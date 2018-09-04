@@ -1,0 +1,199 @@
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH start\-stop\-daemon 8 2008\-01\-30 Debianprojektet dpkg\-verktygen
+.SH NAMN
+start\-stop\-daemon \- startar och stoppar bakgrundsprocesser
+.
+.SH SYNOPS
+\fBstart\-stop\-daemon\fP [\fIflaggor\fP] \fIåtgärd\fP
+.
+.SH BESKRIVNING
+\fBstart\-stop\-daemon\fP används för att kontrollera hur processer på systemnivå
+skapas och avslutas. Med hjälp av en av sökflaggorna kan
+\fBstart\-stop\-daemon\fP ställas in att hitta befintliga instanser av en körande
+process.
+.PP
+Observera att om inte \fB\-\-pidfile\fP anges kommer \fBstart\-stop\-daemon\fP att
+jobba på ett sätt som liknar \fBkillall(1).\fP \fBstart\-stop\-daemon\fP kommer att
+söka i processtabellen efter processer med motsvarande namn på processen,
+användar\-id och/eller grupp\-id (om sådant anges). Alla processer som stämmer
+överens kommer tillsändas KILL\-signalen. För processer som har långlivade
+barn som måste överleva en \fB\-\-stop\fP, måste du ange en pidfil.
+.
+.SH KOMMANDON
+.TP 
+\fB\-S\fP, \fB\-\-start\fP [\fB\-\-\fP] \fIargument\fP
+Se om en angiven process existerar, och om så är fallet gör
+\fBstart\-stop\-daemon\fP ingenting och avslutar med status 1 (0 om \fB\-\-oknodo\fP
+anges). Om en sådan process inte existerar startas en instans, antingen med
+programfilen som anges med \fB\-\-exec\fP eller, om den anges, med
+\fB\-\-startas\fP. Eventuella argument som ges efter \fB\-\-\fP på kommandoraden
+skickas utan ändring till programmet som startas.
+.TP 
+\fB\-K\fP, \fB\-\-stop\fP
+Testa om den angivna processen existerar. Om så är fallet sänder
+\fBstart\-stop\-daemon\fP den signal som anges av \fB\-\-signal\fP till processen, och
+avslutar med status 0. Om processen inte finns avslutar \fBstart\-stop\-daemon\fP
+med status 1 (0 om \fB\-\-oknodo\fP anges). Om \fB\-\-retry\fP anges kommer
+\fBstart\-stop\-daemon\fP kontrollera att processen har avslutats.
+.TP 
+\fB\-H\fP, \fB\-\-help\fP
+Visa hjälpskärm och avsluta.
+.TP 
+\fB\-V\fP, \fB\-\-version\fP
+Visa programversion och avsluta.
+.
+.SH "FLAGGOR FÖR SÖKNING"
+.TP 
+\fB\-p\fP, \fB\-\-pidfile\fP \fIpidfil\fP
+Sök efter processer vars process\-id anges i \fIpidfil\fP.
+.TP 
+\fB\-x\fP, \fB\-\-exec\fP \fIprogramfil\fP
+Sök efter processer som är instanser av programfilen (enligt
+\fB/proc/\fP\fIpid\fP\fB/exe\fP).
+.TP 
+\fB\-n\fP, \fB\-\-name\fP \fIprocessnamn\fP
+Sök efter processer med namnet \fIprocessnamn\fP (enligt
+\fB/proc/\fP\fIpid\fP\fB/stat\fP).
+.TP 
+\fB\-u\fP, \fB\-\-user\fP \fIanvändarnamn\fP|\fIanvändar\-id\fP
+Sök efter processer som ägs av den användare som anges med \fIanvändarnamn\fP
+eller \fIanvändar\-id\fP.
+.
+.SH FLAGGOR
+.TP 
+\fB\-g\fP, \fB\-\-group\fP \fIgrupp\fP|\fIgrupp\-id\fP
+Byt till \fIgrupp\fP eller \fIgrupp\-id\fP när processen startas.
+.TP 
+\fB\-s\fP, \fB\-\-signal\fP \fIsignal\fP
+Tillsammans med \fB\-\-stop\fP anger detta den signal som skall sändas till
+processen som stoppas (förval är 15).
+.TP 
+\fB\-R\fP, \fB\-\-retry\fP \fItidsgräns\fP|\fIschema\fP
+Tillsammans med \fB\-\-stop\fP anger detta att \fBstart\-stop\-daemon\fP skall
+kontrollera att processen avslutas. Den testar flera gånger efter matchande
+processer som körs, tills ingen längre finns kvar. Om processerna inte
+avslutar kommer programmet utföra ytterligare kommandon enligt schemat.
+
+Om \fItidsgräns\fP anges istället för \fIschema\fP kommer schemat
+\fIsignal\fP\fB/\fP\fItimeout\fP\fB/KILL/\fP\fItimeout\fP att användas, där \fIsignal\fP är
+den signal som anges med \fB\-\-signal\fP.
+
+\fIschema\fP är den lista med åtminstone två poster avdelade med snedstreck
+(\fB/\fP); varje post är antingen \fB\-\fP\fIsignalnummer\fP eller
+[\fB\-\fP]\fIsignalnamn\fP, vilket betyder att signalen skall sändas, eller
+\fItimeout\fP, vilket anger det antal sekunder programmet skall vänta på att
+processen avslutar, eller \fBforever\fP, vilket betyder att resten av schemat
+skall repetera för evigt om så behövs.
+
+Om slutet på schemat nås och \fBforever\fP inte anges kommer
+\fBstart\-stop\-daemon\fP avslutas med felkod 2. Om ett schema anges kommer
+eventuell signal angiven med \fB\-\-signal\fP att ignoreras.
+.TP 
+\fB\-a\fP, \fB\-\-startas\fP \fIsökväg\fP
+Tillsammans med \fB\-\-start\fP anger detta att processen som anges med \fIsökväg\fP
+skall startas. Om den inte anges används argumentet som gavs till \fB\-\-exec\fP.
+.TP 
+\fB\-t\fP, \fB\-\-test\fP
+Skriver ut vad som skulle ha utförts och sätter returvärdet, men utför
+ingenting.
+.TP 
+\fB\-o\fP, \fB\-\-oknodo\fP
+Returnerar felstatus 0 i stället för 1 om ingen åtgärd utförs/skulle
+utförts.
+.TP 
+\fB\-q\fP, \fB\-\-quiet\fP
+Skriv inte informationsmeddelanden; visa endast felmeddelanden.
+.TP 
+\fB\-c\fP, \fB\-\-chuid\fP \fIanvändarnamn\fP|\fIanvändar\-id\fP
+Byt till användarnamnet/användar\-id:t innan processen startas. Du kan även
+ange en grupp genom att lägga till ett kolontecken, \fB:\fP, följt av
+gruppnamnet eller grupp\-id på samma sätt som du skull gjort till
+"chown"\-kommandot (\fIanvändare\fP\fB:\fP\fIgrupp\fP). Om du anger en användare utan
+att ange en grupp kommer användarens primära grupp\-id att användas. När du
+använder alternativet måste du ha i åtanke att även både primär\- och
+tilläggsgrupp sätts, även om \fB\-\-group\fP\-flaggan inte
+anges. \fB\-\-group\fP\-flaggan är bara till för grupper som användaren normalt
+inte är en medlem i (t.ex för att lägga till gruppmedlemskap för enskilda
+processer för standardanvändare såsom \fBnobody\fP).
+.TP 
+\fB\-r\fP, \fB\-\-chroot\fP \fIrot\fP
+Byt katalog och rot till \fBrot\fP innan processen startas. Observera att även
+pidfilen skrivs efter chroot har utförts.
+.TP 
+\fB\-d\fP, \fB\-\-chdir\fP \fIsökväg\fP
+Byt katalog till \fIsökväg\fP innan processen startas. Detta görs efter byte av
+rot om \fB\-r\fP|\fB\-\-chroot\fP\-flaggan anges. Om flaggan inte anges kommer
+start\-stop\-daemon byta till rotkatalogen innan processen startas.
+.TP 
+\fB\-b\fP, \fB\-\-background\fP
+Används typiskt med program som inte kopplar loss sig av sig själva. Flagga
+tvingar \fBstart\-stop\-daemon\fP att förgrena sig (fork) innan processen
+startar, och tvinga den grenen att köra i bakgrunden. \fBVARNING:
+start\-stop\-daemon\fP kan inte kontrollera felstatus för processer som av
+\fBnågon som helst\fP anledning misslyckas med att exekvera. Detta är en sista
+utväg, och är endast avsett för program som det antingen inte är någon
+mening att förgrena på egen hand, eller där det inte är möjligt att lägga
+till kod för det på egen hand.
+.TP 
+\fB\-N\fP, \fB\-\-nicelevel\fP \fIheltal\fP
+Ändrar prioriteten på processen innan den startas.
+.TP 
+\fB\-k\fP, \fB\-\-umask\fP \fImaskvärde\fP
+Ställer in umaskvärdet på processen innan den startas.
+.TP 
+\fB\-m\fP, \fB\-\-make\-pidfile\fP
+Används när ett program som inte skapar sin egen pidfil startas. Flaggan
+kommer att få \fBstart\-stop\-daemon\fP att skapa filen som anges med
+\fB\-\-pidfile\fP och lägga process\-id i den precis innan processen
+startas. Observera att den inte kommer att tas bort när programmet
+stoppas. \fBOBSERVERA:\fP Funktionen kanske inte alltid fungerar. Framförallt
+inte när programmet som startas förgrenar sig (fork) från sin
+huvudprocess. Därför är flaggan oftast bara användbar i samband med flaggan
+\fB\-\-background\fP.
+.TP 
+\fB\-v\fP, \fB\-\-verbose\fP
+Skriv ut pratsamma informationsmeddelanden.
+.
+.SH RETURVÄRDE
+\fBstart\-stop\-deamon\fP returnerar 0 om kommandot som önskades utfördes, eller
+om \fB\-\-oknodo\fP angavs och antingen om \fB\-\-start\fP angavs och motsvarande
+process redan kördes, eller om \fB\-\-stop\fP angavs och ingen motsvarande
+process hittades. Om \fB\-\-oknodo\fP inte angavs och ingenting utfördes kommer 1
+att returneras. Om \fB\-\-stop\fP och \fB\-\-retry\fP angavs men slutet på schemat
+nåddes och processer fortfarande kördes är felkoden 2. För alla andra fel är
+statusen 3.
+.
+.SH EXEMPEL
+Starta serverprocessen \fBfood\fP, såvida inte en redan kör (en process med
+namnet food, som körs som användaren food, med process\-id i food.pid):
+.IP
+.nf
+start\-stop\-daemon \-\-start \-\-oknodo \-\-user food \-\-name food \-\-pidfile /var/run/food.pid \-\-startas /usr/sbin/food \-\-chuid food \-\- \-\-daemon
+.fi
+.PP
+Sänd \fBSIGTERM\fP till \fBfood\fP och vänta upp till fem sekunder på att den
+skall avslutas:
+.IP
+.nf
+start\-stop\-daemon \-\-stop \-\-oknodo \-\-user food \-\-name food \-\-pidfile /var/run/food.pid \-\-retry 5
+.fi
+.PP
+Demonstration av ett skräddarsytt schema för att avsluta \fBfood\fP:
+.IP
+.nf
+start\-stop\-daemon \-\-stop \-\-oknodo \-\-user food \-\-name food \-\-pidfile /var/run/food.pid \-\-retry=TERM/30/KILL/5
+.fi
+.PP
+.
+.SH FÖRFATTARE
+Marek Michalkiewicz <marekm@i17linuxb.ists.pwr.wroc.pl>, baserat på
+en tidigare version av Ian Jackson <ian@chiark.greenend.org.uk>.
+
+Manualsida av Klee Dienes <klee@mit.edu>, delvis omformaterad av Ian
+Jackson, översatt av Peter Krefting <peterk@debian.org>.
+.SH "ÖVERSÄTTNING"
+Peter Krefting och Daniel Nylander.

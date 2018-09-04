@@ -1,0 +1,68 @@
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH dpkg\-trigger 1 2008\-04\-08 Debianprojektet Dpkg\-sviten
+.SH NAMN
+dpkg\-trigger \- ett verktyg för paketutlösare
+.
+.SH SYNOPS
+\fBdpkg\-trigger\fP [\fIflaggor\fP...] \fIutlösarnamn\fP
+.br
+\fBdpkg\-trigger\fP [\fIflaggor\fP...] \fIkommando\fP
+.
+.SH BESKRIVNING
+\fBdpkg\-trigger\fP är ett verktyg för att explicit aktivera utlösare och för
+att testa om de stöds av den körande \fBdpkg\fP.
+.PP
+Det kan användas av utvecklarskript i komplexa och villkorliga situationer
+där filutlösare, eller det deklarativa \fBactivate\fP\-direktivet i
+utlösarstyrfilen inte kan uttrycka det som behövs. Det kan även användas för
+test och av systemadministratörer (men observera att utlösarna inte kommer
+att faktiskt köras av dpkg\-trigger).
+.PP
+Okända utlösarnamnsyntaxer är ett fel för dpkg\-trigger.
+.
+.SH KOMMANDON
+.TP 
+\fB\-\-check\-supported\fP
+Se om den körande dpkg stöder utlösare (anropas vanligtvis från ett
+postinst\-skript). Avslutar med 0 om en dpkg med utlösarstöd har kört, eller
+1 med ett felmeddelande på standard fel om inte. Det är dock normalt sett
+bättre att bara aktivera den önskade utlösaren med \fBdpkg\-trigger\fP.
+.TP 
+\fB\-h\fP, \fB\-\-help\fP
+Visar hjälpskärm och avslutar.
+.TP 
+\fB\-\-version\fP
+Visar version och avslutar.
+.TP 
+\fB\-\-license\fP, \fB\-\-licence\fP
+Visa upphovsrättslicensvillkor och avsluta.
+.
+.SH FLAGGOR
+.TP 
+\fB\-\-admindir=\fP\fIkat\fP
+Ändra platsen för \fBdpkg\fP\-databasen. Förval är \fI/var/lib/dpkg\fP.
+.TP 
+\fB\-\-by\-package=\fP\fIpaket\fP
+Överstyr den som väntar på en utlösare (sätts vanligen av dpkg genom
+miljövariabeln DPKG_MAINTSCRIPT_PACKAGE i utvecklarskript, för att namnge
+det paket som skriptet tillhör, och detta används som standard).
+.TP 
+\fB\-\-no\-await\fP
+Denna flagga gör så att det anropade paketet T (om det finns) inte behöver
+vänta på hantering av utlösaren; det/de intresserade paketet/paketen I
+kommer inte läggas till T:s väntelista för hantering av utlösare och T:s
+status ändras inte. T kan anses vara installerat även om I kanske ännu inte
+har hanterat utlösaren.
+.TP 
+\fB\-\-no\-act\fP
+Bara testa, ändra inte på någonting.
+.
+.SH "SE ÄVEN"
+\fBdpkg\fP(1), \fBdeb\-triggers\fP(5).
+
+.SH "ÖVERSÄTTNING"
+Peter Krefting och Daniel Nylander.

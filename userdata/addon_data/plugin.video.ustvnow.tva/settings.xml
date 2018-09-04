@@ -1,0 +1,30 @@
+<settings>
+    <setting id="account_name" value="" />
+    <setting id="account_plan" value="" />
+    <setting id="account_status" value="" />
+    <setting id="addon_name" value="" />
+    <setting id="clear_token" value="false" />
+    <setting id="date_opened" value="" />
+    <setting id="dvr" value="false" />
+    <setting id="dvr_points" value="" />
+    <setting id="email" value="" />
+    <setting id="extended_context" value="false" />
+    <setting id="free_package" value="true" />
+    <setting id="live_stream_option" value="0" />
+    <setting id="logo" value="1" />
+    <setting id="password" value="" />
+    <setting id="quality" value="1" />
+    <setting id="rec_live" value="true" />
+    <setting id="rec_quality" value="1" />
+    <setting id="recordings_stream_option" value="0" />
+    <setting id="setup" value="false" />
+    <setting id="setup_new" value="false" />
+    <setting id="show_movies_section" value="true" />
+    <setting id="show_settings_option" value="true" />
+    <setting id="show_sports_section" value="false" />
+    <setting id="show_tv_guide_epg" value="true" />
+    <setting id="show_tv_guide_list" value="false" />
+    <setting id="skin" value="0" />
+    <setting id="token" value="" />
+    <setting id="version" value="" />
+</settings>

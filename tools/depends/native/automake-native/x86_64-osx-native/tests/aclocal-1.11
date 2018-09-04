@@ -1,0 +1,17 @@
+#!/bin/sh
+# tests/aclocal-1.11.  Generated from aclocal.in by configure.
+
+# Be Bourne compatible
+if test -n "${ZSH_VERSION+set}" && (emulate sh) >/dev/null 2>&1; then
+  emulate sh
+  NULLCMD=:
+  # Zsh 3.x and 4.x performs word splitting on ${1+"$@"}, which
+  # is contrary to our usage.  Disable this feature.
+  alias -g '${1+"$@"}'='"$@"'
+fi
+
+perllibdir="/Users/osx/Desktop/kodi/xbmc/tools/depends/native/automake-native/x86_64-osx-native/lib:/Users/osx/Desktop/kodi/xbmc/tools/depends/native/automake-native/x86_64-osx-native/lib"
+export perllibdir
+
+exec "/Users/osx/Desktop/kodi/xbmc/tools/depends/native/automake-native/x86_64-osx-native/aclocal" "--automake-acdir=/Users/osx/Desktop/kodi/xbmc/tools/depends/native/automake-native/x86_64-osx-native/m4" \
+     "--system-acdir=/Users/osx/Desktop/kodi/xbmc/tools/depends/native/automake-native/x86_64-osx-native/m4/acdir" ${1+"$@"}

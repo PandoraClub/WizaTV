@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+  <category label="Parental Control">
+    <setting id="pc_enable_pc_settings" type="text" label="20000" visible="true" default="UNLOCKED" enable="false"/>
+	<setting id="pc_enable_pc" type="bool" label="20001" default="false" enable="eq(-1,UNLOCKED)"/>
+    <setting id="pc_watershed_pc" type="enum" values="15:00|16:00|17:00|18:00|19:00|20:00|21:00|22:00|23:00|ALWAYS ON" label="20002" default="6" enable="eq(-2,UNLOCKED)"/>
+	<setting id="pc_pw_required_at" type="enum" values="G rated|PG rated|PG-13 rated|R rated" label="20003" default="2" enable="eq(-3,UNLOCKED)"/>
+    <setting id="pc_pass" type="text" option="hidden" label="20004" default="0000" enable="eq(-4,UNLOCKED)"/>
+    <setting id="pc_default" type="enum" values="PLAY|REQUIRE PIN" label="20005" default="1" enable="eq(-5,UNLOCKED)"/>
+  </category>
+</settings>

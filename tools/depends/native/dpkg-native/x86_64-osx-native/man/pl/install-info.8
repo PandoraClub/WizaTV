@@ -1,0 +1,224 @@
+.\" Install-info and this manpage are Copyright 1994 by Ian Jackson.
+.\"
+.\" This is free software; see the GNU General Public Licence version 2
+.\" or later for copying conditions.  There is NO warranty.
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH install\-info 8 2007\-07\-18 "Projekt Debiana" "programy pomocnicze dpkg"
+.SH NAZWA
+install\-info \- tworzy lub aktualizuje wpis w katalogu Info
+.
+.SH SK£ADNIA
+\fBinstall\-info\fP [\fB\-\-version\fP] [\fB\-\-help\fP] [\fB\-\-debug\fP]
+[\fB\-\-maxwidth=\fP\fInnn\fP] [\fB\-\-section \fP\fIwyra¿_regularne\fP\fB \fP\fItytu³\fP]
+[\fB\-\-infodir=\fP\fIxxx\fP] [\fB\-\-align=\fP\fInnn\fP] [\fB\-\-quiet\fP]
+[\fB\-\-menuentry=\fP\fIxxx\fP] [\fB\-\-description=\fP\fIxxx\fP]
+[\fB\-\-remove\fP|\fB\-\-remove\-exactly\fP] [\fB\-\-\fP] \fInazwa_pliku\fP
+.
+.SH OPIS
+\fBinstall\-info\fP tworzy, aktualizuje i usuwa wpisy w katalogu Info, czyli
+pliku \fBdir\fP. Podczas aktualizowania lub tworzenia wpisów, je¿eli nie podano
+opisu ani w linii poleceñ, ani w pliku Info, podejmowana jest próba
+zgadniêcia opisu na podstawie zawarto¶ci pliku.
+.PP
+W opisie opcji \fB\-\-section\fP mo¿na znale¼æ szczegó³y dotycz±ce miejsca, w
+którym zostanie umieszczony wpis oraz opis oczekiwanego formatu pliku
+\fBdir\fP.
+.SH OPCJE
+.TP 
+\fB[\-\-] \fP\fInazwa pliku\fP
+Okre¶la nazwê pliku Info, dla którego ma zostaæ utworzony, zaktualizowany
+lub usuniêty wpis w menu. Je¶li podano \fB\-\-remove\-exactly\fP, wtedy
+\fInazwa_pliku\fP powinna zawieraæ dok³adn± nazwê wpisu w menu do usuniêcia
+(jak np. "emacs\-20/emacs" lub "gcc"). W przeciwnym wypadku bazowa nazwa tego
+pliku jest u¿ywana jako odniesienie do wpisu w menu, który bêdzie tworzony,
+chyba ¿e w podanym pliku znajduje siê nadpisuj±cy wpis START\-INFO\-DIR. Taki
+plik musi wtedy istnieæ (lub powinien byæ instalowany, lub powinien ju¿
+istnieæ podczas usuwania wpisu) w tym samym katalogu co plik \fBdir\fP (proszê
+sprawdziæ opcjê \fB\-\-infodir\fP).
+
+Je¿eli \fInazwa_pliku\fP koñczy siê rozszerzeniem \fB.gz\fP, to jest traktowana
+jako odwo³anie do pliku spakowanego programem \fBgzip\fP. Je¶li plik
+\fInazwa_pliku\fP nie istnieje, to u¿ywany jest plik \fInazwa_pliku\fP\fB.gz\fP, o
+ile takowy istnieje.
+
+Podczas dodawania lub aktualizowania wpisów plik ten musi istnieæ w podanej
+¶cie¿ce (byæ mo¿e z dodatkowym rozszerzeniem \fB.gz\fP).
+.TP 
+\fB\-\-remove\fP
+Okre¶la, ¿e wpis dla pliku \fInazwa_pliku\fP bêdzie usuniêty; domy¶lnie wpisy
+s± tworzone lub aktualizowane.
+
+Je¶li usuniêcie prowadzi do tego, ¿e sekcja zosta³aby pusta, nag³ówek sekcji
+(oraz zapasowa pusta linia) tak¿e bêd± usuniête, chyba ¿e jest to ostatnia
+sekcja w pliku lub podano opcjê \fB\-\-keep\-old\fP. Proszê sprawdziæ opcjê
+\fB\-\-section\fP w celu uzyskania informacji na temat spodziewanego formatu
+pliku \fBdir\fP.
+
+Je¶li w pliku \fBdir\fP znajduje siê kilka odpowiednich wpisów, bêd± usuniête
+tylko wpisy z pierwszej ci±g³ej pasuj±cej grupy, za¶ pozosta³e zostan±
+zignorowane bez ¿adnego ostrze¿enia.
+
+Nie odnalezienie odpowiedniego wpisu nie jest b³êdem, jednak \fBinstall\-info\fP
+wy¶le ostrze¿enie, chyba ¿e podano opcjê \fB\-\-quiet\fP.
+
+Je¿eli podano \fB\-\-remove\fP, to opcje formatowania \fB\-\-maxwidth\fP, \fB\-\-align\fP
+oraz \fB\-\-calign\fP zostan± zignorowane bez ¿adnego ostrze¿enia.
+.TP 
+\fB\-\-remove\-exactly\fP
+Ta opcja jest praktycznie taka sama jak \fB\-\-remove\fP z t± ró¿nic±, ¿e wtedy
+\fInazwa_pliku\fP powinna zawieraæ dok³adn± nazwê wpisu w menu do usuniêcia,
+zamiast nazwy istniej±cego pliku. Mo¿e byæ to istotne podczas próby
+usuniêcia wpisów odnosz±cych siê do plików w podkatalogach
+(np. "emacs\-20/emacs"), poniewa¿ \fB\-\-remove\fP bêdzie korzystaæ z bazowej
+nazwy podanej \fInazwy_pliku\fP zamiast dok³adnej nazwy. (np. \fB\-\-remove\fP
+"emacs\-20/emacs" spowodowa³by, ¿e \fBinstall\-info\fP szuka³oby "emacs", a nie
+"emacs\-20/emacs").
+.TP 
+\fB\-\-section \fP\fIwyra¿_regularne tytu³\fP
+Okre¶la, ¿e je¶li ma byæ stworzony nowy wpis, powinien byæ umieszczony w
+sekcji w pliku \fBdir\fP, której tytu³ pasuje do \fIwyra¿_regularnego\fP. Je¶li
+taka sekcja nie istnieje, zostanie utworzona jako przedostatnia sekcja w
+pliku (patrz ni¿ej) z tytu³em \fItytu³\fP. Sekcja jest czê¶ci± menu \fBdir\fP
+otoczon± pustymi liniami; pierwsza linia sekcji uwa¿ana jest za jej tytu³.
+
+Je¶li ma byæ utworzony nowy wpis, \fBinstall\-info\fP bêdzie staraæ siê wstawiæ
+go w ramach sekcji w porz±dku alfabetycznym. Je¶li wpisy w sekcji nie s±
+wstêpnie posortowane, po³o¿enie wpisu w sekcji bêdzie nie do
+przewidzenia. Kolejno¶æ istniej±cych wpisów nie bêdzie zmieniana.
+
+Je¶li nie zostanie podana opcja \fB\-\-section\fP, \fBinstall\-info\fP bêdzie szukaæ
+tytu³u w samym pliku Info, poszukuj±c wpisu postaci
+
+.br
+\fBINFO\-DIR\-SECTION\fP\fI tytu³\fP
+.br
+
+Je¶li tytu³ sekcji nie zostanie znaleziony, domy¶lnym zachowaniem jest
+dodanie nowych wpisów na koñcu pliku. Ostatnia sekcja (nawet je¶li sk³ada
+siê tylko z linii z tytu³em) powinna zawsze istnieæ aby zapewniæ, ¿e nowe
+sekcje bêd± tworzone we w³a¶ciwym miejscu. Ostatnia sekcja powinna byæ
+zatytu³owana w sposób odzwierciedlaj±cy fakt, ¿e bêd± do niej do³±czane
+pliki Info, które nie maj± okre¶lonego lepszego po³o¿enia.
+
+Je¶li wpis dla instalowanego pliku Info ju¿ istnieje, jest zastêpowany w
+miejscu przez nowy wpis.
+
+Je¶li podczas usuwania wpisu podano sekcjê, to bêdzie ona zignorowana oraz
+zostanie wypisane odpowiednie ostrze¿enie.
+
+Je¶li okre¶lono sekcjê podczas dodawania wpisu, ale plik nie zawiera wcale
+nag³ówków sekcji, \fBinstall\-info\fP utworzy zarówno ¿±dan± sekcjê jak i sekcjê
+Miscellaneous na koñcu pliku.
+.TP 
+\fB\-\-infodir=\fP\fIkatalog_info\fP
+Okre¶la, ¿e plik \fBdir\fP jest, a zainstalowana kopia nowego pliku Info by³a,
+jest lub bêdzie zlokalizowana w \fIkatalogu_info\fP. Domy¶lnie jest to
+\fB/usr/share/info/\fP.
+.TP 
+\fB\-\-align=\fP\fInnn\fP\fB [przestarza³e]\fP
+Okre¶la, ¿e wciêcie pierwszej linii opisu powinno wynosiæ co najmniej \fInnn\fP
+znaków; je¶li bêdzie to potrzebne, to zostan± dodane dodatkowe spacje. Je¶li
+bêdzie to potrzebne z powodu d³ugo¶ci szczegó³ów wpisu \fBdir\fP w menu, mo¿e
+byæ ich dodanych nawet wiêcej. Domy¶ln± warto¶ci± jest 27.
+.TP 
+\fB\-\-calign=\fP\fInnn\fP\fB [przestarza³e]\fP
+Okre¶la, ¿e wciêcie drugiej i kolejnych linii opisu powinno wynosiæ co
+najmniej \fInnn\fP znaków. Domy¶lnie jest to 29.
+.TP 
+\fB\-\-maxwidth=\fP\fInnn\fP\fB [przestarza³e]\fP
+Okre¶la, ¿e maksymalna szeroko¶æ pliku Info to \fInnn\fP. Jest to u¿ywane
+podczas zawijania s³ów tekstu opisu. Domy¶lnie jest to 79.
+.TP 
+\fB\-\-quiet\fP
+Zapobiega typowemu wy¶wietlaniu nowego wpisu w menu tu¿ przed jego
+wstawieniem, komunikatom og³aszaj±cym zast±pienie i usuniêcie istniej±cych
+wpisów oraz tworzenie i usuwanie sekcji.
+.TP 
+\fB\-\-help\fP
+Powoduje, ¿e \fBinstall\-info\fP wy¶wietli informacje o u¿yciu i zakoñczy
+dzia³anie.
+.TP 
+\fB\-\-version\fP
+Powoduje, ¿e \fBinstall\-info\fP wy¶wietli informacje o wersji i prawach
+autorskich i zakoñczy dzia³anie.
+.TP 
+\fB\-\-description=\fP\fIxxx\fP
+Okre¶la, ¿e opisem u¿ywanym za wpisem w menu dla nowych lub aktualizowanych
+wpisów ma byæ \fIxxx\fP. Domy¶lnie u¿ywana jest warto¶æ okre¶lona w samym pliku
+Info, jest ona wyszukiwana poszukuj±c sekcji postaci
+.br
+\fBSTART\-INFO\-DIR\-ENTRY\fP
+.br
+\fB* Auto\-PGP: (auto\-pgp). PGP w GNU Emacsie.\fP
+.br
+\fBEND\-INFO\-DIR\-ENTRY\fP
+
+Je¶li wpis znaleziony w samym pliku Info rozci±ga siê na kilka linii, z
+których ka¿da tworzy wpis w menu, tekst znaleziony w pliku jest u¿ywany
+dos³ownie. Sortowanie alfabetyczne jest wtedy wy³±czane, a wpisy s±
+wstawiane na pocz±tku wskazanej sekcji. W takim przypadku opcje
+\fB\-\-menuentry\fP, \fB\-\-maxwidth\fP, \fB\-\-align\fP, \fB\-\-calign\fP i \fB\-\-menuentry\fP s±
+ignorowane.
+
+Je¶li w pliku nie ma wpisu \fBdir\fP, program bêdzie stara³ siê znale¼æ
+paragraf na pocz±tku pliku rozpoczynaj±cy siê od \fBthis file
+documents\fP. Pierwszy znak pozosta³ej czê¶ci zostanie zamieniony na wielk±
+literê i to zostanie u¿yte.
+
+B³êdem jest je¶li ¿adna z tych metod nie zwróci opisu.
+
+Je¶li podczas usuwania (\fB\-\-remove\fP) podano argument zawieraj±cy opis, to
+jest on ignorowany i odpowiednie ostrze¿enie jest wypisywane.
+.TP 
+\fB\-\-menuentry=\fP\fIxxx\fP
+Okre¶la, ¿e wpisem w menu powinno byæ \fIxxx\fP. Domy¶lnie u¿ywana jest warto¶æ
+okre¶lona w samym pliku Info. Je¶li jej nie ma, u¿ywana jest bazowa nazwa
+pliku Info (ponadto czê¶æ \fB.info\fP jest usuwana, jest te¿ zmieniany
+odpowiednio rozmiar liter pozosta³ego wpisu). Szczegó³owe informacje na
+temat oczekiwanego formatu wpisu w menu zawartego w pliku Info mo¿na znale¼æ
+powy¿ej.
+
+Podczas usuwania wpisów, warto¶æ opcji \fB\-\-menuentry\fP musi odpowiadaæ
+bie¿±cej warto¶ci wpisu pola menu w usuwanej pozycji menu (wielko¶æ znaków
+nie ma znaczenia). Je¶li nie podano \fB\-\-menuentry\fP, to wpis menu nie jest
+sprawdzany.
+.TP 
+\fB\-\-keep\-old\fP
+Zabrania zastêpowania istniej±cych wpisów i usuwania pustych sekcji.
+
+Je¶li instalowany plik ma ju¿ wpis w pliku \fBdir\fP, stary wpis bêdzie
+pozostawiony zamiast zamieniania go. Domy¶lnie stare wpisy s± nadpisywane
+przez nowo wygenerowane.
+
+Je¿eli podano opcjê \fB\-\-remove\fP, to \fB\-\-keep\-old\fP zapobiegnie usuniêciu
+nag³ówka sekcji, co by siê zdarzy³o, gdyby po usuniêciu nag³ówka sekcja
+sta³a siê pusta.
+.TP 
+\fB\-\-test\fP
+W³±cza tryb testowy, który powstrzymuje aktualizacjê pliku katalogu Info
+\fBdir\fP.
+.TP 
+\fB\-\-debug\fP
+W³±cza tryb debugowania, w którym pokazywane s± wyniki wewnêtrznych kroków
+przetwarzania.
+.
+.SH "ZOBACZ TAK¯E"
+\fBemacs\fP(1), \fBinfo\fP(1), \fBgzip(1).\fP
+.SH AUTOR
+Copyright 1994 Ian Jackson
+.sp
+Niniejszy program jest oprogramowaniem wolnym, sprawd¼ Powszechn± Licencjê
+Publiczn± GNU w wersji drugiej lub pó¼niejszej, by dowiedzieæ siê o
+warunkach dystrybucji. Brak JAKIEJKOLWIEK gwarancji.
+.SH "T£UMACZE"
+Piotr Roszatycki <dexter@debian.org>, 1999
+.br
+Bartosz Feñski <fenio@debian.org>, 2004-2005
+.br
+Robert Luberda <robert@debian.org>, 2006-2008
+.br
+Wiktor Wandachowicz <siryes@gmail.com>, 2008

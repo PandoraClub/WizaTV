@@ -1,0 +1,117 @@
+.\" Authors: Ian Jackson
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH deb\-substvars 5 2007\-07\-18 Debianprojektet dpkg\-verktygen
+.SH NAMN
+deb\-substvars \- Debians källkods\-substitueringsvariabler
+.
+.SH SYNOPS
+substvars
+.
+.SH BESKRIVNING
+Innan \fBdpkg\-source\fP, \fBdpkg\-gencontrol\fP och \fBdpkg\-genchanges\fP skriver sin
+kontrollinformation (till control\-filen i källkodspaketet \fB.dsc\fP för
+\fBdpkg\-source\fP och till standard ut för \fBdpkg\-gencontrol\fP och
+\fBdpkg\-genchanges\fP) kommer de utföra viss variabelsubstituering på
+utdatafilen.
+
+En variabelsubstitution har formen \fB${\fP\fIvariabelnamn\fP\fB}\fP. Variabelnamn
+består av alfanumeriska tecken, bindestreck och kolon och börjar med ett
+alfanumeriskt tecken. Variabelsubstitueringar utförs upprepade gånger tills
+det inte kvarstår några \- det resulterande innehållet i fältet läses av på
+nytt efter substitueringen för att se om det behövs fler substitueringar.
+
+När alla substitueringar har utförts ersätts varje förekomst av strängen
+\fB${}\fP (som inte är en giltig substituering) med ett \fB$\fP\-tecken.
+
+Variabler kan sättas genom att använda kommandoradsflaggan \fB\-V\fP. De kan
+även anges i filen \fBdebian/substvars\fP (eller vilken som helst annan fil som
+anges med flaggan \fB\-T\fP). Filen består av rader på formen
+\fInamn\fP\fB=\fP\fIvärde\fP. Avslutande blanksteg på en rad, blanka rader och rader
+som börjar med en \fB#\fP\-symbol (kommentarer) ignoreras.
+
+I tillägg är följande standardvariabler tillgängliga:
+.TP 
+\fBArch\fP
+Den aktuella byggarkitekturen (från \fBdpkg \-\-print\-architecture\fP).
+.TP 
+\fBsource:Version\fP
+Version för källkodspaketet.
+.TP 
+\fBsource:Upstream\-Version\fP
+Version på uppströmskällkodspaketet, inklusive Debianversionens epok, om
+sådan finns.
+.TP 
+\fBbinary:Version\fP
+Den binära paketversionen (som kan avvika från source:Version, till exempel
+i en binNMU).
+.TP 
+\fBSource\-Version\fP
+Versionen på källkodspaketet (från changelog\-filen). Variabeln \fBavråds\fP
+från eftersom betydelsen skiljer sig från funktionen, använd i stället
+\fBsource:Version\fP eller \fBbinary:Version\fP allt eftersom vad som är lämpligt.
+.TP 
+\fBInstalled\-Size\fP
+Den totala storleken på paketets installerade filer. Värdet kopieras in i
+motsvarande fält i kontrollfilen. Om du ställer in det kommer det att
+ersätta värdet på fältet. Om variabeln inte är satt kommer
+\fBdpkg\-gencontrol\fP att använda \fBdu \-k debian/tmp\fP för att hitta det
+förvalda värdet.
+.TP 
+\fBExtra\-Size\fP
+Ytterligare diskutrymme som används när paketet installeras. Om värdet är
+satt kommer dess värde att läggas till \fBInstalled\-Size\fP\-variabelns värde
+(oavsett om den satts explicit eller om det förvalda värdet används) innan
+det kopieras till kontrollfilens fält \fBInstalled\-Size\fP.
+.TP 
+\fBF:\fP\fIfältnamn\fP
+Värdet på utdatafältet \fIfältnamn\fP (som måste anges med rätt form av stora
+och små bokstäver). Om du sätter dessa variabler händer ingenting förutom
+där de explicit expanderats.
+.TP 
+\fBFormat\fP
+Formatet på filen \fB.changes\fP som skapats av denna version av
+källkodspaketeringsskripten. Om du sätter denna variabel kommer innehållet i
+\fBFormat\fP\-fältet i filen \fB.changes\fP också att ändras.
+.TP 
+\fBNewline\fP, \fBSpace\fP, \fBTab\fP
+Dessa variabler innehåller motsvarande tecken (radbrytning, blanksteg,
+tabbsteg).
+.TP 
+\fBshlibs:\fP\fIberoendefält\fP
+Variabelinställningar på den här formen skapas av \fBdpkg\-shlibdeps\fP.
+.TP 
+\fBdpkg:Upstream\-Version\fP
+Uppströmsversionen av dpkg.
+.TP 
+\fBdpkg:Version\fP
+Fullständig version av dpkg.
+.LP
+Om en variabel refereras till men inte definieras kommer en varning att
+genereras och ett tomt värde används.
+.
+.SH FILER
+.TP 
+\fBdebian/substvars\fP
+Lista över substitueringsvariabler och \-värden.
+.
+.SH PROGRAMFEL
+Tidpunkten på fältöverstyrning inträffar jämfört med inställning av vissa
+standardutdatafält är ganska förvirrad.
+
+.SH "SE ÄVEN"
+\fBdpkg\fP(1), \fBdpkg\-genchanges\fP(1), \fBdpkg\-gencontrol\fP(1),
+\fBdpkg\-shlibdeps\fP(1), \fBdpkg\-source\fP(1).
+.
+.SH FÖRFATTARE
+Upphovsrättsskyddad © 1995\-1996 Ian Jackson
+.br
+Upphovsrättsskyddat © 2000 Wichert Akkerman
+.sp
+Detta är fri programvara; se GNU General Public License version 2 eller
+senare för kopieringsvillkor. Det finns INGEN GARANTI.
+.SH "ÖVERSÄTTNING"
+Peter Krefting och Daniel Nylander.

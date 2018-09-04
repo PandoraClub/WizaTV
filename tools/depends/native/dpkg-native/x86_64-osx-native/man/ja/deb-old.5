@@ -1,0 +1,48 @@
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH deb\-old 5 2006\-02\-28 "Debian Project" Debian
+.SH NAME
+deb\-old \- Debian バイナリパッケージ旧形式フォーマット
+.
+.SH 書式
+\fIfilename\fP\fB.deb\fP
+.
+.SH 説明
+\&\fB.deb\fP フォーマットは Debian バイナリパッケージのファイル形式である。このマニュアルでは、Debian 0.93 以前に使用されていた
+\fB旧形式\fP について記述する。新形式の詳細については \fBdeb\fP(5) を参照されたい。
+.
+.SH フォーマット
+2 行の ASCII テキストによるフォーマット情報があり、それに 2 つの gzip 圧縮された ustar ファイルが続く。
+.PP
+1 行目は 8 桁にそろえたフォーマットバージョン番号であり、旧形式アーカイブはすべて \fB0.939000\fP である。
+.PP
+2 行目はひとつ目の gzip 圧縮 tar ファイルの大きさを与える(0 から始まらない) 十進数である。
+.PP
+それぞれの行の終わりは改行文字ひとつである。
+.PP
+1 番目の tar ファイルは、制御情報を平文ファイル群として含む。\fBcontrol\fP ファイルは必須であり、中心となる制御情報を含む。
+.PP
+非常に古いアーカイブでは、 control tar ファイル中のファイルが \fBDEBIAN\fP サブディレクトリにあることもある。この場合、
+control tar ファイルにも \fBDEBIAN\fP サブディレクトリが存在し、 control tar
+ファイルはそのディレクトリ内にのみファイルを保有する。 control tar ファイルは、 `\fB.\fP',
+つまりカレントディレクトリにファイルを含むこともある。
+.PP
+2 番目の gzip 圧縮 tar
+ファイルはファイルシステムアーカイブであり、インストールされるシステムのルートディレクトリからの相対パス名を含んでいる。パス名の先頭にスラッシュ(/)はない。
+.
+.SH 関連項目
+\fBdeb\fP(5), \fBdpkg\-deb\fP(1), \fBdeb\-control\fP(5).
+.SH 翻訳者
+関戸 幸一 <sekido@mbox.kyoto-inet.or.jp>.
+鍋谷 栄展 <nabe@debian.or.jp>.
+倉澤 望 <nabetaro@debian.or.jp>.
+石川睦 <ishikawa@linux.or.jp>.
+鵜飼文敏 <ukai@debian.or.jp>.
+喜瀬浩 <kise@fuyuneko.jp>.
+中野武雄 <nakano@apm.seikei.ac.jp>.
+喜瀬浩 <kise@fuyuneko.jp>.
+.SH 翻訳校正
+Debian JP Documentation ML <debian-doc@debian.or.jp>.

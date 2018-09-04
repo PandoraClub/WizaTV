@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.module.hubparentalcontrol" 
+     name="hubparentalcontrol" 
+     version="1.0.0" 
+     provider-name="Kinkin">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+    <import addon="script.module.t0mm0.common" version="2.0.0"/>
+    <import addon="script.module.metahandler" version="2.4.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Parental Control from XBMCHUB</summary>
+    <description lang="en">Parental Control from XBMCHUB</description>    
+  </extension>
+</addon>

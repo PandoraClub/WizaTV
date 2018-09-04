@@ -1,0 +1,59 @@
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH cleanup\-info 8 2007\-07\-18 Debianprojektet dpkg\-verktygen
+.SH NAMN
+cleanup\-info \- städa upp oredan som en felaktig install\-info kan ha skapat
+.
+.SH SYNOPS
+\fBcleanup\-info\fP [\fIflaggor\fP] [\fB\-\-\fP] [\fIkatalog\fP]
+.
+.SH BESKRIVNING
+\fBcleanup\-info\fP är ett Perlskript som försöker städa upp den oreda en
+felaktig \fBinstall\-info\fP(8) kan ha skapat. Den samlar alla sektioner med
+samma rubrik till en och samma. Den försöker vara smart vad gäller stora och
+små bokstäver och avslutande kolontecken/blanksteg.
+.br
+Annat som städas upp är att tomma sektioner tas bort och att blanka rader
+(endast i posterna) trycks ihop.
+.sp
+Ordningen mellan sektionerna bevaras (den först upptäckta sektionen
+gäller). Ordningen mellan posterna i en sektion bevaras.
+.sp
+Var \fBextremt försiktigt\fP när du använder det här verktyget \- det kanske
+inte är 100 % säkert. cleanup\-info försöker vara försiktigt med din
+info\-katalogfil, men bara fram tills att det skriver till den. Du bör
+säkerhetskopiera filen innan du använder skriptet.
+.
+.SH FLAGGOR
+.TP 
+\fB\-\-unsafe\fP
+Ställer in ytterligare några antagligen användbara flaggor.
+.br
+\fBVarning: flaggar "\-\-unsafe" kan skriva sönder en annars korrekt fil!\fP
+.TP 
+\fB\-\-help\fP
+Visar hjälpskärm och avslutar.
+.TP 
+\fB\-\-version\fP
+Visar version och avslutar.
+.
+.SH FILER
+.TP 
+\fI/usr/info/dir\fP eller \fI<katalog>/dir\fP
+Info\-katalogfilen. Låsfilen heter detsamma, med ändelsen ".lock".
+.
+.SH PROGRAMFEL
+Antagligen flera.
+.
+.SH "SE ÄVEN"
+\fBinstall\-info\fP(8), \fBinfo\fP(1).
+.SH FÖRFATTARE
+Upphovsrättsskyddat © 1996 Kim\-Minh Kaplan
+.sp
+Detta är fri programvara; se GNU General Public License version 2 eller
+senare för kopieringsvillkor. Det finns INGEN GARANTI.
+.SH "ÖVERSÄTTNING"
+Peter Krefting och Daniel Nylander.

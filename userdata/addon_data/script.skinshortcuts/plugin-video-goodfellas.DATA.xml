@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+	<shortcut>
+		<defaultID />
+		<label>Live TV</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(Videos,"plugin://plugin.video.goodfellas",return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>Live Sports</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb>image://C%3a%5cUsers%5ctdodd%5cAppData%5cRoaming%5cKodi%5caddons%5cplugin.video.uktvnow%5cresources%5cart%5csport.PNG/</thumb>
+		<action>ActivateWindow(Videos,"plugin://plugin.video.SportsDevil/?mode=1&amp;item=title%3DLiveTV.ru%26url%3Dlivesports%252Flivetv.ru.cfg%26definedIn%3Dlivesports.cfg%26director%3DLiveTV.ru%26genre%3DLive%2BSports%26type%3Drss%26icon%3DC%253A%255CUsers%255CWizeTV%255CAppData%255CRoaming%255CKodi%255Caddons%255Cplugin.video.SportsDevil%255Cresources%255Cimages%255Clivetv_ru.png",return)</action>
+	</shortcut>
+</shortcuts>

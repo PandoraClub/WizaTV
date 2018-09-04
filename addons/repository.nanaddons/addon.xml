@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.nanaddons" name=" Community Portal Addon Repository" version="1.1" provider-name="noobsandnerds.com">
+	<extension point="xbmc.addon.repository" name=" Community Portal Addon Repository">
+		<info compressed="false">https://raw.githubusercontent.com/noobsandnerds/CP/master/zips/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/noobsandnerds/CP/master/zips/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/noobsandnerds/CP/master/zips/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Home of The Community Portal</summary>
+		<description>Visit www.noobsandnerds.com and become a part of our great family, you get to choose what The Community Portal holds!</description>
+		<platform>all</platform>
+	</extension>
+</addon>

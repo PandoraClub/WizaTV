@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+	<shortcut>
+		<defaultID />
+		<label>TV Shows</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(Videos,"plugin://plugin.video.exodus/?action=tvNavigator",return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>Search</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(Videos,"plugin://plugin.video.exodus/?action=searchNavigator",return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>New TV Shows</label>
+		<label2>Video Add-On</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb>image://C%3a%5cUsers%5ctdodd%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.exodus.artwork%5cresources%5cmedia%5cexodus%5cnew-tvshows.png/</thumb>
+		<action>ActivateWindow(VideoLibrary,"plugin://plugin.video.exodus/?action=tvshows&amp;url=premiere",return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>More TV</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(Videos,"plugin://plugin.video.phstreams/?action=directory&amp;url=http%3A%2F%2Fphoenixtv.offshorepastebin.com%2Ftv%2Fmain.xml&amp;content=0",return)</action>
+	</shortcut>
+</shortcuts>

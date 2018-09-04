@@ -1,0 +1,89 @@
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH dpkg\-statoverride 8 2007\-07\-18 Debianprojektet dpkg\-verktygen
+.SH NAMN
+dpkg\-statoverride \- överstyr ägarskap och läge för filer
+.
+.SH SYNOPS
+\fBdpkg\-statoverride\fP [\fIflaggor\fP] \fIåtgärd\fP
+.
+.SH BESKRIVNING
+"\fBstat\-överstyrningar\fP" är ett sätt att tala om för \fBdpkg\fP(1) att en annan
+ägare eller ett annat läge skall användas för en fil är ett paket
+installeras. (Observera att ordet "fil" används här, men att det kan vara
+alla sorters filsystemsobjekt som hanteras av dpkg, till exempel kataloger,
+enheter osv.). Detta kan användas för att tvinga program som normalt är
+setuid att installeras som en setuid\-flagga, eller bara exekverbar av en
+specifik grupp.
+.P
+\fBdpkg\-statoverride\fP är ett verktyg för att hantera listan över
+stat\-överstyrningar. Det har tre grundläggande funktioner: lägga till, ta
+bort och visa överstyrningar.
+.
+.SH KOMMANDON
+.TP 
+\fB\-\-add\fP\fI användare grupp läge fil\fP
+Lägg till en överstyrning för \fBfil\fP. \fBFil\fP behöver inte existera när
+kommandot körs; överstyrningen kommer lagras och användas senare. Användare
+och grupper kan anges med namn (till exempel \fBroot\fP eller \fBnobody\fP), eller
+med deras nummer med ett "\fB#\fP" (till exempel \fB#0\fP eller \fB#65534\fP).
+
+Om \-\-update anges och \fBfil\fP existerar kommer den omedelbart att sättas till
+den nya användaren och läget.
+.TP 
+\fB\-\-remove\fP\fI fil\fP
+Ta bort en överstyrning för \fBfil\fP, status för \fBfil\fP ändras inte av detta
+kommando.
+.TP 
+\fB\-\-list\fP [\fIfilnamnssökmönster\fP]
+Visa alla överstyrningar. Om ett sökmönster anges kommer utdata att
+begränsas till överstyrningar som motsvarar mönstret. Om det inte finns
+några överstyrningar, eller inga motsvarar mönstret, kommer
+\fBdpkg\-statoverride\fP avslutas med statuskod 1.
+.TP 
+\fB\-\-help\fP
+Visar hjälpskärm och avslutar.
+.TP 
+\fB\-\-version\fP
+Visar version och avslutar.
+.
+.SH FLAGGOR
+.TP 
+\fB\-\-admindir\fP\fI katalog\fP
+Ändra katalog för dpkg\-databasen där statoverride\-filen också lagras. Förval
+är \fI/var/lib/dpkg\fP.
+.TP 
+\fB\-\-force\fP
+Tvinga ett kommando, även om en säkerhetskontroll annars skulle förhindra
+det. Detta behövs för att överstyra en befintlig överstyrning.
+.TP 
+\fB\-\-update\fP
+Försök att omedelbart ändra filen·om·den·finns till den nya ägaren och
+läget.
+.TP 
+\fB\-\-quiet\fP
+Var mindre pratsom om vad som görs.
+.
+.SH FILER
+.TP 
+\fI/var/lib/dpkg/statoverride\fP
+Fil som innehåller den aktuella listan över statöverstyrningar på
+systemet. Den finns i dpkg:s administrationskatalog, tillsammans med andra
+filer som är viktiga för dpkg, som "status" och "available".
+.br
+Observera: \fBdpkg\-statoverride\fP bevarar den gamla upplagan av filen, med
+tillägget "\-old" innan den ersätts med den nya.
+.
+.SH "SE ÄVEN"
+\fBdpkg\fP(1).
+.
+.SH FÖRFATTARE
+Upphovsrättsskyddat © 2000 Wichert Akkerman
+.sp
+Detta är fri programvara; se GNU General Public License version 2 eller
+senare för kopieringsvillkor. Det finns INGEN GARANTI.
+.SH "ÖVERSÄTTNING"
+Peter Krefting och Daniel Nylander.

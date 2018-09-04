@@ -1,0 +1,289 @@
+# Kodi Media Center language file
+# Addon Name: MythTV PVR Client
+# Addon id: pvr.mythtv
+# Addon Provider: Christian Fetzer, Jean-Luc Barrière
+msgid ""
+msgstr ""
+"Project-Id-Version: KODI Main\n"
+"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kodi Translation Team\n"
+"Language-Team: Finnish (Finland) (http://www.transifex.com/projects/p/kodi-main/language/fi_FI/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fi_FI\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#30000"
+msgid "MythTV Backend Hostname or IP"
+msgstr "MythTV-taustaosan konenimi tai IP"
+
+msgctxt "#30001"
+msgid "MythTV Backend Port"
+msgstr "MythTV-taustaosan portti"
+
+msgctxt "#30002"
+msgid "MythTV Database Username"
+msgstr "MythTV-tietokannan käyttäjänimi"
+
+msgctxt "#30003"
+msgid "MythTV Database Password"
+msgstr "MythTV-tietokannan salasana"
+
+msgctxt "#30004"
+msgid "MythTV Database Databasename"
+msgstr "MythTV-tietokannan tietokantanimi"
+
+msgctxt "#30005"
+msgid "Include more debug information in the log file"
+msgstr "Sisällytä enemmän debug tietoa lokitiedostoon"
+
+msgctxt "#30006"
+msgid "Enable Live TV"
+msgstr "Live TV käytössä"
+
+msgctxt "#30010"
+msgid "Prefer recording and stop Live TV"
+msgstr "Suosi tallennuksia ja pysäytä Live TV"
+
+msgctxt "#30012"
+msgid "MythTV Backend Ethernet address (WOL)"
+msgstr "MythTV:n taustaosan ethernet osoite (WOL)"
+
+msgctxt "#30013"
+msgid "MythTV Backend Port for API services"
+msgstr "MythTV:n taustaosan portti API palveluille"
+
+msgctxt "#30014"
+msgid "MythTV Security Pin for API services"
+msgstr "MythTV Turva PIN API palveluille"
+
+msgctxt "#30019"
+msgid "General"
+msgstr "Yleinen"
+
+msgctxt "#30020"
+msgid "Template provider"
+msgstr "Väliaikainen tarjoaja"
+
+msgctxt "#30021"
+msgid "Internal"
+msgstr "Sisäinen"
+
+msgctxt "#30022"
+msgid "MythTV"
+msgstr "MythTV"
+
+msgctxt "#30025"
+msgid "Internal template"
+msgstr "Sisäinen malli"
+
+msgctxt "#30026"
+msgid "Automatically Look Up Metadata"
+msgstr "Etsi automaattisesti metatietoja"
+
+msgctxt "#30028"
+msgid "Transcode new recordings"
+msgstr "Transkoodaa uudet tallennukset"
+
+msgctxt "#30029"
+msgid "Run User Job #1"
+msgstr "Aja käyttäjän tehtävä #1"
+
+msgctxt "#30030"
+msgid "Run User Job #2"
+msgstr "Aja käyttäjän tehtävä #2"
+
+msgctxt "#30031"
+msgid "Run User Job #3"
+msgstr "Aja käyttäjän tehtävä #3"
+
+msgctxt "#30032"
+msgid "Run User Job #4"
+msgstr "Aja käyttäjän tehtävä #4"
+
+msgctxt "#30033"
+msgid "Transcoder"
+msgstr "Transkooderi"
+
+msgctxt "#30034"
+msgid "Allow recordings to expire"
+msgstr "Salli tallennusten vanheta"
+
+msgctxt "#30049"
+msgid "Recording template"
+msgstr "Tallennusmalli"
+
+msgctxt "#30050"
+msgid "Advanced"
+msgstr "Lisäasetukset"
+
+msgctxt "#30053"
+msgid "Tuning delay (sec)"
+msgstr "Viritysviive (sek)"
+
+msgctxt "#30054"
+msgid "Group recordings by title"
+msgstr "Ryhmitä tallennukset nimien perusteella"
+
+msgctxt "#30055"
+msgid "Always"
+msgstr "Aina"
+
+msgctxt "#30056"
+msgid "Only for series"
+msgstr "Vain sarjoihin"
+
+msgctxt "#30057"
+msgid "Never"
+msgstr "Ei koskaan"
+
+msgctxt "#30059"
+msgid "Always"
+msgstr "Aina"
+
+msgctxt "#30060"
+msgid "Dialog"
+msgstr "Dialogi"
+
+msgctxt "#30061"
+msgid "Never"
+msgstr "Ei koskaan"
+
+msgctxt "#30062"
+msgid "Block backend shutdown"
+msgstr "Estä taustaosan sammutus"
+
+msgctxt "#30063"
+msgid "Enable channel icons"
+msgstr "Käytä kanavakuvakkeita"
+
+msgctxt "#30065"
+msgid "Limit channel tuning attempts"
+msgstr "Rajoita kanavanhaku yritykset"
+
+msgctxt "#30110"
+msgid "Enabling EDL"
+msgstr "Ota EDL käyttöön"
+
+msgctxt "#30112"
+msgid "Connection failed"
+msgstr "Yhteys epäonnistui"
+
+msgctxt "#30113"
+msgid "Do you want to retry ?"
+msgstr "Haluatko yrittää uudelleen?"
+
+msgctxt "#30302"
+msgid "Connection to MythTV backend lost"
+msgstr "Yhteys MythTv:hen katkennut"
+
+msgctxt "#30303"
+msgid "Connection to MythTV restored"
+msgstr "Yhteys MythTV:hen palautettu"
+
+msgctxt "#30304"
+msgid "No response from MythTV backend"
+msgstr "MythTv ei vastaa"
+
+msgctxt "#30305"
+msgid "Channel unavailable"
+msgstr "Kanava ei ole saatavilla"
+
+msgctxt "#30306"
+msgid "Recorder unavailable"
+msgstr "Tallennin ei saatavilla"
+
+msgctxt "#30309"
+msgid "Not recording"
+msgstr "Ei tallenna"
+
+msgctxt "#30310"
+msgid "Enabled"
+msgstr "Käytössä"
+
+msgctxt "#30311"
+msgid "Disabled"
+msgstr "Ei käytössä"
+
+msgctxt "#30312"
+msgid "No broadcast found"
+msgstr "Lähetystä ei löytynyt"
+
+msgctxt "#30411"
+msgid "Delete and re-record"
+msgstr "Poista ja uudelleentallenna"
+
+msgctxt "#30412"
+msgid "Keep LiveTV recording"
+msgstr "Pidä LiveTV tallennus"
+
+msgctxt "#30422"
+msgid "Refresh cache for channel icons"
+msgstr "Päivitä kanavalogojen välimuisti"
+
+msgctxt "#30424"
+msgid "Show status of scheduling"
+msgstr "Näytä ajastusten tila"
+
+msgctxt "#30452"
+msgid "Upcoming"
+msgstr "Tuleva"
+
+msgctxt "#30454"
+msgid "Don't record"
+msgstr "Älä tallenna"
+
+msgctxt "#30460"
+msgid "Manual"
+msgstr "Manuaalisesti"
+
+msgctxt "#30461"
+msgid "Record one"
+msgstr "Tallenna yksi"
+
+msgctxt "#30462"
+msgid "Record weekly"
+msgstr "Tallenna viikoittain"
+
+msgctxt "#30463"
+msgid "Record daily"
+msgstr "Tallenna päivittäin"
+
+msgctxt "#30464"
+msgid "Record all"
+msgstr "Tallenna kaikki"
+
+msgctxt "#30465"
+msgid "Record this"
+msgstr "Tallenna tämä"
+
+msgctxt "#30466"
+msgid "Record series"
+msgstr "Tallenna sarjoja"
+
+msgctxt "#30467"
+msgid "Search keyword"
+msgstr "Etsi avainsana"
+
+msgctxt "#30468"
+msgid "Search people"
+msgstr "Etsi ihmisiä"
+
+msgctxt "#30506"
+msgid "Recordings never expire"
+msgstr "Tallennukset eivät koskaan vanhene"
+
+msgctxt "#30507"
+msgid "Allow recordings to expire"
+msgstr "Salli tallennusten vanheta"
+
+msgctxt "#30508"
+msgid "Keep up to %d recordings"
+msgstr "Pidä enintään %d tallennusta"
+
+msgctxt "#30509"
+msgid "Keep %d newest and expire old"
+msgstr "Pidä %d uusinta ja poista vanha"

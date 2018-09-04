@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="Restore Backup">
+ 		<setting id="dummy" label="Click here to restore your backup" type="action" action="XBMC.RunScript(special://home/addons/plugin.video.sportsdevil.launcher/restore.py)" option="close"/>
+		<setting type="lsep" label="[CR]"/>
+		<setting type="lsep" label="This will restore your previous version of SportsDevil if one exists."/>
+		<setting type="lsep" label="[COLOR=red][B]IMPORTANT:[/COLOR][/B]"/>
+		<setting type="lsep" label="If you don't disable auto updates or remove the repo you got SD from"/>
+		<setting type="lsep" label="Kodi WILL auto-update your SportsDevil addon again."/>
+		<setting type="lsep" label="[CR]"/>
+		<setting type="lsep" label="[COLOR=blue]SportsDevil IS NOT hosted on noobsandnerds repo so DO NOT uninstall that one![/COLOR]"/>
+    </category>
+</settings>

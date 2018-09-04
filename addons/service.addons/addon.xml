@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<addon id="skin.refocus” name=“refocus” version=“3.2.5” provider-name=“Jeroen”>
+
+<requires>
+     <import addon=“xbmc.python” version=“2.1.0”/>
+</requires>
+
+<extension point="xbmc.service" library="service.py" start="startup" />
+
+<extension point="xbmc.addon.metadata">
+
+<platform>all</platform>
+
+<summary lang="en"></summary>
+
+</extension>
+
+</addon>

@@ -1,0 +1,59 @@
+Source: dpkg
+Section: admin
+Priority: required
+Maintainer: Dpkg Developers <debian-dpkg@lists.debian.org>
+Uploaders: Frank Lichtenheld <djpig@debian.org>,
+ Guillem Jover <guillem@debian.org>, Raphael Hertzog <hertzog@debian.org>
+Origin: debian
+Bugs: debbugs://bugs.debian.org
+Homepage: http://wiki.debian.org/Teams/Dpkg
+Vcs-Browser: http://git.debian.org/?p=dpkg/dpkg.git
+Vcs-Git: git://git.debian.org/git/dpkg/dpkg.git
+Standards-Version: 3.7.3
+Build-Depends: debhelper (>= 4.1.81), pkg-config, po4a (>= 0.33.1),
+ libncursesw5-dev, zlib1g-dev (>= 1:1.1.3-19.1), libbz2-dev, flex,
+ libselinux1-dev (>= 1.28-4) [!hurd-i386 !kfreebsd-i386 !kfreebsd-amd64],
+ libtimedate-perl, libio-string-perl
+
+Package: dpkg
+Architecture: any
+Essential: yes
+Pre-Depends: ${shlibs:Depends}, coreutils (>= 5.93-1), lzma
+Conflicts: sysvinit (<< 2.82-1), dpkg-iasearch (<< 0.11),
+ dpkg-dev (<< 1.14.16), apt (<< 0.7.7), aptitude (<< 0.4.7-1)
+Replaces: manpages-de (<= 0.4-3), manpages-pl (<= 20051117-1)
+Suggests: apt
+Description: Debian package management system
+ This package provides the low-level infrastructure for handling the
+ installation and removal of Debian software packages.
+ .
+ For Debian package development tools, install dpkg-dev.
+
+Package: dpkg-dev
+Section: utils
+Priority: optional
+Architecture: all
+Depends: dpkg (>= 1.14.6), perl5, perl-modules, cpio (>= 2.4.2-2), bzip2, lzma,
+ patch (>= 2.2-1), make, binutils, libtimedate-perl
+Recommends: gcc | c-compiler, build-essential
+Suggests: gnupg, debian-keyring
+Conflicts: dpkg-cross (<< 2.0.0), devscripts (<< 2.10.26)
+Replaces: manpages-pl (<= 20051117-1)
+Description: Debian package development tools
+ This package provides the development tools (including dpkg-source)
+ required to unpack, build and upload Debian source packages.
+ .
+ Most Debian source packages will require additional tools to build;
+ for example, most packages need make and the C compiler gcc.
+
+Package: dselect
+Priority: optional
+Architecture: any
+Depends: ${shlibs:Depends}, dpkg (>= 1.13.1)
+Replaces: dpkg (<< 1.10.3)
+Description: Debian package management front-end
+ dselect is a high-level interface for managing the installation and
+ removal of Debian software packages.
+ .
+ Many users find dselect intimidating and new users may prefer to use
+ apt-based user interfaces.

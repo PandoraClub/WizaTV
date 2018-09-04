@@ -1,0 +1,2 @@
+jbig_tab.o: jbig_tab.c
+jbig_tab.c :

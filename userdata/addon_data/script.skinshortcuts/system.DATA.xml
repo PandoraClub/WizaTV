@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+	<shortcut>
+		<defaultID />
+		<label>Clear Cache</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(Programs,"plugin://plugin.video.xbmchubmaintenance/?url=url&amp;mode=4&amp;name=Clear+Cache&amp;iconimage=http%3A%2F%2Ftribeca.tvaddons.ag%2Ftools%2Fmaintenance%2Fthumbs%2Fclearcache.jpg&amp;fanart=C%3A%5CUsers%5CWizeTV%5CAppData%5CRoaming%5CKodi%5Caddons%5Cplugin.video.xbmchubmaintenance%5Cfanart.jpg",return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>settings</defaultID>
+		<label>10004</label>
+		<label2>Settings</label2>
+		<icon>DefaultIconSettings.png</icon>
+		<thumb />
+		<action>ActivateWindow(Settings)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>Program Extensions</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(AddonBrowser)</action>
+	</shortcut>
+</shortcuts>

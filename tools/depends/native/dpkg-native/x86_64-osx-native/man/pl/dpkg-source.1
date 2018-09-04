@@ -1,0 +1,468 @@
+.\" Authors: Ian Jackson, Raphael Hertzog
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH dpkg\-source 1 2008\-03\-16 "Projekt Debiana" "programy pomocnicze dpkg"
+.SH NAZWA
+dpkg\-source \- narzêdzia do zarz±dzania ¼ród³owymi pakietami Debiana (.dsc)
+.
+.SH SK£ADNIA
+\fBdpkg\-source\fP [\fIopcje\fP] \fIpolecenie\fP
+.
+.SH OPIS
+\fBdpkg\-source\fP tworzy i rozpakowuje ¼ród³owe archiwa (pakiety) Debiana.
+
+¯adne z tych poleceñ nie pozwala na ³±czenie wielu opcji w jedn±, nie
+pozwalaj± równie¿ na podawanie warto¶ci opcji jako oddzielnego parametru.
+.
+.SH POLECENIA
+.TP 
+\fB\-x \fP\fInazwa\-pliku\fP\fB.dsc \fP[\fIkatalog\-wyj¶ciowy\fP]
+Rozpakowanie pakietu ¼ród³owego. Wymagane jest podanie jednego argumentu nie
+bêd±cego opcj±, nazwy pliku kontrolny pakietu ¼ród³owego (\fB.dsc\fP). Ponadto
+mo¿e byæ podany drugi opcjonalny argument niebêd±cy opcj±, okre¶laj±cy
+katalog, do którego pakiet ¼ród³owy ma zostaæ rozpakowany (katalog ten nie
+mo¿e istnieæ). Je¶li nie podano katalogu wyj¶ciowego, pakiet ¼ród³owy jest
+rozpakowywany do katalogu o nazwie \fI¼ród³o\fP\-\fIwersja\fP w ramach bie¿±cego
+katalogu roboczego.
+
+\fBdpkg\-source\fP odczyta nazwy innych plików tworz±cych pakiet ¼ród³owy z
+pliku kontrolnego; zak³adane jest, ¿e s± one w tym samym katalogu co
+\&\fB.dsc\fP.
+
+Pliki w rozpakowanym pakiecie bêd± mieæ uprawnienia i w³a¶ciciela zgodnie z
+typowymi, oczekiwanymi warto¶ciami jak przy zwyk³ym tworzeniu plików i
+katalogów \- katalogi i pliki wykonywalne bêd± mieæ prawa 0777, za¶ zwyk³e
+pliki bêd± mieæ prawa 0666 (w obu przypadkach modyfikowane przez umask
+rozpakowuj±cego). Ponadto je¶li katalog nadrzêdny ma ustawiony bit setgid,
+rozpakowane katalogi tak¿e bêd± go mieæ, za¶ wszystkie pliki i katalogi
+przejm± ustawienia grupy katalogu nadrzêdnego.
+
+Je¶li pakiet ¼ród³owy u¿ywa niestandardowego formatu (aktualnie oznacza to
+wszystkie formaty poza "1.0"), jego nazwa bêdzie umieszczona w pliku
+\fBdebian/source/format\fP. Dziêki temu przy nastêpnych budowach pakietu
+¼ród³owego bêdzie domy¶lnie u¿ywany ten sam format.
+
+.TP 
+\fB\-b\fP, \fIkatalog\fP [\fIparametry\-zale¿ne\-od\-formatu\fP]
+Budowanie pakietu ¼ród³owego. Pierwszy argument nie bêd±cy opcj± przyjmowany
+jest jako nazwa katalogu zdebianizowanego drzewa ze ¼ród³ami (czyli
+zawieraj±cego podkatalog "debian" i byæ mo¿e zmiany w stosunku do
+oryginalnych plików). Zale¿nie od formatu pakietu ¼ród³owego u¿ywanego przy
+budowaniu pakietu, mog± byæ równie¿ akceptowane dodatkowe parametry.
+
+\fBdpkg\-source\fP bêdzie budowaæ pakiet ¼ród³owy z u¿yciem pierwszego
+dzia³aj±cego formatu z nastêpuj±cej listy, w kolejno¶ci: format okre¶lony w
+polu \fIFormat\fP w pliku \fBdebian/control\fP, format(y) okre¶lone za pomoc±
+opcji \fI\-\-format\fP, format okre¶lony w pliku \fBdebian/source/format\fP, "1.0",
+"3.0 (native)". Poni¿ej znajduje siê wyczerpuj±cy opis ró¿nych formatów
+pakietów ¼ród³owych.
+
+.TP 
+\fB\-h\fP, \fB\-\-help\fP
+Wy¶wietla informacjê o u¿ytkowaniu i koñczy dzia³anie.
+.TP 
+\fB\-\-version\fP
+Wy¶wietla informacjê o wersji i pomy¶lnie koñczy dzia³anie.
+.
+.SH "OGÓLNE OPCJE BUDOWANIA"
+.TP 
+\fB\-c\fP\fIplik_kontrolny\fP
+Okre¶la g³ówny plik kontrolny ¼róde³, z którego bêd± czytane
+informacje. Domy¶lnie jest to \fBdebian/control\fP. Je¶li podano wzglêdn±
+¶cie¿kê, to jest ona interpretowana od najwy¿szego poziomu katalogu drzewa
+ze ¼ród³ami.
+.TP 
+\fB\-l\fP\fIdziennik_zmian\fP
+Okre¶la dziennik zmian, z którego bêd± czytane informacje. Domy¶lnie jest to
+\fBdebian/changelog\fP. Je¶li podano wzglêdn± ¶cie¿kê, to jest ona
+interpretowana od najwy¿szego poziomu katalogu drzewa ze ¼ród³ami.
+.TP 
+\fB\-F\fP\fIformat_dziennika_zmian\fP
+Okre¶la format dziennika zmian. Domy¶lnie format jest czytany ze specjalnej
+linii znajduj±cej siê przy koñcu pliku lub \- je¶li taka linia nie istnieje \-
+u¿ywany jest standardowy format Debiana.
+.TP 
+\fB\-\-format=\fP\fIwarto¶æ\fP
+Do budowy pakietu ¼ród³owego próbowany jest najpierw podany format. Je¶li
+opcja ta jest u¿yta wielokrotnie, s± próbowane w podanej kolejno¶ci. Nie
+nadpisuje to ¿adnego jawnego pola \fIFormat\fP z \fBdebian/control\fP ale
+nadpisuje ka¿dy format podany w pliku \fBdebian/source/format\fP.
+.TP 
+\fB\-V\fP\fInazwa\fP\fB=\fP\fIwarto¶æ\fP
+\fBPrzestarza³e\fP. Ustawia zmienn± podstawienia wyj¶cia. Szczegó³owy opis
+podstawiania wyj¶cia znajduje siê w \fBdeb\-substvars\fP(5).
+.TP 
+\fB\-T\fP\fIplik_zmiennych_podst\fP
+\fBPrzestarza³e\fP. Czyta zmienne podstawiania z \fIpliku_zmiennych_podst\fP;
+domy¶lnie nie czyta ¿adnego pliku.
+.TP 
+\fB\-D\fP\fIpole\fP\fB=\fP\fIwarto¶æ\fP
+Nadpisuje lub dodaje wyj¶ciowe pole pliku kontrolnego.
+.TP 
+\fB\-U\fP\fIpole\fP
+Usuwa wyj¶ciowe pole pliku kontrolnego.
+.TP 
+\fB\-Z\fP\fIkompresja\fP
+Okre¶la rodzaj kompresji u¿ywanej podczas tworzenia plików (archiwów tar
+oraz plików ró¿nic). Uwaga: opcja ta nie spowoduje, ¿e istniej±ce archiwa
+tar bêd± ponownie kompresowane, lecz ma zastosowanie tylko do plików nowo
+tworzonych. Obs³ugiwane warto¶ci: \fIgzip\fP, \fIbzip2\fP oraz \fIlzma\fP. \fIgzip\fP
+jest warto¶ci± domy¶ln±.
+.TP 
+\fB\-z\fP\fIpoziom\fP
+U¿ywany poziom kompresowania. Podobnie jak w wypadki \fB\-Z\fP, dotyczy tylko
+nowo tworzonych plików. Obs³ugiwane warto¶ci: \fI1\fP do \fI9\fP, \fIbest\fP oraz
+\fIfast\fP. \fI9\fP jest warto¶ci± domy¶ln±.
+.TP 
+\fB\-i\fP[\fIwyra¿_regularne\fP]
+Nale¿y podaæ wyra¿enie regularne Perla pasuj±ce do listy plików, które maj±
+nie byæ uwzglêdniane podczas tworzenia pliku ró¿nic (lista ta jest tworzona
+poleceniem find). (Je¶li za¶ pakiet ¼ród³owy jest budowany w formacie 3.0 z
+u¿yciem systemu kontroli wersji, jest ono u¿ywane to ignorowania
+niezatwierdzonych plików.) \fB\-i\fP podane bez ¿adnych argumentów w³±cza tê
+opcjê, domy¶lnie odfiltrowuj±c pliki kontrolne i katalogi
+najpopularniejszych systemów kontroli wersji, kopie zapasowe, pliki wymiany
+oraz katalogi wyj¶ciowe libtoola. Tylko jedno wyra¿enie regularne mo¿e byæ
+aktywne, je¶li opcjê \fB\-i\fP podano kilkakrotnie, to tylko ostatnia z nich
+bêdzie wziêta pod uwagê.
+
+Jest to bardzo przydatne do wykluczania nieistotnych plików, które zosta³yby
+w³±czone do pliku ró¿nic (diff). Przyk³adem mo¿e byæ sytuacja, gdzie kod
+¼ród³owy jest zarz±dzany przez system kontroli wersji i kod pobrany z
+repozytorium ma byæ u¿yty do zbudowania pakietu ¼ród³owego, bez w³±czania w
+to dodatkowych plików i katalogów zwi±zanych z obs³ug± repozytorium
+(np. CVS/, .cvsignore, .svn/). Domy¶lne wyra¿enie regularne jest ju¿ ca³kiem
+obszerne, ale je¶li istnieje potrzeba zast±pienia go, nale¿y zauwa¿yæ ¿e
+domy¶lnie mo¿e ono pasowaæ do dowolnej czê¶ci ¶cie¿ki \- dlatego w celu
+dopasowania do pocz±tku nazwy pliku lub jedynie pe³nych nazw plików,
+konieczne jest samodzielne u¿ycie odpowiednich wyra¿eñ (np. "(^|/)", czy
+"($|/)").
+.TP 
+\fB\-I\fP [\fIwzorzec\-pliku\fP]
+Po podaniu tej opcji, wzorzec bêdzie przekazany jako parametr dla \-\-exclude
+polecenia \fBtar\fP(1), u¿ywanego do stworzenia archiwum .orig.tar lub .tar. Na
+przyk³ad, \-ICVS powoduje, ¿e tar bêdzie pomija³ katalogi CVS przy tworzeniu
+pliku .tar.gz. Ta opcja mo¿e byæ podana wielokrotnie w celu okre¶lenia wielu
+wzorców wykluczeñ.
+
+Samo \fB\-I\fP podane bez ¿adnych argumentów ustawia opcje \-\-exclude, domy¶lnie
+odfiltrowuj±c pliki kontrolne i katalogi najpopularniejszych systemów
+kontroli wersji, kopie zapasowe, pliki wymiany oraz katalogi wyj¶ciowe
+libtoola.
+.PP
+\fBUwaga:\fP Mimo, ¿e maj± podobne przeznaczenie, opcje \fB\-i\fP oraz \fB\-I\fP maj±
+ca³kiem odmienn± sk³adniê i semantykê. \fB\-i\fP mo¿e byæ podana tylko raz i
+przyjmuje wyra¿enie regularne Perla, które jest dopasowywane do pe³nej
+¶cie¿ki wzglêdnej ka¿dego pliku. \fB\-I\fP mo¿e byæ podana wielokrotnie i
+przyjmuje wzorzec nazw plików wraz ze znakami specjalnymi pow³oki
+(wildcards). Wzorzec jest dopasowywany do pe³nej ¶cie¿ki wzglêdnej, ale
+równie¿ indywidualnie do ka¿dej czê¶ci ¶cie¿ki. Pe³na semantyka opcji
+\-\-exclude programu tar jest nieco skomplikowana, proszê sprawdziæ
+http://www.gnu.org/software/tar/manual/tar.html#wildcards w celu uzyskania
+dok³adnych informacji.
+
+Domy¶lne wyra¿enia regularne i wzorce dla obu opcji mo¿na znale¼æ w wyj¶ciu
+polecenia \fB\-\-help\fP.
+.SH "OGÓLNE OPCJE ROZPAKOWYWANIA"
+.TP 
+\fB\-\-no\-copy\fP
+Nie kopiuje oryginalnych archiwów obok rozpakowanego pakietu ¼ród³owego.
+.TP 
+\fB\-\-no\-check\fP
+Bez weryfikacji podpisów i sprawdzania sum kontrolnych przed rozpakowaniem.
+
+.SH "FORMATY PAKIETÓW ¬RÓD£OWYCH"
+.SS "Format: 1.0"
+Pakiet ¼ród³owy w tym formacie sk³ada siê z pliku \fB.orig.tar.gz\fP
+powi±zanego z plikiem ró¿nic \fB.diff.gz\fP, lub z pojedynczego pliku
+\&\fB.tar.gz\fP (w takim przypadku mówi siê, ¿e pakiet jest \fInatywny\fP).
+
+\fBRozpakowywanie\fP
+
+Rozpakowanie pakietu natywnego to proste rozpakowanie pojedynczego pliku
+archiwum w katalogu docelowym. Rozpakowanie pakietu w stylu Debiana
+(non\-native) odbywa siê poprzez najpierw rozpakowanie pliku \fB.orig.tar.gz\fP
+a nastêpnie na³o¿enia ³atek zawartych w pliku \fB.diff.gz\fP. Czasy modyfikacji
+wszystkich ³atanych plików s± ustawiane na warto¶æ odpowiadaj±c± czasowi
+rozpakowania pakietu ¼ród³owego (zapobiega to przesuniêciom czasów, które
+prowadz± do problemów przy ³ataniu plików generowanych automatycznie). Plik
+ró¿nic (diff) mo¿e tworzyæ nowe pliki (ca³y katalog "debian" jest tak
+tworzony), ale nie mo¿e usuwaæ plików (pozostawiane s± puste pliki o zerowej
+d³ugo¶ci).
+
+\fBBudowanie\fP
+
+Budowanie pakietu natywnego to proste stworzenie pojedynczego pliku archiwum
+z katalogu ¼róde³. Budowanie pakietu w stylu Debiana (non\-native) obejmuje
+rozpakowanie oryginalnego archiwum do oddzielnego katalogu z przyrostkiem
+".orig" i regeneracjê pliku \fB.diff.gz\fP poprzez porównanie \fIkatalogu\fP
+pakietu ¼ród³owego z katalogiem ".orig".
+
+.TP 
+\fBOpcje budowania (z \-b):\fP
+.PP
+Buduje pakiet ¼ród³owy. Nale¿y podaæ jeden lub dwa argumenty, nie bêd±ce
+opcjami. Pierwszym z nich jest nazwa katalogu zawieraj±cego rozpakowane
+¼ród³a. Je¿eli podano drugi argument, to powinien on byæ nazw± oryginalnego
+katalogu ze ¼ród³ami lub archiwum tar albo pustym ³añcuchem znaków, je¶li
+pakiet jest specyficzny dla Debiana i nie ma pliku ró¿nic. Je¿eli nie podano
+drugiego argumentu, to \fBdpkg\-source\fP \- w zale¿no¶ci od argumentów \fB\-sX\fP \-
+bêdzie szuka³ albo archiwum tar z oryginalnymi ¼ród³ami
+\fIpakiet\fP\fB_\fP\fIwersja_upstream\fP\fB.orig.tar.\fP\fIrozszerzenie\fP (gdzie
+\fIrozszerzenie\fP jest jednym z \fBgz\fP,\fBbz2\fP lub \fBlzma\fP),  albo katalogu z
+oryginalnymi ¼ród³ami \fIkatalog\fP.orig.
+
+\fB\-sa\fP, \fB\-sp\fP, \fB\-sk\fP, \fB\-su\fP oraz \fB\-sr\fP nie nadpisz± istniej±cych
+archiwów tar lub katalogów. Je¶li jest to wymagane, nale¿y u¿yæ \fB\-sA\fP,
+\fB\-sP\fP, \fB\-sK\fP, \fB\-sU\fP i \fB\-sR\fP.
+.TP 
+\fB\-sk\fP
+Okre¶la, ¿e nale¿y spodziewaæ siê oryginalnych ¼róde³ w postaci archiwum
+tar, domy¶lnie
+\fIpakiet\fP\fB_\fP\fIwersja\-autora\-pakietu\fP\fB.orig.tar.\fP\fIrozszerzenie\fP.
+Pozostawia oryginalne ¼ród³a w tym samym miejscu jako plik tar lub kopiuje
+je do bie¿±cego katalogu je¶li jeszcze ich tam nie ma. Archiwum bêdzie
+rozpakowane do \fIkatalogu\fP\fB.orig\fP w celu utworzenia pliku ró¿nic (diff).
+.TP 
+\fB\-sp\fP
+Jak \fB\-sk\fP, ale ponownie usunie katalog po zakoñczeniu.
+.TP 
+\fB\-su\fP
+Okre¶la, ¿e nale¿y spodziewaæ siê oryginalnych ¼róde³ w postaci katalogu,
+domy¶lnie \fIpakiet\fP\fB\-\fP\fIwersja\-autora\-pakietu\fP\fB.orig\fP, na podstawie
+którego \fBdpkg\-source\fP utworzy nowe archiwum oryginalnych ¼róde³.
+.TP 
+\fB\-sr\fP
+Jak \fB\-su\fP, jednak¿e usunie katalog po jego u¿yciu.
+.TP 
+\fB\-ss\fP
+Okre¶la, ¿e oryginalne ¼ród³a s± dostêpne zarówno jako katalog oraz jako
+archiwum tar. \fBdpkg\-source\fP bêdzie utworzy plik ró¿nic na podstawie
+katalogu, ale u¿yje pliku tar do utworzenia pliku \fB.dsc\fP. Nale¿y u¿ywaæ tej
+opcji z rozwag± \- je¶li katalog oraz plik tar sobie nie odpowiadaj±,
+zostanie wygenerowane niepoprawne archiwum ¼ród³owe.
+.TP 
+\fB\-sn\fP
+Okre¶la aby nie szukaæ ¿adnych oryginalnych ¼róde³, ani nie generowaæ pliku
+ró¿nic. Je¶li jest podany drugi argument, musi on byæ pustym ci±giem
+znaków. Jest to u¿ywane dla pakietów specyficznych dla Debiana, które nie
+maj± oddzielnych ¼róde³ i w zwi±zku z tym nie maj± debianizuj±cych plików
+ró¿nic (diff).
+.TP 
+\fB\-sa\fP lub \fB\-sA\fP
+Okre¶la, ¿e nale¿y szukaæ oryginalnych ¼róde³ w postaci archiwum tar lub
+katalogu. Je¶li podano drugi argument mo¿e wskazywaæ on plik lub katalog,
+albo byæ pustym ci±giem znaków (co jest równowa¿ne u¿yciu \fB\-sn\fP). Je¶li
+znaleziony zostanie plik tar, bêdzie on rozpakowany w celu utworzenia pliku
+ró¿nic, po czym zostanie on usuniêty (co jest równowa¿ne \fB\-sp\fP). Je¶li
+zostanie znaleziony katalog, bêdzie on spakowany w celu utworzenia archiwum
+¼ród³owego, po czym zostanie on usuniêty (co jest równowa¿ne \fB\-sr\fP).
+.TP 
+\fBOpcje rozpakowywania (z \-x):\fP
+.PP
+We wszystkich przypadkach, istniej±ce oryginalne drzewo ze ¼ród³ami bêdzie
+usuniête.
+.TP 
+\fB\-sp\fP
+Je¶li zostanie u¿yta przy wypakowywaniu, wtedy oryginalne ¼ród³a (je¶li s±)
+pozostan± w formie archiwum tar. Je¶li archiwum nie ma jeszcze w bie¿±cym
+katalogu, lub gdy istnieje ale jest to inny plik, zostanie tam
+skopiowane. (\fBJest to zachowanie domy¶lne\fP).
+.TP 
+\fB\-su\fP
+Rozpakowuje oryginalne drzewo ¼róde³ programu.
+.TP 
+\fB\-sn\fP
+Zapewnia, ¿e oryginalne ¼ród³a nie bêd± kopiowane do bie¿±cego katalogu ani
+rozpakowywane. We wszystkich przypadkach, istniej±cy katalog ze ¼ród³ami
+bêdzie usuniêty z bie¿±cego katalogu.
+.PP
+Wszystkie spo¶ród opcji \fB\-s\fP\fI\-X\fP siê wzajemnie wykluczaj±. Je¶li zostanie
+podana wiêcej ni¿ jedna, to zostanie u¿yta ostatnia z nich.
+.
+.SS "Format: 2.0"
+Znany równie¿ jako wig&pen. Ten format nie jest zalecany do szerokiego
+stosowania, zastêpuje go format "3.0 (quilt)". Wig&pen by³ pierwsz±
+specyfikacj± nowej generacji formatu pakietów ¼ród³owych.
+
+Zachowanie dla tego formatu jest takie samo jak dla "3.0 (quilt)" z t±
+ró¿nic±, ¿e nie u¿ywa jawnej listy ³atek. Wszystkie pliki w katalogu
+\fBdebian/patches/\fP pasuj±ce do wyra¿enia regularnego Perla \fB[\ew\-]+\fP musz±
+byæ prawid³owymi ³atkami: s± one nak³adane podczas rozpakowywania.
+
+Podczas budowania nowego pakietu ¼ród³owego, wszystkie zmiany w stosunku do
+kodu ¼ród³owego pochodz±cego od autorów programu s± zapisywane w ³atce o
+nazwie \fBzz_debian\-diff\-auto\fP.
+.
+.SS "Format: 3.0 (native)"
+Ten format jest rozszerzeniem natywnego formatu pakietów zdefiniowanego w
+formacie w wersji 1.0. Obs³uguje wszystkie metody kompresji i domy¶lnie
+ignoruje pliki i katalogi specyficzne dla systemów kontroli wersji, jak
+równie¿ wiele typów plików tymczasowych (proszê sprawdziæ opis domy¶lnej
+warto¶ci opcji \fB\-I\fP w informacjach uzyskiwanych poleceniem \fB\-\-help\fP).
+.
+.SS "Format: 3.0 (quilt)"
+A source package in this format contains at least an original tarball
+(\fB.orig.tar.\fP\fIext\fP where \fIext\fP can be \fBgz\fP, \fBbz2\fP and \fBlzma\fP) and a
+debian tarball (\fB.debian.tar.\fP\fIext\fP). It can also contain additional
+original tarballs (\fB.orig\-\fP\fIcomponent\fP\fB.tar.\fP\fIext\fP).  \fIcomponent\fP can
+only contain alphanumeric characters and dashes ("\-").
+.PP
+\fBRozpakowywanie\fP
+.PP
+Najpierw rozpakowywane jest g³ówne oryginalne archiwum, nastêpnie
+rozpakowywane s± dodatkowe oryginalne archiwa do podkatalogów nazwanych od
+czê¶ci \fIkomponent\fP z ich nazwy pliku (istniej±ce katalogi o takich nazwach
+s± zamieniane). Na koñcu rozpakowywane jest archiwum debian, po uprzednim
+usuniêciu katalogu \fBdebian\fP (je¶li taki istnia³). Nale¿y zauwa¿yæ, ¿e
+archiwum debian musi zawieraæ podkatalog \fBdebian\fP, ale mo¿e równie¿
+zawieraæ pliki binarne poza tym katalogiem (proszê sprawdziæ opcjê
+\fB\-\-include\-binaries\fP).
+.PP
+Nastêpnie nak³adane s± wszystkie ³atki wymienione w
+\fBdebian/patches/debian.series\fP lub \fBdebian/patches/series\fP. Je¶li jest
+u¿yty pierwszy z tych plików a drugi z nich nie istnieje (lub jest ³±czem
+symbolicznym), wtedy ten drugi plik jest zastêpowany ³±czem symbolicznym do
+pierwszego pliku. Ma to upro¶ciæ u¿ywanie quilt do zarz±dzania zbiorem
+³atek. Nale¿y zauwa¿yæ, ¿e o ile \fBdpkg\-source\fP poprawnie przetwarza pliki
+series z podanymi jawnie opcjami programu patch (zapisanymi w ka¿dej z linii
+po nazwie pliku z ³atk± i jednej lub wiêcej spacji), to jednak ignoruje te
+opcje i zawsze oczekuje ³atek, które mo¿na na³o¿yæ u¿ywaj±c opcji \fB\-p1\fP
+programu \fBpatch\fP. Po napotkaniu takich opcji wysy³ane jest ostrze¿enie, za¶
+proces budowania prawdopodobnie siê nie powiedzie.
+.PP
+Podobnie do domy¶lnego zachowania quilt, ³atki mog± tak¿e usuwaæ pliki.
+.PP
+The file \fB.pc/applied\-patches\fP is created if some patches have been applied
+during the extraction.
+.PP
+\fBBudowanie\fP
+.PP
+Wszystkie oryginalne archiwa znalezione w bie¿±cym katalogu s± rozpakowywane
+do katalogu tymczasowego w taki sam sposób jak dla unpack, nastêpnie katalog
+debian jest kopiowany do katalogu tymczasowego i nak³adane s± wszystkie
+³atki, z wy³±czeniem jedynie \fBdebian\-changes\-\fP\fIwersja\fP. Katalog tymczasowy
+jest porównywany z katalogiem pakietu ¼ród³owego a plik ró¿nic (je¶li jest
+niepusty) jest zapisywany w
+\fBdebian/patches/debian\-changes\-\fP\fIwersja\fP. ¯adne zmiany w jakimkolwiek
+pliku binarnym nie mog± byæ odwzorowane w pliku zmian, co doprowadzi do
+niepowodzenia \- chyba, ¿e opiekun pakietu rozmy¶lnie zdecydowa³ o w³±czeniu
+tak zmodyfikowanego pliku binarnego do archiwum debian (wskazuj±c go w
+\fBdebian/source/include\-binaries\fP). Proces budowania nie powiedzie siê tak¿e
+je¶li zostan± znalezione pliki binarne w podkatalogu debian, chyba ¿e
+zosta³y one uprzednio wymienione w \fBdebian/source/include\-binaries\fP.
+
+Zaktualizowany katalog debian oraz lista zmodyfikowanych plików binarnych s±
+nastêpnie u¿ywane do powtórnego wygenerowania archiwum debian.
+
+Automatycznie wygenerowany plik ró¿nic nie zawiera zmian w plikach
+specyficznych dla systemów kontroli wersji, jak równie¿ w wielu typach
+plików tymczasowych (proszê sprawdziæ opis domy¶lnej warto¶ci opcji \fB\-i\fP w
+informacjach uzyskiwanych poleceniem \fB\-\-help\fP). W szczególno¶ci, katalog
+\&\fB.pc\fP u¿ywany przez quilt jest ignorowany podczas automatycznego
+generowania ³atki.
+
+Note: \fBdpkg\-source\fP expects the source tree to have all patches applied
+when you generate the source package.  This is not the case when the source
+tree has been obtained by unpacking a source package using the Format: 1.0
+for instance. To mitigate the problem, \fBdpkg\-source\fP will apply the patches
+by itself if it believes that they have not yet been applied. To detect this
+situation, it uses the following heuristic: it finds the list of supposedly
+unapplied patches (they are listed in the \fBseries\fP file but not in
+\&\fB.pc/applied\-patches\fP), and if the first patch in that set can be applied
+without errors, it will apply them all.  The option \fB\-\-no\-preparation\fP can
+be used to disable this behaviour.
+.PP
+\fBOpcje budowania\fP
+.TP 
+\fB\-\-allow\-version\-of\-quilt\-db=\fP\fIversion\fP
+Allow \fBdpkg\-source\fP to build the source package if the version of the quilt
+metadata is the one specified, even if \fBdpkg\-source\fP doesn't know about
+it. Effectively this says that the given version of the quilt metadata is
+compatible with the version 2 that \fBdpkg\-source\fP currently supports. The
+version of the quilt metadata is stored in \fB.pc/.version\fP.
+.TP 
+\fB\-\-include\-removal\fP
+Usuniête pliki nie bêd± ignorowane, ale bêd± w³±czone do automatycznie
+generowanej ³atki.
+.TP 
+\fB\-\-include\-timestamp\fP
+W³±czenie czasu modyfikacji w automatycznie generowanej ³atce.
+.TP 
+\fB\-\-include\-binaries\fP
+Dodanie wszystkich zmodyfikowanych plików binarnych do archiwum debian. S±
+one równie¿ dodawane do \fBdebian/source/include\-binaries\fP: dziêki temu bêd±
+domy¶lnie dodawane przy nastêpnych budowach pakietu, za¶ ta opcja nie bêdzie
+ju¿ wiêcej potrzebna.
+.TP 
+\fB\-\-no\-preparation\fP
+Nie próbuje przygotowywaæ drzewa budowania poprzez nak³adanie ³atek, które
+wyra¼nie nie s± na³o¿one.
+.PP
+\fBOpcje rozpakowywania\fP
+.TP 
+\fB\-\-skip\-patches\fP
+Nie nak³ada ³atek po skoñczeniu rozpakowywania.
+.
+.SS "Format: 3.0 (custom)"
+Ten format jest szczególny. Nie jest prawdziwym formatem pakietu ¼ród³owego,
+ale mo¿e byæ u¿yty do stworzenia pakietu ¼ród³owego zawieraj±cego dowolne
+pliki.
+.PP
+\fBOpcje budowania\fP
+.PP
+Wszystkie argumenty nie bêd±ce opcjami s± uwa¿ane za pliki, które maj± byæ
+zintegrowane z generowanym pakietem ¼ród³owym. Pliki te musz± istnieæ i
+najlepiej powinny byæ w bie¿±cym katalogu. Musi byæ podany przynajmniej
+jeden plik.
+.TP 
+\fB\-\-target\-format=\fP\fIwarto¶æ\fP
+\fBWymagane\fP. Okre¶la prawdziwy format generowanego pakietu
+¼ród³owego. Generowany plik .dsc bêdzie zawieraæ t± warto¶æ w swoim polu
+\fIFormat\fP zamiast "3.0 (custom)".
+.
+.SS "Format: 3.0 (git) oraz 3.0 (bzr)"
+Te formaty s± eksperymentalne. Generuj± pojedyncze archiwa tar zawieraj±ce
+odpowiednie repozytoria systemu kontroli wersji.
+.PP
+\fBRozpakowywanie\fP
+.PP
+Archiwum tar jest rozpakowywane i system kontroli wersji jest u¿ywany aby
+pobraæ aktualn± ga³±¼ kodu.
+.PP
+\fBBudowanie\fP
+.PP
+Nie zag³êbiaj±c siê dalej, wykonywane s± pewne testy aby upewniæ siê, czy
+nie ma ¿adnych niezatwierdzonych zmian, które nie s± ignorowane.
+.PP
+Nastêpnie czê¶æ katalogu ¼róde³ specyficzna dla systemu kontroli wersji jest
+kopiowana do katalogu tymczasowego. Przed tym katalog tymczasowy jest
+pakowany do archiwum tar i wykonywane s± ró¿ne czynno¶ci porz±dkowe, aby
+zaoszczêdziæ miejsce.
+.SH B£ÊDY
+Punkt, w którym nastêpuje nadpisywanie pól w porównaniu do pewnych
+standardowych ustawieñ pól wyj¶ciowych jest do¶æ zagmatwany.
+.SH "ZOBACZ TAK¯E"
+\fBdpkg\-deb\fP(1), \fBdpkg\fP(1), \fBdselect\fP(1).
+.
+.SH AUTORZY
+Copyright (C) 1995\-1996 Ian Jackson
+.br
+Copyright (C) 2000 Wichert Akkerman
+.br
+Copyright (C) 2008 Rapha\[:e]l Hertzog
+.sp
+Niniejszy program jest oprogramowaniem wolnym, sprawd¼ Powszechn± Licencjê
+Publiczn± GNU w wersji drugiej lub pó¼niejszej, by dowiedzieæ siê o
+warunkach dystrybucji. Brak JAKIEJKOLWIEK gwarancji.
+.SH "T£UMACZE"
+Piotr Roszatycki <dexter@debian.org>, 1999
+.br
+Bartosz Feñski <fenio@debian.org>, 2004-2005
+.br
+Robert Luberda <robert@debian.org>, 2006-2008
+.br
+Wiktor Wandachowicz <siryes@gmail.com>, 2008

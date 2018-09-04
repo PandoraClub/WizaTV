@@ -1,0 +1,246 @@
+.\" update\-alternatives.8
+.\" This man page is copyright 1997 Charles Briscoe-Smith
+.\" This is free documentation; you can redistribute it and/or modify
+.\" it under the terms of the GNU General Public License as published
+.\" by the Free Software Foundation; either version 2 of the License, or
+.\" (at your option) any later version.  There is NO WARRANTY.  You can
+.\" find the GNU GPL in /usr/share/common-licenses/GPL on any Debian system.
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH update\-alternatives 8 2007\-07\-18 "Debian Project" "dpkg utilities"
+.SH NAME
+update\-alternatives \- シンボリックリンクを管理してデフォルトのコマンドを決定する
+.
+.SH 書式
+\fBupdate\-alternatives\fP [\fIoptions\fP] \fIcommand\fP
+.
+.SH 説明
+\fBupdate\-alternatives\fP は Debian の alternatives
+システムを成すシンボリックリンクを生成・削除・管理したり、リンクの情報を表示したりする。
+.PP
+同じ機能を (あるいは似たような機能を)
+持つ複数のプログラムを一つのシステムにインストールし、共存させることができる。例えば多くのシステムでは、複数のテキストエディタを共存させている。これにより、システムのユーザは好みに応じて別々のエディタを使うことができるようになる。しかしプログラムにとっては、特に指定がなかったときにどのエディタを起動すれば良いのかという、なかなか難しい問題を抱えることになる。
+.PP
+Debian の alternatives
+システムは、この問題を解決するためのものである。同じ機能を提供し、互いに置き換え可能な全てのファイルは、ファイルシステム中の「一般名 (generic
+name)」を共有する。その一般名が実際にどのファイルを参照するかは、 alternatives
+システムとシステム管理者とが決定する。例えば、テキストエディタである \fBed\fP(1) と \fBnvi\fP(1)
+の両方がシステムにインストールされていたとすると、一般名である \fI/usr/bin/editor\fP は、デフォルトでは \fI/usr/bin/nvi\fP
+を参照する。システム管理者はこれを上書きし、 \fI/usr/bin/ed\fP
+を参照させるようにすることもできる。こうすると、その後明示的なリクエストがなければ、 alternatives システムはその設定を変更しない。
+.PP
+一般名は、選ばれた「選択肢 (alternative)」への直接のシンボリックリンクではなく、 \fIalternatives\fP
+ディレクトリにある名前へのシンボリックリンクになっている。そしてその名前が実際に参照されるファイルへのシンボリックリンクになっている。こうなっている理由は、システム管理者の変更が
+\fI/etc\fP ディレクトリ以下で行われるようにするためである。なぜこうするのが良いかについては FHS に説明がある。
+.PP
+置き換え可能な一群のファイル中のどれかを含むパッケージがインストール・変更・削除されると、 \fBupdate\-alternatives\fP
+が呼ばれ、そのファイルに対する alternatives システムの内部情報を更新する。 \fBupdate\-alternatives\fP は、通常
+Debian パッケージの \fBpostinst\fP または \fBprerm\fP スクリプトから呼び出される。
+.PP
+複数の選択肢を同期させ、グループとして変更すると便利なことが多い。例えば \fBvi\fP(1)
+エディタのいろいろな派生システムが同時にインストールされていたとすると、 \fI/usr/share/man/man1/vi.1\fP が参照する man
+ページは、 \fI/usr/bin/vi\fP が参照する実行ファイルに対応しているべきであろう。 \fBupdate\-alternatives\fP は、
+\fImaster\fP リンクと \fIslave\fP リンクによってこれを取り扱う。 master が変更されると、それに関連づけされた各 slave
+も同時に変更される。 master リンクとそれに関連づけされた slave とは、 \fIリンクグループ\fP を形成する。
+.PP
+各リンクグループは、いかなる時点においても、 automatic または manual の 2 つのモードのいずれかにある。グループが
+automatic モードにある場合は、パッケージのインストール・削除の際にリンクを更新するかどうか/どのように更新するかは、 alternatives
+システムが自動的に決定する。 manual モードでは、 alternatives
+システムはリンクを変更しない。システム管理者が行った決定がずっと保存される。
+.PP
+リンクグループは、システムに導入されると、まず automatic モードになる。システム管理者がその設定を変更すると、次に
+\fBupdate\-alternatives\fP がリンクグループに対して実行されたときに変更が認識され、そのリンクグループは自動的に manual
+モードに切り換わる。
+.PP
+各選択肢は \fIpriority\fP 属性を持っている。リンクグループが automatic モードにあるときは、 \fIpriority\fP
+のもっとも高いものが、そのグループのメンバーが参照する選択肢になる。
+.PP
+\fI\-\-config\fP オプションを用いると、 \fBupdate\-alternatives\fP は与えられた master
+リンクのリンクグループに対応する選択肢をすべてリストする。現在選択されているものには '*' が、もっとも priority の高いものには '+'
+マークがつく。そしてそのリンクグループの選択を問い合わせるプロンプトが表示される。ここで変更を行うと、その一般名は \fIauto\fP モードではなくなる。
+automatic 状態に戻すには、 \fI\-\-auto\fP オプションを用いる必要がある。
+.PP
+非対話的に設定をしたい場合は \fI\-\-set\fP オプションを代わりに使用する(以下を参照)。
+.PP
+Different packages providing the same file need to do so \fBcooperatively\fP.
+That is \- the usage of \fBupdate\-alternatives\fP is \fBmandatory\fP for all
+involved packages in such case \- it is not possible to override some file in
+a package that does not employ the \fBupdate\-alternatives\fP mechanism.
+.
+.SH 用語
+\fBupdate\-alternatives\fP の動作は極めて複雑なので、ここでいくつか特殊な用語を説明し、動作の理解の助けとしたい。
+.TP 
+一般名 (generic name)
+\fI/usr/bin/editor\fP のような名前。 alternatives システムによって同様の機能を持つ複数のファイルのどれかひとつを参照する。
+.TP 
+symlink
+特に他に指定がなければ、これは alternatives ディレクトリ内のシンボリックリンクを意味する。システム管理者が調整の対象とするものである。
+.TP 
+選択肢 (alternative)
+ファイルシステム中の特定のファイル。 alternatives システムによって、一般名からアクセスされるようにできる。
+.TP 
+alternatives ディレクトリ
+symlink を保持するディレクトリ。デフォルトは \fI/etc/alternatives\fP。
+.TP 
+administrative ディレクトリ
+\fBupdate\-alternatives\fP の状態情報を保持するディレクトリ。デフォルトは
+\fI/var/lib/dpkg/alternatives\fP。
+.TP 
+リンクグループ
+関連する symlink のセット。グループごと更新するためのもの。
+.TP 
+master リンク
+リンクグループに属するリンクで、グループの他のリンクの設定を決定するもの。
+.TP 
+slave リンク
+リンクグループに属するリンクで、 master リンクの設定によって制御されるもの。
+.TP 
+automatic モード
+リンクグループが automatic モードにあるときは、そのグループに対応しており、かつもっとも高い priority
+を持つ選択肢をグループ内の各リンクが参照する。この調整は alternatives システムが自動的に行う。
+.TP 
+manual モード
+リンクグループが manual モードにあるときは、 alternatives システムはシステム管理者の設定を一切変更しない。
+.
+.SH コマンド
+.TP 
+\fB\-\-install\fP \fIgenname symlink altern priority\fP [\fB\-\-slave\fP \fIgenname symlink altern\fP]...
+選択肢のグループをシステムに追加する。 \fIgenname\fP は master リンクの一般名・ \fIsymlink\fP はその symlink の名前・
+\fIaltern\fP はここで導入される master リンクに対応した選択肢、である。\fB\-\-slave\fP
+オプションに続く引数は、alternatives ディレクトリでの一般名と slave リンクの選択肢である。 \fB\-\-slave\fP
+オプションと、それにに続く 3 つの引数のセットは、 0 個以上いくつでも指定してよい。
+.IP
+指定した master の symlink が既に alternatives
+システムの記録に存在していると、与えられた情報はそのグループに対する新たな選択肢のセットとして追加される。そうでなければ、新しいグループとして、automatic
+モードにして、この情報に追加する。グループが automatic モードにあり、新たに追加された選択肢の priority
+がそのグループに対してインストールされている他の選択肢のものより高いときには、 symlink は新たに追加された選択肢を参照するように更新される。
+.TP 
+\fB\-\-set\fP \fIname path\fP
+プログラム \fIpath\fP を \fIname\fP の選択肢として設定する。 \fI\-\-config\fP
+と同等だが、こちらは非対話的であるため、スクリプト向けである。
+.TP 
+\fB\-\-remove\fP \fIname path\fP
+(master の) 選択肢とそれに関連する全ての slave リンクを削除する。 \fIname\fP は alternatives
+ディレクトリ中の名前であり、 \fIpath\fP は \fIname\fP のリンク先に指定できる、絶対パスでのファイル名である。 \fIname\fP が実際に
+\fIpath\fP にリンクされている場合には、 \fIname\fP
+は他の適切な選択肢を参照するよう更新される。あるいはそのような選択肢が残っていなければ削除される。関連する slave リンクも対応して更新 (削除)
+される。 \fIname\fP が現在その \fIpath\fP を参照していなければ、リンクの変更は行われない。その選択肢の情報が削除されるだけである。
+.TP 
+\fB\-\-remove\-all\fP \fIname\fP
+すべての選択肢と、それに関連するすべての slave リンクを削除する。 \fIname\fP は、alternative ディレクトリの名前である。
+.TP 
+\fB\-\-all\fP
+\fB\-\-config\fP をすべての選択肢について呼び出す。
+.TP 
+\fB\-\-auto\fP \fIlink\fP
+master の symlink \fIlink\fP を automatic モードに変更する。この処理を行う際には、この master リンクと対応する各
+slave は、現在インストールされている alterantive のうち、もっとも priority の高いものを参照するように更新される。
+.TP 
+\fB\-\-display\fP \fIlink\fP
+\fIlink\fP を master リンクとするリンクグループの情報を表示する。表示される情報は、グループのモード (auto か manual
+か)・その symlink の現在の参照先・他に alternatives (とそれに対応した slave altarnative)
+があるかどうか・現在インストールされている選択肢のうち、もっとも priority の高いもの、である。
+.TP 
+\fB\-\-list\fP \fIlink\fP
+リンクグループのすべてのターゲットを表示する。
+.TP 
+\fB\-\-config\fP \fIlink\fP
+リンクグループの利用可能なすべての選択肢を表示し、対話的に選択肢の 1 つを選べるようにする。リンクグループは更新され、 \fIauto\fP
+モードではなくなる。
+.TP 
+\fB\-\-help\fP
+Show the usage message and exit.
+.TP 
+\fB\-\-version\fP
+Show the version and exit.
+.
+.SH オプション
+.TP 
+\fB\-\-altdir\fP\fI directory\fP
+alternatives ディレクトリをデフォルトから変えたいときに指定する。
+.TP 
+\fB\-\-admindir\fP\fI directory\fP
+administrative ディレクトリをデフォルトから変えたいときに指定する。
+.TP 
+\fB\-\-verbose\fP
+\fBupdate\-alternatives\fP が行っている作業に付いて、より詳細なコメントを生成する。
+.TP 
+\fB\-\-quiet\fP
+エラー以外のコメントを出さない。このオプションはまだ実装されていない。
+.
+.SH ファイル
+.TP 
+\fI/etc/alternatives/\fP
+デフォルトの alternatives ディレクトリ。 \fB\-\-altdir\fP オプションによって変更できる。
+.TP 
+\fI/var/lib/dpkg/alternatives/\fP
+デフォルトの administration ディレクトリ。 \fB\-\-admindir\fP オプションによって変更できる。
+.
+.SH 終了ステータス
+.IP 0
+リクエストされたアクションが正しく実行された。
+.IP 2
+コマンドラインの解釈を行うときか、アクションを実行するときに問題が起こった。
+.
+.SH DIAGNOSTICS
+\fBupdate\-alternatives\fP は、動作の最中に、いま何をやっているかを逐一標準出力にしゃべり続ける。問題が起きると、
+\fBupdate\-alternatives\fP はエラーメッセージを標準エラー出力に出力し、終了ステータス 2
+を返す。これらの診断メッセージは、読めばわかるはずである。もしわからなければ、バグとして報告して欲しい。
+.
+.SH 例
+There are several packages which provide a text editor compatible with
+\fBvi\fP, for example \fBnvi\fP and \fBvim\fP. Which one is used is controlled by the
+link group \fBvi\fP, which includes links for the program itself and the
+associated manpage.
+.PP
+\fBvi\fP を提供するパッケージとその現在の設定を表示するには、 \fI\-\-display\fP アクションを使う。
+.RS
+.PP
+\fBupdate\-alternatives \-\-display vi\fP
+.RE
+.PP
+特定の \fBvi\fP 実装を選ぶには、root としてこのコマンドを実行し、そして一覧から数字を選ぶ。
+.RS
+.PP
+\fBupdate\-alternatives \-\-config vi\fP
+.RE
+.PP
+\fBvi\fP 実装の選択を自動的に行なうように戻すには、root としてこのコマンドを実行する。
+.RS
+.PP
+\fBupdate\-alternatives \-\-auto vi\fP
+.RE
+.
+.SH バグ
+バグを見つけたら、 Debian のバグ追跡システムを使ってレポートして欲しい。それが無理なら、著者に直接電子メールで送って欲しい。
+.PP
+もし \fBupdate\-alternatives\fP
+の動作とこのマニュアルページの記述に矛盾があれば、実装か文書、どちらかのバグである。レポートをお願いしたい。
+.
+.SH AUTHOR
+Copyright (C) 1995 Ian Jackson
+.sp
+This is free software; see the GNU General Public Licence version 2 or later
+for copying conditions. There is NO WARRANTY.
+.PP
+This manual page is copyright 1997,1998 Charles Briscoe\-Smith.
+.sp
+This is free documentation; see the GNU General Public Licence version 2 or
+later for copying conditions. There is NO WARRANTY.
+.
+.SH 関連項目
+\fBln\fP(1), FHS, the Filesystem Hierarchy Standard.
+.SH 翻訳者
+関戸 幸一 <sekido@mbox.kyoto-inet.or.jp>.
+鍋谷 栄展 <nabe@debian.or.jp>.
+倉澤 望 <nabetaro@debian.or.jp>.
+石川睦 <ishikawa@linux.or.jp>.
+鵜飼文敏 <ukai@debian.or.jp>.
+喜瀬浩 <kise@fuyuneko.jp>.
+中野武雄 <nakano@apm.seikei.ac.jp>.
+喜瀬浩 <kise@fuyuneko.jp>.
+.SH 翻訳校正
+Debian JP Documentation ML <debian-doc@debian.or.jp>.

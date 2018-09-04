@@ -1,0 +1,153 @@
+AR=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar
+ARFLAGS=crs
+RM=rm -rf
+SHELL=/bin/sh
+ARCH=arm-osx
+abs_top_srcdir=/Users/osx/Desktop/kodi/xbmc
+rel_top_srcdir=$(subst $(abspath $(abs_top_srcdir))/,,$(abspath $(CURDIR))/)
+prefix=/Users/Shared/xbmc-depends/iphoneos9.2_armv7-target
+exec_prefix=/Users/Shared/xbmc-depends/iphoneos9.2_armv7-target
+bindir=${exec_prefix}/bin
+sbindir=${exec_prefix}/sbin
+libexecdir=${exec_prefix}/libexec
+sysconfdir=${prefix}/etc
+sharedstatedir=${prefix}/com
+localstatedir=${prefix}/var
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+oldincludedir=/usr/include
+datarootdir=${prefix}/share
+datadir=${datarootdir}
+infodir=${datarootdir}/info
+localedir=${datarootdir}/locale
+mandir=${datarootdir}/man
+PACKAGE_TARNAME=kodi
+docdir=${datarootdir}/doc/${PACKAGE_TARNAME}
+htmldir=${docdir}
+dvidir=${docdir}
+pdfdir=${docdir}
+psdir=${docdir}
+CXX=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++
+CXX_FOR_BUILD=g++
+CC=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
+CC_FOR_BUILD=gcc
+CXXFLAGS+=-O2 -g -D_DEBUG -Wall -no-cpp-precomp -mcpu=cortex-a8 -mfpu=neon -ftree-vectorize -mfloat-abi=softfp -pipe -Wno-trigraphs -fpascal-strings -O3 -Wreturn-type -Wunused-variable -fmessage-length=0 -gdwarf-2 -arch armv7 -miphoneos-version-min=5.1 -std=c++11 -stdlib=libc++ -g -O2 -std=gnu++11 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk -isystem /Users/Shared/xbmc-depends/iphoneos9.2_armv7-target/include -no-cpp-precomp -mcpu=cortex-a8 -mfpu=neon -ftree-vectorize -mfloat-abi=softfp -pipe -Wno-trigraphs -fpascal-strings -O3 -Wreturn-type -Wunused-variable -fmessage-length=0 -gdwarf-2 -arch armv7 -miphoneos-version-min=5.1 -std=c++11 -stdlib=libc++ -g -O2 -std=gnu++11 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk -isystem /Users/Shared/xbmc-depends/iphoneos9.2_armv7-target/include -O3 
+CXXFLAGS_FOR_BUILD+=-g -O2 -I/Users/Shared/xbmc-depends/buildtools-native/include
+CFLAGS+=-O2 -g -D_DEBUG -Wall -fheinous-gnu-extensions -no-cpp-precomp -mcpu=cortex-a8 -mfpu=neon -ftree-vectorize -mfloat-abi=softfp -pipe -Wno-trigraphs -fpascal-strings -O3 -Wreturn-type -Wunused-variable -fmessage-length=0 -gdwarf-2 -arch armv7 -miphoneos-version-min=5.1  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk -isystem /Users/Shared/xbmc-depends/iphoneos9.2_armv7-target/include -fheinous-gnu-extensions -no-cpp-precomp -mcpu=cortex-a8 -mfpu=neon -ftree-vectorize -mfloat-abi=softfp -pipe -Wno-trigraphs -fpascal-strings -O3 -Wreturn-type -Wunused-variable -fmessage-length=0 -gdwarf-2 -arch armv7 -miphoneos-version-min=5.1  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk -isystem /Users/Shared/xbmc-depends/iphoneos9.2_armv7-target/include -O3 
+CFLAGS_FOR_BUILD+=-g -O2 -I/Users/Shared/xbmc-depends/buildtools-native/include
+LDFLAGS+=-L/Users/Shared/xbmc-depends/iphoneos9.2_armv7-target/lib -Wl,-search_paths_first -L/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/usr/lib/system -Wl,-segalign,4000 -arch armv7 -miphoneos-version-min=5.1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk   
+LDFLAGS_FOR_BUILD+= -L/Users/Shared/xbmc-depends/buildtools-native/lib
+INCLUDES+=-I/Users/osx/Desktop/kodi/xbmc
+INCLUDES+=-I/Users/osx/Desktop/kodi/xbmc/lib
+INCLUDES+=-I/Users/osx/Desktop/kodi/xbmc/xbmc
+INCLUDES+=-I/Users/osx/Desktop/kodi/xbmc/xbmc/addons/include
+INCLUDES+=-I/Users/osx/Desktop/kodi/xbmc/addons/library.kodi.guilib
+INCLUDES+=-I/Users/osx/Desktop/kodi/xbmc/addons/library.xbmc.addon
+INCLUDES+=-I/Users/osx/Desktop/kodi/xbmc/addons/library.kodi.adsp
+INCLUDES+=-I/Users/osx/Desktop/kodi/xbmc/addons/library.kodi.audioengine
+INCLUDES+=-I/Users/osx/Desktop/kodi/xbmc/addons/library.xbmc.pvr
+INCLUDES+=-I/Users/osx/Desktop/kodi/xbmc/addons/library.xbmc.codec
+INCLUDES+=$(sort  -I$(abs_top_srcdir)/xbmc/osx -I/Users/Shared/xbmc-depends/iphoneos9.2_armv7-target/include/mysql -I/Users/Shared/xbmc-depends/iphoneos9.2_armv7-target/include  -I/Users/Shared/xbmc-depends/iphoneos9.2_armv7-target/include/libxml2  -I/Users/Shared/xbmc-depends/iphoneos9.2_armv7-target/include -I/Users/Shared/xbmc-depends/iphoneos9.2_armv7-target/include/libxml2  -I/Users/Shared/xbmc-depends/iphoneos9.2_armv7-target/include/fribidi  -I/Users/Shared/xbmc-depends/iphoneos9.2_armv7-target/include  -I/Users/Shared/xbmc-depends/iphoneos9.2_armv7-target/include/libpng15  -DPCRE_STATIC -I/Users/Shared/xbmc-depends/iphoneos9.2_armv7-target/include  -DPCRE_STATIC -I/Users/Shared/xbmc-depends/iphoneos9.2_armv7-target/include  -I/Users/Shared/xbmc-depends/iphoneos9.2_armv7-target/include/freetype2 -I/Users/Shared/xbmc-depends/iphoneos9.2_armv7-target/include  -I/Users/Shared/xbmc-depends/iphoneos9.2_armv7-target/include/taglib  -I/Users/Shared/xbmc-depends/iphoneos9.2_armv7-target/include  -I/Users/Shared/xbmc-depends/iphoneos9.2_armv7-target/include  -I/Users/Shared/xbmc-depends/iphoneos9.2_armv7-target/include )
+INCLUDES+=-I/Users/osx/Desktop/kodi/xbmc/xbmc/linux
+INCLUDES+=-I/Users/osx/Desktop/kodi/xbmc/xbmc/cores/dvdplayer
+DEFINES+= \
+	-DTARGET_POSIX -DTARGET_DARWIN -DTARGET_DARWIN_IOS -D_LINUX \
+	-D_FILE_DEFINED \
+	-D__STDC_CONSTANT_MACROS \
+	-DBIN_INSTALL_PATH="\"$(libdir)/kodi\"" \
+	-DINSTALL_PATH="\"$(datarootdir)/kodi\"" \
+	 \
+	-DNPT_CONFIG_ENABLE_LOGGING -DPLT_HTTP_DEFAULT_USER_AGENT="\"UPnP/1.0 DLNADOC/1.50 Kodi\"" -DPLT_HTTP_DEFAULT_SERVER="\"UPnP/1.0 DLNADOC/1.50 Kodi\"" \
+	-DHAVE_CONFIG_H \
+
+ifeq ($(findstring osx,$(ARCH)), osx)
+	INCLUDES+=-I/Users/osx/Desktop/kodi/xbmc/xbmc/osx
+endif
+
+ifeq ($(ARCH), powerpc-osx)
+	BUNDLE1_O=-lbundle1.o
+endif
+
+ifneq ($(V), 1)
+	SILENT_CPP=@echo "CPP     $(rel_top_srcdir)$@";
+	SILENT_CC =@echo "CC      $(rel_top_srcdir)$@";
+	SILENT_S  =@echo "S       $(rel_top_srcdir)$@";
+	SILENT_GCH=@echo "GCH     $(rel_top_srcdir)$@";
+	SILENT_MM =@echo "MM      $(rel_top_srcdir)$@";
+	SILENT_AR =@echo "AR      $(rel_top_srcdir)$@";
+	SILENT_LD =@echo "LD      $(rel_top_srcdir)$@";
+endif
+
+OBJS+=$(filter %.o,$(SRCS:.cpp=.o))
+OBJS+=$(filter %.o,$(SRCS:.c=.o))
+OBJS+=$(filter %.o,$(SRCS:.S=.o))
+OBJS+=$(filter %.o,$(SRCS:.mm=.o))
+OBJS+=$(filter %.o,$(SRCS:.m=.o))
+
+DEPS+=$(filter %.P,$(OBJS:.o=.P))
+
+GEN_DEPS=\
+  cp $*.d $*.P \
+  && sed -e 's/\#.*//' -e 's/^[^:]*: *//' -e 's/ *\\$$//' \
+         -e '/^$$/ d' -e 's/$$/ :/' < $*.d >> $*.P \
+  && rm -f $*.d \
+  || ( rm -f $*.P $@ && exit 1 )
+
+%.o: %.cpp
+	@rm -f $@
+	$(SILENT_CPP) $(CXX) -MF $*.d -MD -c $(CXXFLAGS) $(DEFINES) $(INCLUDES) $(CPPFLAGS) $< -o $@ \
+	&& $(GEN_DEPS)
+
+%.o: %.cc
+	@rm -f $@
+	$(SILENT_CPP) $(CXX) -MF $*.d -MD -c $(CXXFLAGS) $(DEFINES) $(INCLUDES) $(CPPFLAGS) $< -o $@ \
+	&& $(GEN_DEPS)
+
+%.o: %.c
+	@rm -f $@
+	$(SILENT_CC) $(CC) -MF $*.d -MD -c $(CFLAGS) $(DEFINES) $(INCLUDES) $(CPPFLAGS) $< -o $@ \
+	&& $(GEN_DEPS)
+
+%.o: %.C
+	@rm -f $@
+	$(SILENT_CPP) $(CXX) -MF $*.d -MD -c $(CFLAGS) $(DEFINES) $(INCLUDES) $(CPPFLAGS) $< -o $@ \
+	&& $(GEN_DEPS)
+
+%.o: %.S
+	@rm -f $@
+	$(SILENT_CC) $(CC) -c $(CFLAGS) $(DEFINES) $(INCLUDES) $< -o $@
+
+
+%.h.gch : %.h
+	$(SILENT_GCH) $(CXX) -c $(CFLAGS) $(DEFINES) $(INCLUDES) $< -o $@
+
+%.o: %.m
+	@rm -f $@
+	$(SILENT_MM) $(CC) -MF $*.d -MD -c $(CFLAGS) $(DEFINES) $(INCLUDES) $< -o $@ \
+	&& $(GEN_DEPS)
+
+%.o: %.mm
+	@rm -f $@
+	$(SILENT_MM) $(CXX) -MF $*.d -MD -c $(CXXFLAGS) $(DEFINES) $(INCLUDES) $< -o $@ \
+	&& $(GEN_DEPS)
+
+
+.PHONY : lib pch clean distclean distclean_evil check testsuite
+
+$(LIB): $(OBJS)
+	$(SILENT_AR) $(AR) $(ARFLAGS) $(LIB) $(OBJS)
+
+pch: $(PCH:.h=.h.gch)
+	for d in $(DIRS); do (cd "$$d"; $(MAKE) pch ); done
+
+clean: 
+	$(RM) $(OBJS) *.o $(LIB) $(SLIB) $(CLEAN_FILES) $(PCH:.h=.h.gch) $(DEPS)
+	for d in $(DIRS); do (if test -f "$$d/Makefile"; then ($(MAKE) -C "$$d" clean); fi ); done
+	for d in $(CHECK_DIRS) $(GTEST_DIR); do if test -f $$d/Makefile; then $(MAKE) -C $$d $@; fi; done
+
+distclean:
+	$(RM) $(OBJS) *.o $(LIB) $(SLIB) $(STATICLIB) $(CLEAN_FILES) $(DISTCLEAN_FILES) $(PCH:.h=.h.gch) $(DEPS)
+	for d in $(DIRS); do (if test -f "$$d/Makefile"; then ($(MAKE) -C "$$d" distclean || $(MAKE) -C "$$d" clean); fi ); done
+	for d in $(CHECK_DIRS) $(GTEST_DIR); do (if test -f "$$d/Makefile"; then ($(MAKE) -C "$$d" $@ || $(MAKE) -C "$$d" clean); fi ); done
+	if [ "$(shell pwd -P)" = "$(abs_top_srcdir)" ] || \
+	   [ "$(shell pwd)" = "$(abs_top_srcdir)" ]; then rm -f $(AUTOGENERATED_MAKEFILES) Makefile.include Makefile; fi

@@ -1,0 +1,237 @@
+.\" Install-info and this manpage are Copyright 1994 by Ian Jackson.
+.\"
+.\" This is free software; see the GNU General Public Licence version 2
+.\" or later for copying conditions.  There is NO warranty.
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH install\-info 8 2007\-07\-18 Debian\-Projekt dpkg\-Hilfsprogramme
+.SH NAME
+install\-info \- Erzeuge oder aktualisiere Einträge in der
+Info\-Verzeichnisdatei
+.
+.SH ÜBERSICHT
+\fBinstall\-info\fP [\fB\-\-version\fP] [\fB\-\-help\fP] [\fB\-\-debug\fP]
+[\fB\-\-maxwidth=\fP\fInnn\fP] [\fB\-\-section \fP\fIRegexp\fP\fB \fP\fITitel\fP]
+[\fB\-\-infodir=\fP\fIxxx\fP] [\fB\-\-align=\fP\fInnn\fP] [\fB\-\-quiet\fP]
+[\fB\-\-menuentry=\fP\fIxxx\fP] [\fB\-\-description=\fP\fIxxx\fP]
+[\fB\-\-remove\fP|\fB\-\-remove\-exactly\fP] [\fB\-\-\fP] \fIDateiname\fP
+.
+.SH BESCHREIBUNG
+\fBinstall\-info\fP erstellt, aktualisiert oder entfernt Einträge in der
+\fBdir\fP\-Datei von Info. Beim Aktualisieren oder Einfügen von Einträgen
+versucht es die Beschreibung vom Inhalt der Datei zu raten, falls keine
+Beschreibung auf der Befehlszeile oder in der Info\-Datei angegeben wird.
+.PP
+Siehe die Beschreibung der Option \fB\-\-section\fP zu Details wo der Eintrag
+platziert wird und einer Beschreibung des erwarteten Formats der Datei
+\fBdir\fP.
+.SH OPTIONEN
+.TP 
+\fB[\-\-] \fP\fIDateiname\fP
+Gibt den Dateinamen der Info\-Datei an, deren Menüeintrag erstellt,
+aktualisiert oder entfernt werden soll. Falls \fB\-\-remove\-exactly\fP angegeben
+wird, dann sollte \fIDateiname\fP der exakte Eintragsname sein, der entfernt
+werden soll (z.B. »emacs\-20/emacs« oder »gcc«), andernfalls wird der
+Basisname des Dateinamens als Referenzierender des zu erstellenden
+Menüeintrags verwendet, es sei denn, es gibt einen überschreibenden
+START\-INFO\-DIR\-Eintrag innerhalb der übergebenen Datei. Diese Datei muss
+daher im gleichen Verzeichnis wie die \fBdir\fP\-Datei existieren (oder gerade
+installiert werden, oder muss früher existiert haben, wenn ein Eintrag
+entfernt wird) (lesen Sie die Informationen zu der Option \fB\-\-infodir\fP).
+
+Falls \fIDateiname\fP auf \fB.gz\fP endet, wird er als Verweis auf eine mit
+\fBgzip\fP komprimierte Datei genommen; falls er nicht existiert, aber eine
+entsprechende \fIDateiname\fP\fB.gz\fP existiert, wird stattdessen letztere
+benutzt.
+
+Beim Hinzufügen oder Aktualisieren von Einträgen muss die Datei an dem
+angegebenen Pfad existieren (möglicherweise mit einer zusätzlichen
+\&\fB.gz\fP\-Endung).
+.TP 
+\fB\-\-remove\fP
+Spezifiziert, dass der Eintrag für die Datei \fIDateiname\fP entfernt werden
+soll; standardmäßig werden Einträge erstellt oder aktualisiert.
+
+Falls die Entfernung dazu führt, dass ein Abschnitt leer wird, wird auch die
+Abschnittsüberschrift (und die überflüssige Leerzeile) entfernt, falls dies
+nicht der letzte Abschnitt in der Datei ist oder \fB\-\-keep\-old\fP angegeben
+wird. Lesen Sie hierzu auch über die \fB\-\-section\fP\-Option für Details über
+das erwartete Format der \fBdir\fP\-Datei.
+
+Falls es mehrere passende Einträge in \fBVerz\fP gibt, werden nur die in der
+ersten passenden zusammenhängenden Gruppe entfernt, die anderen werden ohne
+Rückmeldung ignoriert.
+
+Es ist kein Fehler, wenn kein passender Eintrag gefunden wird, jedoch gibt
+\fBinstall\-info\fP eine Warnung aus. Diese Warnung kann durch Angabe der Option
+\fB\-\-quiet\fP unterdrückt werden.
+
+Wenn \fB\-\-remove\fP angegeben wird, werden die Formatierungsoptionen
+\fB\-\-maxwidth\fP, \fB\-\-align\fP und \fB\-\-calign\fP ohne Rückmeldung ignoriert.
+.TP 
+\fB\-\-remove\-exactly\fP
+Diese Option ist im Prinzip die gleiche wie \fB\-\-remove\fP, abgesehen davon,
+dass \fIDateiname\fP als exakter Eintrag angesehen wird, der entfernt werden
+soll, statt als Name einer existierenden Datei. Dies kann wichtig sein, wenn
+Einträge entfernt werden sollen, die sich auf Info\-Dateien in
+Unterverzeichnissen beziehen (z.B. »emacs\-20/emacs«), da \fB\-\-remove\fP mit dem
+Basisnamen (»basename«) des übergebenen \fIDateiname\fPns, statt des exakten
+Namens, arbeiten wird (d.h. \fB\-\-remove\fP »emacs\-20/emacs« würde dazu führen,
+dass \fBinstall\-info\fP nach »emacs« und nicht »emacs\-20/emacs« sucht).
+.TP 
+\fB\-\-section \fP\fIRegexp Titel\fP
+Gibt an, dass, falls ein neuer Eintrag erfolgen soll, dieser in einem
+Abschnitt der Datei \fBdir\fP platziert werden soll, dessen Titel auf \fIRegexp\fP
+passt. Falls ein solcher Abschnitt nicht existiert, wird er als der
+vorletzte in der Datei (siehe unten) mit dem Titel \fITitel\fP erzeugt. Ein
+Abschnitt ist ein durch Leerzeilen begrenzter Teil des Menüs \fBdir\fP; von der
+ersten Zeile wird angenommen, dass sie der Titel ist.
+
+Falls ein neuer Eintrag erstellt werden soll, wird \fBinstall\-info\fP
+versuchen, diesen innerhalb des Abschnitts in alphabetischer Reihenfolge
+einzufügen. Falls die Einträge noch nicht alphabetisch sortiert sind, kann
+der Platz innerhalb des Abschnitts nicht vorhergesagt werden. Die
+Reihenfolge der existierenden Einträge wird nicht geändert.
+
+Falls die Option \fB\-\-section\fP nicht angegeben ist, wird \fBinstall\-info\fP nach
+einem Titel in der Info\-Datei selbst suchen, indem es nach einem Eintrag der
+folgenden Form schaut:
+
+.br
+\fBINFO\-DIR\-SECTION\fP\fI Titel\fP
+.br
+
+Falls kein Abschnittstitel gefunden wird, ist die Voreinstellung, neue
+Einträge an das Ende der Datei anzuhängen. Der letzte Abschnitt (selbst
+falls dieser nur aus der Titelzeile besteht) sollte immer existieren, um
+sicherzustellen, dass neue Abschnitte am richtigen Ort erstellt werden. Der
+letzte Abschnitt sollte so mit einem Titel benannt werden, dass die Tatsache
+ausgedrückt wird, dass Info\-Dateien ohne besseren Ort hier angehängt werden.
+
+Falls es bereits einen Eintrag für die zu installierende Infodatei gibt,
+wird dieser in situ durch den neuen Eintrag ersetzt.
+
+Falls beim Entfernen eines Eintrags ein Abschnitt angegeben wird, wird der
+Abschnitt ignoriert und eine Warnung ausgegeben.
+
+Falls beim Hinzufügen eines Eintrags ein Abschnitt angefordert wird, aber
+die Datei überhaupt keine Abschnittsüberschriften enthält, erzeugt
+\fBinstall\-info\fP sowohl den angeforderten als auch einen Abschnitt für
+Verschiedenes am Ende der Datei.
+.TP 
+\fB\-\-infodir=\fP\fIInfoverz\fP
+Gibt an, das die Datei \fBdir\fP sich in \fIInfoverz\fP befindet oder befinden
+wird, wo auch die installierte Kopie der neuen Infodatei war. Der
+Standardwert ist \fB/usr/share/info/\fP.
+.TP 
+\fB\-\-align=\fP\fInnn\fP \fB [veraltet]\fP
+Bestimmt, dass die erste Zeile der Beschreibung mindestens \fInnn\fP\-Zeichen
+weit eingezogen werden soll; zusätzliche Zeichen werden nach Bedarf
+hinzugefügt. Falls notwendig aufgrund der Länge des Details des
+\fBdir\fP\-Menüeintrages, könnte der Ausgleich größer sein. Der Standardwert
+beträgt 27.
+.TP 
+\fB\-\-calign=\fP\fInnn\fP\fB [veraltet]\fP
+Gibt an, dass die zweite und folgende Zeilen der Beschreibung mindestens um
+\fInnn\fP\-Zeichen eingerückt werden sollen. Der Standardwert beträgt 29.
+.TP 
+\fB\-\-maxwidth=\fP\fInnn\fP\fB [veraltet]\fP
+Spezifiziert, dass die maximale Breite für die Info\-Datei \fInnn\fP
+beträgt. Dies wird verwendet, falls die Beschreibung umgebrochen werden
+muss. Der Standardwert is 79.
+.TP 
+\fB\-\-quiet\fP
+Unterdrückt die gewöhnliche Anzeige des neuen Menüeintrags bevor er
+eingefügt wird und von Nachrichten, die das Ersetzen und Entfernen
+existierender Einträge und das Erzeugen und Löschen von Abschnitten
+ankündigen.
+.TP 
+\fB\-\-help\fP
+Bringt \fBinstall\-info\fP dazu, seinen Gebrauchshinweis auszugeben und sich zu
+beenden.
+.TP 
+\fB\-\-version\fP
+Bringt \fBinstall\-info\fP dazu, seine Version und Copyrightinformationen
+auszugeben und sich zu beenden.
+.TP 
+\fB\-\-description=\fP\fIxxx\fP
+Gibt die nach dem Menü\-Eintrag in neuen oder aktualisierten Einträgen zu
+benutzende Beschreibung \fIxxx\fP an. Die Voreinstellung ist den in der
+Infodatei selbst angegebenen Wert zu benutzen; dieser wird gefunden, indem
+nach einem Abschnitt der folgenden Form gesucht wird:
+.br
+\fBSTART\-INFO\-DIR\-ENTRY\fP
+.br
+\fB* Auto\-PGP: (auto\-pgp). PGP under GNU Emacs.\fP
+.br
+\fBEND\-INFO\-DIR\-ENTRY\fP
+
+Falls der Eintrag, der in der Info\-Datei selbst gefunden wird, sich über
+mehrere Zeilen ausdehnt, wobei jede Zeile einen Menüeintrag angibt, wird der
+in der Datei gefundene Text wörtlich übernommen. In diesem Fall wird das
+alphabetische Sortierschema abgeschaltet und die Einträge werden am Anfang
+des in Frage kommenden Abschnitts eingefügt. In diesem Fall werden die
+Optionen \fB\-\-menuentry\fP, \fB\-\-maxwidth\fP, \fB\-\-align\fP, \fB\-\-calign\fP und
+\fB\-\-menuentry\fP ignoriert.
+
+Falls es in der Datei keinen \fBdir\fP\-Eintrag gibt, versucht das Programm im
+Anfangsbereich der Datei einen Absatz zu finden, der mit \fBthis file
+documents\fP beginnt. Es macht aus dem ersten Zeichen des Folgenden einen
+Großbuchstaben und verwendet dieses.
+
+Es ist ein Fehler, wenn keine dieser Methoden eine Beschreibung ergibt.
+
+Falls eine Beschreibungs\-Argument zusammen mit \fB\-\-remove\fP angegeben ist,
+wird dieses ignoriert und eine Warnung ausgegeben.
+.TP 
+\fB\-\-menuentry=\fP\fIxxx\fP
+Gibt an, dass der Eintrag im Menü \fIxxx\fP sein soll. Die Voreinstellung ist,
+den in der Info\-Datei selbst angegebenen Wert zu benutzen. Falls dieser
+nicht vorhanden ist, wird der Basisname der Info\-Datei benutzt (jegliches
+\&\fB.info\fP wird gelöscht, und der Eintrag wird in gemischte
+Groß\-Klein\-Schreibung überführt). Für Details über das erwartete Format des
+Menüeintrags in der Info\-Datei siehe oben.
+
+Beim Entfernen von Einträgen muss die Option \fB\-\-menuentry\fP auf das
+tatsächliche Menüeintragsfeld im Menüeintrag passen, das entfernt werden
+soll (Groß\-/Kleinschreibung ist nicht relevant). Falls \fB\-\-menuentry\fP nicht
+angegeben wird, erfolgt keine Prüfung des Menüeintrags.
+.TP 
+\fB\-\-keep\-old\fP
+Verhindert die Ersetzung existierender Einträge und das Entfernen leerer
+Abschnitte.
+
+Falls die zu installierende Datei bereits einen Eintrag in der \fBdir\fP\-Datei
+hat, wird der alte Eintrag unverändert gelassen und nicht ersetzt;
+standardmäßig werden gefundene alte Einträge mit den neu generierten
+überschrieben.
+
+Falls \fB\-\-remove\fP angegeben ist, verhindert \fB\-\-keep\-old\fP das Entfernen der
+Abschnittsüberschrift, was andernfalls passieren würde, falls der Abschnitt
+durch das Entfernen leer werden würde.
+.TP 
+\fB\-\-test\fP
+Aktiviert den Testmodus, in dem das Aktualisieren der Info \fBdir\fP\-Datei
+verhindert wird.
+.TP 
+\fB\-\-debug\fP
+Aktiviert den Fehlersuche\-Modus, bei dem die Ergebnisse einiger interner
+Bearbeitungsschritte angezeigt werden.
+.
+.SH ÜBERSETZUNG
+Die deutsche Übersetzung wurde 2004, 2006-2008 von Helge Kreutzmann
+<debian@helgefjell.de>, 2007 von Florian Rehnisch <eixman@gmx.de> und
+2008 von Sven Joachim <svenjoac@gmx.de>
+angefertigt. Diese Übersetzung ist Freie Dokumentation; lesen Sie die
+GNU General Public License Version 2 oder neuer für die Kopierbedingungen.
+Es gibt KEINE HAFTUNG.
+.SH "SIEHE AUCH"
+\fBemacs\fP(1), \fBinfo\fP(1), \fBgzip(1).\fP
+.SH AUTOR
+Copyright 1994 Ian Jackson.
+.sp
+Dies ist Freie Software; lesen Sie die GNU General Public License Version 2
+oder neuer für die Kopierbedingungen. Es gibt KEINE Haftung.

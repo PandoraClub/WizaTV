@@ -1,0 +1,52 @@
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH dpkg\-checkbuilddeps 1 2008\-03\-14 "Projekt Debiana" "programy pomocnicze dpkg"
+.SH NAZWA
+dpkg\-checkbuilddeps \- sprawdza zale¿no¶ci i konflikty czasu budowania
+.
+.SH SK£ADNIA
+\fBdpkg\-checkbuilddeps\fP [\fIopcje\fP] [\fIplik\-kontrolny\fP]
+.
+.SH OPIS
+Program ten sprawdza pakiety zainstalowane w systemie w stosunku do wymagañ
+i konfliktów zapisanych w pliku kontrolnym. Je¿eli które¶ nie s± spe³nione,
+wy¶wietla je i koñczy dzia³anie z niezerowym kodem powrotu.
+.P
+Domy¶lnie bêdzie czytany plik \fIdebian/control\fP, jednak¿e w linii poleceñ
+mo¿na podaæ alternatywny plik kontrolny.
+.
+.SH OPCJE
+.TP 
+\fB\-\-admindir=\fP\fIkatalog\fP
+Zmienia po³o¿enie bazy danych \fBdpkg\fP. Domy¶lnie jest to \fI/var/lib/dpkg\fP.
+.TP 
+\fB\-B\fP
+Ignoruje linie \fIBuild\-Depends\-Indep\fP. Nale¿y u¿ywaæ, je¶li nie bêd±
+budowane pakiety niezale¿ne od architektury.
+.TP 
+\fB\-d \fP\fIzale¿no¶ci_budowania\fP
+.TP 
+\fB\-c \fP\fIkonflikty_budowania\fP
+U¿ywa podanych zale¿no¶ci/konfliktów czasu budowania zamiast wymienionych w
+pliku \fIdebian/control\fP.
+.TP 
+\fB\-h\fP
+Wy¶wietla informacjê o u¿ytkowaniu i koñczy dzia³anie.
+.
+.SH AUTOR
+Copyright (C) 2001 Joey Hess
+.sp
+Niniejszy program jest oprogramowaniem wolnym, sprawd¼ Powszechn± Licencjê
+Publiczn± GNU w wersji drugiej lub pó¼niejszej, by dowiedzieæ siê o
+warunkach dystrybucji. Brak JAKIEJKOLWIEK gwarancji.
+.SH "T£UMACZE"
+Piotr Roszatycki <dexter@debian.org>, 1999
+.br
+Bartosz Feñski <fenio@debian.org>, 2004-2005
+.br
+Robert Luberda <robert@debian.org>, 2006-2008
+.br
+Wiktor Wandachowicz <siryes@gmail.com>, 2008

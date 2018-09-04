@@ -1,0 +1,3 @@
+<settings>
+    <setting id="extract_directory" type="folder" label="10000" default="set"/>
+</settings>

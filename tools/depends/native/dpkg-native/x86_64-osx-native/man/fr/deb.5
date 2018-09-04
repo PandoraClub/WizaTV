@@ -1,0 +1,66 @@
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH deb 5 28\-02\-2006 "Projet Debian" Debian
+.SH NOM
+deb \- Format des paquets binaires Debian
+.SH SYNOPSIS
+\fInom\-du\-fichier.deb\fP
+.SH DESCRIPTION
+Le format \fB.deb\fP est le format des paquets binaires de Debian. Il est
+compatible avec les versions 0.93.76 et ultérieures de dpkg, et il est
+généré par défaut par toutes les versions de dpkg depuis la version 1.2.0
+ainsi que toutes les versions i386/ELF depuis la version 1.1.1elf.
+.PP
+Le format décrit ici est utilisé depuis la version 0.93 de Debian\ ; les
+détails concernant le vieux format sont consultables dans \fBdeb\-old\fP(5).
+.SH FORMAT
+Le fichier est une archive \fBar\fP avec un numéro magique de
+\fB!<arch>.\fP
+.PP
+Le premier membre est nommé \fBdebian\-binary\fP et contient une succession de
+lignes, séparées par des retours\-chariot. Pour le moment, une seule ligne
+est présente\ : le numéro de version du format, \fB2.0\fP à l'heure où ce
+document a été écrit. Les programmes lisant des archives Debian récentes
+doivent être préparés à une augmentation du numéro de version mineur et à la
+présence de nouvelles lignes, ainsi qu'à les ignorer s'il le faut.
+.PP
+Si le numéro de version majeur a changé, cela signifie qu'une modification
+entraînant une incompatibilité entre les versions a été effectuée, et le
+programme doit alors s'arrêter. Si ce n'est pas le cas, le programme doit
+être en mesure de continuer à traiter correctement le fichier, à moins qu'il
+ne rencontre un membre non reconnu dans l'archive (excepté à la fin de cette
+dernière), comme décrit ci\-dessous.
+.PP
+Le second membre requis est nommé \fBcontrol.tar.gz\fP. Il s'agit d'une archive
+tar compressée grâce à gzip contenant les informations de contrôle du
+paquet, sous la forme d'une série de fichiers, parmi lesquels le fichier
+\fBcontrol\fP est strictement requis et contient les principales informations
+de contrôle. L'archive de contrôle peut éventuellement contenir une entrée
+pour «\ .\ », le répertoire courant.
+.PP
+Le troisième et dernier membre requis se nomme \fBdata.tar.gz\fP. Il contient
+les fichiers de données sous forme d'une archive tar compressée grâce à
+gzip.
+.PP
+Ces trois membres doivent apparaître dans cet ordre exact. Les
+implémentations actuelles devraient ignorer tout membre additionnel suivant
+\fBdata.tar.gz\fP. D'autres membres seront éventuellement proposés, et (si
+possible)  seront placés après ces trois derniers. Tout autre membre qui
+nécessitera d'être inséré avant \fBdata.tar.gz\fP et qui pourra être ignoré
+sans problème par des programmes plus anciens, aura un nom commençant par un
+underscore, «\ _\ ».
+.PP
+Les nouveaux membres qui ne pourront pas être ignorés sans conséquence
+seront insérés avant \fBdata.tar.gz\fP avec des noms préfixés par quelque chose
+d'autre qu'un underscore, ou causeront (ce qui est plus probable) une
+incrémentation du numéro majeur de version.
+.SH "VOIR AUSSI"
+\fBdeb\-old\fP(5), \fBdpkg\-deb\fP(1), \fBdeb\-control\fP(5).
+.SH TRADUCTION
+Ariel VARDI <ariel.vardi@freesbee.fr>, 2002.
+Philippe Batailler, 2006.
+Nicolas François, 2006.
+Veuillez signaler toute erreur à <debian\-l10n\-french@lists.debian.org>.

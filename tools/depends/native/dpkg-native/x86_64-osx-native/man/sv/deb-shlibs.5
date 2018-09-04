@@ -1,0 +1,57 @@
+.\" Copyright (C) 1996 Michael Shields <shields@crosslink.net>
+.\" Copyright (C) 2008 Zack Weinberg <zackw@panix.com>
+.\" This is free software; you may redistribute it and/or modify
+.\" it under the terms of the GNU General Public License as
+.\" published by the Free Software Foundation; either version 2,
+.\" or (at your option) any later version.
+.\"
+.\" This is distributed in the hope that it will be useful, but
+.\" WITHOUT ANY WARRANTY; without even the implied warranty of
+.\" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+.\" GNU General Public License for more details.
+.\"
+.\" You should have received a copy of the GNU General Public
+.\" License along with dpkg; if not, write to the Free Software
+.\" Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH deb\-shlibs 5 2008\-02\-17 Debianprojektet dpkg\-verktygen
+.SH NAMN
+deb\-shlibs \- Debians informationsfil för delade bibliotek
+.
+.SH BESKRIVNING
+.PP
+\fBshlibs\fP\-filer skapar en koppling mellan biblioteksnamn och versioner
+(\fIsonamn\fP) till beroenden som är lämpliga för en paketstyrfil. Den har en
+post per rad. Blanka rader är \fBinte\fP tillåtna. Rader som inleds med ett
+\fB#\fP\-tecken anses vara kommentarer, och ignoreras. Alla andra rader måste
+vara på formatet
+.IP
+[\fImärke:\fP] \fIbibliotek\fP \fIversion\fP \fIberoenden\fP
+.PP
+Fälten \fIbibliotek\fP och \fIversion\fP avdelas med blanktecken medan fältet
+\fIberoenden\fP sträcker sig till slutet av raden. Fältet \fImärke\fP är
+frivilligt och behövs vanligtvis inte.
+.PP
+Se Debians policymanual för ytterligare detaljer.
+.
+.SH EXEMPEL
+.PP
+\fBshlibs\fP\-filen för ett typiskt bibliotekspaket, som heter \fIlibcrunch1\fP och
+som innehåller ett bibliotek vars sonamn är \fIlibcrunch.so.1\fP, kan se ut så
+här:
+.IP
+libcrunch 1 libcrunch1 (>= 1.2\-1)
+.PP
+Fältet \fIberoenden\fP måste ange den senaste versionen av paketet som lade
+till nya symboler i biblioteket: i exemplet ovan lades nya symboler till i
+version 1.2 av \fIlibcrunch\fP. Det är inte den enda orsaken till att beroenden
+kan behöva snävas in; återigen, se Debians policymanual för detaljer.
+.
+.SH "SE ÄVEN"
+\fBdpkg\-shlibdeps\fP(1), \fBdeb\-symbols\fP(5).
+.SH "ÖVERSÄTTNING"
+Peter Krefting och Daniel Nylander.

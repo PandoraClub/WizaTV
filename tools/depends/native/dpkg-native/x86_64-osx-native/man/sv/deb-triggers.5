@@ -1,0 +1,53 @@
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH deb\-triggers 5 2008\-04\-09 Debianprojektet dpkg\-verktygen
+.SH NAMN
+deb\-triggers \- utlösare för paket
+.
+.SH SYNOPS
+utlösare
+.
+.SH BESKRIVNING
+Ett paket anger hur det förhåller sig till en eller flera utlösare genom att
+ta med en fil \fItriggers\fP i sitt styrarkiv (dvs. \fIDEBIAN/triggers\fP när
+paketet skapas).
+.PP
+Filen innehåller direktiv, ett per rad. Inledande och avslutande blanktecken
+och allt efter det första \fB#\fP på en rad kommer att klippas bort och tomma
+rader ignoreras.
+.PP
+De styrdirektiv som för närvarande stöds för utlösare är:
+.PP
+.in +5
+\fBinterest\fP \fIutlösarnamn\fP
+.PP
+.in +5
+Anger att paketet är intresserat av den namngivna utlösaren. Alla utlösare
+som ett paket är intresserat av måste listas genom att använda detta
+direktiv i utlösar\-styrfilen.
+.PP
+.in +5
+\fBactivate\fP \fIutlösarnamn\fP
+.PP
+.in +5
+Gör så att ändringar av detta pakets tillstånd aktiverar den angivna
+utlösaren. Utlösaren aktiveras när en av följande operationer påbörjas:
+uppackning, konfigurering, borttagning (också när det tas bort till fördel
+av ett paket det står i konflikt med), rensning och avkonfigurering.
+.PP
+.in +5
+Om paketet försvinner när ett annat paket packas upp kommer utlösaren att
+aktiveras när försvinnandet upptäcks mot slutet av uppackningen. Hantering
+av utlösare, och en övergång från "väntar på utlösare" till "installerat"
+orsakar inte aktiveringar. När det gäller uppackning kommer både utlösare
+som omnämns i gamla och nya versioner av paketet att aktiveras.
+.PP
+Okända direktiv är ett fel som förhindrar paketet från att installeras.
+.
+.SH "SE ÄVEN"
+\fBdpkg\-trigger\fP(1), \fBdpkg\fP(1).
+.SH "ÖVERSÄTTNING"
+Peter Krefting och Daniel Nylander.

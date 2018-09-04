@@ -1,0 +1,52 @@
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH dpkg\-checkbuilddeps 1 14\-03\-2008 "Projet Debian" "Utilitaires de dpkg"
+.SH NOM
+dpkg\-checkbuilddeps \- vérifier les dépendances et les conflits de
+construction
+.
+.SH SYNOPSIS
+\fBdpkg\-checkbuilddeps\fP [\fIoptions\fP] [\fIfichier\-control\fP]
+.
+.SH DESCRIPTION
+Ce programme vérifie si les dépendances et les conflits de construction
+listés dans le fichier control existent dans les paquets installés sur le
+système. S'il en existe, il les affiche et se termine avec un code de retour
+différent de 0.
+.P
+Normalement, le fichier \fIdebian/control\fP est lu, mais un autre fichier peut
+être indiqué sur la ligne de commande.
+.
+.SH OPTIONS
+.TP 
+\fB\-\-admindir\fP=\fIdir\fP
+Change l'endroit où se trouve la base de données de \fBdpkg\fP. Par défaut,
+c'est \fI/var/lib/dpkg\fP.
+.TP 
+\fB\-B\fP
+Ignore les lignes \fIBuild\-Depends\-Indep\fP. À utiliser lorsque aucun paquet
+indépendant d'une architecture ne va être construit.
+.TP 
+\fB\-d \fP\fIchaine\-des\-dépendances\-pour\-la\-construction\fP
+.TP 
+\fB\-c \fP\fIchaîne\-des\-conflits\-de\-construction\fP
+Utilise les dépendances et conflits de construction donnés au lieu de ceux
+indiqués dans le fichier \fIdebian/control\fP.
+.TP 
+\fB\-h\fP
+Affiche un message d'aide puis quitte.
+.
+.SH AUTEUR
+Copyright (C) 2001 Joey Hess
+.sp
+Ce programme est un logiciel libre\ ; voyez la «\ GNU General Public
+Licence\ » version 2 ou supérieure pour le copyright. Il n'y a PAS de
+garantie.
+.SH TRADUCTION
+Ariel VARDI <ariel.vardi@freesbee.fr>, 2002.
+Philippe Batailler, 2006.
+Nicolas François, 2006.
+Veuillez signaler toute erreur à <debian\-l10n\-french@lists.debian.org>.

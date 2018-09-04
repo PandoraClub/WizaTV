@@ -1,0 +1,103 @@
+.\" This is an -*- nroff -*- source file.
+.\" dpkg-name and this manpage are Copyright 1995,1996 by Erick Branderhorst.
+.\"
+.\" This is free software; see the GNU General Public Licence version 2
+.\" or later for copying conditions.  There is NO warranty.
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH dpkg\-name 1 2007\-11\-22 Debianprojektet dpkg\-verktygen
+.SH NAMN
+dpkg\-name \- byt namnet på Debianpaket till det fullständiga paketnamnet
+.
+.SH SYNOPS
+\fBdpkg\-name\fP [\fIflaggor\fP] [\fB\-\-\fP] \fIfiler\fP
+.
+.SH BESKRIVNING
+.PP
+Manualsidan dokumenterar programmet \fBdpkg\-name\fP, vilket tillhandahåller ett
+enkelt sätt att byta namn på \fBDebian\fPpaket till deras fullständiga
+paketnamn. Ett fullständigt paketnamn består av
+\fI<paket>_<version>_<arkitektur>.<pakettyp>\fP
+och anges av control\-filen i paketet. \fI<Version>\fP\-delen av
+filnamnet består av uppströmsversionsinformation och kan eventuellt följas
+av ett bindestreck och revisionsinformationen. \fI<Pakettyp>\fP\-delen
+kommer från fältet \fIpackage_type\fP om det finns, annars \fBdeb\fP.
+.
+.SH FLAGGOR
+.TP 
+\fB\-a\fP, \fB\-\-no\-architecture\fP
+Destinationsfilnamnet kommer inte att innehålla information om arkitektur.
+.TP 
+\fB\-k\fP, \fB\-\-symlink\fP
+Skapa en symbolisk länk istället för att flytta.
+.TP 
+\fB\-o\fP, \fB\-\-overwrite\fP
+Befintliga filer kommer att skrivas över om de har samma namn som
+destinationsfilnamnet.
+.TP 
+\fB\-s\fP, \fB\-\-subdir\fP [\fIkatalog\fP]
+Filerna kommer att flyttas till en underkatalog. Om katalogen i argumentet
+existerar kommer filerna att flyttas in i den katalogen, om inte kommer
+namnet på målkatalogen att hämtas från sektionsfältet i styrdelen av
+paketet. Målkatalogen kommer vara
+"unstable/binary\-<arkitekur>/<sektion>". Om sektionen inte
+hittas i styrfilen antas "no\-section", och i så fall, samt för sektionerna
+"non\-free" och "contrib", är målkatalogen
+"<sektion>/binary\-<arkitektur>". Sektionsfältet är inte
+nödvändigt, så flera paket hamnar i katalogen "no\-section". Använd den här
+flaggan med tillförsikt, den kan vara rörig.
+.TP 
+\fB\-c\fP, \fB\-\-create\-dir\fP
+Flaggan kan användas tillsammans med \-s\-flaggan. Om en målkatalog inte
+existerar kommer den att skapas automatiskt. \fBAnvänd denna flagga
+försiktigt.\fP
+.TP 
+\fB\-h\fP, \fB\-\-help\fP
+Visar hjälpskärm och avslutar.
+.TP 
+\fB\-v\fP, \fB\-\-version\fP
+Visar version och avslutar.
+.TP 
+\fB\-l\fP, \fB\-\-license\fP
+Visa upphovsrättslicensvillkor och avsluta.
+.
+.SH EXEMPEL
+.TP 
+\fBdpkg\-name bar\-foo.deb\fP
+Filen "bar\-foo.deb" kommer att få det nya namnet bar\-foo_1.0\-2_i386.deb
+eller något liknande (beroende på vilken information som hittas i styrdelen
+av "bar\-foo.deb").
+.TP 
+\fBfind /root/debian/ \-name \(aq*.deb\(aq | xargs \-n 1 dpkg\-name \-a\fP
+Alla filer med ändelsen "deb" i katalogen /root/debian och dess
+underkataloger kommer att få sina namn ersatta med dpkg\-name, om så behövs,
+till namn utan arkitekturinformation.
+.TP 
+\fBfind \-name \(aq*.deb\(aq | xargs \-n 1 dpkg\-name \-a \-o \-s \-c\fP
+\fBGör inte så här.\fP Ditt arkiv kommer att röras till helt och hållet
+eftersom många paket inte har någon sektionsinformation. \fBGör inte så här.\fP
+.TP 
+\fBdpkg \-\-build debian\-tmp && dpkg\-name \-o \-s .. debian\-tmp.deb\fP
+Kan användas när nya paket byggs.
+.
+.SH PROGRAMFEL
+Vissa paket följer inte namnstrukturen
+<paket>_<version>_<arckitektur>.deb. Paket vars namn
+ändrats med dpkg\-name kommer följa denna struktur. Normalt påverkar detta
+inte hur \fBdselect\fP(1)/\fBdpkg\fP(1) installerar paket, men vissa andra
+installationsverktyg kan vara beroende av denna namngivningsstruktur.
+.
+.SH "SE ÄVEN"
+\fBdeb\fP(5), \fBdeb\-control\fP(5), \fBdpkg\fP(1), \fBdpkg\-deb\fP(1), \fBfind\fP(1),
+\fBxargs\fP(1).
+.
+.SH FÖRFATTARE
+Upphovsrättsskyddat © 1995, 1996 Erick Branderhorst
+.sp
+Detta är fri programvara; se GNU General Public License version 2 eller
+senare för kopieringsvillkor. Det finns INGEN GARANTI.
+.SH "ÖVERSÄTTNING"
+Peter Krefting och Daniel Nylander.

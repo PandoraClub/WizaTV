@@ -1,0 +1,126 @@
+.\" Authors: Ian Jackson
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH deb\-substvars 5 2007\-07\-18 Debian\-Projekt dpkg\-Hilfsprogramme
+.SH NAME
+deb\-substvars \- Substitutionsvariablen in Debian\-Quellen
+.
+.SH ÜBERSICHT
+substvars
+.
+.SH BESCHREIBUNG
+Bevor \fBdpkg\-source\fP, \fBdpkg\-gencontrol\fP und \fBdpkg\-genchanges\fP ihre
+Steuerinformationen (zu der Quellsteuer\-Datei \fB.dsc\fP für \fBdpkg\-source\fP und
+zu der Standardausgabe für \fBdpkg\-gencontrol\fP und \fBdpkg\-genchanges\fP)
+schreiben, führen sie einige Variablensubstitutionen in der Ausgabedatei
+durch.
+
+Eine Variablensubstitution hat die Form
+\fB${\fP\fIVariablenname\fP\fB}\fP. Variablennamen bestehen aus alphanumerischen
+Zeichen (womit sie auch beginnen), Gedankenstrichen und
+Doppelpunkten. Variablensubstitutionen werden wiederholt durchgeführt, bis
+keine übrig geblieben sind; der komplette Text des Feldes nach der
+Substitution wird erneut auf weitere Substitutionen geprüft.
+
+Nachdem alle Substitutionen erfolgt sind, wird jedes Auftreten der
+Zeichenkette \fB${}\fP (die keine erlaubte Substitution ist) durch das
+\fB$\fP\-Zeichen ersetzt.
+
+Variablen können über die allgemeine \fB\-V\fP\-Option gesetzt werden. Sie können
+auch in der \fBdebian/substvars\fP (bzw. in der über die Option \fB\-T\fP gesetzten
+Datei) angegeben werden. Diese Datei besteht auch Zeilen der Form
+\fIName\fP\fB=\fP\fIWert\fP. Leerzeichen am Zeilenende, leere Zeilen und Zeilen, die
+mit dem \fB#\fP\-Symbol starten (Kommentare) werden ignoriert.
+
+Zusätzlich sind die folgenden Standardvariablen verfügbar:
+.TP 
+\fBArch\fP
+Die aktuelle Bau\-Architektur (von \fBdpkg \-\-print\-architecture\fP).
+.TP 
+\fBsource:Version\fP
+Die Quellpaket\-Version.
+.TP 
+\fBsource:Upstream\-Version\fP
+Die Paketversion der Originalautoren, einschließlich der Epoche der
+Debian\-Version, falls vorhanden.
+.TP 
+\fBbinary:Version\fP
+Die Binärpaketversion (die z.B. in einem binNMU von source:Version abweichen
+kann).
+.TP 
+\fBSource\-Version\fP
+Die Quellpaketversion (aus der changelog\-Datei). Diese Variable ist jetzt
+\fBveraltet\fP, da ihre Bedeutung von ihrer Funktion abweicht, bitte verwenden
+Sie \fBsource:Version\fP oder \fBbinary:Version\fP wo zutreffend.
+.TP 
+\fBInstalled\-Size\fP
+Die Gesamtgröße der vom Paket installierten Dateien. Dieser Wert wird in das
+entsprechende Feld der »control«\-Datei kopiert; wird es gesetzt, verändert
+es den Wert dieses Feldes. Falls diese Variable nicht gesetzt ist, wird
+\fBdpkg\-gencontrol\fP »\fBdu \-k debian/tmp\fP« verwenden, um den Standardwert zu
+ermitteln.
+.TP 
+\fBExtra\-Size\fP
+Zusätzlicher Plattenplatz, der verwendet wird, wenn das Paket installiert
+ist. Falls diese Variable gesetzt ist, wird dieser Wert zu der
+\fBInstalled\-Size\fP\-Variablen hinzuaddiert (egal ob sie explizit gesetzt oder
+der Standardwert verwendet wird), bevor sie in das Feld \fBInstalled\-Size\fP
+der »control«\-Datei kopiert wird.
+.TP 
+\fBF:\fP\fIFeldname\fP
+Der Wert des Ausgabefeldes \fIFeldname\fP (der in der kanonischen
+Groß\-/Kleinschreibung angegeben werden muss). Das Setzen dieser Variablen
+hat nur einen Effekt an den Stellen, wo diese explizit expandiert werden.
+.TP 
+\fBFormat\fP
+Die Formatversion der \fB.changes\fP\-Datei, die von dieser Version der
+Quellpaketierskripte erstellt wird. Falls Sie diese Variable setzen, werden
+die Inhalte des \fBFormat\fP\-Feldes in der \fB.changes\fP\-Datei auch geändert.
+.TP 
+\fBNewline\fP, \fBSpace\fP, \fBTab\fP
+Diese Variablen enthalten das jeweils korrespondieren Zeichen
+(\fBZeilenumbruch\fP, \fBLeerzeichen\fP und \fBTabulator\fP in dieser Reihenfolge).
+.TP 
+\fBshlibs:\fP\fIdependencyfield\fP
+Variableneinstellungen mit Namen dieser Form werden von \fBdpkg\-shlibdeps\fP
+erstellt.
+.TP 
+\fBdpkg:Upstream\-Version\fP
+Die Original\- (Upstream\-)Version von Dpkg.
+.TP 
+\fBdpkg:Version\fP
+Die komplette Version von Dpkg.
+.LP
+Falls auf eine Variable Bezug genommen wird, diese aber nicht definiert ist,
+wird es eine Warnung erstellen und ein leerer Wert wird angenommen.
+.
+.SH DATEIEN
+.TP 
+\fBdebian/substvars\fP
+Liste von Substitutionsvariablen und \-werten.
+.
+.SH FEHLER
+Die Stelle, an der das Überschreiben von Feldern passiert, verglichen mit
+bestimmten Standard\-Ausgabe\-Feldeinstellungen, ist eher konfus.
+
+.SH ÜBERSETZUNG
+Die deutsche Übersetzung wurde 2004, 2006-2008 von Helge Kreutzmann
+<debian@helgefjell.de>, 2007 von Florian Rehnisch <eixman@gmx.de> und
+2008 von Sven Joachim <svenjoac@gmx.de>
+angefertigt. Diese Übersetzung ist Freie Dokumentation; lesen Sie die
+GNU General Public License Version 2 oder neuer für die Kopierbedingungen.
+Es gibt KEINE HAFTUNG.
+.SH "SIEHE AUCH"
+\fBdpkg\fP(1), \fBdpkg\-genchanges\fP(1), \fBdpkg\-gencontrol\fP(1),
+\fBdpkg\-shlibdeps\fP(1), \fBdpkg\-source\fP(1).
+.
+.SH AUTOR
+Copyright (C) 1995\-1996 Ian Jackson
+.br
+Copyright (C) 2000 Wichert Akkerman
+.sp
+Dies ist Freie Software; lesen Sie die GNU General Public License Version 2
+oder neuer für die Kopierbedingungen. Es gibt KEINE Haftung.

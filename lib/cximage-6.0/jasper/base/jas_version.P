@@ -1,0 +1,4 @@
+base/jas_version.o: base/jas_version.c include/jasper/jas_version.h \
+  include/jasper/jas_config.h
+base/jas_version.c include/jasper/jas_version.h :
+  include/jasper/jas_config.h :

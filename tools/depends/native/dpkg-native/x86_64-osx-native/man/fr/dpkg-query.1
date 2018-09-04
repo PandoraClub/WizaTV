@@ -1,0 +1,165 @@
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH dpkg\-query 1 18\-07\-2007 "Projet Debian" "suite dpkg"
+.SH NOM
+dpkg\-query \- Un outil pour interroger la base de données de dpkg
+.
+.SH SYNOPSIS
+\fBdpkg\-query\fP [\fIoption\fP...] \fIcommande\fP
+.
+.SH DESCRIPTION
+\fBdpkg\-query\fP est un outil pour afficher des informations sur les paquets
+connus par la base de données de \fBdpkg\fP.
+.
+.SH COMMANDES
+.TP 
+\fB\-l\fP, \fB\-\-list\fP \fImotif\-de\-nom\-de\-paquet\fP...
+Liste les paquets correspondants au motif donné. Quand on ne donne aucun
+\fInom\-paquet\-motif\fP, tous les paquets listés dans \fI/var/lib/dpkg/status\fP
+sont affichés, sauf ceux dont l'état est «\ purge\ ». Les métacaractères
+ordinaires de l'interpréteur de commandes sont autorisés dans
+\fInom\-paquet\-motif\fP. Il faudra sans doute mettre \fInom\-paquet\-motif\fP entre
+apostrophes pour éviter l'expansion des noms de fichier par l'interpréteur
+de commandes. Par exemple, tous les paquets dont le nom commence par «\
+libc6\ » seront affichés par la commande\ :
+
+.nf
+\fBdpkg\-query \-l \(aqlibc6*\(aq\fP
+.fi
+
+On ne peut pas configurer le format de sortie de cette option. Il s'adapte
+automatiquement à la largeur du terminal. Ce format est destiné aux humains
+et la machine le lit mal. Voyez \fB\-W\fP (\fB\-\-show\fP) et \fB\-\-showformat\fP pour
+une possible configuration de ce format.
+.TP 
+\fB\-W\fP, \fB\-\-show\fP \fImotif\-de\-nom\-de\-paquet\fP...
+Tout comme l'option \fB\-\-list\fP, cette option affiche la liste des paquets qui
+correspondent au motif donné. La sortie peut cependant être formatée en
+utilisant l'option \fB\-\-showformat\fP. Le format de sortie par défaut est le
+suivant\ : une ligne pour chaque paquet, avec le nom et la version
+installée, séparé par une tabulation.
+.TP 
+\fB\-s\fP, \fB\-\-status\fP \fInom\-paquet\fP ...
+Donne l'état du paquet indiqué. C'est simplement l'affichage de l'entrée de
+la base de données concernant les états des paquets installés.
+.TP 
+\fB\-L\fP, \fB\-\-listfiles\fP \fInom\-paquet\fP...
+Affiche la liste des fichiers du \fInom\-paquet\fP installés sur le système. Il
+faut remarquer cependant que les fichiers créés par les scripts
+d'installation particuliers au paquet ne sont pas affichés.
+.TP 
+\fB\-S\fP, \fB\-\-search\fP \fImotif\-de\-nom\-a\-rechercher\fP...
+Recherche un nom de fichier dans les paquets installés. On peut utiliser
+dans le motif tous les métacaractères de l'interpréteur de commandes. Cette
+commande ne donne pas les fichiers supplémentaires créés par les scripts du
+responsable de paquet, ni les alternatives.
+.TP 
+\fB\-p\fP, \fB\-\-print\-avail\fP \fInom\-paquet\fP...
+Affiche des renseignements détaillés sur \fIpaquet\fP, tels qu'ils sont trouvés
+dans le fichier \fI/var/lib/dpkg/available\fP.
+.TP 
+\fB\-h\fP, \fB\-\-help\fP
+Affiche un message d'aide puis quitte.
+.TP 
+\fB\-\-version\fP
+Affiche le numéro de version puis quitte.
+.TP 
+\fB\-\-license\fP, \fB\-\-licence\fP
+Affiche des renseignements sur le copyright et la licence, puis quitte.
+.
+.SH OPTIONS
+.TP 
+\fB\-\-admindir\fP=\fIdir\fP
+Change l'endroit où se trouve la base de données de \fBdpkg\fP. Par défaut,
+c'est \fI/var/lib/dpkg\fP.
+.TP 
+\fB\-f\fP, \fB\-\-showformat=\fP\fIformat\fP
+Cette option sert à spécifier le format de sortie de l'option \fB\-\-show\fP. Ce
+format sera utilisé pour chaque paquet listé.
+
+Dans la chaîne, \(lq\fB\e\fP\(rq déspécifie le caractère
+
+.nf
+    \fB\en\fP  nouvelle ligne
+    \fB\er\fP  retour chariot
+    \fB\et\fP  tabulation
+.fi
+
+\(lq\fB\e\fP\(rq avant un caractère supprime la signification du caractère qui
+suit. C'est utile pour les caractères \(lq\fB\e\fP\(rq and \(lq\fB$\fP\(rq.
+
+On peut indiquer un paquet en insérant des appels de variables spécifiant
+des champs du paquet avec la syntaxe suivante\ :
+\(lq\fB${\fP\fIfield\fP[\fB;\fP\fIwidth\fP]\fB}\fP\(rq. Les champs sont alignés à droite, à
+moins que la largeur ne soit négative, auquel cas ils sont alignés à
+gauche. Les champs suivants sont reconnus\ :
+
+.nf
+    \fBArchitecture\fP
+    \fBBugs\fP
+    \fBConffiles\fP
+    \fBConfig\-Version\fP
+    \fBConflicts\fP
+    \fBBreaks\fP
+    \fBDepends\fP
+    \fBDescription\fP
+    \fBEnhances\fP
+    \fBEssential\fP
+    \fBFilename\fP
+    \fBHomepage\fP
+    \fBInstalled\-Size\fP
+    \fBMD5sum\fP
+    \fBMSDOS\-Filename\fP
+    \fBMaintainer\fP
+    \fBOrigin\fP
+    \fBPackage\fP
+    \fBPre\-Depends\fP
+    \fBPriority\fP
+    \fBProvides\fP
+    \fBRecommends\fP
+    \fBReplaces\fP
+    \fBRevision\fP
+    \fBSection\fP
+    \fBSize\fP
+    \fBSource\fP
+    \fBStatus\fP
+    \fBSuggests\fP
+    \fBTag\fP
+    \fBVersion\fP
+.fi
+
+Le format par défaut est le suivant\ :
+\(lq\fB${Paquet}\et${Version}\en\fP\(rq. Tous les autres champs du fichier
+status, par exemple des champs définis par l'utilisateur, peuvent être
+demandés. Ils seront affichés mais sans aucune mise en forme et aucune
+vérification n'est faite. Pour obtenir le nom du responsable de dpkg et la
+version installée, exécutez par exemple :
+
+.nf
+  \fBdpkg\-query \-W \-f=\(aq${Package} ${Version}\et${Maintainer}\en\(aq dpkg\fP
+.fi
+.
+.SH ENVIRONNEMENT
+.TP 
+\fBCOLUMNS\fP
+Fixer le nombre de colonnes influence la sortie de l'option \fB\-\-list\fP en
+modifiant la largeur d'affichage.
+.
+.SH AUTEUR
+Copyright (C) 2001 Wichert Akkerman
+.sp
+Ce programme est un logiciel libre\ ; voyez la «\ GNU General Public
+Licence\ » version 2 ou supérieure pour le copyright. Il n'y a PAS de
+garantie.
+.
+.SH "VOIR AUSSI"
+\fBdpkg\fP(1).
+
+.SH TRADUCTION
+Ariel VARDI <ariel.vardi@freesbee.fr>, 2002.
+Philippe Batailler, 2006.
+Nicolas François, 2006.
+Veuillez signaler toute erreur à <debian\-l10n\-french@lists.debian.org>.

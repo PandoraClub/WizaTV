@@ -1,0 +1,303 @@
+.\" update\-alternatives.8
+.\" This man page is copyright 1997 Charles Briscoe-Smith
+.\" This is free documentation; you can redistribute it and/or modify
+.\" it under the terms of the GNU General Public License as published
+.\" by the Free Software Foundation; either version 2 of the License, or
+.\" (at your option) any later version.  There is NO WARRANTY.  You can
+.\" find the GNU GPL in /usr/share/common-licenses/GPL on any Debian system.
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH update\-alternatives 8 2007\-07\-18 "Projekt Debiana" "programy pomocnicze dpkg"
+.SH NAZWA
+update\-alternatives \- zarz±dzanie linkami symbolicznymi okre¶laj±cymi
+domy¶lne polecenia
+.
+.SH SK£ADNIA
+\fBupdate\-alternatives\fP [\fIopcje\fP] \fIpolecenie\fP
+.
+.SH OPIS
+\fBupdate\-alternatives\fP tworzy, usuwa, wy¶wietla informacje o linkach
+symbolicznych sk³adaj±cych siê na system alternatyw Debiana oraz nimi
+zarz±dza.
+.PP
+Kilka programów maj±cych tê sam± lub podobn± funkcjonalno¶æ mo¿e zostaæ
+zainstalowanych w systemie w tym samym czasie. Na przyk³ad w wielu systemach
+jest zainstalowanych jednocze¶nie kilka edytorów tekstu. Stanowi to
+u³atwienie dla u¿ytkowników takiego systemu, z których ka¿dy mo¿e uruchomiæ
+inny edytor, je¶li ma na to ochotê. Z drugiej strony jest to jednak
+utrudnienie dla programów chc±cych podj±æ w³a¶ciw± decyzjê, który edytor
+uruchomiæ, je¿eli u¿ytkownik nie okre¶li³ swoich preferencji co do edytora.
+.PP
+Celem systemu alternatyw Debiana jest rozwi±zanie tego problemu. Ogólna
+nazwa w systemie plików jest wspó³dzielona przez wszystkie pliki
+dostarczaj±ce zmieniaj±c± siê funkcjonalno¶æ. System alternatyw wraz z
+administratorem systemu okre¶laj±, do którego obecnego pliku prowadzi ta
+ogólna nazwa. Na przyk³ad je¿eli zainstalowano zarówno edytor \fBed\fP(1), jak
+i \fBnvi\fP(1), to system alternatyw spowoduje, ¿e nazwa ogólna
+\fI/usr/bin/editor\fP bêdzie siê odnosiæ do \fI/usr/bin/nvi\fP. Administrator
+systemu mo¿e zmieniæ to ustawienie na \fI/usr/bin/ed\fP, a system alternatyw
+tego nie zmieni, chyba ¿e administrator ka¿e mu tak zrobiæ.
+.PP
+Nazwa ogólna nie jest bezpo¶rednim linkiem symbolicznym do wybranej
+alternatywy, ale jest linkiem do pliku w \fIkatalogu\fP \fIalternatyw\fP, który to
+z kolei jest linkiem do w³a¶ciwego pliku. Jest tak zrobione dlatego, ¿eby
+zmiany administratora systemu by³y po³±czone ze zmianami w katalogu \fI/etc\fP:
+standard FHS wymienia powody, aby tak zrobiæ.
+.PP
+Kiedy pakiet dostarczaj±cy pliku o okre¶lonej funkcjonalno¶ci jest
+instalowany, zmieniany lub usuwany, wywo³ywany jest program
+\fBupdate\-alternatives\fP, aby zaktualizowaæ informacje o tym pliku w systemie
+alternatyw. \fBupdate\-alternatives\fP jest zazwyczaj wywo³ywany ze skryptów
+\fBpostinst\fP lub \fBprerm\fP w pakietach Debiana.
+.PP
+Czêsto u¿yteczne jest, aby pewna liczba alternatyw by³a zsynchronizowana,
+tak ¿eby by³a zmieniana jako grupa. Na przyk³ad je¿eli jest zainstalowane
+kilka wersji edytora \fBvi\fP(1), to strona podrêcznika
+\fI/usr/share/man/man1/vi.1\fP powinna odpowiadaæ wersji programu
+zainstalowanego jako \fI/usr/bin/vi\fP. \fBupdate\-alternatives\fP obs³uguje to
+przy pomocy linków \fIg³ównych\fP i \fIpodrzêdnych\fP \- zmiana linku g³ównego
+powoduje zmianê skojarzonych linków podrzêdnych. Link g³ówny i skojarzone z
+nim linki podrzêdne tworz± \fIgrupê\fP \fIlinków\fP.
+.PP
+W dowolnym czasie ka¿da grupa linków mo¿e byæ w jednym z dwu trybów:
+automatycznym lub rêcznym. W trybie automatycznym podczas instalacji lub
+usuwania pakietu system alternatyw automatycznie zdecyduje, czy i jak
+aktualizowaæ linki. W trybie rêcznym system alternatyw nie bêdzie zmienia³
+linków i zostawi wszystkie decyzje administratorowi systemu.
+.PP
+Grupa linków jest trybie automatycznym, kiedy jest po raz pierwszy
+wprowadzana do systemu. Je¿eli administrator systemu wprowadzi zmiany do
+automatycznych ustawieñ, bêd± one wziête pod uwagê podczas nastêpnego
+uruchomienia \fBupdate\-alternatives\fP na takiej zmienionej grupie linków, a
+grupa ta automatycznie przejdzie w tryb rêczny.
+.PP
+Z ka¿d± alternatyw± skojarzony jest \fIpriorytet\fP. Je¿eli grupa linków jest w
+trybie automatycznym, to wybran± alternatyw± bêdzie ta, która ma najwy¿szy
+priorytet.
+.PP
+\fBupdate\-alternatives\fP u¿yte z opcj± \fI\-\-config\fP wy¶wietli listê wszystkich
+alternatyw dla grupy linków, dla której podana \fInazwa\fP jest nazw± linku
+g³ównego. Bie¿±ca alternatywa zostanie oznaczona znakiem "*", a alternatywa
+o najwy¿szym priorytecie bêdzie oznaczona przez "+". U¿ytkownik zostanie
+poproszony o wybór alternatywy, która bêdzie u¿ywana dla tej grupy
+linków. Po dokonaniu zmiany grupa linków nie bêdzie ju¿ w trybie
+\fIautomatycznym\fP. Aby przywróciæ tryb automatyczny, nale¿y u¿yæ opcji
+\fI\-\-auto\fP.
+.PP
+Aby skonfigurowaæ nieinteraktywnie, mo¿na u¿yæ opcji \fI\-\-set\fP (patrz ni¿ej).
+.PP
+Opiekunowie ró¿nych pakietów dostarczaj±cych tych samych plików powinni
+\fBwspó³pracowaæ\fP ze sob±. Oznacza to, ¿e u¿ywanie programu
+\fBupdate\-alternatives\fP jest \fBobowi±zkowe\fP dla wszystkich takich pakietów \-
+nie jest mo¿liwe nadpisanie pewnych plików w pakiecie, który nie u¿ywa
+mechanizmu \fBupdate\-alternatives\fP.
+.
+.SH TERMINOLOGIA
+Poniewa¿ operacje programu \fBupdate\-alternatives\fP s± do¶æ z³o¿one,
+wprowadzimy parê terminów, które pomog± je zrozumieæ.
+.TP 
+nazwa ogólna
+Nazwa, taka jak \fI/usr/bin/editor\fP, która odnosi siê przez system alternatyw
+do jednego z kilku plików o podobnej funkcjonalno¶ci.
+.TP 
+link symboliczny
+Bez ¿adnego szczegó³owego dookre¶lenia, oznacza to link symboliczny w
+katalogu alternatyw: ten, który administrator systemu powinien poprawiaæ.
+.TP 
+alternatywa
+Nazwa okre¶lonego pliku w systemie plików, który w systemie alternatyw mo¿e
+byæ dostêpny przez nazwê ogóln±.
+.TP 
+katalog alternatyw
+Katalog zawieraj±cy linki symboliczne, domy¶lnie \fI/etc/alternatives\fP.
+.TP 
+katalog administracyjny
+Katalog zawieraj±cy informacje o stanie \fBupdate\-alternatives\fP, domy¶lnie
+\fI/var/lib/dpkg/alternatives\fP.
+.TP 
+grupa linków
+Zbiór powi±zanych linków, zarz±dzany jako grupa.
+.TP 
+link g³ówny
+Link w grupie linków, który okre¶la sposób konfigurowania innych linków z
+grupy.
+.TP 
+link podrzêdny
+Link w grupie linków, który jest kontrolowany przez ustawienie linku
+g³ównego.
+.TP 
+tryb automatyczny
+Kiedy grupa linków jest w trybie automatycznym, system alternatyw zapewni,
+¿e linki tej grupy wskazuj± na alternatywê o najwy¿szym priorytecie.
+.TP 
+tryb rêczny
+Kiedy grupa linków jest w trybie rêcznym, system alternatyw nic nie zmieni w
+ustawieniach administratora systemu.
+.
+.SH POLECENIA
+.TP 
+\fB\-\-install\fP \fInazwa\-ogólna symlink altern priorytet\fP [\fB\-\-slave\fP \fInazwa\-ogólna symlink altern\fP]...
+Dodaje grupê alternatyw do systemu. \fInazwa\-ogólna\fP jest ogóln± nazw±
+g³ównego linku, \fIlink\-symboliczny\fP jest nazw± linku symbolicznego w
+katalogu alternatyw, a \fIalternatywa\fP jest wprowadzan± alternatyw± dla
+g³ównego linku. Argumentami opcji \fB\-\-slave\fP s± nazwa ogólna, nazwa linku
+symbolicznego w katalogu alternatyw i alternatywa dla linku
+symbolicznego. Mo¿na podaæ zero lub wiêcej opcji \fB\-\-slave\fP, po ka¿dej musz±
+nastêpowaæ jej trzy argumenty.
+.IP
+Je¿eli g³ówny link symboliczny ju¿ istnieje w systemie alternatyw, to podana
+informacja bêdzie dodana jako nowy zbiór alternatyw dla tej grupy. W
+przeciwnym wypadku zostanie utworzona nowa grupa, ustawiona w tryb
+automatyczny. Je¿eli grupa jest w trybie automatycznym, a priorytet nowo
+dodawanej alternatywy jest wiêkszy od priorytetu ka¿dej z innych
+zainstalowanych alternatyw w tej grupie, to linki symboliczne bêd±
+zaktualizowane tak, ¿eby prowadzi³y do nowo dodanej alternatywy.
+.TP 
+\fB\-\-set\fP \fInazwa ¶cie¿ka\fP
+Ustawia program \fI¶cie¿ka\fP jako alternatywê dla \fInazwy\fP. Jest to
+nieinteraktywny, a wiêc mo¿liwy do u¿ycia w skryptach, odpowiednik opcji
+\fI\-\-config\fP.
+.TP 
+\fB\-\-remove\fP \fInazwa ¶cie¿ka\fP
+Usuwa alternatywê i wszystkie linki podrzêdne z ni± skojarzone. \fInazwa\fP
+jest nazw± w katalogu alternatyw, \fI¶cie¿ka\fP jest absolutn± nazw± pliku, do
+której \fInazwa\fP mog³aby byæ linkiem. Je¿eli \fInazwa\fP rzeczywi¶cie jest
+linkiem do \fI¶cie¿ki\fP, to \fInazwa\fP zostanie zaktualizowana, tak ¿eby
+wskazywa³a na inn± odpowiedni± alternatywê, albo zostanie usuniêta, je¿eli
+nie pozostanie ani jedna alternatywa. Skojarzone linki podrzêdne zostan±
+odpowiednio zaktualizowane lub usuniête. Je¿eli link nie prowadzi obecnie do
+\fI¶cie¿ki\fP, to ¿adne linki nie bêd± aktualizowane; zostanie tylko usuniêta
+informacja o alternatywie.
+.TP 
+\fB\-\-remove\-all\fP \fInazwa\fP
+Usuwa wszystkie linki alternatyw i wszystkie skojarzone z nimi linki
+podrzêdne. \fInazwa\fP jest nazw± w katalogu alternatyw.
+.TP 
+\fB\-\-all\fP
+Wywo³uje \fB\-\-config\fP dla wszystkich alternatyw.
+.TP 
+\fB\-\-auto\fP \fIlink\fP
+Prze³±cza g³ówny link \fIlink\fP w tryb automatyczny. Podczas tego procesu,
+link ten wraz z jego linkami podrzêdnymi bêdzie zaktualizowany tak, ¿eby
+wskazywa³ na alternatywê o najwy¿szym priorytecie.
+.TP 
+\fB\-\-display\fP \fIlink\fP
+Wy¶wietla informacje o grupie linków, której \fIlink\fP jest linkiem
+nadrzêdnym. Informacje te zawieraj± tryb grupy (automatyczny lub rêczny),
+okre¶laj±, na któr± alternatywê obecnie link wskazuje, jakie s± inne
+dostêpne alternatywy (i odpowiadaj±ce im alternatywy podrzêdne) oraz obecnie
+zainstalowan± alternatywê o najwy¿szym priorytecie.
+.TP 
+\fB\-\-list\fP \fIlink\fP
+Wy¶wietla wszystkie cele w grupie linków.
+.TP 
+\fB\-\-config\fP \fIlink\fP
+Wy¶wietla dostêpne alternatywy w grupie linków i pozwala u¿ytkownikowi
+interakcyjnie wybraæ, której nale¿y u¿yæ. Grupa linków zostanie
+zaktualizowana, a tryb \fIautomatyczny\fP zostanie wy³±czony.
+.TP 
+\fB\-\-help\fP
+Wy¶wietla informacjê o u¿ytkowaniu i koñczy dzia³anie.
+.TP 
+\fB\-\-version\fP
+Wy¶wietla informacjê o wersji i pomy¶lnie koñczy dzia³anie.
+.
+.SH OPCJE
+.TP 
+\fB\-\-altdir\fP\fI katalog\fP
+Okre¶la katalog alternatyw, je¿eli ma byæ inny ni¿ domy¶lny.
+.TP 
+\fB\-\-admindir\fP\fI katalog\fP
+Okre¶la katalog administracyjny, je¿eli ma byæ inny ni¿ domy¶lny.
+.TP 
+\fB\-\-verbose\fP
+Podaje wiêcej informacji o przebiegu wykonywania \fBupdate\-alternatives\fP.
+.TP 
+\fB\-\-quiet\fP
+Nie wy¶wietla ¿adnych komentarzy, chyba ¿e wyst±pi b³±d. Opcja jeszcze
+niezaimplementowana.
+.
+.SH PLIKI
+.TP 
+\fI/etc/alternatives/\fP
+Domy¶lny katalog alternatyw. Mo¿na go zmieniæ opcj± \fB\-altdir\fP.
+.TP 
+\fI/var/lib/dpkg/alternatives/\fP
+Domy¶lny katalog administracyjny. Mo¿na go zmieniæ opcj± \fB\-admindir\fP.
+.
+.SH "KOD WYJ¦CIA"
+.IP 0
+Akcja zakoñczy³a siê powodzeniem.
+.IP 2
+Wyst±pi³y problemy podczas przetwarzania linii poleceñ lub wykonywania
+akcji.
+.
+.SH DIAGNOSTYKA
+\fBupdate\-alternatives\fP wypisuje nieustannie informacje o podejmowanych
+dzia³aniach do standardowego wyj¶cia. Je¿eli wyst±pi b³±d
+\fBupdate\-alternatives\fP wy¶wietla komunikaty b³êdu do standardowego wyj¶cia
+b³êdów i koñczy dzia³anie z kodem wyj¶cia 2. Wypisywana diagnostyka powinna
+wszystko wyja¶niaæ, je¿eli tak nie jest, proszê zg³osiæ to jako b³±d.
+.
+.SH PRZYK£ADY
+Mamy klika pakietów, które dostarczaj± edytora tekstu kompatybilnego z
+edytorem \fBvi\fP, na przyk³ad \fBnvi\fP i \fBvim\fP. To, który pakiet bêdzie
+u¿ywany, kontrolowane jest przez grupê linków \fBvi\fP, zawieraj±c± linki do
+samego programu i skojarzonych stron podrêcznika.
+.PP
+Aby wy¶wietliæ listê dostêpnych pakietów, które dostarczaj± \fBvi\fP oraz jego
+bie¿±ce ustawienie, nale¿y u¿yæ akcji \fI\-\-display\fP:
+.RS
+.PP
+\fBupdate\-alternatives \-\-display vi\fP
+.RE
+.PP
+Aby wybraæ okre¶lon± implementacjê edytora \fBvi\fP, nale¿y u¿yæ tego polecenia
+jako u¿ytkownik root i wybraæ liczbê z listy:
+.RS
+.PP
+\fBupdate\-alternatives \-\-config vi\fP
+.RE
+.PP
+Aby przywróciæ automatyczne wybieranie implementacji programu \fBvi\fP, nale¿y
+jako u¿ytkownik root wykonaæ:
+.RS
+.PP
+\fBupdate\-alternatives \-\-auto vi\fP
+.RE
+.
+.SH B£ÊDY
+W razie znalezienia b³êdu, prosimy o jego zg³oszenie, u¿ywaj±c systemu
+¶ledzenia b³êdów Debiana, a je¿eli nie jest to mo¿liwe, to przez wys³anie
+bezpo¶redniego e\-maila do autora.
+.PP
+Rozbie¿no¶ci pomiêdzy dzia³aniem \fBupdate\-alternatives\fP a t± stron±
+podrêcznika stanowi± b³±d albo w implementacji, albo w dokumentacji. W razie
+znalezienia jakichkolwiek rozbie¿no¶ci, prosimy o ich zg³oszenie.
+.
+.SH AUTOR
+Copyright (C) 1995 Ian Jackson
+.sp
+Niniejszy program jest oprogramowaniem wolnym, sprawd¼ Powszechn± Licencjê
+Publiczn± GNU w wersji drugiej lub pó¼niejszej, by dowiedzieæ siê o
+warunkach dystrybucji. Brak JAKIEJKOLWIEK gwarancji.
+.PP
+Copyright tej strony podrêcznika: 1997,1998 Charles Briscoe\-Smith.
+.sp
+Niniejszy program jest oprogramowaniem wolnym, sprawd¼ Powszechn± Licencjê
+Publiczn± GNU w wersji drugiej lub pó¼niejszej, by dowiedzieæ siê o
+warunkach dystrybucji. Brak JAKIEJKOLWIEK gwarancji.
+.
+.SH "ZOBACZ TAK¯E"
+\fBln\fP(1), FHS \- standard hierarchii systemu plików.
+.SH "T£UMACZE"
+Piotr Roszatycki <dexter@debian.org>, 1999
+.br
+Bartosz Feñski <fenio@debian.org>, 2004-2005
+.br
+Robert Luberda <robert@debian.org>, 2006-2008
+.br
+Wiktor Wandachowicz <siryes@gmail.com>, 2008

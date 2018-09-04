@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon version="2.0" id="repository.Coolwave.v2" name="[COLOR blue]Coolwave Repo[/COLOR]" provider-name="[COLOR blue]Coolwave[/COLOR]">
+	<extension point="xbmc.addon.repository" name="Coolwave's Addon Repository">
+		<info compressed="false">http://github.com/Coolwave/repository.Coolwave.v2/raw/master/addons.xml</info>
+		<checksum>http://github.com/Coolwave/repository.Coolwave.v2/raw/master/addons.xml.md5</checksum>
+		<datadir zip="true">http://github.com/Coolwave/repository.Coolwave.v2/raw/master/repo/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Install [COLOR blue]Coolwave[/COLOR]'s Addons</summary>
+		<description>Download and install addons from Coolwave</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+

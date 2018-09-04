@@ -1,0 +1,11 @@
+prefix=/Users/Shared/xbmc-depends/iphoneos9.2_armv7-target
+exec_prefix=/Users/Shared/xbmc-depends/iphoneos9.2_armv7-target
+libdir=/Users/Shared/xbmc-depends/iphoneos9.2_armv7-target/lib
+includedir=/Users/Shared/xbmc-depends/iphoneos9.2_armv7-target/include
+
+Name: libdvdread
+Description: Low level DVD access library
+Version: 4.2.1
+
+Cflags: -I${includedir}
+Libs: -L${libdir} -ldvdread

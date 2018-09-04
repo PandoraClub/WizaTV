@@ -1,0 +1,137 @@
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH dpkg\-parsechangelog 1 13\-01\-2008 "Projet Debian" "Utilitaires de dpkg"
+.SH NOM
+dpkg\-parsechangelog \- Analyser un fichier changelog Debian.
+.
+.SH SYNOPSIS
+\fBdpkg\-parsechangelog\fP [\fIoptions\fP]
+.
+.SH DESCRIPTION
+\fBdpkg\-parsechangelog\fP lit et fait l'analyse du fichier «\ changelog\ »
+d'une arborescence source dépaquetée et affiche les informations qu'il
+contient sur la sortie standard et sous une forme lisible par la machine.
+.
+.SH OPTIONS
+.TP 
+\fB\-l\fP\fIfichier/changelog\fP
+Indique le fichier d'enregistrement des changements où trouver des
+renseignements. Par défaut, c'est le fichier \fBdebian/changelog\fP.
+.TP 
+\fB\-F\fP\fIformat\-du\-changelog\fP
+Donne le format du fichier changelog. Par défaut, c'est une ligne spéciale,
+près de la fin du fichier, qui l'indique\ ; sinon, on utilise le format
+classique \fBdebian\fP.
+.TP 
+\fB\-L\fP\fIrep_lib\fP
+Spécifie un répertoire supplémentaire pour la recherche de scripts
+d'analyse. Ce répertoire est examiné avant les répertoires par défaut qui
+sont \fB/usr/local/lib/dpkg/parsechangelog\fP et
+\fB/usr/lib/dpkg/parsechangelog\fP.
+.TP 
+\fB\-h\fP, \fB\-\-help\fP
+Affiche un message d'aide puis quitte.
+.TP 
+\fB\-\-version\fP
+Affiche le numéro de version puis quitte.
+.SS "Options de filtrage"
+Les options suivantes peuvent être utilisées pour influencer la sortie de
+l'analyseur du changelog, par exemple la gamme d'entrées ou le format de
+sortie. Ils doivent être supportés par le script d'analyse en question. Voir
+aussi \fBCAVEATS\fP.
+.TP 
+\fB\-\-format\fP\fI outputformat\fP
+Règle le format de sortie. Actuellement les valeurs supportées sont \fIdpkg\fP
+et \fIrfc822\fP. \fIdpkg\fP est le format classique de sortie (avant que cette
+option n'existe) et l'option par défaut. Il se compose d'un paragraphe dans
+le format du fichier de contrôle Debian (voir \fBdeb\-control\fP(5)). Si plus
+d'une entrée est demandée, alors la plupart des champs sont tirés de la
+dernière entrée, sauf s'il y a l'indication\ :
+.RS
+.TP 
+\fBSource:\fP <nom du paquet>
+.TP 
+\fBVersion:\fP <version>
+.TP 
+\fBDistribution:\fP <distribution cible>
+.TP 
+\fBUrgency:\fP <priorité>
+La priorité la plus haute de celles indiquées est utilisée.
+.TP 
+\fBMaintainer:\fP <auteur>
+.TP 
+\fBDate:\fP <date>
+.TP 
+\fBCloses:\fP <Numéro de bogue>
+Les champs «\ Closes\ » de toutes les entrées incluses sont fusionnés.
+.TP 
+\fBChanges:\fP <entrées du fichier des changements>
+Le texte de toutes les entrées de changelog est concaténé. Pour faire de ce
+champ un champ de contrôle Debian valide, les lignes multiples qui sont
+vides sont remplacées par un point \fB"."\fP et toutes les lignes sont
+intentées par un seul espace. Le contenu exact dépend du format du
+changelog.
+.RE
+.IP
+Il est possible d'avoir d'autres champs qui sont définis par l'utilisateur.
+.IP
+Le format \fBrfc822\fP utilise les mêmes champs mais le résultat est un
+paragraphe distinct pour chaque entrée du changelog afin que toutes les
+métadonnées de chaque entrée soit préservées.
+.TP 
+\fB\-\-since\fP, \fB\-s\fP, \fB\-v\fP \fIversion\fP
+inclut tous les changements qui ont suivi la \fIversion\fP.
+.TP 
+\fB\-\-until\fP, \fB\-u\fP \fIversion\fP
+inclut tous les changements qui ont eu lieu avant la \fIversion\fP.
+.TP 
+\fB\-\-from\fP, \fB\-f\fP \fIversion\fP
+inclut tous les changements depuis la \fIversion\fP (incluse).
+.TP 
+\fB\-\-to\fP, \fB\-t\fP \fIversion\fP
+inclut tous les changements apportés jusqu'à la \fIversion\fP comprise.
+.TP 
+\fB\-\-count\fP, \fB\-c\fP, \fB\-n\fP \fInuméro\fP
+inclut ce \fInombre\fP d'entrées depuis le début (ou la fin si le \fInombre\fP est
+inférieur à 0).
+.TP 
+\fB\-\-offset\fP, \fB\-o\fP \fInombre\fP
+modifie le point de départ pour «\ \-\-count\ », à compter du début (ou la fin
+si le \fInombre\fP est inférieure à 0).
+.TP 
+\fB\-\-all\fP
+inclut tous les changements.
+.
+.SH CAVEATS
+Toutes les \fBOptions d'analyse\fP sauf «\ \-v\ » sont supportées par \fBdpkg\fP
+avec la version 1.14.16 et suivantes. Les analyseurs tiers pour le format du
+changelog plus vieux que \fIdebian\fP ne supportent peut être pas toutes les
+options.
+.
+.SH FICHIERS
+.TP 
+\fBdebian/changelog\fP
+Le fichier d'enregistrement des modifications\ ; on s'en sert pour connaître
+les informations qui dépendent d'une version du paquet source, par exemple
+l'urgence ou la distribution d'une installation sur le serveur, les
+modifications faites depuis telle édition et le numéro de la version source
+lui\-même.
+.
+.SH AUTEURS
+Copyright (C) 1995\-1996 Ian Jackson
+.br
+Copyright (C) 2000 Wichert Akkerman
+.br
+Copyright (C) 2007, 2008 Frank Lichtenheld
+.sp
+Ce programme est un logiciel libre\ ; voyez la «\ GNU General Public
+Licence\ » version 2 ou supérieure pour le copyright. Il n'y a PAS de
+garantie.
+.SH TRADUCTION
+Ariel VARDI <ariel.vardi@freesbee.fr>, 2002.
+Philippe Batailler, 2006.
+Nicolas François, 2006.
+Veuillez signaler toute erreur à <debian\-l10n\-french@lists.debian.org>.

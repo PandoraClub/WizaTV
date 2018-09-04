@@ -1,0 +1,6 @@
+1.0.2a
+Added count to main menu
+Added ability to save each list to user-defined location
+
+1.0.0
+Initial Release

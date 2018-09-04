@@ -1,0 +1,256 @@
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH dpkg\-buildpackage 1 2008\-08\-15 Debian\-Projekt dpkg\-Hilfsprogramme
+.SH NAME
+dpkg\-buildpackage \- baue Binär\- oder Quellpakete aus Quellen
+.
+.SH ÜBERSICHT
+\fBdpkg\-buildpackage\fP [\fIOptionen\fP]
+.
+.SH BESCHREIBUNG
+\fBdpkg\-buildpackage\fP ist ein Steuerskript, das zu Automatisierung des Bauens
+von Paketen verwendet werden kann.
+.
+.SH OPTIONEN
+.TP 
+\fB\-b\fP
+Spezifiziert einen rein binären Bau, keine Quelldateien sollen gebaut
+und/oder vertrieben (im Sinne von verteilen) werden.
+.TP 
+\fB\-B\fP
+Spezifiziert einen rein binären Bau, es werden auch keine
+architekturunabhängigen Binärpaketdateien vertrieben.
+.TP 
+\fB\-S\fP
+Spezifiziert einen reinen Bau der Quellen, keine Binärpakete müssen erstellt
+werden.
+.PP
+Die \fB\-s\fP\fIx\fP Optionen steuern, ob das Original\-Quellarchiv dem Upload
+hinzugefügt wird, falls die Quellen erzeugt werden (d.h. \fB\-b\fP oder \fB\-B\fP
+nicht verwendet wurden).
+.TP 
+\fB\-si\fP
+Standardmäßig, oder falls angegeben, werden die Originalquellen nur
+hinzugefügt, falls sich die Versionsnummer der Originalautoren (die Version
+ohne Epoche und ohne die Debian\-Revision) von der Versionsnummer der
+Originalautoren in dem letzten Changlog\-Eintrag unterscheidet.
+.TP 
+\fB\-sa\fP
+Erzwingt die Hinzunahme der Originalquellen.
+.TP 
+\fB\-sd\fP
+Erzwingt den Ausschluss der Originalquellen und fügt nur den Diff hinzu.
+.TP 
+\fB\-a\fP\fIArchitektur\fP
+Spezifiziert die Debian\-Architektur, für die gebaut wird. Die Architektur
+der Maschine, auf der gebaut wird, wird automatisch bestimmt, und ist auch
+die Voreinstellung für die Gastgebermaschine (»host machine«).
+
+Falls sich die Host\-Architektur von der Bau\-Architektur unterscheidet (wie
+diese bei Cross\-Kompilierung der Fall ist) und falls die Umgebungsvariable
+\fBPKG_CONFIG_LIBDIR\fP nicht gesetzt ist, dann wird sie auf einen Wert
+gesetzt, der für Cross\-Kompilierung geeignet ist
+(»/usr/\fIgnu\-system\-type\fP/lib/pkgconfig/:/usr/share/pkgconfig«).
+.TP 
+\fB\-t\fP\fIGNU\-Systemtyp\fP
+Spezifiziere den GNU\-Systemtyp, für den wir bauen. Er kann anstelle von \-a
+oder als Ergänzung verwandt werden, um den Standard GNU\-Systemtyp der
+Ziel\-Debian\-Architektur zu überschreiben.
+.TP 
+\fB\-j\fP\fIAufträge\fP
+Anzahl an Aufträgen, die simultan laufen dürfen, äquivalent zu der Option
+von \fBmake\fP(1) mit dem gleichen Namen. Fügt sich selbst zu der
+Umgebungsvariablen MAKEFLAGS hinzu, was dazu führen sollte, dass alle
+folgenden Aufrufe von make diese Option erben werden. Fügt auch
+\fBparallel=\fP\fIAufträge\fP zu der Umgebungsvariablen DEB_BUILD_OPTIONS hinzu,
+was es debian/rules\-Dateien erlaubt, diese Information für eigene Zwecke zu
+verwenden. Der Eintrag \fBparallel=\fP\fIAufträge\fP in der Umgebungsvariablen
+DEB_BUILD_OPTIONS überschreibt den Wert von \fB\-j\fP, falls diese Option
+angegeben ist.
+.TP 
+\fB\-v\fP\fIVersion\fP
+Verwende »changelog«\-Informationen von allen Versionen, die strikt neuer als
+\fIVersion\fP sind.
+.TP 
+\fB\-C\fP\fIÄnderungsbeschreibung\fP
+Lese die Beschreibung der Änderungen aus der Datei \fIÄnderungsbeschreibung\fP
+anstatt die Informationen aus dem changelog\-Datei des Quellbaums zu
+verwenden.
+.TP 
+\fB\-m\fP\fIBetreueradresse\fP
+Verwende \fIBetreueradresse\fP als Namen und E\-Mail\-Adresse des Betreuers
+dieses Paketes, anstatt die Informationen aus der »control«\-Datei des
+Quellbaums zu verwenden.
+.TP 
+\fB\-e\fP\fIBetreueradresse\fP
+Verwende \fIBetreueradresse\fP als Namen und E\-Mail\-Adresse des Betreuers für
+diesen Upload, anstatt die Informationen aus dem »changelog« des Quellbaums
+zu verwenden.
+.TP 
+\fB\-D\fP
+Überprüfe Bauabhängigkeiten und \-konflikte; Abbruch falls nicht erfüllt.
+.TP 
+\fB\-d\fP
+Überprüfe Bauabhängigkeiten und \-konflikte nicht.
+.TP 
+\fB\-E\fP
+Verwandle bestimme Warnungen in Fehler. Nur \fBdpkg\-source\fP verwendet dies,
+aber \fBdpkg\-buildpackage\fP erkennt es und leitet es an \fBdpkg\-source\fP weiter.
+.TP 
+\fB\-W\fP
+Verneint ein vorher gesetzte \fB\-E\fP. Nur \fBdpkg\-source\fP verwendet dies, aber
+\fBdpkg\-buildpackage\fP erkennt es und leitet es an \fBdpkg\-source\fP weiter.
+.TP 
+\fB\-nc\fP
+Den Quellbaum nicht säubern (impliziert \fB\-b\fP).
+.TP 
+\fB\-tc\fP
+Den Quellbaum säubern (verwendet \fIroot\-werde\-Befehl\fP \fBdebian/rules clean\fP)
+nachdem das Paket gebaut wurde.
+.TP 
+\fB\-r\fP\fIroot\-werde\-Befehl\fP
+Wenn \fBdpkg\-buildpackage\fP einen Teil des Bauprozesses als Root ausführen
+muss, stellt es dem auszführenden Befehl den \fIroot\-werde\-Befehl\fP voran,
+falls dieser angegeben wurde. Andernfalls wird standardmäßig \fBfakeroot\fP
+verwendet, falls es vorhanden ist. Der \fIroot\-werde\-Befehl\fP sollte der Name
+des Programmes im \fBPATH\fP sein und wird als Argumente den Namen des wirklich
+auszuführenden Befehles und dessen Argumente erhalten. \fIroot\-werde\-Befehl\fP
+kann Parameter enthalten (die durch Leerzeichen voneinander getrennt sein
+müssen), aber keine Shell\-Metazeichen. Typischerweise ist der
+\fIroot\-werde\-Befehl\fP \fBfakeroot\fP, \fBsudo\fP, \fBsuper\fP oder \fBreally\fP. \fBsu\fP
+ist nicht geeignet, da es nur die Shell des Benutzers mit \fB\-c\fP aufrufen
+kann, anstatt Argumente individuell zur Ausführung des Programms zu
+übergeben.
+.TP 
+\fB\-R\fP\fIrules\-Datei\fP
+Der Bau eines Debian\-Pakets erfolgt gewöhnlich durch Aufruf von
+\fBdebian/rules\fP als ein Befehl mit mehreren Standardparametern. Mit dieser
+Option ist es möglich, einen anderen Programmaufruf zum Bau des Paketes zu
+verwenden (es können durch Leerzeichen getrennte Parameter angegeben
+werden). Alternativ kann die Standard\-debian/rules\-Datei mit einem anderen
+Make\-Programm ausgeführt werden (zum Beispiel durch die Verwendung von
+\fB/usr/local/bin/make \-f debian/rules\fP als \fIrules\-Datei\fP).
+.TP 
+\fB\-p\fP\fIsignier\-Befehl\fP
+Wenn \fBdpkg\-buildpackage\fP GPG oder PGP zum Signieren einer Quellsteuerdatei
+((\fB.dsc\fP)) oder einer \fB.changes\fP\-Datei benötigt, wird es statt \fBpgp\fP den
+\fIsignier\-Befehl\fP ausführen (und dabei falls notwendig den \fBPATH\fP
+durchsuchen). Falls \fIsignier\-Befehl\fP seine Argumente im GPG\- statt im
+PGP\-Stil verlangt, sollten Sie die \fB\-sgpg\fP\-Option
+verwenden. \fIsignier\-Befehl\fP sollte keine Leerzeichen oder andere
+Metazeichen der Shell enthalten.
+.TP 
+\fB\-k\fP\fISchlüssel\-id\fP
+Geben Sie die Schlüssel\-ID zur Signatur von Paketen an.
+.TP 
+\fB\-us\fP
+Das Quellpaket nicht signieren.
+.TP 
+\fB\-uc\fP
+Die .changes\-Datei nicht signieren.
+.TP 
+\fB\-i\fP[\fIRegexp\fP]
+Wird unverändert an \fBdpkg\-source\fP weitergegeben.
+.TP 
+\fB\-I\fP\fI[Muster]\fP
+Wird unverändert an \fBdpkg\-source\fP weitergegeben. Kann mehrfach wiederholt
+werden.
+.TP 
+\fB\-s\fP[\fBnsAkurKUR\fP]
+Wird unverändert an \fBdpkg\-source\fP weitergegeben.
+.TP 
+\fB\-z\fP, \fB\-Z\fP
+Wird unverändert an \fBdpkg\-source\fP weitergegeben.
+.TP 
+\fB\-\-admindir=\fP\fIVerz\fP
+Ändert den Ablageort der \fBdpkg\fP\-Datenbank. Der Standardort ist
+\fI/var/lib/dpkg\fP.
+.TP 
+\fB\-h\fP, \fB\-\-help\fP
+Zeige den Bedienungshinweis und beende.
+.TP 
+\fB\-\-version\fP
+Gebe die Version aus und beende sich.
+.
+.SH UMGEBUNG
+Eine Reihe von Umgebungsvariablen für Einstellungen der Optionen des
+Compilers und Linkers werden auf Standardwerte gesetzt, falls sie noch nicht
+in der Umgebung gesetzt werden. Beachten Sie, dass dieser Mechanismus erst
+in dpkg\-dev Version 1.14.17 eingeführt wurde und noch nicht alle
+\fIrules\fP\-Dateien und Bauwerkzeuge diese Variablen berücksichtigen.
+.TP 
+\fBCFLAGS\fP
+Optimierungs\-Optionen, die an das Debian\-Bausystem weitergegeben und vom
+Paketbausystem bei Bedarf überschrieben werden können/sollten (Vorgabewert:
+\fB\-g \-O2\fP oder \fB\-g\ \-O0\fP falls \fBnoopt\fP in DEB_BUILD_OPTIONS angegeben
+ist). Das Überschreiben der Optionen kann dazu verwendet werden, explizit
+eine höhere Optimierungsstufe zu setzen oder um Compiler\-Fehler zu umgehen,
+die nur bei einigen Optimierungsstufen auftreten (die letzte
+Optimierungsstufe »gewinnt«).
+.TP 
+\fBCFLAGS_APPEND\fP
+Optimierungsoptionen, die an die Compiler\-Schalter angehängt werden, die
+nicht vom Paket überschrieben werden dürfen (hauptsächlich zum
+Testen). Standardmäßig leer.
+.TP 
+\fBCXXFLAGS\fP
+Identisch zu \fBCFLAGS\fP für C++\-Quellen.
+.TP 
+\fBCXXFLAGS_APPEND\fP
+Identisch zu \fBCFLAGS_APPEND\fP für C++\-Quellen.
+.TP 
+\fBFFLAGS\fP
+Identisch zu \fBCFLAGS\fP für Fortran\-Quellen.
+.TP 
+\fBFFLAGS_APPEND\fP
+Identisch zu \fBCFLAGS_APPEND\fP für Fortran\-Quellen.
+.TP 
+\fBCPPFLAGS\fP
+Präprozessor\-Schalter, die an das Debian\-Bausystem weitergegeben und vom
+Paketbausystem bei Bedarf überschrieben werden können/sollten (Vorgabewert:
+leer). Dieses Makro wird selten benutzt (die meisten Bausysteme verwenden
+einfach \fBCFLAGS\fP statt \fBCPPFLAGS\fP).
+.TP 
+\fBCPPFLAGS_APPEND\fP
+Präprozessor\-Schalter, die an die Präprozessor\-Schalter angehängt werden,
+die nicht vom Paket überschrieben werden dürfen (hauptsächlich zum
+Testen). Standardmäßig leer.
+.TP 
+\fBLDFLAGS\fP
+Optionen die beim Linken von Programmen oder Laufzeitbibliotheken an den
+Compiler weitergegeben werden (falls der Linker direkt aufgerufen wird,
+müssen \fB\-Wl\fP und \fB,\fP aus diesen Optionen entfernt werden). Standardmäßig
+leer.
+.TP 
+\fBLDFLAGS_APPEND\fP
+Optimierungs\-Optionen, die an den Compiler beim Linken von Code angehängt
+werden und die nicht vom Paket überschrieben werden dürfen (hauptsächlich
+zum Testen). Standardmäßig leer.
+.
+.SH FEHLER
+Es sollte möglich sein, Leerzeichen und Metazeichen der Shell in und
+Anfangsargumente für \fIroot\-werde\-Befehl\fP und \fIsignier\-Befehl\fP anzugeben.
+.
+.SH ÜBERSETZUNG
+Die deutsche Übersetzung wurde 2004, 2006-2008 von Helge Kreutzmann
+<debian@helgefjell.de>, 2007 von Florian Rehnisch <eixman@gmx.de> und
+2008 von Sven Joachim <svenjoac@gmx.de>
+angefertigt. Diese Übersetzung ist Freie Dokumentation; lesen Sie die
+GNU General Public License Version 2 oder neuer für die Kopierbedingungen.
+Es gibt KEINE HAFTUNG.
+.SH "SIEHE AUCH"
+\fBdpkg\-source\fP(1), \fBdpkg\-architecture\fP(1), \fBdpkg\-genchanges\fP(1),
+\fBgpg\fP(1), \fBpgp\fP(1).
+.
+.SH AUTOREN
+Copyright (C) 1995\-1996 Ian Jackson
+.br
+Copyright (C) 2000 Wichert Akkerman
+.br
+Copyright (C) 2007 Frank Lichtenheld
+.sp
+Dies ist Freie Software; lesen Sie die GNU General Public License Version 2
+oder neuer für die Kopierbedingungen. Es gibt KEINE Haftung.

@@ -1,0 +1,136 @@
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH dpkg\-parsechangelog 1 2008\-01\-13 Debian\-Projekt dpkg\-Hilfsprogramme
+.SH NAME
+dpkg\-parsechangelog \- auswerten von Debian changelog\-Dateien
+.
+.SH ÜBERSICHT
+\fBdpkg\-parsechangelog\fP [\fIOptionen\fP]
+.
+.SH BESCHREIBUNG
+\fBdpkg\-parsechangelog\fP liest das Änderungsprotokoll (»changelog«) eines
+entpackten Debian\-Quellcodebaums ein, wertet diese aus und gibt die
+Informationen in der Standard\-Ausgabe in maschinenlesbarer Form aus.
+.
+.SH OPTIONEN
+.TP 
+\fB\-l\fP\fIChangelog\-Datei\fP
+Gibt die Änderungsprotokolldatei an, aus der Informationen gelesen werden
+sollen. Standardmäßig \fBdebian/changelog\fP.
+.TP 
+\fB\-F\fP\fIChangelog\-Format\fP
+Gibt das Format der Änderungsprotokolldatei an. Standardmäßig wird das
+Format aus einer speziellen Zeile in der Nähe des Endes der
+Änderungsprotokolldatei gelesen oder, falls dies fehlschlägt, wird das
+Debian\-Standardformat angenommen.
+.TP 
+\fB\-L\fP\fIlibverzeichnis\fP
+Spezifiziere ein zusätzliches Verzeichnis, dass nach Parser\-Skripten
+durchsucht werden soll. Diese Verzeichnis wird vor den
+Standardverzeichnissen (derzeit \fB/usr/local/lib/dpkg/parsechangelog\fP und
+\fB/usr/lib/dpkg/parsechangelog\fP) durchsucht.
+.TP 
+\fB\-h\fP, \fB\-\-help\fP
+Zeige den Bedienungshinweis und beende.
+.TP 
+\fB\-\-version\fP
+Gebe die Version aus und beende sich.
+.SS Parser\-Optionen:
+Die folgenden Optionen können verwendet werden, um die Ausgabe des
+Changelog\-Parsers zu beinflussen, z.B. den Bereich der Einträge oder das
+Format der Ausgabe. Sie müssen vom in Frage kommenden Parser\-Skript
+unterstützt werden. Lesen Sie auch \fBWARNUNGEN\fP.
+.TP 
+\fB\-\-format\fP\fI Ausgabeformat\fP
+Setze das Ausgabeformat. Derzeit werden die Werte \fIdpkg\fP und \fIrfc822\fP
+unterstützt. \fIdpkg\fP ist das klassische Ausgabeformat (es existiert länger
+als diese Option), das voreingestellt ist. Es besteht aus einem Absatz im
+Debian\-Steuerformat (lesen Sie \fBdeb\-control\fP(5)). Falls mehr als ein
+Eintrag angefordert wird, dann werden die meisten Felder aus dem letzten
+Eintrag verwendet, falls dies nicht anders angegeben wird:
+.RS
+.TP 
+\fBSource:\fP <Paket\-Name>
+.TP 
+\fBVersion:\fP <Version>
+.TP 
+\fBDistribution:\fP <Ziel\-Distribution>
+.TP 
+\fBUrgency:\fP <Dringlichkeit>
+Die höchste Dringlichkeit aller enthaltenen Einträge wird verwendet.
+.TP 
+\fBMaintainer:\fP <Autor>
+.TP 
+\fBDate:\fP <Datum>
+.TP 
+\fBCloses:\fP <Fehlernummer>
+Die Felder »Closes« aller enthaltenen Einträge werden zusammengefasst.
+.TP 
+\fBChanges:\fP <Changelog\-Einträge>
+Der Text aller Changelog\-Einträge wird aneinandergehängt. Um aus diesem Feld
+ein gültiges mehrzeiliges Feld im Debian Steuer\-Format zu bekomen, werden
+leere Zeilen mit einem einzelnen Satzpunkt ersetzt und alle Zeilen durch ein
+Leerzeichen eingerückt. Der genaue Inhalt hängt vom Changelog\-Format ab.
+.RE
+.IP
+Es können zusätzliche benutzerdefinierte Felder vorhanden sein.
+.IP
+Das \fBrfc822\fP\-Format verwendet die gleichen Felder, gibt aber einzelne
+Absätze für jeden Changelog\-Eintrag aus, so dass alle Metadaten für jeden
+Eintrag erhalten bleiben.
+.TP 
+\fB\-\-since\fP, \fB\-s\fP, \fB\-v\fP \fIVersion\fP
+füge alle Änderungen neuer als aus \fIVersion\fP hinzu.
+.TP 
+\fB\-\-until\fP, \fB\-u\fP \fIVersion\fP
+füge alle Änderungen älter als aus \fIVersion\fP hinzu.
+.TP 
+\fB\-\-from\fP, \fB\-f\fP \fIVersion\fP
+füge alle Änderungen aus oder neuer als aus \fIVersion\fP hinzu.
+.TP 
+\fB\-\-to\fP, \fB\-t\fP \fIVersion\fP
+füge alle Änderungen aus oder älter als aus \fIVersion\fP hinzu.
+.TP 
+\fB\-\-count\fP, \fB\-c\fP, \fB\-n\fP \fIAnzahl\fP
+füge \fIAnzahl\fP Einträge vom Kopf (oder vom Fuß, falls \fIAnzahl\fP negativ ist)
+hinzu.
+.TP 
+\fB\-\-offset\fP, \fB\-o\fP \fIZahl\fP
+ändere den Startpunkt für \-\-count, gezählt vom Kopf (oder Fuß falls, falls
+\fIZahl\fP negativ ist).
+.TP 
+\fB\-\-all\fP
+füge alle Änderungen hinzu.
+.
+.SH WARNUNG
+Alle \fBParser\-Optionen\fP außer \-v werden nur von \fBdpkg\fP Version 1.14.16 oder
+neuer unterstützt. Parser von Dritten für Changelog\-Formate außer \fIdebian\fP
+könnten nicht alle Optionen unterstützen.
+.
+.SH DATEIEN
+.TP 
+\fBdebian/changelog\fP
+Die changelog\-Datei wird verwendet, um versionsabhängige Informationen über
+das Quellpaket, wie beispielsweise die Dringlichkeit (»urgency«) und die
+Distribution des Uploads, die Änderungen seit einer bestimmten
+Veröffentlichung und die Quellversionsnummer selbst zu erhalten.
+.
+.SH AUTOREN
+Copyright (C) 1995\-1996 Ian Jackson
+.br
+Copyright (C) 2000 Wichert Akkerman
+.br
+Copyright (C) 2007, 2008 Frank Lichtenheld
+.sp
+Dies ist Freie Software; lesen Sie die GNU General Public License Version 2
+oder neuer für die Kopierbedingungen. Es gibt KEINE Haftung.
+.SH ÜBERSETZUNG
+Die deutsche Übersetzung wurde 2004, 2006-2008 von Helge Kreutzmann
+<debian@helgefjell.de>, 2007 von Florian Rehnisch <eixman@gmx.de> und
+2008 von Sven Joachim <svenjoac@gmx.de>
+angefertigt. Diese Übersetzung ist Freie Dokumentation; lesen Sie die
+GNU General Public License Version 2 oder neuer für die Kopierbedingungen.
+Es gibt KEINE HAFTUNG.

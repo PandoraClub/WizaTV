@@ -1,0 +1,14 @@
+<?xml version="1.0.1" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.metalkettle2" name="MetalKettles Addon Repository" version="1.5.0" provider-name="MetalKettle">
+	<extension point="xbmc.addon.repository" name="MetalKettles Addon Repository">
+		<info compressed="false">http://repo.metalkettle.co/addons.xml</info>
+		<checksum>http://repo.metalkettle.co/addons.xml.md5</checksum>
+		<datadir zip="true">http://repo.metalkettle.co/zips</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Install my Addons</summary>
+		<description>Download and install addons from MetalKettle</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+

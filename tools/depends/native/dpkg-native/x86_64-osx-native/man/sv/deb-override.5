@@ -1,0 +1,58 @@
+.\" This manpage is copyright (C) 1996 Michael Shields <shields@crosslink.net>.
+.\" This is free software; you may redistribute it and/or modify
+.\" it under the terms of the GNU General Public License as
+.\" published by the Free Software Foundation; either version 2,
+.\" or (at your option) any later version.
+.\"
+.\" This is distributed in the hope that it will be useful, but
+.\" WITHOUT ANY WARRANTY; without even the implied warranty of
+.\" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+.\" GNU General Public License for more details.
+.\"
+.\" You should have received a copy of the GNU General Public
+.\" License along with dpkg; if not, write to the Free Software
+.\" Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH deb\-override 5 2007\-03\-07 Debianprojektet dpkg\-verktygen
+.SH NAMN
+deb\-override \- Debianarkivets överstyrningsfil
+.
+.SH SYNOPS
+override
+.
+.SH BESKRIVNING
+Även om huvuddelen av informationen om ett paket finns i kontrollfilen måste
+en del fyllas i av distributionstsarerna snarare än paketansvariga, eftersom
+de handlar om hur filer arrangeras för utgivningen snarare än faktiska
+beroenden och beskrivningen av paketet. Denna informationen finns i filen
+"override".
+.PP
+Filen override har ett enkelt blanksteg\-avdelat format. Kommentarer är
+tillåtna (markeras med ett \fB#\fP).
+.PP
+.in +5
+\fIpaket\fP \fIprioritet\fP \fIsektion\fP [\fIansvariginfo\fP]
+.in -5
+.PP
+\fIpaket\fP är namnet på paketet. Poster i filen override för paket som inte
+finns i trädet med binära paket ignoreras.
+.PP
+\fIprioritet\fP och \fIsektion\fP placerar paketet i utgivningsträdet, dessa bör
+inte förekomma i kontrollfilen. Om paketet finns i en underkatalog av
+\fIbinärkatalog\fP kommer den att kontrolleras mot \fIsektion\fP.
+.PP
+\fIansvariginfo\fP kan, om det anges, antingen vara namnet på en paketansvarig
+för en ovillkorlig överstyrning, eller \fIgammal\-ansvarig\fP \fB=>\fP
+\fIny\-ansvarig\fP för att utföra en substituering.
+.PP
+De override\-filer som används för att skapa den officiella listan över paket
+("Packages") finns i \fIindices\fP\-katalogen på alla Debianspeglar.
+.
+.SH "SE ÄVEN"
+\fBdpkg\-scanpackages\fP(1), \fBdpkg\-scansources\fP(1), \fBapt\-ftparchive\fP(1).
+.SH "ÖVERSÄTTNING"
+Peter Krefting och Daniel Nylander.

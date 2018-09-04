@@ -1,0 +1,95 @@
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH dpkg\-statoverride 8 2007\-07\-18 "Projekt Debiana" "programy pomocnicze dpkg"
+.SH NAZWA
+dpkg\-statoverride \- nadpisywanie w³a¶ciciela i praw plików
+.
+.SH SK£ADNIA
+\fBdpkg\-statoverride\fP [\fIopcje\fP] \fIpolecenie\fP
+.
+.SH OPIS
+\fBNadpisania stanu\fP s± sposobem nakazania programowi \fBdpkg\fP(1) u¿ycie
+innego w³a¶ciciela i trybu pliku podczas instalacji pakietu. (Uwaga: u¿y³em
+tu s³owa "plik", ale tak naprawdê mo¿e to byæ dowolny obiekt systemu plików,
+którym zarz±dza dpkg, np. katalogi czy urz±dzenia). Mo¿na ich u¿yæ do
+zmuszenia programów, które s± zazwyczaj instalowane z flag± setuid, by by³y
+zainstalowane bez tej flagi lubby by³y mo¿liwe do wykonania tylko przez
+pewn± grupê u¿ytkowników.
+.P
+\fBdpkg\-statoverride\fP jest narzêdziem u¿ytkowym do zarz±dzania list± nadpisañ
+stanu. Ma trzy podstawowe funkcje: dodawania, usuwania i wy¶wietlania listy
+takich nadpisañ.
+.
+.SH POLECENIA
+.TP 
+\fB\-\-add\fP\fI u¿ytkownik grupa tryb plik\fP
+Dodaje nadpisanie dla \fBpliku\fP.\fBplik\fP nie musi istnieæ w czasie wykonania
+tego polecenia, nadpisanie bêdzie przechowane i u¿yte pó¼niej. U¿ytkowników
+i grupy mo¿na podaæ, u¿ywaj±c albo ich nazw (na przyk³ad \fBroot\fP lub
+\fBnobody\fP), albo ich numeru poprzedzonego znakiem \fB#\fP (na przyk³ad \fB#0\fP
+lub \fB#65534\fP).
+
+Je¿eli podano opcjê \-\-update i \fBplik\fP istnieje, to nowy w³a¶ciciel i prawa
+zostan± od razu ustawione.
+.TP 
+\fB\-\-remove\fP \fIplik\fP
+Usuwa nadpisanie \fBpliku\fP. Polecenie to nie zmienia stanu \fBpliku\fP.
+.TP 
+\fB\-\-list\fP [\fIwzorzec\-glob\fP]
+Wy¶wietla wszystkie napisania. Je¿eli podano wzorzec nazwy, to wyj¶ciowa
+lista bêdzie zawieraæ tylko nadpisania pasuj±ce do tego wzorca. Je¿eli nie
+ma ¿adnych nadpisañ lub ¿adne nadpisanie nie pasuje do wzorca, to
+\fBdpkg\-statoverride\fP zakoñczy dzia³anie z kodem b³êdu 1.
+.TP 
+\fB\-\-help\fP
+Wy¶wietla informacjê o u¿ytkowaniu i koñczy dzia³anie.
+.TP 
+\fB\-\-version\fP
+Wy¶wietla informacjê o wersji i pomy¶lnie koñczy dzia³anie.
+.
+.SH OPCJE
+.TP 
+\fB\-\-admindir\fP\fI katalog\fP
+Zmienia katalog bazy danych dpkg, w którym tak¿e jest przechowywany plik
+statoverride. Domy¶lnie jest to \fI/var/lib/dpkg\fP.
+.TP 
+\fB\-\-force\fP
+Wymusza podan± akcjê, nawet je¿eli sprawdzenia dokonywane przez program by
+tego zabroni³y. Jest to potrzebne, aby nadpisaæ istniej±ce nadpisanie.
+.TP 
+\fB\-\-update\fP
+Od razy próbuje zmieniæ w³a¶ciciela i prawa pliku, je¿eli ten plik istnieje.
+.TP 
+\fB\-\-quiet\fP
+Wy¶wietla mniej komunikatów o podejmowanych przez program akcjach.
+.
+.SH PLIKI
+.TP 
+\fI/var/lib/dpkg/statoverride\fP
+Plik zawieraj±cy obecn± listê nadpisañ stanu w systemie. Zlokalizowany jest
+w katalogu administracyjnym dpkg, ³±cznie z innymi plikami wa¿nymi dla dpkg,
+takimi jak "status" lub "available".
+.br
+Uwaga: przed zast±pieniem pliku now± wersj±, \fBdpkg\-statoverride\fP zachowuje
+star± kopiê w pliku z rozszerzeniem "\-old".
+.
+.SH "ZOBACZ TAK¯E"
+\fBdpkg\fP(1).
+.
+.SH AUTOR
+Copyright (C) 2000 Wichert Akkerman
+.sp
+Niniejszy program jest oprogramowaniem wolnym, sprawd¼ Powszechn± Licencjê
+Publiczn± GNU w wersji drugiej lub pó¼niejszej, by dowiedzieæ siê o
+warunkach dystrybucji. Brak JAKIEJKOLWIEK gwarancji.
+.SH "T£UMACZE"
+Piotr Roszatycki <dexter@debian.org>, 1999
+.br
+Bartosz Feñski <fenio@debian.org>, 2004-2005
+.br
+Robert Luberda <robert@debian.org>, 2006-2008
+.br
+Wiktor Wandachowicz <siryes@gmail.com>, 2008

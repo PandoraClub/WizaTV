@@ -1,0 +1,125 @@
+.TH dpkg\-divert 8 "2007-07-18" "Debian Project" "dpkg utilities"
+.SH NAME
+dpkg\-divert \- override a package's version of a file
+.
+.SH SYNOPSIS
+.B dpkg\-divert
+.RI [ options ]
+.I command
+.
+.SH DESCRIPTION
+.B dpkg\-divert
+is the utility used to set up and update the list of diversions.
+.PP
+File \fIdiversions\fP are a way of forcing
+.BR dpkg (1)
+not to install a file into its
+location, but to a \fIdiverted\fP location. Diversions can be used through the
+Debian package scripts to move a file away when it causes a conflict. System
+administrators can also use it to override some package's configuration
+file, or whenever some files (which aren't marked as 'conffiles') need to be
+preserved by dpkg, when installing a newer version of a package which
+contains those files.
+.sp
+.SH COMMANDS
+.TP
+.RB [ \-\-add "] \fIfile\fP"
+Add a diversion for \fIfile\fP.
+.TP
+.BI \-\-remove " file"
+Remove a diversion for \fIfile\fP.
+.TP
+.BI \-\-list " glob-pattern"
+List diversions matching \fIglob-pattern\fP.
+.TP
+.BI \-\-truename " file"
+Print the real name for a diverted file.
+.
+.SH OPTIONS
+.TP
+.BI \-\-admindir " directory"
+Set the dpkg data directory to \fIdirectory\fP (default: \fI/var/lib/dpkg\fP).
+.TP
+.BI \-\-divert " divert-to"
+\fIdivert-to\fP is the location where the versions of \fIfile\fP, as
+provided by other packages, will be diverted.
+.TP
+.B \-\-local
+Specifies that all packages' versions of this file are diverted.
+This means, that there are no exceptions, and whatever package is installed,
+the file is diverted. This can be used by an admin to install a locally
+modified version.
+.TP
+.BI \-\-package " package"
+\fIpackage\fP is the name of a package whose copy of \fIfile\fP will not
+be diverted. i.e. \fIfile\fP will be diverted for all packages except
+\fIpackage\fP.
+.TP
+.B \-\-quiet
+Quiet mode, i.e. no verbose output.
+.TP
+.B \-\-rename
+Actually move the file aside (or back). \fBdpkg\-divert\fP will abort operation
+in case the destination file already exists.
+.TP
+.B \-\-test
+Test mode, i.e. don't actually perform any changes, just demonstrate.
+.TP
+.B \-\-help
+Show the usage message and exit.
+.TP
+.B \-\-version
+Show the version and exit.
+.
+.SH NOTES
+When adding, default is \fB\-\-local\fP and \fB\-\-divert\fP
+\fI<original>.distrib\fP. When removing, \fB\-\-package\fP or \fB\-\-local\fP
+and \fB\-\-divert\fP must match if specified.
+
+Directories can't be diverted with \fBdpkg\-divert\fP.
+
+Care should be taken when diverting shared libraries, \fBldconfig\fP(8)
+creates a symbolic link based on the DT_SONAME field embedded in the library.
+Because ldconfig doesn't honour diverts (only dpkg does), the symlink may
+end up pointing at the diverted library, if a diverted library has the
+same SONAME as the undiverted one.
+.
+.SH EXAMPLES
+To divert all copies of a \fI/usr/bin/example\fR to \fI/usr/bin/example.foo\fR,
+i.e. directs all packages providing \fI/usr/bin/example\fR to install it as
+\fI/usr/bin/example.foo\fR, performing the rename if required:
+.HP
+dpkg-divert \-\-divert /usr/bin/example.foo \-\-rename /usr/bin/example
+.PP
+To remove that diversion:
+.HP
+dpkg-divert \-\-rename \-\-remove /usr/bin/example
+
+.PP
+To divert any package trying to install \fI/usr/bin/example\fR to
+\fI/usr/bin/example.foo\fR, except your own \fIwibble\fR package:
+.HP
+dpkg-divert \-\-package wibble \-\-divert /usr/bin/example.foo \-\-rename /usr/bin/example
+.PP
+To remove that diversion:
+.HP
+dpkg-divert \-\-package wibble \-\-rename \-\-remove /usr/bin/example
+.
+.SH FILES
+.TP
+.I /var/lib/dpkg/diversions
+File which contains the current list of diversions of the system. It is
+located in the dpkg administration directory, along with other files
+important to dpkg, such as \fIstatus\fP or \fIavailable\fP.
+.br
+Note: \fBdpkg\-divert\fP preserves the old copy of this file, with extension
+\fI\-old\fP, before replacing it with the new one.
+.
+.SH SEE ALSO
+.BR dpkg (1).
+.
+.SH AUTHOR
+Copyright (C) 1995 Ian Jackson
+.sp
+This is free software; see the GNU General Public Licence version 2 or
+later for copying conditions. There is NO WARRANTY.

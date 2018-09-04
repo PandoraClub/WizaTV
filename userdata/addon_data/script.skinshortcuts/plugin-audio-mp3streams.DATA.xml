@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+	<shortcut>
+		<defaultID />
+		<label>Music</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(Music,"plugin://plugin.audio.mp3streams",return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>133</defaultID>
+		<label>133</label>
+		<label2>Custom item</label2>
+		<icon>DefaultMusicArtists.png</icon>
+		<thumb />
+		<action>ActivateWindow(MusicLibrary,"plugin://plugin.audio.mp3streams/?url=http%3A%2F%2Fmusicmp3.ru%2Fartists.html&amp;mode=21&amp;name=Artists&amp;iconimage=C%3A%5CUsers%5Ctdodd%5CAppData%5CRoaming%5CKodi%5Caddons%5Cplugin.audio.mp3streams%5Cart%2Fartists.jpg&amp;list=artists&lt;&gt;http://musicmp3.ru/artists.html&lt;&gt;C:\\Users\\tdodd\\AppData\\Roaming\\Kodi\\addons\\plugin.audio.mp3streams\\art/artists.jpg&amp;type=",return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>31705</defaultID>
+		<label>Search Songs</label>
+		<label2>Custom item</label2>
+		<icon>DefaultMusicRecentlyAdded.png</icon>
+		<thumb />
+		<action>ActivateWindow(MusicLibrary,"plugin://plugin.audio.mp3streams/?url=url&amp;mode=24&amp;name=Search+Songs&amp;iconimage=C%3A%5CUsers%5Ctdodd%5CAppData%5CRoaming%5CKodi%5Caddons%5Cplugin.audio.mp3streams%5Cart%2Fsearchsongs.jpg&amp;list=search songs&lt;&gt;url&lt;&gt;C:\\Users\\tdodd\\AppData\\Roaming\\Kodi\\addons\\plugin.audio.mp3streams\\art/searchsongs.jpg&amp;type=",return)</action>
+	</shortcut>
+</shortcuts>

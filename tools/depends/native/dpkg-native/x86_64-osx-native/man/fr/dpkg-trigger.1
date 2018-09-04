@@ -1,0 +1,77 @@
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH dpkg\-trigger 1 08\-04\-2008 "Projet Debian" "suite dpkg"
+.SH NOM
+dpkg\-trigger \- un utilitaire pour activer les actions différées de paquets
+.
+.SH SYNOPSIS
+\fBdpkg\-trigger\fP [\fIoption\fP...] \fInom\-action\-différée\fP
+.br
+\fBdpkg\-trigger\fP [\fIoption\fP...] \fIcommande\fP
+.
+.SH DESCRIPTION
+\fBdpkg\-trigger\fP est un outil pour activer explicitement les actions
+différées et pour vérifier leur support dans le fonctionnement de \fBdpkg\fP.
+.PP
+Utilisable par les scripts du mainteneur dans certaines situations complexes
+où l'activation d'une action différée par mise à jour de fichiers ou par la
+directive \fBactivate\fP du fichier de contrôle ne sont pas suffisants. Peut
+également être utilisé par les administrateurs système, ou par des
+mainteneurs de paquets pour faire des essais (mais notez que les actions
+différées ne seront pas exécutées par dpkg\-trigger).
+.PP
+Les syntaxes non\-reconnues pour le nom des actions différées constituent une
+erreur pour dpkg\-trigger.
+.
+.SH COMMANDES
+.TP 
+\fB\-\-check\-supported\fP
+Vérifie si dpkg sait gérer les actions différées (généralement appelées
+depuis un postinst). Retourne en sortie 0 si c'est le cas, ou 1 avec un
+message d'erreur sur stderr si ce n'est pas le cas. Toutefois, en règle
+générale, il est préférable de simplement activer l'action différée désirée
+à l'aide de \fBdpkg\-trigger\fP.
+.TP 
+\fB\-h\fP, \fB\-\-help\fP
+Affiche un message d'aide puis quitte.
+.TP 
+\fB\-\-version\fP
+Affiche le numéro de version puis quitte.
+.TP 
+\fB\-\-license\fP, \fB\-\-licence\fP
+Affiche des renseignements sur le copyright et la licence, puis quitte.
+.
+.SH OPTIONS
+.TP 
+\fB\-\-admindir\fP=\fIdir\fP
+Change l'endroit où se trouve la base de données de \fBdpkg\fP. Par défaut,
+c'est \fI/var/lib/dpkg\fP.
+.TP 
+\fB\-\-by\-package=\fP\fIpaquet\fP
+Indique le paquet qui sera marqué en attente de l'exécution de l'action
+différée (normalement défini par la variable d'environnement
+DPKG_MAINTSCRIPT_PACKAGE dans les scripts du mainteneur, qui nomme le paquet
+auquel le script appartient, et qui constitue la valeur par défaut).
+.TP 
+\fB\-\-no\-await\fP
+Cette option fait en sorte que le paquet appelant T (s'il existe) n'a pas
+besoin d'attendre l'exécution de cette action différée\ ; I, le(s) paquet(s)
+associé(s) à l'action différée, ne sera pas ajouté à liste des paquets dont
+le traitement des actions différées est attendu par T et l'état de T reste
+inchangé. T peut être considéré installé même si les actions différées de I
+n'ont pas encore été exécutées.
+.TP 
+\fB\-\-no\-act\fP
+Teste uniquement, n'apporte aucun changement.
+.
+.SH "VOIR AUSSI"
+\fBdpkg\fP(1), \fBdeb\-triggers\fP(5).
+
+.SH TRADUCTION
+Ariel VARDI <ariel.vardi@freesbee.fr>, 2002.
+Philippe Batailler, 2006.
+Nicolas François, 2006.
+Veuillez signaler toute erreur à <debian\-l10n\-french@lists.debian.org>.

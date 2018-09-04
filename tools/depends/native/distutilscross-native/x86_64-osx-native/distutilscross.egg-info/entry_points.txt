@@ -1,0 +1,3 @@
+[distutils.commands]
+build = distutilscross.crosscompile:build
+

@@ -1,0 +1,37 @@
+HUB Parental Controls allow you to lock videos based on their MPAA rating. Enabling this function in the 
+MAINTENANCE TOOL means that, depending on your settings, you will be asked for a PIN before playing a video.
+
+MAINTENANCE TOOL will install its own parentalcontrol module. Parental Controls are only active if the addon
+developer calls the module as part of their PLAY function.
+
+[COLOR gold][B]Settings[/B][/COLOR] 
+
+Set the following:
+[COLOR cyan][Enable Parental Control][/COLOR]: Turn parental control on/off
+
+[COLOR cyan][Set watershed time][/COLOR]: Set a time between 15:00 and 23:00 or set to "ALWAYS ON"
+Any video will play without needing a PIN after this time, but controls are automatically turned 
+on again at 6AM	
+				  
+[COLOR cyan][Set minimum watershed rating][/COLOR]: There are 4 settings (movie rating first).......
+a. "G or TV-Y/TV-Y7/TV-G"
+b. "PG or TV-Y7-FV/TV-PG"
+c. "PG-13 or TV-14"
+d. "R/NC-17 or TV-MA"
+Any movie or tv show with a rating EQUAL TO OR GREATER THAN your setting will require
+a PIN before playing (unless it is past your watershed time) 
+
+[COLOR cyan][Set PIN][/COLOR]: PIN is set to "0000" by default. I suggest setting a 4 digit PIN as it's easier to 
+enter on a remote.
+
+[COLOR cyan][Set action if no rating is available][/COLOR]: Sometimes a rating is not available. Set your option 
+here to either play them or require a PIN.
+
+[COLOR red]Locking the Parental Control settings[/COLOR]
+If your kids know their way round the settings window you can lock them to your PIN.
+In the Parental Controls menu you will see a new link to [LOCK Parental Control Settings]. 
+If you enter the correct PIN the Parental Control settings tab will be locked. To unlock, perform the same action.
+
+MPAA ratings are sourced directly from the metahandler module. 
+If for some reason there is no rating available you will be given the option to set your own rating when playing the movie/tv show. You will need your PIN to save the rating and/or to play the title when no MPAA rating is available. When you set a rating it will be saved for future plays.
+

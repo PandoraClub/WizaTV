@@ -1,0 +1,6053 @@
+# translation of ru.po to Russian
+# Localization file for dpkg and other programs from dpkg package.
+# Copyright (C) 1999 Michael Sobolev
+#
+# Michael Sobolev <mss@transas.com>, 1999.
+# Yuri Kozlov <kozlov.y@gmail.com>, 2004, 2005, 2006, 2007, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: dpkg 1.14.23\n"
+"Report-Msgid-Bugs-To: debian-dpkg@lists.debian.org\n"
+"POT-Creation-Date: 2010-10-31 11:39+0100\n"
+"PO-Revision-Date: 2008-11-15 16:24+0300\n"
+"Last-Translator: Yuri Kozlov <kozlov.y@gmail.com>\n"
+"Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: lib/compat.c:46
+msgid "unable to open tmpfile for vsnprintf"
+msgstr "vsnprintf: не удалось открыть tmpfile"
+
+#: lib/compat.c:48
+msgid "unable to rewind at start of vsnprintf"
+msgstr "vsnprintf: не удалось перейти к началу файла при запуске функции"
+
+#: lib/compat.c:49
+msgid "unable to truncate in vsnprintf"
+msgstr "vsnprintf: не удалось усечь файл"
+
+#: lib/compat.c:51
+msgid "write error in vsnprintf"
+msgstr "vsnprintf: ошибка записи"
+
+#: lib/compat.c:52
+msgid "unable to flush in vsnprintf"
+msgstr "vsnprintf: не удалось сбросить буфер"
+
+#: lib/compat.c:53
+msgid "unable to stat in vsnprintf"
+msgstr "vsnprintf: не удалось получить информацию о файле"
+
+#: lib/compat.c:54
+msgid "unable to rewind in vsnprintf"
+msgstr "vsnprintf: не удалось перейти к началу файла в ходе работы функции"
+
+#: lib/compat.c:62
+msgid "read error in vsnprintf truncated"
+msgstr "vsnprintf: ошибка чтения -- прочитан слишком короткий блок данных"
+
+#: lib/compat.c:89
+#, c-format
+msgid "System error no.%d"
+msgstr "Системная ошибка номер %d"
+
+#: lib/compat.c:99
+#, c-format
+msgid "Signal no.%d"
+msgstr "Сигнал номер %d"
+
+#: lib/compression.c:34
+#, c-format
+msgid "%s: failed to exec '%s %s'"
+msgstr "%s: не удалось запустить '%s %s'"
+
+#: lib/compression.c:62
+#, c-format
+msgid "%s: internal gzip error: `%s'"
+msgstr "%s: внутренняя ошибка gzip: `%s'"
+
+#: lib/compression.c:85
+#, c-format
+msgid "%s: internal bzip2 error: `%s'"
+msgstr "%s: внутренняя ошибка bzip2:`%s'"
+
+#: lib/compression.c:97
+#, c-format
+msgid "%s: decompression"
+msgstr "%s: распаковка сжатых данных"
+
+#: lib/compression.c:132
+#, c-format
+msgid "%s: internal gzip error: read: `%s'"
+msgstr "%s: внутренняя ошибка gzip: чтение: `%s'"
+
+#: lib/compression.c:142
+#, c-format
+msgid "%s: internal gzip error: write: `%s'"
+msgstr "%s: внутренняя ошибка gzip: запись: `%s'"
+
+#: lib/compression.c:145
+#, c-format
+msgid "%s: internal gzip error: read(%i) != write(%i)"
+msgstr "%s: внутренняя ошибка gzip: прочитано(%i) != записано(%i)"
+
+#: lib/compression.c:167
+#, c-format
+msgid "%s: internal bzip2 error: read: `%s'"
+msgstr "%s: внутренняя ошибка bzip2: чтение: `%s'"
+
+#: lib/compression.c:177
+#, c-format
+msgid "%s: internal bzip2 error: write: `%s'"
+msgstr "%s: внутренняя ошибка bzip2: запись: `%s'"
+
+#: lib/compression.c:180
+#, c-format
+msgid "%s: internal bzip2 error: read(%i) != write(%i)"
+msgstr "%s: внутренняя ошибка bzip2: прочитано(%i) != записано(%i)"
+
+#: lib/compression.c:195
+#, c-format
+msgid "%s: compression"
+msgstr "%s: сжатие данных"
+
+#: lib/database.c:195
+#, c-format
+msgid "size %7d occurs %5d times\n"
+msgstr "размер %7d встретился %5d раз\n"
+
+#: lib/database.c:196
+msgid "failed write during hashreport"
+msgstr "hashreport: ошибка записи в файл"
+
+#: lib/dbmodify.c:60
+#, c-format
+msgid ""
+"updates directory contains file `%.250s' whose name is too long (length=%d, "
+"max=%d)"
+msgstr ""
+"каталог обновлений содержит файл %.250s, у которого слишком длинное имя (%d "
+"символов при допустимых %d)"
+
+#: lib/dbmodify.c:64
+#, c-format
+msgid ""
+"updates directory contains files with different length names (both %d and %d)"
+msgstr ""
+"каталог обновлений содержит файлы с разными длинами имён (как %d, так и %d)"
+
+#: lib/dbmodify.c:78
+#, c-format
+msgid "cannot scan updates directory `%.255s'"
+msgstr "не удалось просмотреть каталог обновлений %.255s"
+
+#: lib/dbmodify.c:94
+#, c-format
+msgid "failed to remove incorporated update file %.255s"
+msgstr "не удалось удалить втянутый файл обновлений %.255s"
+
+#: lib/dbmodify.c:112 src/archives.c:654 dpkg-deb/build.c:343
+#, c-format
+msgid "unable to create `%.255s'"
+msgstr "не удалось создать %.255s"
+
+#: lib/dbmodify.c:116
+#, c-format
+msgid "unable to fill %.250s with padding"
+msgstr "не удалось заполнить %.250s символами выравнивания"
+
+#: lib/dbmodify.c:118
+#, c-format
+msgid "unable to flush %.250s after padding"
+msgstr "не удалось очистить %.250s после выравнивания"
+
+#: lib/dbmodify.c:120
+#, c-format
+msgid "unable to seek to start of %.250s after padding"
+msgstr "не удалось перейти к началу %.250s после выравнивания"
+
+#: lib/dbmodify.c:157
+msgid "requested operation requires superuser privilege"
+msgstr "запрошенная операция требует привилегий суперпользователя"
+
+#: lib/dbmodify.c:162
+msgid "unable to access dpkg status area"
+msgstr "не удалось получить доступ к области состояния dpkg"
+
+#: lib/dbmodify.c:164
+msgid "operation requires read/write access to dpkg status area"
+msgstr "операция требует прав на чтение области состояния dpkg и запись в неё"
+
+#: lib/dbmodify.c:215
+#, c-format
+msgid "failed to remove my own update file %.255s"
+msgstr "не удалось удалить собственный файл обновлений %.255s"
+
+#: lib/dbmodify.c:253
+#, c-format
+msgid "unable to write updated status of `%.250s'"
+msgstr "не удалось записать обновлённый файл состояния пакета %.250s"
+
+#: lib/dbmodify.c:255
+#, c-format
+msgid "unable to flush updated status of `%.250s'"
+msgstr "не удалось сбросить буфер обновлённого файла состояния пакета %.250s"
+
+#: lib/dbmodify.c:257
+#, c-format
+msgid "unable to truncate for updated status of `%.250s'"
+msgstr "не удалось усечь обновлённый файл состояния пакета %.250s"
+
+#: lib/dbmodify.c:259
+#, c-format
+msgid "unable to fsync updated status of `%.250s'"
+msgstr "не удалось синхронизировать обновлённый файл состояния пакета %.250s"
+
+#: lib/dbmodify.c:261
+#, c-format
+msgid "unable to close updated status of `%.250s'"
+msgstr "не удалось закрыть обновлённый файл состояния пакета %.250s"
+
+#: lib/dbmodify.c:264
+#, c-format
+msgid "unable to install updated status of `%.250s'"
+msgstr "не удалось установить обновлённый файл состояния пакета %.250s"
+
+#: lib/dump.c:346
+#, c-format
+msgid "failed to write details of `%.50s' to `%.250s'"
+msgstr "не удалось записать подробности о `%.50s' в `%.250s'"
+
+#: lib/dump.c:373
+#, c-format
+msgid "failed to open `%s' for writing %s information"
+msgstr "не удалось открыть файл %s для записи информации о %s"
+
+#: lib/dump.c:376
+msgid "unable to set buffering on status file"
+msgstr "не удалось начать буферизацию файла состояния"
+
+#: lib/dump.c:387
+#, c-format
+msgid "failed to write %s record about `%.50s' to `%.250s'"
+msgstr "не удалось добавить запись %s о `%.50s' в `%.250s'"
+
+#: lib/dump.c:395
+#, c-format
+msgid "failed to flush %s information to `%.250s'"
+msgstr "не удалось сбросить буфер файла информации о %s в `%.250s'"
+
+#: lib/dump.c:397
+#, c-format
+msgid "failed to fsync %s information to `%.250s'"
+msgstr "не удалось синхронизировать файл информации о %s в `%.250s'"
+
+#: lib/dump.c:399
+#, c-format
+msgid "failed to close `%.250s' after writing %s information"
+msgstr "не удалось закрыть файл `%.250s' после записи информации о %s"
+
+#: lib/dump.c:403
+#, c-format
+msgid "failed to link `%.250s' to `%.250s' for backup of %s info"
+msgstr ""
+"не удалось создать ссылку `%.250s' на `%.250s' в качестве резервной копии "
+"информации о %s"
+
+#: lib/dump.c:406
+#, c-format
+msgid "failed to install `%.250s' as `%.250s' containing %s info"
+msgstr "не удалось сделать файл `%.250s' файлом `%.250s' с информацией о %s"
+
+#: lib/ehandle.c:85
+#, c-format
+msgid ""
+"%s: unrecoverable fatal error, aborting:\n"
+" %s\n"
+msgstr ""
+"%s: невосстановимая ошибка, прекращение работы:\n"
+" %s\n"
+
+#: lib/ehandle.c:101
+msgid "out of memory pushing error handler: "
+msgstr "при регистрации обработчика ошибок исчерпана память: "
+
+#: lib/ehandle.c:117
+#, c-format
+msgid ""
+"%s: error while cleaning up:\n"
+" %s\n"
+msgstr ""
+"%s: ошибка при очистке -\n"
+" %s\n"
+
+#: lib/ehandle.c:132
+#, c-format
+msgid "dpkg: too many nested errors during error recovery !!\n"
+msgstr ""
+"dpkg: при восстановлении после ошибки обнаружено слишком много наведённых "
+"ошибок!!!\n"
+
+#: lib/ehandle.c:207
+msgid "out of memory for new cleanup entry with many arguments"
+msgstr ""
+"недостаточно памяти для новой записи очистки с большим количеством аргументов"
+
+#: lib/ehandle.c:219
+msgid "out of memory for new cleanup entry"
+msgstr "недостаточно памяти для новой записи очистки"
+
+#: lib/ehandle.c:309
+#, c-format
+msgid "error writing `%s'"
+msgstr "ошибка записи %s"
+
+#: lib/ehandle.c:313
+#, c-format
+msgid "%s:%d: internal error `%s'\n"
+msgstr "%s:%d: внутренняя ошибка -- %s\n"
+
+#: lib/fields.c:44
+#, c-format
+msgid "%s is missing"
+msgstr "отсутствует %s"
+
+#: lib/fields.c:57
+#, c-format
+msgid "`%.*s' is not allowed for %s"
+msgstr "\"%.*s\" не может встречаться там, где требуется %s"
+
+#: lib/fields.c:64
+#, c-format
+msgid "junk after %s"
+msgstr "требуется только %s, всё остальное следует удалить"
+
+#: lib/fields.c:74
+#, c-format
+msgid "invalid package name (%.250s)"
+msgstr "недопустимое имя пакета (%.250s)"
+
+#: lib/fields.c:91
+#, c-format
+msgid "empty file details field `%s'"
+msgstr "пустое значение в поле информации о файле %s"
+
+#: lib/fields.c:94
+#, c-format
+msgid "file details field `%s' not allowed in status file"
+msgstr "в файле состояний пакетов не может встречаться информационное поле %s"
+
+#: lib/fields.c:104
+#, c-format
+msgid "too many values in file details field `%s' (compared to others)"
+msgstr ""
+"в информационном поле `%s' слишком много значений (по сравнению с остальными)"
+
+#: lib/fields.c:117
+#, c-format
+msgid "too few values in file details field `%s' (compared to others)"
+msgstr ""
+"в информационном поле `%s' слишком мало значений (по сравнению с остальными)"
+
+#: lib/fields.c:133
+msgid "yes/no in boolean field"
+msgstr "значение \"да\" или \"нет\" в логическом поле"
+
+#: lib/fields.c:152
+msgid "word in `priority' field"
+msgstr "слово в поле `priority'"
+
+#: lib/fields.c:166
+msgid "value for `status' field not allowed in this context"
+msgstr "значение в поле `status' в этом контексте недопустимо"
+
+#: lib/fields.c:170
+msgid "first (want) word in `status' field"
+msgstr "первое (желаемое) слово в поле `status'"
+
+#: lib/fields.c:173
+msgid "second (error) word in `status' field"
+msgstr "второе (ошибочное) слово в поле `status'"
+
+#: lib/fields.c:179
+msgid "third (status) word in `status' field"
+msgstr "третье (состояние) слово в поле `status'"
+
+#: lib/fields.c:190
+#, c-format
+msgid "error in Version string `%.250s': %.250s"
+msgstr "ошибка в строке Version `%.250s': %.250s"
+
+#: lib/fields.c:201
+msgid "obsolete `Revision' or `Package-Revision' field used"
+msgstr "используется устаревшее поле `Revision' или `Package-Revision'"
+
+#: lib/fields.c:219
+msgid "value for `config-version' field not allowed in this context"
+msgstr "значение для поля `config-version' в этом контексте недопустимо"
+
+#: lib/fields.c:223
+#, c-format
+msgid "error in Config-Version string `%.250s': %.250s"
+msgstr "ошибка в строке Config-Version `%.250s': %.250s"
+
+#: lib/fields.c:248
+#, c-format
+msgid "value for `conffiles' has malformatted line `%.*s'"
+msgstr "значение поля `conffiles' содержит недопустимую строку `%.*s'"
+
+#: lib/fields.c:266
+#, c-format
+msgid "value for `conffiles' has line starting with non-space `%c'"
+msgstr "значение поля `conffiles' начинается не с пробела, а с символа `%c'"
+
+#: lib/fields.c:282
+msgid "root or null directory is listed as a conffile"
+msgstr "в качестве файла конфигурации указан корневой или пустой каталог"
+
+#: lib/fields.c:338
+#, c-format
+msgid ""
+"`%s' field, missing package name, or garbage where package name expected"
+msgstr ""
+"Поле `%s': отсутствует имя пакета или указана строка, не могущая являться "
+"именем пакета"
+
+#: lib/fields.c:341
+#, c-format
+msgid "`%s' field, invalid package name `%.255s': %s"
+msgstr "Поле `%s': недопустимое имя пакета `%.255s' -- %s"
+
+#: lib/fields.c:372
+#, c-format
+msgid ""
+"`%s' field, reference to `%.255s':\n"
+" bad version relationship %c%c"
+msgstr ""
+"Поле `%s', ссылка на `%.255s':\n"
+" несуществующее отношение версий %c%c"
+
+#: lib/fields.c:378
+#, c-format
+msgid ""
+"`%s' field, reference to `%.255s':\n"
+" `%c' is obsolete, use `%c=' or `%c%c' instead"
+msgstr ""
+"Поле `%s', ссылка на `%.255s':\n"
+" форма записи %c устарела, используйте `%c=' или `%c%c'"
+
+#: lib/fields.c:388
+#, c-format
+msgid ""
+"`%s' field, reference to `%.255s':\n"
+" implicit exact match on version number, suggest using `=' instead"
+msgstr ""
+"Поле `%s', ссылка на `%.255s':\n"
+" неявная ссылка на номер версии, в таких случаях используйте `='"
+
+#: lib/fields.c:395
+msgid "Only exact versions may be used for Provides"
+msgstr "В поле Provides не может использоваться диапазон версий"
+
+#: lib/fields.c:399
+#, c-format
+msgid ""
+"`%s' field, reference to `%.255s':\n"
+" version value starts with non-alphanumeric, suggest adding a space"
+msgstr ""
+"Поле `%s', ссылка на `%.255s'\n"
+" значение версии начинается не с латинской буквы или цифры, рекомендуется "
+"добавить пробел"
+
+#: lib/fields.c:414 lib/fields.c:417
+#, c-format
+msgid "`%s' field, reference to `%.255s': version contains `%c'"
+msgstr "Поле `%s', ссылка на `%.255s': версия содержит `%c'"
+
+#: lib/fields.c:420
+#, c-format
+msgid "`%s' field, reference to `%.255s': version unterminated"
+msgstr "Поле `%s', ссылка на `%.255s': название версии не завершено"
+
+#: lib/fields.c:430
+#, c-format
+msgid "`%s' field, reference to `%.255s': error in version: %.255s"
+msgstr "Поле `%s', ссылка на `%.255s': ошибка в поле версии: %.255s"
+
+#: lib/fields.c:439
+#, c-format
+msgid "`%s' field, syntax error after reference to package `%.255s'"
+msgstr "Поле `%s': синтаксическая ошибка после ссылки на пакет `%.255s'"
+
+#: lib/fields.c:447
+#, c-format
+msgid "alternatives (`|') not allowed in %s field"
+msgstr "В поле %s альтернативы (`|') недопустимы"
+
+#: lib/fields.c:508
+msgid "value for `triggers-pending' field not allowed in this context"
+msgstr "значение в поле `triggers-pending' в этом контексте недопустимо"
+
+#: lib/fields.c:514
+#, c-format
+msgid "illegal pending trigger name `%.255s': %s"
+msgstr "недопустимое имя триггера рассмотрения `%.255s': %s"
+
+#: lib/fields.c:518
+#, c-format
+msgid "duplicate pending trigger `%.255s'"
+msgstr "повтор триггера рассмотрения `%.255s'"
+
+#: lib/fields.c:533
+msgid "value for `triggers-awaited' field not allowed in this context"
+msgstr "значение в поле `triggers-awaited' в этом контексте недопустимо"
+
+#: lib/fields.c:539
+#, c-format
+msgid "illegal package name in awaited trigger `%.255s': %s"
+msgstr "недопустимое имя пакета в триггере ожидания '%.250s': %s"
+
+#: lib/fields.c:545
+#, c-format
+msgid "duplicate awaited trigger package `%.255s'"
+msgstr "повтор пакета в триггере ожидания %.250s"
+
+#: lib/lock.c:47
+msgid "unable to unlock dpkg status database"
+msgstr "не удалось разблокировать базу данных состояний dpkg"
+
+#: lib/lock.c:99
+msgid "you do not have permission to lock the dpkg status database"
+msgstr "у вас нет прав на блокирование базы данных состояний dpkg"
+
+#: lib/lock.c:100
+msgid "unable to open/create status database lockfile"
+msgstr "не удалось открыть/создать файл блокировки базы данных состояний"
+
+#: lib/lock.c:105
+msgid "unable to lock dpkg status database"
+msgstr "не удалось заблокировать базу данных состояний dpkg"
+
+#: lib/lock.c:106
+msgid "status database area is locked by another process"
+msgstr "база данных состояний заблокирована другим процессом"
+
+#: lib/log.c:51
+#, c-format
+msgid "couldn't open log `%s': %s\n"
+msgstr "не удалось открыть файл журнала `%s': %s\n"
+
+#: lib/mlib.c:51
+#, c-format
+msgid "malloc failed (%ld bytes)"
+msgstr "функции malloc не удалось выделить %ld байт(а) памяти"
+
+#: lib/mlib.c:64
+#, c-format
+msgid "realloc failed (%ld bytes)"
+msgstr "функции realloc не удалось выделить %ld байт(а) памяти"
+
+#: lib/mlib.c:78
+msgid "failed to allocate memory"
+msgstr "не удалось выделить память"
+
+#: lib/mlib.c:85
+#, c-format
+msgid "%s (subprocess): %s\n"
+msgstr "%s (подпроцесс): %s\n"
+
+#: lib/mlib.c:99
+msgid "fork failed"
+msgstr "ошибка при выполнении системного вызова fork"
+
+#: lib/mlib.c:112
+#, c-format
+msgid "failed to dup for std%s"
+msgstr "не удалось создать копию дескриптора потока std%s"
+
+#: lib/mlib.c:113
+#, c-format
+msgid "failed to dup for fd %d"
+msgstr "не удалось создать копию дескриптора файла %d"
+
+#: lib/mlib.c:119
+msgid "failed to create pipe"
+msgstr "не удалось создать канал"
+
+#: lib/mlib.c:128
+#, c-format
+msgid "dpkg: warning - %s returned error exit status %d\n"
+msgstr "dpkg: предупреждение -- %s возвратил код ошибки %d\n"
+
+#: lib/mlib.c:130
+#, c-format
+msgid "subprocess %s returned error exit status %d"
+msgstr "подпроцесс %s возвратил код ошибки %d"
+
+#: lib/mlib.c:135
+#, c-format
+msgid "dpkg: warning - %s killed by signal (%s)%s\n"
+msgstr "dpkg: предупреждение -- %s убит по сигналу (%s)%s\n"
+
+#: lib/mlib.c:136 lib/mlib.c:139
+msgid ", core dumped"
+msgstr ", создан файл core"
+
+#: lib/mlib.c:138
+#, c-format
+msgid "subprocess %s killed by signal (%s)%s"
+msgstr "подпроцесс %s убит по сигналу (%s)%s"
+
+#: lib/mlib.c:141
+#, c-format
+msgid "subprocess %s failed with wait status code %d"
+msgstr "работа подпроцесса %s завершилась неудачно с кодом состояния %d"
+
+#: lib/mlib.c:151
+#, c-format
+msgid "wait for %s failed"
+msgstr "ожидание завершения процесса %s завершилось неудачно"
+
+#: lib/mlib.c:159
+#, c-format
+msgid "unable to read filedescriptor flags for %.250s"
+msgstr "не удалось прочитать флаги дескриптора файла %.250s"
+
+#: lib/mlib.c:161
+#, c-format
+msgid "unable to set close-on-exec flag for %.250s"
+msgstr "не удалось установить флаг close-on-exec файла %.250s"
+
+#: lib/mlib.c:215
+#, c-format
+msgid "failed in buffer_write(fd) (%i, ret=%li): %s"
+msgstr ""
+"при работе функции buffer_write(fd) произошла ошибка (%i, ret=%li): %s)"
+
+#: lib/mlib.c:222
+#, c-format
+msgid "eof in buffer_write(stream): %s"
+msgstr ""
+"при работе функции buffer_write(stream) обнаружен символ конца файла: %s"
+
+#: lib/mlib.c:224
+#, c-format
+msgid "error in buffer_write(stream): %s"
+msgstr "при работе функции buffer_write(stream) произошла ошибка: %s"
+
+#: lib/mlib.c:230
+#, c-format
+msgid "unknown data type `%i' in buffer_write\n"
+msgstr "функции buffer_write передан неизвестный тип данных %i\n"
+
+#: lib/mlib.c:246
+#, c-format
+msgid "failed in buffer_read(fd): %s"
+msgstr "при работе функции buffer_read(fd) произошла ошибка: %s"
+
+#: lib/mlib.c:253
+#, c-format
+msgid "error in buffer_read(stream): %s"
+msgstr "при работе функции buffer_read(stream) произошла ошибка: %s"
+
+#: lib/mlib.c:256
+#, c-format
+msgid "unknown data type `%i' in buffer_read\n"
+msgstr "функции buffer_read передан неизвестный тип данных %i\n"
+
+#: lib/mlib.c:352
+#, c-format
+msgid "failed in buffer_copy (%s)"
+msgstr "при работе функции buffer_copy (%s) произошла ошибка"
+
+#: lib/mlib.c:353
+#, c-format
+msgid "short read in buffer_copy (%s)"
+msgstr ""
+"при работе функции buffer_copy (%s) прочитан слишком короткий блок данных"
+
+#: lib/myopt.c:40
+#, c-format
+msgid "failed to open configuration file `%.255s' for reading"
+msgstr "не удалось открыть для чтения файл конфигурации %.255s"
+
+#: lib/myopt.c:73
+#, c-format
+msgid "configuration error: unknown option %s"
+msgstr "ошибочная конфигурация: недопустимый параметр %s"
+
+#: lib/myopt.c:76
+#, c-format
+msgid "configuration error: %s needs a value"
+msgstr "ошибочная конфигурация: параметр %s должен иметь значение"
+
+#: lib/myopt.c:81
+#, c-format
+msgid "configuration error: %s does not take a value"
+msgstr "ошибочная конфигурация: %s не принимает значение"
+
+#: lib/myopt.c:86
+#, c-format
+msgid "read error in configuration file `%.255s'"
+msgstr "ошибка чтения файла конфигурации %.255s"
+
+#: lib/myopt.c:87
+#, c-format
+msgid "error closing configuration file `%.255s'"
+msgstr "ошибка при закрытии файла конфигурации %.255s"
+
+#: lib/myopt.c:129
+#, c-format
+msgid "unknown option --%s"
+msgstr "неизвестный параметр --%s"
+
+#: lib/myopt.c:133
+#, c-format
+msgid "--%s option takes a value"
+msgstr "параметр --%s должен иметь значение"
+
+#: lib/myopt.c:138
+#, c-format
+msgid "--%s option does not take a value"
+msgstr "параметр --%s не принимает значение"
+
+#: lib/myopt.c:145
+#, c-format
+msgid "unknown option -%c"
+msgstr "неизвестный параметр -%c"
+
+#: lib/myopt.c:150
+#, c-format
+msgid "-%c option takes a value"
+msgstr "параметр -%c должен иметь значение"
+
+#: lib/myopt.c:158
+#, c-format
+msgid "-%c option does not take a value"
+msgstr "параметр -%c не принимает значение"
+
+#: lib/myopt-util.c:50
+msgid "cannot open GPL file"
+msgstr "не удалось открыть файл GPL"
+
+#: lib/parse.c:108
+#, c-format
+msgid "failed to open package info file `%.255s' for reading"
+msgstr "не удалось открыть для чтения файл информации о пакете %.255s"
+
+#: lib/parse.c:113
+#, c-format
+msgid "can't stat package info file `%.255s'"
+msgstr "не удалось получить информацию о файле информации о пакете %.255s"
+
+#: lib/parse.c:118
+#, c-format
+msgid "can't mmap package info file `%.255s'"
+msgstr "не удалось отобразить файл информации о пакете %.255s в память"
+
+#: lib/parse.c:122
+#, c-format
+msgid "copy info file `%.255s'"
+msgstr "копирование файла информации %.250s"
+
+#: lib/parse.c:154
+#, c-format
+msgid "EOF after field name `%.*s'"
+msgstr "после имени поля %.*s обнаружен символ конца файла"
+
+#: lib/parse.c:157
+#, c-format
+msgid "newline in field name `%.*s'"
+msgstr "в имени поля %.*s обнаружен символ конца строки"
+
+#: lib/parse.c:160
+#, c-format
+msgid "MSDOS EOF (^Z) in field name `%.*s'"
+msgstr "в имени поля %.*s обнаружен символ конца файла MS DOS (^Z)"
+
+#: lib/parse.c:163
+#, c-format
+msgid "field name `%.*s' must be followed by colon"
+msgstr "после имени поля %.*s должно идти двоеточие"
+
+#: lib/parse.c:171
+#, c-format
+msgid "EOF before value of field `%.*s' (missing final newline)"
+msgstr ""
+"перед значением поля %.*s обнаружен символ конца файла (отсутствует символ "
+"конца строки)"
+
+#: lib/parse.c:175
+#, c-format
+msgid "MSDOS EOF char in value of field `%.*s' (missing newline?)"
+msgstr ""
+"в значении поля %.*s обнаружен символ конца файла MS DOS (возможно, "
+"отсутствует символ конца строки)"
+
+#: lib/parse.c:189
+#, c-format
+msgid "EOF during value of field `%.*s' (missing final newline)"
+msgstr ""
+"в значении поля %.*s обнаружен символ конца файла (отсутствует символ конца "
+"строки)"
+
+#: lib/parse.c:212
+#, c-format
+msgid "duplicate value for `%s' field"
+msgstr "значение поля %s должно встречаться только один раз"
+
+#: lib/parse.c:217
+#, c-format
+msgid "user-defined field name `%.*s' too short"
+msgstr "название пользовательского поля %.*s слишком коротко"
+
+#: lib/parse.c:222
+#, c-format
+msgid "duplicate value for user-defined field `%.*s'"
+msgstr ""
+"значение пользовательского поля %.*s должно встречаться только один раз"
+
+#: lib/parse.c:235
+msgid "several package info entries found, only one allowed"
+msgstr ""
+"обнаружено несколько экземпляров информации о пакете, хотя допускается "
+"только один"
+
+#: lib/parse.c:261
+msgid "Configured-Version for package with inappropriate Status"
+msgstr ""
+"У пакета задано поле версии файлов конфигурации, хотя его состояние этого не "
+"допускает"
+
+#: lib/parse.c:271
+#, c-format
+msgid "package has status %s but triggers are awaited"
+msgstr "пакет в состоянии %s, но есть триггеры ожидания"
+
+#: lib/parse.c:275
+msgid "package has status triggers-awaited but no triggers awaited"
+msgstr "пакет в состоянии triggers-awaited, но нет триггеров ожидания"
+
+#: lib/parse.c:281
+#, c-format
+msgid "package has status %s but triggers are pending"
+msgstr "пакет в состоянии %s, но есть триггеры рассмотрения"
+
+#: lib/parse.c:285
+msgid "package has status triggers-pending but no triggers pending"
+msgstr "пакет в состоянии triggers-awaited, но нет триггеров рассмотрения"
+
+#: lib/parse.c:295
+msgid "Package which in state not-installed has conffiles, forgetting them"
+msgstr ""
+"У не установленного пакета установлены файлы конфигурации, можно не "
+"принимать во внимание"
+
+#: lib/parse.c:362
+#, c-format
+msgid "failed to close after read: `%.255s'"
+msgstr "не удалось закрыть файл %.255s после чтения"
+
+#: lib/parse.c:363
+#, c-format
+msgid "no package information in `%.255s'"
+msgstr "в файле `%.255s' нет информации о пакете"
+
+#: lib/parsehelp.c:38
+#, c-format
+msgid "failed to read `%s' at line %d"
+msgstr "ошибка чтения файла `%s' в строке %d"
+
+#: lib/parsehelp.c:41
+#, c-format
+msgid "warning, in file `%.255s' near line %d"
+msgstr "предупреждение, файл `%.255s' около строки %d"
+
+#: lib/parsehelp.c:44
+#, c-format
+msgid "parse error, in file `%.255s' near line %d"
+msgstr "ошибка разбора, файл `%.255s' около строки %d"
+
+#: lib/parsehelp.c:48
+#, c-format
+msgid " package `%.255s'"
+msgstr " пакет `%.255s'"
+
+#: lib/parsehelp.c:59
+msgid "failed to write parsing warning"
+msgstr "не удалось вывести предупреждение о нештатной ситуации при разборе"
+
+#: lib/parsehelp.c:121
+msgid "may not be empty string"
+msgstr "не может быть пустой строкой"
+
+#: lib/parsehelp.c:122
+msgid "must start with an alphanumeric"
+msgstr "должно начинаться с латинской буквы или цифры"
+
+#: lib/parsehelp.c:131
+#, c-format
+msgid "character `%c' not allowed (only letters, digits and characters `%s')"
+msgstr ""
+"символ `%c' недопустим (допустимы латинские буквы, цифры и символы `%s')"
+
+#: lib/parsehelp.c:186
+msgid "<none>"
+msgstr "<нет>"
+
+#: lib/parsehelp.c:201
+msgid "version string is empty"
+msgstr "строка версии пуста"
+
+#: lib/parsehelp.c:212
+msgid "version string has embedded spaces"
+msgstr "в строке версии есть пробелы"
+
+#: lib/parsehelp.c:217
+msgid "epoch in version is not number"
+msgstr "эпоха версии не является числом"
+
+#: lib/parsehelp.c:218
+msgid "nothing after colon in version number"
+msgstr "после двоеточия в номере версии ничего не следует"
+
+#: lib/parsehelp.c:240
+#, c-format
+msgid "missing %s"
+msgstr "отсутствует %s"
+
+#: lib/parsehelp.c:244
+#, c-format
+msgid "empty value for %s"
+msgstr "пустое значение там, где ожидается %s"
+
+#: lib/showpkg.c:70
+#, c-format
+msgid "invalid character `%c' in field width\n"
+msgstr "в записи о ширине поля встречается недопустимый символ `%c'\n"
+
+#: lib/showpkg.c:157
+#, c-format
+msgid "Closing brace missing in format\n"
+msgstr "В строке формата отсутствует закрывающая фигурная скобка\n"
+
+#: lib/trigdeferred.l:62
+#, c-format
+msgid "invalid package name `%.250s' in triggers deferred file `%.250s'"
+msgstr "неверное имя пакета `%.250s' в файле триггеров deferred `%.250s'"
+
+#: lib/trigdeferred.l:71
+#, c-format
+msgid "truncated triggers deferred file `%.250s'"
+msgstr "урезанный файл триггеров deferred `%.250s'"
+
+#: lib/trigdeferred.l:75
+#, c-format
+msgid "syntax error in triggers deferred file `%.250s' at character `%s'%s"
+msgstr ""
+"синтаксическая ошибка в файле триггеров deferred `%.250s', начиная с символа "
+"`%s'%s"
+
+#: lib/trigdeferred.l:112
+#, c-format
+msgid "unable to open/create triggers lockfile `%.250s'"
+msgstr "не удалось открыть/создать файл блокировки триггеров %.250s"
+
+#: lib/trigdeferred.l:119
+msgid "unable to lock triggers area"
+msgstr "не удалось заблокировать область триггеров"
+
+#: lib/trigdeferred.l:130
+#, c-format
+msgid "unable to stat triggers deferred file `%.250s'"
+msgstr "не удалось получить информацию о файле триггеров deferred `%.250s'"
+
+#: lib/trigdeferred.l:144
+#, c-format
+msgid "unable to open triggers deferred file `%.250s'"
+msgstr "не удалось открыть файл триггеров deferred %.250s"
+
+#: lib/trigdeferred.l:158
+#, c-format
+msgid "unable to open/create new triggers deferred file `%.250s'"
+msgstr "не удалось открыть/создать новый файл триггеров deferred %.250s"
+
+#: lib/trigdeferred.l:178
+#, c-format
+msgid "error reading triggers deferred file `%.250s'"
+msgstr "ошибка чтения файла триггеров deferred %.255s"
+
+#: lib/trigdeferred.l:186
+#, c-format
+msgid "unable to write new triggers deferred file `%.250s'"
+msgstr "ошибка записи в новый файл триггеров deferred %.250s"
+
+#: lib/trigdeferred.l:191
+#, c-format
+msgid "unable to close new triggers deferred file `%.250s'"
+msgstr "не удалось закрыть новый файл триггеров deferred %.250s"
+
+#: lib/trigdeferred.l:195
+#, c-format
+msgid "unable to install new triggers deferred file `%.250s'"
+msgstr "не удалось установить новый файл триггеров deferred %.255s"
+
+#: lib/triglib.c:42
+msgid "empty trigger names are not permitted"
+msgstr "пустые имена триггеров не разрешены"
+
+#: lib/triglib.c:46
+msgid "trigger name contains invalid character"
+msgstr "имя триггера содержит недопустимый символ"
+
+#: lib/triglib.c:302
+#, c-format
+msgid ""
+"invalid or unknown syntax in trigger name `%.250s' (in trigger interests for "
+"package `%.250s')"
+msgstr ""
+"неправильный или неизвестный синтаксис в имени триггера `%.250s' (в триггере "
+"interests для пакета `%.250s')"
+
+#: lib/triglib.c:337
+#, c-format
+msgid "failed to open trigger interest list file `%.250s'"
+msgstr "не удалось открыть файл списка триггеров interest %.250s"
+
+#: lib/triglib.c:366
+#, c-format
+msgid "failed to rewind trigger interest file `%.250s'"
+msgstr "не удалось вернуться в начало файла триггера interest %.250s"
+
+#: lib/triglib.c:371
+#, c-format
+msgid ""
+"trigger interest file `%.250s' syntax error; illegal package name `%.250s': "
+"%.250s"
+msgstr ""
+"ошибка в файле триггера interest `%.250s'; неправильное имя пакета `%.250s': "
+"%.250s"
+
+#: lib/triglib.c:393
+#, c-format
+msgid "unable to create new trigger interest file `%.250s'"
+msgstr "не удалось создать новый файл триггера interest `%.250s'"
+
+#: lib/triglib.c:405
+#, c-format
+msgid "unable to write new trigger interest file `%.250s'"
+msgstr "не удалось записать в новый файл триггера interest `%.250s'"
+
+#: lib/triglib.c:410
+#, c-format
+msgid "unable to install new trigger interest file `%.250s'"
+msgstr "не удалось установить новый файл триггера interest %.255s"
+
+#: lib/triglib.c:467
+#, c-format
+msgid ""
+"duplicate file trigger interest for filename `%.250s' and package `%.250s'"
+msgstr "повтор файла триггера interest для файла `%.250s' и пакета `%.250s'"
+
+#: lib/triglib.c:490
+#, c-format
+msgid "unable to create new file triggers file `%.250s'"
+msgstr "не удалось создать новый файл триггеров %.250s"
+
+#: lib/triglib.c:499
+#, c-format
+msgid "unable to write new file triggers file `%.250s'"
+msgstr "не удалось записать в новый файл триггеров %.250s"
+
+#: lib/triglib.c:504
+#, c-format
+msgid "unable to install new file triggers file as `%.250s'"
+msgstr "не удалось установить новый файл триггеров `%.250s'"
+
+#: lib/triglib.c:525
+#, c-format
+msgid "unable to read file triggers file `%.250s'"
+msgstr "не удалось прочитать файл триггеров %.250s"
+
+#: lib/triglib.c:533
+#, c-format
+msgid "syntax error in file triggers file `%.250s'"
+msgstr "синтаксическая ошибка в файле триггеров %.255s"
+
+#: lib/triglib.c:537
+#, c-format
+msgid ""
+"file triggers record mentions illegal package name `%.250s' (for interest in "
+"file `%.250s'): %.250s"
+msgstr ""
+"запись файла триггеров содержит неверное имя пакета `%.250s' (для interest в "
+"файле `%.250s'): %.250s"
+
+#: lib/triglib.c:631
+#, c-format
+msgid ""
+"triggers ci file `%.250s' contains illegal trigger syntax in trigger name `"
+"%.250s': %.250s"
+msgstr ""
+"файл триггеров ci `%.250s' содержит неверный синтаксис в имени триггера `"
+"%.250s': %.250s"
+
+#: lib/triglib.c:651
+#, c-format
+msgid "unable to open triggers ci file `%.250s'"
+msgstr "не удалось открыть файл триггеров ci `%.250s'"
+
+#: lib/triglib.c:666
+msgid "triggers ci file contains unknown directive syntax"
+msgstr "файл триггеров ci содержит директиву с неизвестным синтаксисом"
+
+#: lib/triglib.c:675
+#, c-format
+msgid "triggers ci file contains unknown directive `%.250s'"
+msgstr "файл триггеров ci содержит неизвестную директиву `%.250s'"
+
+#: lib/triglib.c:730
+#, c-format
+msgid "unable to create triggers state directory `%.250s'"
+msgstr "не удалось создать каталог состояния триггеров `%.250s'"
+
+#: lib/triglib.c:733
+#, c-format
+msgid "unable to set ownership of triggers state directory `%.250s'"
+msgstr ""
+"не удалось назначить владельца для каталога состояния триггеров `%.250s'"
+
+#: lib/utils.c:50
+#, c-format
+msgid "read error in `%.250s'"
+msgstr "ошибка чтения в %.250s"
+
+#: lib/utils.c:55
+#, c-format
+msgid "fgets gave an empty string from `%.250s'"
+msgstr "fgets прочитал пустую строку из `%.250s'"
+
+#: lib/utils.c:57
+#, c-format
+msgid "too-long line or missing newline in `%.250s'"
+msgstr "слишком длинная строка или отсутствующая новая строка в %.250s"
+
+#: lib/utils.c:69
+#, c-format
+msgid "unexpected eof reading `%.250s'"
+msgstr "неожиданный конец файла при чтении %.250s"
+
+#: lib/varbuf.c:109
+msgid "failed to realloc for variable buffer"
+msgstr "функции realloc не удалось выделить буфер переменных"
+
+#: src/archives.c:209
+msgid "process_archive ...  already disappeared !"
+msgstr "process_archive ...  уже исчез!"
+
+#: src/archives.c:229
+msgid "error reading from dpkg-deb pipe"
+msgstr "ошибка чтения данных из канала dpkg-deb"
+
+#: src/archives.c:266
+#, c-format
+msgid "error setting timestamps of `%.255s'"
+msgstr "ошибка при установке времени модификации %.255s"
+
+#: src/archives.c:273 src/archives.c:671
+#, c-format
+msgid "error setting ownership of `%.255s'"
+msgstr "ошибка при установке владельца %.255s"
+
+#: src/archives.c:275 src/archives.c:674
+#, c-format
+msgid "error setting permissions of `%.255s'"
+msgstr "ошибка при установке прав доступа к %.255s"
+
+#: src/archives.c:341
+#, c-format
+msgid "failed to stat (dereference) existing symlink `%.250s'"
+msgstr ""
+"не удалось выполнить stat для существующей символической ссылки `%.250s'"
+
+#: src/archives.c:362
+#, c-format
+msgid ""
+"failed to stat (dereference) proposed new symlink target `%.250s' for "
+"symlink `%.250s'"
+msgstr ""
+"не удалось выполнить stat для предполагаемой новой символической цели `"
+"%.250s' для символической ссылки `%.250s'"
+
+#: src/archives.c:414
+#, c-format
+msgid ""
+"trying to overwrite `%.250s', which is the diverted version of `"
+"%.250s' (package: %.100s)"
+msgstr ""
+"попытка переписать `%.250s', являющийся изменённой версией `%.250s' (пакет: "
+"%.100s)"
+
+#: src/archives.c:420
+#, c-format
+msgid "trying to overwrite `%.250s', which is the diverted version of `%.250s'"
+msgstr "попытка переписать `%.250s', являющийся изменённой версией `%.250s'"
+
+#: src/archives.c:443
+#, c-format
+msgid "unable to stat `%.255s' (which I was about to install)"
+msgstr ""
+"не удалось получить информацию о %.255s (который должен быть установлен)"
+
+#: src/archives.c:451
+#, c-format
+msgid ""
+"unable to clean up mess surrounding `%.255s' before installing another "
+"version"
+msgstr ""
+"при установке новой версии не удалось разобраться со старой мешаниной в "
+"%.255s"
+
+#: src/archives.c:457
+#, c-format
+msgid "unable to stat restored `%.255s' before installing another version"
+msgstr ""
+"перед установкой новой версии не удалось получить информацию о "
+"восстановленном файле %.255s"
+
+#: src/archives.c:492
+#, c-format
+msgid "archive contained object `%.255s' of unknown type 0x%x"
+msgstr "архив содержит объект %.255s неизвестного типа 0x%x"
+
+#: src/archives.c:553
+#, c-format
+msgid "Replacing files in old package %s ...\n"
+msgstr "Замена файлов в старом пакете %s ...\n"
+
+#: src/archives.c:556
+#, c-format
+msgid "Replaced by files in installed package %s ...\n"
+msgstr "Заменено файлами из установленного пакета %s ...\n"
+
+#: src/archives.c:562
+#, c-format
+msgid ""
+"trying to overwrite directory `%.250s' in package %.250s with nondirectory"
+msgstr ""
+"попытка переписать каталог %.250s в пакете %.250s файлом, не являющимся "
+"каталогом"
+
+#: src/archives.c:572
+#, c-format
+msgid "trying to overwrite `%.250s', which is also in package %.250s"
+msgstr "попытка перезаписать %.250s, который уже имеется в пакете %.250s"
+
+#: src/archives.c:591
+#, c-format
+msgid "gobble replaced file `%.255s'"
+msgstr "сожрано заменой файла `%.255s'"
+
+#: src/archives.c:659
+#, c-format
+msgid "backend dpkg-deb during `%.255s'"
+msgstr "обработка файла %.255s процессом dpkg-deb"
+
+#: src/archives.c:677
+#, c-format
+msgid "error closing/writing `%.255s'"
+msgstr "ошибка при закрытии/записи %.255s"
+
+#: src/archives.c:682
+#, c-format
+msgid "error creating pipe `%.255s'"
+msgstr "ошибка создания канала %.255s"
+
+#: src/archives.c:688 src/archives.c:694
+#, c-format
+msgid "error creating device `%.255s'"
+msgstr "ошибка создания устройства %.255s"
+
+#: src/archives.c:703
+#, c-format
+msgid "error creating hard link `%.255s'"
+msgstr "ошибка создания жёсткой ссылки %.255s"
+
+#: src/archives.c:710
+#, c-format
+msgid "error creating symbolic link `%.255s'"
+msgstr "ошибка создания символической ссылки %.255s"
+
+#: src/archives.c:716 src/archives.c:721
+#, c-format
+msgid "error setting ownership of symlink `%.255s'"
+msgstr "ошибка при установке владельца символической ссылки %.255s"
+
+#: src/archives.c:727
+#, c-format
+msgid "error creating directory `%.255s'"
+msgstr "ошибка создания каталога %.255s"
+
+#: src/archives.c:762
+#, c-format
+msgid "unable to move aside `%.255s' to install new version"
+msgstr ""
+"не удалось переместить в другое место %.255s, что необходимо для установки "
+"новой версии"
+
+#: src/archives.c:771
+#, c-format
+msgid "unable to read link `%.255s'"
+msgstr "не удалось прочитать символическую ссылку %.255s"
+
+#: src/archives.c:775
+#, c-format
+msgid "unable to make backup symlink for `%.255s'"
+msgstr "не удалось создать резервную ссылку на %.255s"
+
+#: src/archives.c:778 src/archives.c:781
+#, c-format
+msgid "unable to chown backup symlink for `%.255s'"
+msgstr "не удалось сменить владельца резервной ссылки на %.255s"
+
+#: src/archives.c:786
+#, c-format
+msgid "unable to make backup link of `%.255s' before installing new version"
+msgstr ""
+"не удалось создать резервную ссылку на %.255s перед установкой новой версии"
+
+#: src/archives.c:811
+#, c-format
+msgid "unable to install new version of `%.255s'"
+msgstr "не удалось установить новую версию %.255s"
+
+#: src/archives.c:858
+#, c-format
+msgid ""
+"dpkg: warning - ignoring dependency problem with %s:\n"
+"%s"
+msgstr ""
+"dpkg: предупреждение -- игнорируются проблемы зависимостей с %s:\n"
+"%s"
+
+#: src/archives.c:865
+#, c-format
+msgid ""
+"dpkg: warning - considering deconfiguration of essential\n"
+" package %s, to enable %s.\n"
+msgstr ""
+"dpkg: предупреждение -- рассматривается деконфигурация пакета первой\n"
+"необходимости %s для активации %s.\n"
+
+#: src/archives.c:869
+#, c-format
+msgid ""
+"dpkg: no, %s is essential, will not deconfigure\n"
+" it in order to enable %s.\n"
+msgstr ""
+"dpkg: нет, пакет %s является пакетом первой необходимости и не будет\n"
+"деконфигурирован для активации %s.\n"
+
+#: src/archives.c:883
+#, c-format
+msgid ""
+"dpkg: no, cannot proceed with %s (--auto-deconfigure will help):\n"
+"%s"
+msgstr ""
+"dpkg: нет, невозможно продолжить с %s (вам поможет --auto-deconfigure):\n"
+"%s"
+
+#: src/archives.c:893
+#, c-format
+msgid "removal of %.250s"
+msgstr "удаление %.250s"
+
+#: src/archives.c:920
+#, c-format
+msgid "installation of %.250s"
+msgstr "установка %.255s"
+
+#: src/archives.c:921
+#, c-format
+msgid ""
+"dpkg: considering deconfiguration of %s, which would be broken by %s ...\n"
+msgstr ""
+"dpkg: рассматривается деконфигурация %s, который был бы сломан %s ...\n"
+
+#: src/archives.c:928
+#, c-format
+msgid "dpkg: yes, will deconfigure %s (broken by %s).\n"
+msgstr "dpkg: да, %s будет деконфигурирован (сломан из-за %s).\n"
+
+#: src/archives.c:932 src/archives.c:1057
+#, c-format
+msgid ""
+"dpkg: regarding %s containing %s:\n"
+"%s"
+msgstr ""
+"dpkg: относительно %s, содержащего %s:\n"
+"%s"
+
+#: src/archives.c:940
+#, c-format
+msgid "dpkg: warning - ignoring breakage, may proceed anyway !\n"
+msgstr "dpkg: предупреждение -- поломка игнорируется, можно продолжать!\n"
+
+#: src/archives.c:946
+#, c-format
+msgid ""
+"installing %.250s would break %.250s, and\n"
+" deconfiguration is not permitted (--auto-deconfigure might help)"
+msgstr ""
+"установка %.250s сломает %.250s, и\n"
+" деконфигурация не разрешена (--auto-deconfigure может помочь)"
+
+#: src/archives.c:950
+#, c-format
+msgid "installing %.250s would break existing software"
+msgstr "установка %.250s сломает имеющееся ПО"
+
+#: src/archives.c:983
+#, c-format
+msgid "dpkg: considering removing %s in favour of %s ...\n"
+msgstr ""
+"dpkg: чтобы можно было установить пакет %2$s, необходимо удалить %1$s...\n"
+
+#: src/archives.c:989
+#, c-format
+msgid "%s is not properly installed - ignoring any dependencies on it.\n"
+msgstr "%s не установлен корректно, все зависимости от него игнорируются.\n"
+
+#: src/archives.c:1018
+#, c-format
+msgid "dpkg: may have trouble removing %s, as it provides %s ...\n"
+msgstr ""
+"dpkg: возможны проблемы с удалением %s, поскольку он предоставляет %s...\n"
+
+#: src/archives.c:1033
+#, c-format
+msgid ""
+"dpkg: package %s requires reinstallation, but will remove anyway as you "
+"request.\n"
+msgstr ""
+"dpkg: пакет %s требует переустановки, но по вашему указанию всё равно будет "
+"удалён.\n"
+
+#: src/archives.c:1036
+#, c-format
+msgid "dpkg: package %s requires reinstallation, will not remove.\n"
+msgstr "dpkg: пакет %s требует переустановки и не будет удалён.\n"
+
+#: src/archives.c:1043
+#, c-format
+msgid "package %s has too many Conflicts/Replaces pairs"
+msgstr "пакет %s содержит слишком много Conflicts/Replaces пар"
+
+#: src/archives.c:1049
+#, c-format
+msgid "dpkg: yes, will remove %s in favour of %s.\n"
+msgstr "dpkg: %s будет удалён, чтобы можно было установить %s.\n"
+
+#: src/archives.c:1060
+#, c-format
+msgid "conflicting packages - not installing %.250s"
+msgstr "конфликт пакетов -- %.250s не будет установлен"
+
+#: src/archives.c:1061
+#, c-format
+msgid "dpkg: warning - ignoring conflict, may proceed anyway !\n"
+msgstr "dpkg: предупреждение -- конфликт игнорируется, можно продолжать!\n"
+
+#: src/archives.c:1102
+#, c-format
+msgid "--%s --recursive needs at least one path argument"
+msgstr "--%s --recursive требует задания хотя бы одного имени каталога"
+
+#: src/archives.c:1134
+msgid "failed to exec find for --recursive"
+msgstr "не удалось запустить find для поиска файлов в каталогах"
+
+#: src/archives.c:1139
+msgid "failed to fdopen find's pipe"
+msgstr "не удалось открыть дескриптор канала find"
+
+#: src/archives.c:1145
+msgid "error reading find's pipe"
+msgstr "ошибка чтения из канала find"
+
+#: src/archives.c:1146
+msgid "error closing find's pipe"
+msgstr "ошибка при закрытии канала find"
+
+#: src/archives.c:1149
+#, c-format
+msgid "find for --recursive returned unhandled error %i"
+msgstr ""
+"при поиске файлов в каталогах программа find вернула неизвестный код ошибки %"
+"i"
+
+#: src/archives.c:1152
+msgid "searched, but found no packages (files matching *.deb)"
+msgstr ""
+"поиск завершён, пакеты (файлы с именами, удовлетворяющими шаблону *.deb) "
+"найти не удалось"
+
+#: src/archives.c:1168
+#, c-format
+msgid "--%s needs at least one package archive file argument"
+msgstr "--%s требует задания хотя бы одного имени файла"
+
+#: src/archives.c:1240
+#, c-format
+msgid "Selecting previously deselected package %s.\n"
+msgstr "Выбор ранее не выбранного пакета %s.\n"
+
+#: src/archives.c:1245
+#, c-format
+msgid "Skipping deselected package %s.\n"
+msgstr "Пропуск не выбранного пакета %s.\n"
+
+#: src/archives.c:1262
+#, c-format
+msgid "Version %.250s of %.250s already installed, skipping.\n"
+msgstr "Версия %.250s пакета %.250s уже установлена, пропускаем пакет.\n"
+
+#: src/archives.c:1272
+#, c-format
+msgid "%s - warning: downgrading %.250s from %.250s to %.250s.\n"
+msgstr "%s: предупреждение -- снижение версии %.250s с %.250s до %.250s.\n"
+
+#: src/archives.c:1278
+#, c-format
+msgid "Will not downgrade %.250s from version %.250s to %.250s, skipping.\n"
+msgstr "Версия %.250s не будет снижена с %.250s до %.250s, пропускаем пакет.\n"
+
+#: src/cleanup.c:83
+#, c-format
+msgid ""
+"unable to remove newly-installed version of `%.250s' to allow reinstallation "
+"of backup copy"
+msgstr ""
+"не удалось удалить новую версию %.250s, что необходимо для отката к старой "
+"версии"
+
+#: src/cleanup.c:90
+#, c-format
+msgid "unable to restore backup version of `%.250s'"
+msgstr "невозможно восстановить сохранённую копию старой версии %.250s"
+
+#: src/cleanup.c:94
+#, c-format
+msgid "unable to remove newly-installed version of `%.250s'"
+msgstr "невозможно удалить новую версию `%.250s'"
+
+#: src/cleanup.c:101
+#, c-format
+msgid "unable to remove newly-extracted version of `%.250s'"
+msgstr "не удалось установить новую версию %.250s"
+
+#: src/configure.c:90
+#, c-format
+msgid "no package named `%s' is installed, cannot configure"
+msgstr "пакет %s не установлен, настройка невозможна"
+
+#: src/configure.c:92
+#, c-format
+msgid "package %.250s is already installed and configured"
+msgstr "пакет %.250s уже установлен и настроен"
+
+#: src/configure.c:94
+#, c-format
+msgid ""
+"package %.250s is not ready for configuration\n"
+" cannot configure (current status `%.250s')"
+msgstr ""
+"пакет %.250s не готов к настройке\n"
+" настройка невозможна (текущее состояние: %.250s)"
+
+#: src/configure.c:124
+#, c-format
+msgid ""
+"dpkg: dependency problems prevent configuration of %s:\n"
+"%s"
+msgstr ""
+"dpkg: зависимости пакетов не позволяют настроить пакет %s:\n"
+"%s"
+
+#: src/configure.c:127
+msgid "dependency problems - leaving unconfigured"
+msgstr "проблемы зависимостей -- оставляем не настроенным"
+
+#: src/configure.c:131
+#, c-format
+msgid ""
+"dpkg: %s: dependency problems, but configuring anyway as you request:\n"
+"%s"
+msgstr ""
+"dpkg: %s: проблемы зависимостей, но по вашему указанию всё равно производим "
+"настройку:\n"
+"%s"
+
+#: src/configure.c:139
+msgid ""
+"Package is in a very bad inconsistent state - you should\n"
+" reinstall it before attempting configuration."
+msgstr ""
+"Пакет абсолютно неработоспособен -- перед настройкой его\n"
+" следует переустановить."
+
+#: src/configure.c:142
+#, c-format
+msgid "Setting up %s (%s) ...\n"
+msgstr "Настраивается пакет %s (%s) ...\n"
+
+#: src/configure.c:192
+#, c-format
+msgid "unable to stat new dist conffile `%.250s'"
+msgstr "не удалось получить информацию о новом файле конфигурации `%.250s'"
+
+#: src/configure.c:202 src/configure.c:441
+#, c-format
+msgid "unable to stat current installed conffile `%.250s'"
+msgstr ""
+"не удалось получить информацию об уже установленном файле конфигурации `"
+"%.250s'"
+
+#: src/configure.c:211
+#, c-format
+msgid ""
+"\n"
+"Configuration file `%s', does not exist on system.\n"
+"Installing new config file as you request.\n"
+msgstr ""
+"\n"
+"Файл конфигурации `%s' отсутствует.\n"
+"По вашему указанию устанавливается новый файл настройки.\n"
+
+#: src/configure.c:245
+#, c-format
+msgid "dpkg: %s: warning - failed to remove old backup `%.250s': %s\n"
+msgstr ""
+"dpkg: %s: предупреждение -- не удалось удалить резервную копию `%.250s': %s\n"
+
+#: src/configure.c:254
+#, c-format
+msgid "dpkg: %s: warning - failed to rename `%.250s' to `%.250s': %s\n"
+msgstr ""
+"dpkg: %s: предупреждение -- не удалось переименовать `%.250s' в `%.250s': %"
+"s\n"
+
+#: src/configure.c:262
+#, c-format
+msgid "dpkg: %s: warning - failed to remove `%.250s': %s\n"
+msgstr "dpkg: %s: предупреждение -- не удалось удалить `%.250s': %s\n"
+
+#: src/configure.c:270
+#, c-format
+msgid "dpkg: %s: warning - failed to remove old distrib version `%.250s': %s\n"
+msgstr ""
+"dpkg: %s: предупреждение -- не удалось удалить поставлявшуюся ранее с "
+"пакетом версию `%.250s': %s\n"
+
+#: src/configure.c:275
+#, c-format
+msgid "dpkg: %s: warning - failed to remove `%.250s' (before overwrite): %s\n"
+msgstr ""
+"dpkg: %s: предупреждение -- не удалось удалить `%.250s' (для замены его "
+"другим файлом): %s\n"
+
+#: src/configure.c:280
+#, c-format
+msgid "dpkg: %s: warning - failed to link `%.250s' to `%.250s': %s\n"
+msgstr ""
+"dpkg: %s: предупреждение -- не удалось создать жёсткую ссылку `%.250s' на `"
+"%.250s': %s\n"
+
+#: src/configure.c:284
+#, c-format
+msgid "Installing new version of config file %s ...\n"
+msgstr "Устанавливается новая версия файла конфигурации %s ...\n"
+
+#: src/configure.c:289
+#, c-format
+msgid "unable to install `%.250s' as `%.250s'"
+msgstr "не удалось установить `%.250s' в качестве `%.250s'"
+
+#: src/configure.c:346
+#, c-format
+msgid ""
+"dpkg: %s: warning - unable to stat config file `%s'\n"
+" (= `%s'): %s\n"
+msgstr ""
+"dpkg: %s: предупреждение -- не удалось получить информацию о файле "
+"конфигурации `%s'\n"
+" (= `%s'): %s\n"
+
+#: src/configure.c:357
+#, c-format
+msgid ""
+"dpkg: %s: warning - config file `%s' is a circular link\n"
+" (= `%s')\n"
+msgstr ""
+"dpkg: %s: предупреждение -- файл конфигурации `%s' является циклической "
+"ссылкой\n"
+" (= `%s')\n"
+
+#: src/configure.c:370
+#, c-format
+msgid ""
+"dpkg: %s: warning - unable to readlink conffile `%s'\n"
+" (= `%s'): %s\n"
+msgstr ""
+"dpkg: %s: предупреждение -- не удалось прочитать являющуюся частью "
+"конфигурации символическую ссылку `%s'\n"
+" (= `%s'): %s\n"
+
+#: src/configure.c:390
+#, c-format
+msgid ""
+"dpkg: %s: warning - conffile `%.250s' resolves to degenerate filename\n"
+" (`%s' is a symlink to `%s')\n"
+msgstr ""
+"dpkg: %s: предупреждение -- запись о файле конфигурации `%.250s' разрешается "
+"в вырожденное имя файла\n"
+" (`%s' является символической ссылкой на `%s')\n"
+
+#: src/configure.c:403
+#, c-format
+msgid ""
+"dpkg: %s: warning - conffile `%.250s' is not a plain file or symlink (= `%"
+"s')\n"
+msgstr ""
+"dpkg: %s: предупреждение -- файл конфигурации `%.250s' не является обычным "
+"файлом или символической ссылкой (= `%s')\n"
+
+#: src/configure.c:421
+msgid "md5hash"
+msgstr "md5hash"
+
+#: src/configure.c:427
+#, c-format
+msgid "dpkg: %s: warning - unable to open conffile %s for hash: %s\n"
+msgstr ""
+"dpkg: %s: предупреждение -- не удалось открыть файл конфигурации %s, для "
+"которого нужно вычислить хэш: %s\n"
+
+#: src/configure.c:445
+#, c-format
+msgid "unable to change ownership of new dist conffile `%.250s'"
+msgstr "не удалось изменить владельца нового файла конфигурации `%.250s'"
+
+#: src/configure.c:448
+#, c-format
+msgid "unable to set mode of new dist conffile `%.250s'"
+msgstr ""
+"не удалось установить режим доступа к новому файлу конфигурации `%.250s'"
+
+#: src/configure.c:478
+#, c-format
+msgid "failed to run %s (%.250s)"
+msgstr "не удалось запустить программу %s (%.250s)"
+
+#: src/configure.c:487 src/configure.c:525
+msgid "wait for shell failed"
+msgstr "ожидание возврата из оболочки завершилось неудачно"
+
+#: src/configure.c:507
+msgid "Type `exit' when you're done.\n"
+msgstr "Когда закончите, наберите exit.\n"
+
+#: src/configure.c:516
+#, c-format
+msgid "failed to exec shell (%.250s)"
+msgstr "не удалось запустить оболочку (%.250s)"
+
+#: src/configure.c:528
+msgid "Don't forget to foreground (`fg') this process when you're done !\n"
+msgstr ""
+"Когда закончите, не забудьте вывести этот процесс из фонового режима "
+"(команда fg)!\n"
+
+#: src/configure.c:555
+#, c-format
+msgid ""
+"\n"
+"Configuration file `%s'"
+msgstr ""
+"\n"
+"Файл конфигурации `%s'"
+
+#: src/configure.c:557
+#, c-format
+msgid " (actually `%s')"
+msgstr " (на самом деле `%s')"
+
+#: src/configure.c:561
+#, c-format
+msgid ""
+"\n"
+" ==> File on system created by you or by a script.\n"
+" ==> File also in package provided by package maintainer.\n"
+msgstr ""
+"\n"
+" ==> Файл, созданный вами или сценарием.\n"
+" ==> Также, файл в пакете, предоставленный сопровождающим пакета.\n"
+
+#: src/configure.c:566
+#, c-format
+msgid ""
+"\n"
+"     Not modified since installation.\n"
+msgstr ""
+"\n"
+"     После установки не изменялся.\n"
+
+#: src/configure.c:568
+#, c-format
+msgid ""
+"\n"
+" ==> Modified (by you or by a script) since installation.\n"
+msgstr ""
+"\n"
+" ==> Изменён после установки (вами или сценарием).\n"
+
+#: src/configure.c:569
+#, c-format
+msgid ""
+"\n"
+" ==> Deleted (by you or by a script) since installation.\n"
+msgstr ""
+"\n"
+" ==> Удалён во время установки (вами или сценарием).\n"
+
+#: src/configure.c:572
+#, c-format
+msgid " ==> Package distributor has shipped an updated version.\n"
+msgstr " ==> Автор пакета предоставил обновлённую версию.\n"
+
+#: src/configure.c:573
+#, c-format
+msgid "     Version in package is the same as at last installation.\n"
+msgstr "     Версия в пакете та же, что и при последней установке.\n"
+
+#: src/configure.c:580
+#, c-format
+msgid " ==> Using new file as you requested.\n"
+msgstr " ==> По вашему указанию используется новый файл.\n"
+
+#: src/configure.c:584
+#, c-format
+msgid " ==> Using current old file as you requested.\n"
+msgstr " ==> По вашему указанию используется старый файл.\n"
+
+#: src/configure.c:594
+#, c-format
+msgid " ==> Keeping old config file as default.\n"
+msgstr " ==> По умолчанию сохраняется старый файл конфигурации.\n"
+
+#: src/configure.c:598
+#, c-format
+msgid " ==> Using new config file as default.\n"
+msgstr " ==> По умолчанию используется новый файл конфигурации.\n"
+
+#: src/configure.c:606
+#, c-format
+msgid ""
+"   What would you like to do about it ?  Your options are:\n"
+"    Y or I  : install the package maintainer's version\n"
+"    N or O  : keep your currently-installed version\n"
+"      D     : show the differences between the versions\n"
+"      Z     : background this process to examine the situation\n"
+msgstr ""
+"  Что вы будете с этим делать?  У вас есть следующие варианты:\n"
+"   Y или I : установить версию, предлагаемую сопровождающим пакета\n"
+"   N или O : оставить установленную на данный момент версию\n"
+"      D    : показать различия между версиями\n"
+"      Z    : перевести этот процесс в фоновый режим для проверки ситуации\n"
+
+#: src/configure.c:613
+#, c-format
+msgid " The default action is to keep your current version.\n"
+msgstr " По умолчанию сохраняется текущая версия файла конфигурации.\n"
+
+#: src/configure.c:615
+#, c-format
+msgid " The default action is to install the new version.\n"
+msgstr " По умолчанию устанавливается новая версия файла.\n"
+
+#: src/configure.c:621
+msgid "[default=N]"
+msgstr "[по умолчанию N]"
+
+#: src/configure.c:622
+msgid "[default=Y]"
+msgstr "[по умолчанию Y]"
+
+#: src/configure.c:622
+msgid "[no default]"
+msgstr "[значения по умолчанию нет]"
+
+#: src/configure.c:625
+msgid "error writing to stderr, discovered before conffile prompt"
+msgstr "при выводе запроса обнаружена ошибка записи в поток stderr"
+
+#: src/configure.c:632
+msgid "read error on stdin at conffile prompt"
+msgstr "ошибка чтения ответа на запрос из потока stdin"
+
+#: src/configure.c:633
+msgid "EOF on stdin at conffile prompt"
+msgstr "В ответе на запрос из потока stdin прочитан символ конца файла"
+
+#: src/depcon.c:77
+#, c-format
+msgid "unable to check for existence of `%.250s'"
+msgstr "не удалось проверить существование `%.250s'"
+
+#: src/depcon.c:156
+#, c-format
+msgid "%s depends on %s"
+msgstr "%s зависит от %s"
+
+#: src/depcon.c:159
+#, c-format
+msgid "%s pre-depends on %s"
+msgstr "%s требует предварительной установки %s"
+
+#: src/depcon.c:162
+#, c-format
+msgid "%s recommends %s"
+msgstr "%s рекомендует %s"
+
+#: src/depcon.c:165
+#, c-format
+msgid "%s suggests %s"
+msgstr "%s предлагает %s"
+
+#: src/depcon.c:168
+#, c-format
+msgid "%s breaks %s"
+msgstr "%s ломает %s"
+
+#: src/depcon.c:171
+#, c-format
+msgid "%s conflicts with %s"
+msgstr "%s конфликтует с %s"
+
+#: src/depcon.c:174
+#, c-format
+msgid "%s enhances %s"
+msgstr "%s расширяет возможности %s"
+
+#: src/depcon.c:268
+#, c-format
+msgid "  %.250s is to be removed.\n"
+msgstr "  пакет %.250s будет удалён.\n"
+
+#: src/depcon.c:271
+#, c-format
+msgid "  %.250s is to be deconfigured.\n"
+msgstr "  файлы конфигурации пакета %.250s будут удалены.\n"
+
+#: src/depcon.c:275
+#, c-format
+msgid "  %.250s is to be installed, but is version %.250s.\n"
+msgstr " пакет %.250s будет установлен, но его версия %.250s.\n"
+
+#: src/depcon.c:284
+#, c-format
+msgid "  %.250s is installed, but is version %.250s.\n"
+msgstr "  пакет %.250s установлен, но его версия %.250s.\n"
+
+#: src/depcon.c:300
+#, c-format
+msgid "  %.250s is unpacked, but has never been configured.\n"
+msgstr "  пакет %.250s распакован, но не был настроен.\n"
+
+#: src/depcon.c:304
+#, c-format
+msgid "  %.250s is unpacked, but is version %.250s.\n"
+msgstr "  пакет %.250s распакован, но его версия %.250s.\n"
+
+#: src/depcon.c:310
+#, c-format
+msgid "  %.250s latest configured version is %.250s.\n"
+msgstr "  последняя настроенная версия пакета %.250s -- %.250s.\n"
+
+#: src/depcon.c:320
+#, c-format
+msgid "  %.250s is %s.\n"
+msgstr "  пакет %.250s %s.\n"
+
+#: src/depcon.c:356
+#, c-format
+msgid "  %.250s provides %.250s but is to be removed.\n"
+msgstr " пакет %.250s предоставляет %.250s, но должен быть удалён.\n"
+
+#: src/depcon.c:360
+#, c-format
+msgid "  %.250s provides %.250s but is to be deconfigured.\n"
+msgstr ""
+"  пакет %.250s предоставляет %.250s, но должен быть удалён вместе с файлами "
+"конфигурации.\n"
+
+#: src/depcon.c:365
+#, c-format
+msgid "  %.250s provides %.250s but is %s.\n"
+msgstr "  пакет %.250s предоставляет %.250s, но он %s.\n"
+
+#: src/depcon.c:379
+#, c-format
+msgid "  %.250s is not installed.\n"
+msgstr "  пакет %.250s не установлен.\n"
+
+#: src/depcon.c:410
+#, c-format
+msgid "  %.250s (version %.250s) is to be installed.\n"
+msgstr "  пакет %.250s версии %.250s будет установлен.\n"
+
+#: src/depcon.c:432
+#, c-format
+msgid "  %.250s (version %.250s) is present and %s.\n"
+msgstr "  %.250s (версия %.250s) существует и %s.\n"
+
+#: src/depcon.c:457
+#, c-format
+msgid "  %.250s provides %.250s and is to be installed.\n"
+msgstr "  %.250s предоставляет %.250s и будет установлен.\n"
+
+#: src/depcon.c:497
+#, c-format
+msgid "  %.250s provides %.250s and is present and %s.\n"
+msgstr "  %.250s предоставляет %.250s и и существует и %s.\n"
+
+#: src/enquiry.c:56 src/query.c:61 src/query.c:104
+msgid "(no description available)"
+msgstr "(описание недоступно)"
+
+#: src/enquiry.c:81
+msgid ""
+"The following packages are in a mess due to serious problems during\n"
+"installation.  They must be reinstalled for them (and any packages\n"
+"that depend on them) to function properly:\n"
+msgstr ""
+"При установке следующих пакетов возникли серьёзные проблемы, и они\n"
+"совершенно неработоспособны. Чтобы эти (и другие, зависящие от них)\n"
+"пакеты корректно функционировали, их необходимо переустановить:\n"
+
+#: src/enquiry.c:86
+msgid ""
+"The following packages have been unpacked but not yet configured.\n"
+"They must be configured using dpkg --configure or the configure\n"
+"menu option in dselect for them to work:\n"
+msgstr ""
+"Следующие пакеты распакованы, но пока ещё не настроены.\n"
+"Чтобы они заработали, их необходимо настроить с помощью команды\n"
+"dpkg --configure или выбрав пункт \"Настроить\" в меню программы dselect:\n"
+
+#: src/enquiry.c:91
+msgid ""
+"The following packages are only half configured, probably due to problems\n"
+"configuring them the first time.  The configuration should be retried using\n"
+"dpkg --configure <package> or the configure menu option in dselect:\n"
+msgstr ""
+"Следующие пакеты настроены лишь частично. Вероятно, это связано с\n"
+"с проблемами, возникшими при первой попытке настройки. Следует\n"
+"провести настройку ещё раз с помощью команды dpkg --configure <package>\n"
+"или пункта \"Настроить\" меню программы dselect:\n"
+
+#: src/enquiry.c:96
+msgid ""
+"The following packages are only half installed, due to problems during\n"
+"installation.  The installation can probably be completed by retrying it;\n"
+"the packages can be removed using dselect or dpkg --remove:\n"
+msgstr ""
+"Следующие пакеты установлены лишь частично. Это связано с проблемами,\n"
+"возникшими при установке. Вероятно, установку можно завершить, повторив\n"
+"её. Удалить пакеты можно с помощью программы dselect или команды\n"
+"dpkg --remove:\n"
+
+#: src/enquiry.c:101
+msgid ""
+"The following packages are awaiting processing of triggers that they\n"
+"have activated in other packages.  This processing can be requested using\n"
+"dselect or dpkg --configure --pending (or dpkg --triggers-only):\n"
+msgstr ""
+"Для следующих пакетов ожидается обработка триггеров, которые были "
+"активированы\n"
+"другими пакетами. Эта обработка может быть запрошена из\n"
+"dselect или с помощью dpkg --configure --pending (или dpkg --triggers-"
+"only):\n"
+
+#: src/enquiry.c:106
+msgid ""
+"The following packages have been triggered, but the trigger processing\n"
+"has not yet been done.  Trigger processing can be requested using\n"
+"dselect or dpkg --configure --pending (or dpkg --triggers-only):\n"
+msgstr ""
+"Для следующих пакетов были установлены триггеры, но обработка триггеров\n"
+"ещё не выполнена. Эта обработка может быть запрошена из\n"
+"dselect или с помощью dpkg --configure --pending (или dpkg --triggers-"
+"only):\n"
+
+#: src/enquiry.c:131
+msgid "--audit does not take any arguments"
+msgstr "параметр --audit не принимает аргументов"
+
+#: src/enquiry.c:168
+msgid "<unknown>"
+msgstr "<неизвестен>"
+
+#: src/enquiry.c:185
+msgid "--yet-to-unpack does not take any arguments"
+msgstr "параметр --yet-to-unpack не принимает аргументов"
+
+#: src/enquiry.c:224
+#, c-format
+msgid " %d in %s: "
+msgstr " %d пакетов из раздела %s: "
+
+#: src/enquiry.c:239
+#, c-format
+msgid " %d packages, from the following sections:"
+msgstr " %d пакетов из следующих разделов:"
+
+#: src/enquiry.c:258
+msgid "--assert-* does not take any arguments"
+msgstr "параметры --assert-* не принимают аргументов"
+
+#: src/enquiry.c:275
+#, c-format
+msgid ""
+"Version of dpkg with working epoch support not yet configured.\n"
+" Please use `dpkg --configure dpkg', and then try again.\n"
+msgstr ""
+"Версия dpkg с работающей поддержкой эпох ещё не настроена.\n"
+" Пожалуйста, выполните команду dpkg --configure dpkg, а затем повторите\n"
+"попытку.\n"
+
+#: src/enquiry.c:279
+#, c-format
+msgid "dpkg not recorded as installed, cannot check for epoch support !\n"
+msgstr ""
+"dpkg не обозначен как установленный, невозможно проверить поддержку эпох!\n"
+
+#: src/enquiry.c:322
+msgid "--predep-package does not take any argument"
+msgstr "параметр --predep-package не принимает аргументов"
+
+#: src/enquiry.c:375
+#, c-format
+msgid ""
+"dpkg: cannot see how to satisfy pre-dependency:\n"
+" %s\n"
+msgstr ""
+"dpkg: не получается удовлетворить зависимости пакетов от предварительной "
+"установки других:\n"
+" %s\n"
+
+#: src/enquiry.c:376
+#, c-format
+msgid "cannot satisfy pre-dependencies for %.250s (wanted due to %.250s)"
+msgstr ""
+"установить пакет %.250s невозможно, однако это необходимо сделать до "
+"установки %.250s"
+
+#: src/enquiry.c:394
+msgid "--print-architecture does not take any argument"
+msgstr "параметр --print-architecture не принимает аргументов"
+
+#: src/enquiry.c:436
+msgid ""
+"--compare-versions takes three arguments: <version> <relation> <version>"
+msgstr ""
+"параметр --compare-versions требует наличия трёх аргументов: <версия> "
+"<отношение> <версия>"
+
+#: src/enquiry.c:441
+msgid "--compare-versions bad relation"
+msgstr "в качестве аргумента --compare-versions указано недопустимое отношение"
+
+#: src/enquiry.c:446 src/enquiry.c:457
+#, c-format
+msgid "dpkg: version '%s' has bad syntax: %s\n"
+msgstr "dpkg: версия '%s' имеет неправильный синтаксис: %s\n"
+
+#: src/errors.c:57
+#, c-format
+msgid ""
+"%s: error processing %s (--%s):\n"
+" %s\n"
+msgstr ""
+"%s: не удалось обработать параметр %s (--%s):\n"
+" %s\n"
+
+#: src/errors.c:64
+msgid ""
+"dpkg: failed to allocate memory for new entry in list of failed packages."
+msgstr ""
+"dpkg: не удалось выделить память для нового элемента списка неудачно "
+"установленных пакетов."
+
+#: src/errors.c:74
+#, c-format
+msgid "dpkg: too many errors, stopping\n"
+msgstr "dpkg: слишком много ошибок -- завершение работы\n"
+
+#: src/errors.c:80
+msgid "Errors were encountered while processing:\n"
+msgstr "При обработке следующих пакетов произошли ошибки:\n"
+
+#: src/errors.c:87
+msgid "Processing was halted because there were too many errors.\n"
+msgstr "Обработка остановлена из-за слишком большого количества ошибок.\n"
+
+#: src/errors.c:95
+#, c-format
+msgid "Package %s was on hold, processing it anyway as you request\n"
+msgstr ""
+"Пакет %s зафиксирован, но по вашему указанию всё равно обрабатывается\n"
+
+#: src/errors.c:99
+#, c-format
+msgid ""
+"Package %s is on hold, not touching it.  Use --force-hold to override.\n"
+msgstr ""
+"Пакет %s зафиксирован и не будет обработан. Если вас это не устраивает, "
+"используйте --force-hold.\n"
+
+#: src/errors.c:108
+msgid ""
+"dpkg - warning, overriding problem because --force enabled:\n"
+" "
+msgstr ""
+"dpkg: предупреждение -- проблема игнорируется, поскольку задан параметр --"
+"force:\n"
+" "
+
+#: src/filesdb.c:135
+#, c-format
+msgid "unable to open files list file for package `%.250s'"
+msgstr "не удалось открыть список файлов пакета %.250s"
+
+#: src/filesdb.c:140
+#, c-format
+msgid ""
+"dpkg: serious warning: files list file for package `%.250s' missing, "
+"assuming package has no files currently installed.\n"
+msgstr ""
+"dpkg: важное предупреждение - список файлов пакета %.250s отсутствует. "
+"Предполагаем, что на данный момент у пакета нет установленных файлов.\n"
+
+#: src/filesdb.c:157
+#, c-format
+msgid "files list for package `%.250s'"
+msgstr "список файлов пакета %.250s"
+
+#: src/filesdb.c:170
+#, c-format
+msgid "files list file for package `%.250s' contains empty filename"
+msgstr "список файлов пакета %.250s содержит пустое имя файла"
+
+#: src/filesdb.c:182
+#, c-format
+msgid "error closing files list file for package `%.250s'"
+msgstr "ошибка при закрытии списка файлов пакета %.250s"
+
+#: src/filesdb.c:215
+#, c-format
+msgid "(Reading database ... "
+msgstr "(Чтение базы данных... "
+
+#: src/filesdb.c:224
+#, c-format
+msgid "%d files and directories currently installed.)\n"
+msgstr "на данный момент установлено %d файлов и каталогов.)\n"
+
+#: src/filesdb.c:255
+#, c-format
+msgid "unable to create updated files list file for package %s"
+msgstr "не удалось создать обновлённый список файлов пакета %s"
+
+#: src/filesdb.c:265
+#, c-format
+msgid "failed to write to updated files list file for package %s"
+msgstr "не удалось записать обновлённый список файлов пакета %s"
+
+#: src/filesdb.c:267
+#, c-format
+msgid "failed to flush updated files list file for package %s"
+msgstr "не удалось сбросить на диск обновлённый список файлов пакета %s"
+
+#: src/filesdb.c:269
+#, c-format
+msgid "failed to sync updated files list file for package %s"
+msgstr "не удалось синхронизировать обновлённый список файлов пакета %s"
+
+#: src/filesdb.c:272
+#, c-format
+msgid "failed to close updated files list file for package %s"
+msgstr "не удалось закрыть обновлённый список файлов пакета %s"
+
+#: src/filesdb.c:274
+#, c-format
+msgid "failed to install updated files list file for package %s"
+msgstr "не удалось установить обновлённый список файлов пакета %s"
+
+#: src/filesdb.c:339
+msgid "failed to open statoverride file"
+msgstr "не удалось открыть файл statoverride"
+
+#: src/filesdb.c:343
+msgid "failed to fstat statoverride file"
+msgstr "не удалось выполнить fstat на файл statoverride"
+
+#: src/filesdb.c:346
+msgid "failed to fstat previous statoverride file"
+msgstr "не удалось выполнить fstat на старый файл statoverride"
+
+#: src/filesdb.c:365
+#, c-format
+msgid "statoverride file `%.250s'"
+msgstr "файл statoverride `%.250s'"
+
+#: src/filesdb.c:378
+msgid "statoverride file contains empty line"
+msgstr "файл statoverride содержит пустую строку"
+
+#: src/filesdb.c:463
+msgid "failed to open diversions file"
+msgstr "не удалось открыть файл diversions"
+
+#: src/filesdb.c:467
+msgid "failed to fstat previous diversions file"
+msgstr "не удалось выполнить fstat на старый файл diversions"
+
+#: src/filesdb.c:469
+msgid "failed to fstat diversions file"
+msgstr "не удалось выполнить fstat на файл diversions"
+
+#: src/filesdb.c:501
+#, c-format
+msgid "conflicting diversions involving `%.250s' or `%.250s'"
+msgstr "конфликт файлов diversions из пакетов `%.250s' и `%.250s'"
+
+#: src/filesdb.c:510
+msgid "read error in diversions [i]"
+msgstr "ошибка чтения файла diversions [i]"
+
+#: src/help.c:41
+msgid "not installed"
+msgstr "не установлен"
+
+#: src/help.c:42
+msgid "not installed but configs remain"
+msgstr "не установлен, но сохранены файлы конфигурации"
+
+#: src/help.c:43
+msgid "broken due to failed removal or installation"
+msgstr "неработоспособен в результате неудачного удаления или установки"
+
+#: src/help.c:44
+msgid "unpacked but not configured"
+msgstr "распакован, но не настроен"
+
+#: src/help.c:45
+msgid "broken due to postinst failure"
+msgstr "неработоспособен в результате ошибки в postinst"
+
+#: src/help.c:46
+msgid "awaiting trigger processing by another package"
+msgstr "ожидает обработки триггера другим пакетом"
+
+#: src/help.c:47
+msgid "triggered"
+msgstr "с триггером"
+
+#: src/help.c:48
+msgid "installed"
+msgstr "установлен"
+
+#: src/help.c:97
+msgid "dpkg - error: PATH is not set.\n"
+msgstr "dpkg: предупреждение -- не задана переменная окружения PATH.\n"
+
+#: src/help.c:112
+#, c-format
+msgid "dpkg: `%s' not found on PATH.\n"
+msgstr "dpkg: %s отсутствует в каталогах, перечисленных в PATH.\n"
+
+#: src/help.c:119
+#, c-format
+msgid ""
+"%d expected program(s) not found on PATH.\n"
+"NB: root's PATH should usually contain /usr/local/sbin, /usr/sbin and /sbin."
+msgstr ""
+"В каталогах, перечисленных в PATH, отсутствуют %d необходимых программ.\n"
+"NB: В PATH суперпользователя обычно должны присутствовать /usr/local/sbin, /"
+"usr/sbin и /sbin."
+
+#: src/help.c:155
+#, c-format
+msgid "failed to chroot to `%.250s'"
+msgstr "не удалось выполнить chroot в %.250s"
+
+#: src/help.c:204
+#, c-format
+msgid "error un-catching signal %s: %s\n"
+msgstr "не удалось восстановить старый обработчик сигнала %s: %s\n"
+
+#: src/help.c:222
+#, c-format
+msgid "unable to ignore signal %s before running script"
+msgstr "не удалось проигнорировать сигнал %s перед запуском сценария"
+
+#: src/help.c:267
+#, c-format
+msgid "unable to set execute permissions on `%.250s'"
+msgstr "не удалось сделать файл %.250s исполняемым"
+
+#: src/help.c:287
+msgid "unable to setenv for maint script"
+msgstr "не удалось выполнить setenv для сценария сопровождающего"
+
+#: src/help.c:319
+#, c-format
+msgid "unable to stat installed %s script `%.250s'"
+msgstr "не удалось получить информацию об установленном сценарии %s, %.250s"
+
+#: src/help.c:321 src/help.c:411 src/help.c:432
+#, c-format
+msgid "unable to execute %s"
+msgstr "не удалось запустить %s"
+
+#: src/help.c:377
+#, c-format
+msgid "unable to stat new %s script `%.250s'"
+msgstr "не удалось получить информацию о новом сценарии %s, %.250s"
+
+#: src/help.c:379
+#, c-format
+msgid "unable to execute new %s"
+msgstr "не удалось запустить новый %s"
+
+#: src/help.c:399
+#, c-format
+msgid "old %s script"
+msgstr "старый сценарий %s"
+
+#: src/help.c:407
+#, c-format
+msgid "dpkg: warning - unable to stat %s `%.250s': %s\n"
+msgstr ""
+"dpkg: предупреждение -- не удалось получить информацию о %s %.250s: %s\n"
+
+#: src/help.c:416
+#, c-format
+msgid "dpkg - trying script from the new package instead ...\n"
+msgstr "dpkg: попытка использовать сценарий из нового пакета...\n"
+
+#: src/help.c:423
+#, c-format
+msgid "new %s script"
+msgstr "новый сценарий %s"
+
+#: src/help.c:427
+msgid "there is no script in the new version of the package - giving up"
+msgstr "в новой версии пакета нет этого сценария, отказ"
+
+#: src/help.c:429
+#, c-format
+msgid "unable to stat %s `%.250s'"
+msgstr "не удалось получить информацию о %s в `%.250s'"
+
+#: src/help.c:433
+#, c-format
+msgid "dpkg: ... it looks like that went OK.\n"
+msgstr "dpkg: ...похоже всё обошлось.\n"
+
+#: src/help.c:524
+msgid "unlink"
+msgstr "unlink"
+
+#: src/help.c:538
+msgid "chmod"
+msgstr "chmod"
+
+#: src/help.c:554 src/processarc.c:747
+msgid "delete"
+msgstr "delete"
+
+#: src/help.c:564
+#, c-format
+msgid "failed to %s `%%.255s'"
+msgstr "не удалось перейти в каталог %s `%%.255s'"
+
+#: src/help.c:570 dpkg-deb/info.c:54
+msgid "failed to exec rm for cleanup"
+msgstr "не удалось выполнить команду rm для очистки каталога"
+
+#: src/main.c:46
+#, c-format
+msgid "Debian `%s' package management program version %s.\n"
+msgstr "Система управления пакетами Debian `%s', версия %s.\n"
+
+#: src/main.c:48 src/query.c:457 src/trigcmd.c:76 dpkg-deb/main.c:50
+#: dpkg-split/main.c:43
+#, c-format
+msgid ""
+"This is free software; see the GNU General Public License version 2 or\n"
+"later for copying conditions. There is NO warranty.\n"
+"See %s --license for copyright and license details.\n"
+msgstr ""
+"Это свободное программное обеспечение. См. условия распространения в\n"
+"Универсальной общественной лицензии GNU версии 2 или более поздней.\n"
+"НИКАКИЕ гарантии не предоставляются.\n"
+"Подробности по команде %s --license.\n"
+
+#: src/main.c:61 src/query.c:470 dpkg-deb/main.c:60 dpkg-split/main.c:53
+#, c-format
+msgid ""
+"Usage: %s [<option> ...] <command>\n"
+"\n"
+msgstr ""
+"Использование: %s [<параметр> ...] <команда>\n"
+"\n"
+
+#: src/main.c:65
+#, c-format
+msgid ""
+"Commands:\n"
+"  -i|--install       <.deb file name> ... | -R|--recursive <directory> ...\n"
+"  --unpack           <.deb file name> ... | -R|--recursive <directory> ...\n"
+"  -A|--record-avail  <.deb file name> ... | -R|--recursive <directory> ...\n"
+"  --configure        <package> ... | -a|--pending\n"
+"  --triggers-only    <package> ... | -a|--pending\n"
+"  -r|--remove        <package> ... | -a|--pending\n"
+"  -P|--purge         <package> ... | -a|--pending\n"
+"  --get-selections [<pattern> ...] Get list of selections to stdout.\n"
+"  --set-selections                 Set package selections from stdin.\n"
+"  --clear-selections               Deselect every non-essential package.\n"
+"  --update-avail <Packages-file>   Replace available packages info.\n"
+"  --merge-avail <Packages-file>    Merge with info from file.\n"
+"  --clear-avail                    Erase existing available info.\n"
+"  --forget-old-unavail             Forget uninstalled unavailable pkgs.\n"
+"  -s|--status <package> ...        Display package status details.\n"
+"  -p|--print-avail <package> ...   Display available version details.\n"
+"  -L|--listfiles <package> ...     List files `owned' by package(s).\n"
+"  -l|--list [<pattern> ...]        List packages concisely.\n"
+"  -S|--search <pattern> ...        Find package(s) owning file(s).\n"
+"  -C|--audit                       Check for broken package(s).\n"
+"  --print-architecture             Print dpkg architecture.\n"
+"  --compare-versions <a> <op> <b>  Compare version numbers - see below.\n"
+"  --force-help                     Show help on forcing.\n"
+"  -Dh|--debug=help                 Show help on debugging.\n"
+"\n"
+msgstr ""
+"Команды:\n"
+"  -i|--install      <имя файла .deb> ... | -R|--recursive <каталог> ...\n"
+"  --unpack          <имя файла .deb> ... | -R|--recursive <каталог> ...\n"
+"  -A|--record-avail <имя файла .deb> ... | -R|--recursive <каталог> ...\n"
+"  --configure       <имя пакета> ... | -a|--pending\n"
+"  --triggers-only   <имя пакета> ... | -a|--pending\n"
+"  -r|--remove |     <имя пакета> ... | -a|--pending\n"
+"  -P|--purge        <имя пакета> ... | -a|--pending\n"
+"  --get-selections [<шаблон> ...]     Вывести список в стандартный поток\n"
+"                                      вывода список выбранных пакетов\n"
+"  --set-selections                    Выбрать пакеты в соответствии со\n"
+"                                      списком из стандартного потока ввода\n"
+"  --clear-selections                  Отменить выбор всех пакетов\n"
+"                                      первой необходимости\n"
+"  --update-avail <файл Packages>      Заменить информацию о доступных\n"
+"                                      пакетах содержимым файла\n"
+"  --merge-avail <файл Packages>       Объединить информацию о доступных\n"
+"                                      пакетах с содержимым файла\n"
+"  --clear-avail                       Удалить информацию о доступных "
+"пакетах\n"
+"  --forget-old-unavail                Удалить информацию о неустановленных\n"
+"                                      недоступных пакетах\n"
+"  -s|--status <имя пакета> ...        Вывести информацию о состоянии пакета\n"
+"  -p|--print-avail <имя пакета> ...   Вывести информацию о доступной\n"
+"                                      версии пакета\n"
+"  -L|--listfiles <имя пакета> ...     Перечислить файлы, принадлежащие\n"
+"                                      пакету(ам)\n"
+"  -l|--list [<шаблон> ...]            Кратко перечислить пакеты\n"
+"  -S|--search <шаблон> ...            Найти пакет(ы), которому(ым)\n"
+"                                      принадлежит(ат) файл(ы)\n"
+"  -C|--audit                          Проверить наличие сломанных пакетов\n"
+"  --print-architecture                Вывести целевую архитектуру\n"
+"  --compare-versions <a> <op> <b>     Сравнить номера версий, см. ниже\n"
+"  --force-help                        Вывести справку по командам "
+"игнорирования\n"
+"  -Dh|--debug=help                    Вывести справку по командам отладки\n"
+"\n"
+
+#: src/main.c:93 src/query.c:484 src/trigcmd.c:98 dpkg-deb/main.c:77
+#: dpkg-split/main.c:67
+#, c-format
+msgid ""
+"  -h|--help                        Show this help message.\n"
+"  --version                        Show the version.\n"
+"  --license|--licence              Show the copyright licensing terms.\n"
+"\n"
+msgstr ""
+"  -h|--help                           Вывести это сообщение\n"
+"  --version                           Вывести номер версии\n"
+"  --license | --licence               Вывести информацию об авторских\n"
+"                                      правах и условиях лицензии\n"
+"\n"
+
+#: src/main.c:99
+#, c-format
+msgid ""
+"Use dpkg -b|--build|-c|--contents|-e|--control|-I|--info|-f|--field|\n"
+" -x|--extract|-X|--vextract|--fsys-tarfile  on archives (type %s --help).\n"
+"\n"
+msgstr ""
+"К архивам применяются команды: dpkg -b|--build|-c|--contents|-e|--control|\n"
+" -f|--field|-x|--extract|-X|--vextract|--fsys-tarfile (см. %s --help).\n"
+"\n"
+
+#: src/main.c:104
+#, c-format
+msgid ""
+"For internal use: dpkg --assert-support-predepends | --predep-package |\n"
+"  --assert-working-epoch | --assert-long-filenames | --assert-multi-conrep.\n"
+"\n"
+msgstr ""
+"Для внутреннего использования: dpkg --assert-support-predepends |\n"
+"  --predep-package | --assert-working-epoch | --assert-long-filenames |\n"
+"  --assert-multi-conrep.\n"
+"\n"
+
+#: src/main.c:109
+#, c-format
+msgid ""
+"Options:\n"
+"  --admindir=<directory>     Use <directory> instead of %s.\n"
+"  --root=<directory>         Install on a different root directory.\n"
+"  --instdir=<directory>      Change installation dir without changing admin "
+"dir.\n"
+"  -O|--selected-only         Skip packages not selected for install/"
+"upgrade.\n"
+"  -E|--skip-same-version     Skip packages whose same version is installed.\n"
+"  -G|--refuse-downgrade      Skip packages with earlier version than "
+"installed.\n"
+"  -B|--auto-deconfigure      Install even if it would break some other "
+"package.\n"
+"  --[no-]triggers            Skip or force consequential trigger "
+"processing.\n"
+"  --no-debsig                Do not try to verify package signatures.\n"
+"  --no-act|--dry-run|--simulate\n"
+"                             Just say what we would do - don't do it.\n"
+"  -D|--debug=<octal>         Enable debugging (see -Dhelp or --debug=help).\n"
+"  --status-fd <n>            Send status change updates to file descriptor "
+"<n>.\n"
+"  --log=<filename>           Log status changes and actions to <filename>.\n"
+"  --ignore-depends=<package>,...\n"
+"                             Ignore dependencies involving <package>.\n"
+"  --force-...                Override problems (see --force-help).\n"
+"  --no-force-...|--refuse-...\n"
+"                             Stop when problems encountered.\n"
+"  --abort-after <n>          Abort after encountering <n> errors.\n"
+"\n"
+msgstr ""
+"Параметры:\n"
+"  --admindir=<каталог>             Использовать <каталог> вместо %s\n"
+"  --root=<каталог>                 Установить в другой\n"
+"                                   корневой каталог\n"
+"  --instdir=<каталог>              Изменить корневой каталог для\n"
+"                                   установки, не меняя административный\n"
+"                                   каталог\n"
+"  -O|--selected-only               Пропустить не выбранные для\n"
+"                                   установки/обновления пакеты\n"
+"  -E|--skip-same-version           Пропустить пакеты, версия\n"
+"                                   которых совпадает с установленной\n"
+"  -G|--refuse-downgrade            Пропустить пакеты, версия\n"
+"                                   которых младше установленной\n"
+"  -B|--auto-deconfigure            Установить, даже если это может сделать\n"
+"                                   другие пакеты неработоспособными\n"
+"  --[no-]triggers                  Пропустить или принудительно выполнить\n"
+"                                   последовательную обработку триггеров\n"
+"  --no-debsig                      Не проверять подписи пакетов\n"
+"  --no-act|--dry-run|--simulate\n"
+"                                   Показать, что должно быть сделано, но\n"
+"                                   не выполнять действия\n"
+"  -D|--debug=<восьм. знач.>        Включить отладку,\n"
+"                                   см. -Dhelp или --debug=help\n"
+"  --status-fd <n>                  Вывести информацию об изменениях\n"
+"                                   состояний пакетов в файл\n"
+"                                   с дескриптором <n>\n"
+"  --log=<имя файла>                Записывать изменения состояний\n"
+"                                   и действия в <имя файла>\n"
+"  --ignore-depends=<пакет>,...\n"
+"                                   Игнорировать зависимости от <пакета>\n"
+"  --force-...                      Игнорировать проблемы, см. --force-help\n"
+"  --no-force-...|--refuse-...\n"
+"                                   Прекратить работу при\n"
+"                                   обнаружении проблем\n"
+"  --abort-after <n>                Прекратить работу после\n"
+"                                   обнаружения <n> количества ошибок\n"
+"\n"
+
+#: src/main.c:133
+#, c-format
+msgid ""
+"Comparison operators for --compare-versions are:\n"
+"  lt le eq ne ge gt       (treat empty version as earlier than any "
+"version);\n"
+"  lt-nl le-nl ge-nl gt-nl (treat empty version as later than any version);\n"
+"  < << <= = >= >> >       (only for compatibility with control file "
+"syntax).\n"
+"\n"
+msgstr ""
+"Операторы сравнения, возможные в --compare-versions:\n"
+"  lt le eq ne ge gt       (пустое значение версии считать самой ранней);\n"
+"  lt-nl le-nl ge-nl gt-nl (пустое значение версии считать самой поздней);\n"
+"  < << <= = >= >> >       (для совместимости с синтаксисом файла control).\n"
+"\n"
+
+#: src/main.c:140
+#, c-format
+msgid "Use `dselect' or `aptitude' for user-friendly package management.\n"
+msgstr ""
+"Программы `dselect' или 'aptitude' предоставляют дружественный интерфейс\n"
+"управления пакетами.\n"
+
+#: src/main.c:147
+msgid ""
+"Type dpkg --help for help about installing and deinstalling packages [*];\n"
+"Use `dselect' or `aptitude' for user-friendly package management;\n"
+"Type dpkg -Dhelp for a list of dpkg debug flag values;\n"
+"Type dpkg --force-help for a list of forcing options;\n"
+"Type dpkg-deb --help for help about manipulating *.deb files;\n"
+"Type dpkg --license for copyright license and lack of warranty (GNU GPL) "
+"[*].\n"
+"\n"
+"Options marked [*] produce a lot of output - pipe it through `less' or "
+"`more' !"
+msgstr ""
+"Чтобы получить справку об установке и удалении пакетов, введите dpkg --help "
+"[*];\n"
+"Программа `dselect' или `aptitude' предоставляет дружественный интерфейс\n"
+"управления пакетами;\n"
+"Чтобы получить список значений флагов отладки dpkg, введите dpkg -Dhelp;\n"
+"Чтобы получить информацию об игнорировании проблем, введите dpkg --force-"
+"help;\n"
+"Чтобы получить справку об работе с файлами *.deb, введите dpkg-deb --help;\n"
+"Чтобы получить информацию об авторских правах и отсутствии гарантий (GNU "
+"GPL),\n"
+"введите dpkg --license [*].\n"
+"\n"
+"Команды, отмеченные [*], выводят большое количество информации.\n"
+"Объедините их в конвейер с программами `less' или `more'!"
+
+#: src/main.c:205 src/query.c:527 dpkg-deb/main.c:174 dpkg-split/main.c:152
+#, c-format
+msgid "conflicting actions -%c (--%s) and -%c (--%s)"
+msgstr "несовместимые действия -%c (--%s) и -%c (--%s)"
+
+#: src/main.c:211
+#, c-format
+msgid "Warning: obsolete option `--%s'\n"
+msgstr "Предупреждение: устаревший параметр `--%s'\n"
+
+#: src/main.c:219
+#, c-format
+msgid ""
+"%s debugging option, --debug=<octal> or -D<octal>:\n"
+"\n"
+" number  ref. in source   description\n"
+"      1   general           Generally helpful progress information\n"
+"      2   scripts           Invocation and status of maintainer scripts\n"
+"     10   eachfile          Output for each file processed\n"
+"    100   eachfiledetail    Lots of output for each file processed\n"
+"     20   conff             Output for each configuration file\n"
+"    200   conffdetail       Lots of output for each configuration file\n"
+"     40   depcon            Dependencies and conflicts\n"
+"    400   depcondetail      Lots of dependencies/conflicts output\n"
+"  10000   triggers          Trigger activation and processing\n"
+"  20000   triggersdetail    Lots of output regarding triggers\n"
+"  40000   triggersstupid    Silly amounts of output regarding triggers\n"
+"   1000   veryverbose       Lots of drivel about eg the dpkg/info directory\n"
+"   2000   stupidlyverbose   Insane amounts of drivel\n"
+"\n"
+"Debugging options are be mixed using bitwise-or.\n"
+"Note that the meanings and values are subject to change.\n"
+msgstr ""
+"Параметры отладки %s: --debug=<восьм. знач.> или -D<восьм. знач.>:\n"
+"\n"
+"  число   в исходном коде   описание\n"
+"      1   general           Общая полезная информация о происходящих "
+"событиях\n"
+"      2   scripts           Вызов и состояние сценариев сопровождающего\n"
+"     10   eachfile          Информация о каждом обработанном файле\n"
+"    100   eachfiledetail    Подробная информация о каждом обработанном "
+"файле\n"
+"     20   conff             Информация о каждом файле конфигурации\n"
+"    200   conffdetail       Подробная информация о каждом файле "
+"конфигурации\n"
+"     40   depcon            Зависимости и конфликты\n"
+"    400   depcondetail      Подробная информация о зависимостях и "
+"конфликтах\n"
+"   1000   veryverbose       Всякая чушь о, например, каталоге dpkg/info\n"
+"   2000   stupidlyverbose   Патологические количества бессмысленного текста\n"
+"\n"
+"Параметры отладки объединяются побитовой операцией \"или\".\n"
+"Имейте в виду, что значения и их смысловая нагрузка могут быть изменены.\n"
+
+#: src/main.c:243
+msgid "--debug requires an octal argument"
+msgstr "параметр --debug принимает в качестве аргумента восьмеричное число"
+
+#: src/main.c:267
+#, c-format
+msgid "null package name in --ignore-depends comma-separated list `%.250s'"
+msgstr ""
+"пустое имя пакета в разделённом запятыми списке игнорируемых зависимостей `"
+"%.250s'"
+
+#: src/main.c:273
+#, c-format
+msgid "--ignore-depends requires a legal package name. `%.250s' is not; %s"
+msgstr ""
+"--ignore-depends требует корректного имени пакета. `%.250s' таковым не "
+"является: %s"
+
+#: src/main.c:289 src/main.c:300
+#, c-format
+msgid "invalid integer for --%s: `%.250s'"
+msgstr ""
+"аргумент --%s (`%.250s') не является допустимым целочисленным значением"
+
+#: src/main.c:302
+msgid "<package status and progress file descriptor>"
+msgstr "<состояние пакета и дескриптор файла-индикатора выполнения>"
+
+#: src/main.c:322
+#, c-format
+msgid ""
+"%s forcing options - control behaviour when problems found:\n"
+"  warn but continue:  --force-<thing>,<thing>,...\n"
+"  stop with error:    --refuse-<thing>,<thing>,... | --no-force-<thing>,...\n"
+" Forcing things:\n"
+"  all [!]                Set all force options\n"
+"  downgrade [*]          Replace a package with a lower version\n"
+"  configure-any          Configure any package which may help this one\n"
+"  hold                   Process incidental packages even when on hold\n"
+"  bad-path               PATH is missing important programs, problems "
+"likely\n"
+"  not-root               Try to (de)install things even when not root\n"
+"  overwrite              Overwrite a file from one package with another\n"
+"  overwrite-diverted     Overwrite a diverted file with an undiverted "
+"version\n"
+"  bad-verify             Install a package even if it fails authenticity "
+"check\n"
+"  depends-version [!]    Turn dependency version problems into warnings\n"
+"  depends [!]            Turn all dependency problems into warnings\n"
+"  confnew [!]            Always use the new config files, don't prompt\n"
+"  confold [!]            Always use the old config files, don't prompt\n"
+"  confdef [!]            Use the default option for new config files if one\n"
+"                         is available, don't prompt. If no default can be "
+"found,\n"
+"                         you will be prompted unless one of the confold or\n"
+"                         confnew options is also given\n"
+"  confmiss [!]           Always install missing config files\n"
+"  breaks [!]             Install even if it would break another package\n"
+"  conflicts [!]          Allow installation of conflicting packages\n"
+"  architecture [!]       Process even packages with wrong architecture\n"
+"  overwrite-dir [!]      Overwrite one package's directory with another's "
+"file\n"
+"  remove-reinstreq [!]   Remove packages which require installation\n"
+"  remove-essential [!]   Remove an essential package\n"
+"\n"
+"WARNING - use of options marked [!] can seriously damage your installation.\n"
+"Forcing options marked [*] are enabled by default.\n"
+msgstr ""
+"Параметры игнорирования позволяют управлять поведением %s при\n"
+"обнаружении ошибок:\n"
+"  предупредить и продолжить работу:      --force-<ошибка>,<ошибка>,...\n"
+"  прекратить работу и вывести сообщение: --refuse-<ошибка>,<ошибка>,... | \n"
+"                                         --no-force-<ошибка>,...\n"
+"Возможные ошибки:\n"
+"  all [!]                   Все возможные ошибки\n"
+"  downgrade [*]         Замена пакета его более ранней версией\n"
+"  configure-any         Настройка пакетов, которые могут помочь\n"
+"                        устанавливаемому\n"
+"  hold                  Обработка пакетов, даже если они зафиксированы\n"
+"  bad-path              В PATH отсутствуют необходимые программы,\n"
+"                        возможны проблемы\n"
+"  not-root              Пытаться устанавливать или удалять файлы, даже\n"
+"                        если программа запущена не суперпользователем\n"
+"  overwrite             Можно перезаписывать файлы других пакетов\n"
+"  overwrite-diverted    Можно перезаписывать файл с изменённым\n"
+"                        размещением файлом, не являющимся таковым\n"
+"  bad-verify            Установить пакет, даже если он не проходит\n"
+"                        проверку подлинности\n"
+"  depends-version [!]   Сделать проблемы с зависимостями по версиям\n"
+"                        версий предупреждениями\n"
+"  depends [!]           Сделать все проблемы с зависимостями "
+"предупреждениями\n"
+"  confnew [!]           Всегда использовать новые файлы конфигурации\n"
+"  confold [!]           Всегда использовать старые файлы конфигурации\n"
+"  confdef [!]           Использовать для новых файлов конфигурации вариант\n"
+"                        по умолчанию, если он есть, ничего не спрашивая.\n"
+"                        Если он не найден, то выдаётся запрос,\n"
+"                        если только не заданы параметры confold и confnew\n"
+"  confmiss [!]          Всегда устанавливать отсутствующие файлы "
+"конфигурации\n"
+"  breaks [!]            Устанавливать даже если это сломает другой пакет\n"
+"  conflicts [!]         Допускается установка конфликтующих пакетов\n"
+"  architecture [!]      Обрабатывать пакеты даже для других архитектур\n"
+"  overwrite-dir [!]     Допускается перезапись каталога одного пакета\n"
+"                        файлом другого\n"
+"  remove-reinstreq [!]  Допускается удаление пакетов, требующих "
+"переустановки\n"
+"  remove-essential [!]  Допускается удаление пакетов первой необходимости\n"
+"\n"
+"ПРЕДУПРЕЖДЕНИЕ: Использование параметров, отмеченных [!], может серьёзно\n"
+"повредить вашу систему. Параметры, отмеченные [*], задействованы по "
+"умолчанию.\n"
+
+#: src/main.c:368
+#, c-format
+msgid "unknown force/refuse option `%.*s'"
+msgstr "недопустимый параметр игнорирования/обработки проблем `%.*s'"
+
+#: src/main.c:373
+#, c-format
+msgid "Warning: obsolete force/refuse option `%s'\n"
+msgstr "Предупреждение: устаревший параметр игнорирования/обработки `%s'\n"
+
+#: src/main.c:522
+#, c-format
+msgid "failed to exec %s"
+msgstr "не удалось запустить %s"
+
+#: src/main.c:537
+msgid "--command-fd takes one argument, not zero"
+msgstr "параметр --command-fd принимает один аргумент, а не ноль"
+
+#: src/main.c:539
+msgid "--command-fd only takes one argument"
+msgstr "параметр --command-fd принимает только один аргумент"
+
+#: src/main.c:541
+msgid "invalid number for --command-fd"
+msgstr "аргумент параметра --command-fd не является числом"
+
+#: src/main.c:543
+#, c-format
+msgid "couldn't open `%i' for stream"
+msgstr "не удалось открыть поток дескриптора `%i'"
+
+#: src/main.c:568
+#, c-format
+msgid "unexpected eof before end of line %d"
+msgstr "неожиданный конец файла, ещё не кончилась строка %d"
+
+#: src/main.c:613 src/main.c:628 src/query.c:563 dpkg-deb/main.c:199
+#: dpkg-split/main.c:165
+msgid "need an action option"
+msgstr "укажите требуемое действие"
+
+#: src/packages.c:105
+#, c-format
+msgid "--%s --pending does not take any non-option arguments"
+msgstr "--%s --pending не принимает аргументов, помимо параметров"
+
+#: src/packages.c:143 src/query.c:296
+#, c-format
+msgid "--%s needs at least one package name argument"
+msgstr "--%s требует указания хотя бы одного имени пакета"
+
+#: src/packages.c:150
+msgid ""
+"you must specify packages by their own names, not by quoting the names of "
+"the files they come in"
+msgstr ""
+"пакеты задаются их собственными именами, а именами файлов, из которых они "
+"установлены"
+
+#: src/packages.c:191
+#, c-format
+msgid "Package %s listed more than once, only processing once.\n"
+msgstr "Пакет %s перечислен несколько раз, обрабатывается только единожды.\n"
+
+#: src/packages.c:195
+#, c-format
+msgid ""
+"More than one copy of package %s has been unpacked\n"
+" in this run !  Only configuring it once.\n"
+msgstr ""
+"На текущем проходе распаковано несколько копий пакета %s!\n"
+" Настраивается только одна из них.\n"
+
+#: src/packages.c:242
+#, c-format
+msgid ""
+"package %.250s is not ready for trigger processing\n"
+" (current status `%.250s' with no pending triggers)"
+msgstr ""
+"пакет %.250s не готов для обработки триггеров\n"
+" (текущее состояние %.250s без триггеров рассмотрения)"
+
+#: src/packages.c:338
+#, c-format
+msgid "  Package %s which provides %s is to be removed.\n"
+msgstr "  Пакет %s предоставляет %s, но должен быть удалён.\n"
+
+#: src/packages.c:341
+#, c-format
+msgid "  Package %s is to be removed.\n"
+msgstr "  Пакет %s будет удалён.\n"
+
+#: src/packages.c:358
+#, c-format
+msgid "  Version of %s on system is %s.\n"
+msgstr "  Версия %s в системе %s.\n"
+
+#: src/packages.c:379
+#, c-format
+msgid "  Package %s which provides %s awaits trigger processing.\n"
+msgstr ""
+"  Пакет %s, предоставляющий %s, ожидает обработки триггеров ожидания.\n"
+
+#: src/packages.c:383
+#, c-format
+msgid "  Package %s awaits trigger processing.\n"
+msgstr "  Пакет %s ожидает обработки триггеров ожидания.\n"
+
+#: src/packages.c:414
+#, c-format
+msgid "dpkg: also configuring `%s' (required by `%s')\n"
+msgstr "dpkg: настраивается также пакет `%s' (необходимо для `%s')\n"
+
+#: src/packages.c:420
+#, c-format
+msgid "  Package %s which provides %s is not configured yet.\n"
+msgstr "  Пакет %s, предоставляющий %s, пока не настроен.\n"
+
+#: src/packages.c:423
+#, c-format
+msgid "  Package %s is not configured yet.\n"
+msgstr "  Пакет %s пока не настроен.\n"
+
+#: src/packages.c:434
+#, c-format
+msgid "  Package %s which provides %s is not installed.\n"
+msgstr "  Пакет %s, предоставляющий %s, не установлен.\n"
+
+#: src/packages.c:437
+#, c-format
+msgid "  Package %s is not installed.\n"
+msgstr "  Пакет %s не установлен.\n"
+
+#: src/packages.c:475
+#, c-format
+msgid " %s (%s) breaks %s and is %s.\n"
+msgstr " %s (%s) ломает %s и %s.\n"
+
+#: src/packages.c:483
+#, c-format
+msgid "  %s (%s) provides %s.\n"
+msgstr "  %s (%s) предоставляет %s.\n"
+
+#: src/packages.c:488
+#, c-format
+msgid "  Version of %s to be configured is %s.\n"
+msgstr "  Версия %s, которая будет настроена: %s.\n"
+
+#: src/packages.c:588
+msgid " depends on "
+msgstr " зависит от "
+
+#: src/packages.c:594
+msgid "; however:\n"
+msgstr ", однако:\n"
+
+#: src/processarc.c:109
+msgid "cannot access archive"
+msgstr "нет доступа к архиву"
+
+#: src/processarc.c:119
+#, c-format
+msgid "error ensuring `%.250s' doesn't exist"
+msgstr "не удалось убедиться в том, что %.250s не существует"
+
+#: src/processarc.c:124
+msgid "failed to exec dpkg-split to see if it's part of a multiparter"
+msgstr ""
+"не удалось запустить dpkg-split и проверить, является ли файл частью "
+"многотомного архива"
+
+#: src/processarc.c:127
+msgid "wait for dpkg-split failed"
+msgstr "ошибка ожидания завершения работы dpkg-split"
+
+#: src/processarc.c:133
+msgid "reassembled package file"
+msgstr "собранный файл пакета"
+
+#: src/processarc.c:148
+#, c-format
+msgid "Authenticating %s ...\n"
+msgstr "Проверка подлинности файла %s...\n"
+
+#: src/processarc.c:153
+msgid "failed to execl debsig-verify"
+msgstr "не удалось запустить debsig-verify"
+
+#: src/processarc.c:159
+#, c-format
+msgid "Verification on package %s failed!"
+msgstr "Пакет %s не проходит проверку подлинности!"
+
+#: src/processarc.c:161
+#, c-format
+msgid ""
+"Verification on package %s failed,\n"
+"but installing anyway as you request.\n"
+msgstr ""
+"Пакет %s не проходит проверку подлинности,\n"
+"но по вашему указанию всё равно будет установлен.\n"
+
+#: src/processarc.c:164
+#, c-format
+msgid "passed\n"
+msgstr "пройдена\n"
+
+#: src/processarc.c:173
+msgid "unable to get unique filename for control info"
+msgstr "не удалось сгенерировать уникальное имя файла управляющей информации"
+
+#: src/processarc.c:195
+msgid "failed to exec dpkg-deb to extract control information"
+msgstr "не удалось запустить dpkg-deb, чтобы извлечь управляющую информацию"
+
+#: src/processarc.c:212
+#, c-format
+msgid "Recorded info about %s from %s.\n"
+msgstr "Записана информация о пакете %s из файла %s.\n"
+
+#: src/processarc.c:221
+#, c-format
+msgid "package architecture (%s) does not match system (%s)"
+msgstr "архитектура пакета (%s) не соответствует архитектуре системы (%s)"
+
+#: src/processarc.c:276
+#, c-format
+msgid ""
+"dpkg: regarding %s containing %s, pre-dependency problem:\n"
+"%s"
+msgstr ""
+"dpkg: не выполнены обязательные условия установки пакета %s из файла %s:\n"
+"%s"
+
+#: src/processarc.c:279
+#, c-format
+msgid "pre-dependency problem - not installing %.250s"
+msgstr "не выполнены предварительные условия, пакет %.250s не будет установлен"
+
+#: src/processarc.c:280
+#, c-format
+msgid "dpkg: warning - ignoring pre-dependency problem !\n"
+msgstr ""
+"dpkg: предупреждение -- игнорируются предварительные условия установки!\n"
+
+#: src/processarc.c:295
+#, c-format
+msgid "Preparing to replace %s %s (using %s) ...\n"
+msgstr "Подготовка к замене пакета %s %s (используется файл %s)...\n"
+
+#: src/processarc.c:301
+#, c-format
+msgid "Unpacking %s (from %s) ...\n"
+msgstr "Распаковывается пакет %s (из файла %s)...\n"
+
+#: src/processarc.c:330
+#, c-format
+msgid "name of conffile (starting `%.250s') is too long (>%d characters)"
+msgstr "имя conffile (начинается с %.250s) слишком длинное (>%d символов)"
+
+#: src/processarc.c:383
+#, c-format
+msgid "read error in %.250s"
+msgstr "ошибка чтения файла %.250s"
+
+#: src/processarc.c:385
+#, c-format
+msgid "error closing %.250s"
+msgstr "ошибка при закрытии файла %.250s"
+
+#: src/processarc.c:387
+#, c-format
+msgid "error trying to open %.250s"
+msgstr "ошибка при попытке открыть файл %.250s"
+
+#: src/processarc.c:423
+#, c-format
+msgid "De-configuring %s, to allow removal of %s ...\n"
+msgstr "Деконфигурация %s, чтобы можно было удалить %s ...\n"
+
+#: src/processarc.c:426
+#, c-format
+msgid "De-configuring %s ...\n"
+msgstr "Деконфигурация %s ...\n"
+
+#: src/processarc.c:501
+#, c-format
+msgid "Unpacking replacement %.250s ...\n"
+msgstr "Распаковывается замена для пакета %.250s ...\n"
+
+#: src/processarc.c:582
+msgid "unable to exec dpkg-deb to get filesystem archive"
+msgstr "не удалось извлечь архив файловой системы с помощью dpkg-deb"
+
+#: src/processarc.c:596
+msgid "error reading dpkg-deb tar output"
+msgstr "ошибка чтения архива tar, возвращённого dpkg-deb"
+
+#: src/processarc.c:598
+msgid "corrupted filesystem tarfile - corrupted package archive"
+msgstr "повреждённый архив файловой системы: повреждён файл пакета"
+
+#: src/processarc.c:601
+msgid "dpkg-deb: zap possible trailing zeros"
+msgstr "dpkg-deb: удаление возможных завершающих нулей"
+
+#: src/processarc.c:657
+#, c-format
+msgid "dpkg: warning - could not stat old file `%.250s' so not deleting it: %s"
+msgstr ""
+"dpkg: предупреждение -- не удалось получить информацию о старом файл`"
+"%.250s', поэтому не удаляем его: %s"
+
+#: src/processarc.c:665
+#, c-format
+msgid "dpkg: warning - unable to delete old directory `%.250s': %s\n"
+msgstr ""
+"dpkg: предупреждение -- не удалось удалить старый каталог `%.250s': %s\n"
+
+#: src/processarc.c:669
+#, c-format
+msgid ""
+"dpkg: warning - old conffile `%.250s' was an empty directory (and has now "
+"been deleted)\n"
+msgstr ""
+"dpkg: предупреждение -- старый conffile `%.250s' является пустым каталогом "
+"(и был удалён)\n"
+
+#: src/processarc.c:699
+#, c-format
+msgid "unable to stat other new file `%.250s'"
+msgstr "не удалось получить информацию о другом новом файле `%.250s'"
+
+#: src/processarc.c:710
+#, c-format
+msgid ""
+"dpkg: warning - old file `%.250s' is the same as several new files!  (both `"
+"%.250s' and `%.250s')\n"
+msgstr ""
+"dpkg: предупреждение -- старый файл `%.250s' такой же как несколько новых "
+"файлов! (`%.250s' и `%.250s')\n"
+
+#: src/processarc.c:751
+#, c-format
+msgid "dpkg: warning - unable to %s old file `%%.250s': %%s\n"
+msgstr "dpkg: предупреждение -- не удалось %s старый файл `%%.250s': %%s\n"
+
+#: src/processarc.c:787 src/processarc.c:1053 src/remove.c:297
+msgid "cannot read info directory"
+msgstr "ошибка чтения информационного каталога"
+
+#: src/processarc.c:800
+#, c-format
+msgid "old version of package has overly-long info file name starting `%.250s'"
+msgstr ""
+"старая версия пакета содержит информационный файл с очень длинным именем, "
+"начинающимся с `%.250s'"
+
+#: src/processarc.c:825
+#, c-format
+msgid "unable to remove obsolete info file `%.250s'"
+msgstr "не удалось удалить устаревший информационный файл `%.250s'"
+
+#: src/processarc.c:829
+#, c-format
+msgid "unable to install (supposed) new info file `%.250s'"
+msgstr ""
+"не удалось установить(предположительно) новый информационный файл `%.250s'"
+
+#: src/processarc.c:840
+msgid "unable to open temp control directory"
+msgstr "не удалось открыть временный каталог управляющей информации"
+
+#: src/processarc.c:849
+#, c-format
+msgid "package contains overly-long control info file name (starting `%.50s')"
+msgstr ""
+"пакет содержит очень длинное имя файла управляющей информации (начинается с `"
+"%.50s')"
+
+#: src/processarc.c:854
+#, c-format
+msgid "package control info contained directory `%.250s'"
+msgstr "управляющая информация пакета содержит каталог `%.250s'"
+
+#: src/processarc.c:856
+#, c-format
+msgid "package control info rmdir of `%.250s' didn't say not a dir"
+msgstr ""
+"rmdir при попытке удалить управляющую информацию пакета `%.250s' не "
+"утверждает, что это не было каталогом"
+
+#: src/processarc.c:862
+#, c-format
+msgid "dpkg: warning - package %s contained list as info file"
+msgstr ""
+"dpkg: предупреждение -- пакет %s содержит в качестве информационного файла "
+"список"
+
+#: src/processarc.c:869
+#, c-format
+msgid "unable to install new info file `%.250s' as `%.250s'"
+msgstr "не удалось переименовать новый информационный файл `%.250s' в `%.250s'"
+
+#: src/processarc.c:1032
+#, c-format
+msgid "(Noting disappearance of %s, which has been completely replaced.)\n"
+msgstr "(Пакет %s полностью заменён и фактически исчез.)\n"
+
+#: src/processarc.c:1069
+#, c-format
+msgid "unable to delete disappearing control info file `%.250s'"
+msgstr "не удалось удалить файл управляющей информации `%.250s'"
+
+#: src/query.c:125
+msgid ""
+"Desired=Unknown/Install/Remove/Purge/Hold\n"
+"| Status=Not/Inst/Cfg-files/Unpacked/Failed-cfg/Half-inst/trig-aWait/Trig-"
+"pend\n"
+"|/ Err?=(none)/Hold/Reinst-required/X=both-problems (Status,Err: "
+"uppercase=bad)\n"
+msgstr ""
+"Желаемый=неизвестно[u]/установить[i]/удалить[r]/вычистить[p]/зафиксировать"
+"[h]\n"
+"| Состояние=нет[n]/установлен[i]/настроен[c]/распакован[U]/ошибка настройки"
+"[F]/\n"
+"            частично установлен[H]/trig-aWait/Trig-pend\n"
+"|/ Ошибка?=<нет>/зафиксирован[H]/требуется переустановка[R]/X=и то, и "
+"другое\n"
+"(верхний регистр в полях состояния и ошибки указывает на ненормальную "
+"ситуацию)\n"
+
+#: src/query.c:129
+msgid "Name"
+msgstr "Имя"
+
+#: src/query.c:129
+msgid "Version"
+msgstr "Версия"
+
+#: src/query.c:129
+msgid "Description"
+msgstr "Описание"
+
+#: src/query.c:197 src/query.c:440 src/select.c:80
+#, c-format
+msgid "No packages found matching %s.\n"
+msgstr "Шаблону %s не соответствует ни один пакет.\n"
+
+#: src/query.c:219
+#, c-format
+msgid "diversion by %s from: %s\n"
+msgstr "размещение изменено %s из %s\n"
+
+#: src/query.c:221
+#, c-format
+msgid "diversion by %s to: %s\n"
+msgstr "размещение изменено %s на %s\n"
+
+#: src/query.c:224
+#, c-format
+msgid "local diversion from: %s\n"
+msgstr "локальное изменение размещения из %s\n"
+
+#: src/query.c:225
+#, c-format
+msgid "local diversion to: %s\n"
+msgstr "локальное изменение размещения на %s\n"
+
+#: src/query.c:250
+msgid "--search needs at least one file name pattern argument"
+msgstr ""
+"--search требует задания в качестве аргумента хотя бы одного шаблона имён "
+"файлов"
+
+#: src/query.c:278
+#, c-format
+msgid "dpkg: %s not found.\n"
+msgstr "dpkg: файл %s не найден.\n"
+
+#: src/query.c:316
+#, c-format
+msgid "Package `%s' is not installed and no info is available.\n"
+msgstr "Пакет %s не установлен, информация о нём недоступна.\n"
+
+#: src/query.c:325
+#, c-format
+msgid "Package `%s' is not available.\n"
+msgstr "Пакет %s недоступен.\n"
+
+#: src/query.c:335
+#, c-format
+msgid "Package `%s' is not installed.\n"
+msgstr "Пакет %s не установлен.\n"
+
+#: src/query.c:344
+#, c-format
+msgid "Package `%s' does not contain any files (!)\n"
+msgstr "Пакет `%s' не содержит файлов (!)\n"
+
+#: src/query.c:351
+#, c-format
+msgid "locally diverted to: %s\n"
+msgstr "локальное изменение размещения файла на %s\n"
+
+#: src/query.c:354
+#, c-format
+msgid "package diverts others to: %s\n"
+msgstr "пакет изменяет размещение файла другого пакета на %s\n"
+
+#: src/query.c:357
+#, c-format
+msgid "diverted by %s to: %s\n"
+msgstr "размещение файла изменено пакетом %s на %s\n"
+
+#: src/query.c:379
+msgid ""
+"Use dpkg --info (= dpkg-deb --info) to examine archive files,\n"
+"and dpkg --contents (= dpkg-deb --contents) to list their contents.\n"
+msgstr ""
+"Для проверки файлов архивов используйте команду dpkg --info (dpkg-deb --"
+"info),\n"
+"для вывода списка файлов в них -- команду dpkg--contents (dpkg-deb --"
+"contents).\n"
+
+#: src/query.c:455
+#, c-format
+msgid "Debian `%s' package management program query tool\n"
+msgstr "Утилита запросов к системе управления пакетами Debian `%s'\n"
+
+#: src/query.c:474
+#, c-format
+msgid ""
+"Commands:\n"
+"  -s|--status <package> ...        Display package status details.\n"
+"  -p|--print-avail <package> ...   Display available version details.\n"
+"  -L|--listfiles <package> ...     List files `owned' by package(s).\n"
+"  -l|--list [<pattern> ...]        List packages concisely.\n"
+"  -W|--show <pattern> ...          Show information on package(s).\n"
+"  -S|--search <pattern> ...        Find package(s) owning file(s).\n"
+"\n"
+msgstr ""
+"Команды:\n"
+"  -s|--status <имя пакета> ...        вывести информацию о состоянии "
+"пакета.\n"
+"  -p|--print-avail <имя пакета> ...   вывести информацию о доступной версии\n"
+"                                      пакета.\n"
+"  -L|--listfiles <имя пакета> ...     перечислить файлы,\n"
+"                                      принадлежащие пакету(ам).\n"
+"  -l|--list [<шаблон> ...]            кратко перечислить пакеты.\n"
+"  -W|--show <шаблон> ...              показать информацию о пакете(ах).\n"
+"  -S|--search <шаблон> ...            найти пакет(ы), содержащие файл(ы).\n"
+"\n"
+
+#: src/query.c:490
+#, c-format
+msgid ""
+"Options:\n"
+"  --admindir=<directory>           Use <directory> instead of %s.\n"
+"  -f|--showformat=<format>         Use alternative format for --show.\n"
+"\n"
+msgstr ""
+"Параметры:\n"
+"  --admindir=<каталог>                использовать <каталог> вместо %s.\n"
+"  -f|--showformat=<формат>            использовать другой формат для --"
+"show.\n"
+"\n"
+
+#: src/query.c:496 dpkg-deb/main.c:101
+#, c-format
+msgid ""
+"Format syntax:\n"
+"  A format is a string that will be output for each package. The format\n"
+"  can include the standard escape sequences \\n (newline), \\r (carriage\n"
+"  return) or \\\\ (plain backslash). Package information can be included\n"
+"  by inserting variable references to package fields using the ${var[;"
+"width]}\n"
+"  syntax. Fields will be right-aligned unless the width is negative in "
+"which\n"
+"  case left alignment will be used.\n"
+msgstr ""
+"Синтаксис описания формата:\n"
+"  Формат описывается строкой, которая будет выведена один раз для каждого\n"
+"  пакета. Формат может включать стандартные последовательности \\n (конец\n"
+"  строки), \\r (возврат каретки) или \\\\ (обратная косая черта). "
+"Информация\n"
+"  о пакете включается путём вставки в строку ссылок на поля пакета вида\n"
+"  ${поле[;ширина]}. Поля выравниваются по правому краю, если ширина\n"
+"  неотрицательна и по левому в противном случае.\n"
+
+#: src/query.c:506
+msgid ""
+"Use --help for help about querying packages;\n"
+"Use --license for copyright license and lack of warranty (GNU GPL).\n"
+"\n"
+msgstr ""
+"Для вывода справки о запросе пакетов используйте --help.\n"
+"Для вывода информации об авторских правах и отсутствии гарантий (GNU GPL)\n"
+"используйте --license.\n"
+
+#: src/remove.c:95
+#, c-format
+msgid ""
+"dpkg - warning: ignoring request to remove %.250s which isn't installed.\n"
+msgstr ""
+"dpkg: предупреждение -- запрос на удаление неустановленного пакета %.250s "
+"игнорируется.\n"
+
+#: src/remove.c:103
+#, c-format
+msgid ""
+"dpkg - warning: ignoring request to remove %.250s, only the config\n"
+" files of which are on the system.  Use --purge to remove them too.\n"
+msgstr ""
+"dpkg: предупреждение -- запрос на удаление пакета %.250s, от которого\n"
+" сохранились только файлы конфигурации, игнорируется. Чтобы удалить и файлы\n"
+" конфигурации, используйте --purge.\n"
+
+#: src/remove.c:112
+msgid "This is an essential package - it should not be removed."
+msgstr ""
+"Этот пакет является пакетом первой необходимости и не должен быть удалён."
+
+#: src/remove.c:138
+#, c-format
+msgid ""
+"dpkg: dependency problems prevent removal of %s:\n"
+"%s"
+msgstr ""
+"dpkg: зависимости не позволяют удалить пакет %s:\n"
+"%s"
+
+#: src/remove.c:140
+msgid "dependency problems - not removing"
+msgstr "проблемы зависимостей -- пакет не будет удалён"
+
+#: src/remove.c:144
+#, c-format
+msgid ""
+"dpkg: %s: dependency problems, but removing anyway as you request:\n"
+"%s"
+msgstr ""
+"dpkg: зависимости мешают удалению пакета %s, но по вашему указанию\n"
+"он всё равно будет удалён:\n"
+"%s"
+
+#: src/remove.c:152
+msgid ""
+"Package is in a very bad inconsistent state - you should\n"
+" reinstall it before attempting a removal."
+msgstr ""
+"Пакет абсолютно неработоспособен -- перед удалением его\n"
+" следует переустановить."
+
+#: src/remove.c:159
+#, c-format
+msgid "Would remove or purge %s ...\n"
+msgstr "Пакет %s будет удалён или вычищен...\n"
+
+#: src/remove.c:167
+#, c-format
+msgid "Removing %s ...\n"
+msgstr "Удаляется пакет %s...\n"
+
+#: src/remove.c:262 src/remove.c:379
+#, c-format
+msgid ""
+"dpkg - warning: while removing %.250s, unable to remove directory `%.250s': %"
+"s - directory may be a mount point ?\n"
+msgstr ""
+"dpkg: предупреждение -- при удалении пакета %.250s не удалось удалить "
+"каталог %.250s: %s -- возможно, он является точкой монтирования файловой "
+"системы\n"
+
+#: src/remove.c:269 src/remove.c:386
+#, c-format
+msgid "cannot remove `%.250s'"
+msgstr "не удалось удалить файл %.250s"
+
+#: src/remove.c:287
+#, c-format
+msgid "cannot remove file `%.250s'"
+msgstr "не удалось удалить файл %.250s"
+
+#: src/remove.c:320
+#, c-format
+msgid "unable to delete control info file `%.250s'"
+msgstr "не удалось удалить файл управляющей информации %.250s"
+
+#: src/remove.c:373
+#, c-format
+msgid ""
+"dpkg - warning: while removing %.250s, directory `%.250s' not empty so not "
+"removed.\n"
+msgstr ""
+"dpkg: предупреждение -- при удалении пакета %.250s не пустой каталог %.250s "
+"не удалён.\n"
+
+#: src/remove.c:409
+#, c-format
+msgid "Purging configuration files for %s ...\n"
+msgstr "Удаляются файлы конфигурации пакета %s...\n"
+
+#: src/remove.c:460
+#, c-format
+msgid "cannot remove old config file `%.250s' (= `%.250s')"
+msgstr "не удалось удалить старый файл конфигурации %.250s (= %.250s)"
+
+#: src/remove.c:475
+#, c-format
+msgid "cannot read config file dir `%.250s' (from `%.250s')"
+msgstr ""
+"не удалось открыть для чтения каталог файлов конфигурации %.250s (указан в "
+"%.250s)"
+
+#: src/remove.c:510
+#, c-format
+msgid "cannot remove old backup config file `%.250s' (of `%.250s')"
+msgstr "не удалось удалить %.250s, резервную копию файла настройки %.250s"
+
+#: src/remove.c:546
+#, c-format
+msgid "unable to check existence of `%.250s'"
+msgstr "не удалось проверить существование файла %.250s"
+
+#: src/remove.c:581
+msgid "cannot remove old files list"
+msgstr "не удалось удалить старый список файлов"
+
+#: src/remove.c:587
+msgid "can't remove old postrm script"
+msgstr "не удалось удалить старый скрипт, выполняемый после удаления"
+
+#: src/select.c:95
+msgid "--set-selections does not take any argument"
+msgstr "действие --set-selections не принимает аргументов"
+
+#: src/select.c:114
+#, c-format
+msgid "unexpected eof in package name at line %d"
+msgstr "неожиданный конец файла в имени пакета в строке %d"
+
+#: src/select.c:115
+#, c-format
+msgid "unexpected end of line in package name at line %d"
+msgstr "неожиданный конец строки в имени пакета в строке %d"
+
+#: src/select.c:119
+#, c-format
+msgid "unexpected eof after package name at line %d"
+msgstr "неожиданный конец файла после имени пакета в строке %d"
+
+#: src/select.c:120
+#, c-format
+msgid "unexpected end of line after package name at line %d"
+msgstr "неожиданный конец строки после имени пакета в строке %d"
+
+#: src/select.c:129
+#, c-format
+msgid "unexpected data after package and selection at line %d"
+msgstr "лишние символы после имени пакета и желаемого состояния в строке %d"
+
+#: src/select.c:134
+#, c-format
+msgid "illegal package name at line %d: %.250s"
+msgstr "недопустимое имя пакета в строке %d: %.250s"
+
+#: src/select.c:136
+#, c-format
+msgid "unknown wanted status at line %d: %.250s"
+msgstr "некорректное желаемое состояние в строке %d: %.250s"
+
+#: src/select.c:142
+msgid "read error on standard input"
+msgstr "ошибка чтения стандартного потока ввода"
+
+#: src/select.c:154
+msgid "--clear-selections does not take any argument"
+msgstr "у действия --clear-selections нет аргументов"
+
+#: src/trigcmd.c:67
+msgid "Type dpkg-trigger --help for help about this utility."
+msgstr "Чтобы получить справку, введите dpkg-trigger --help."
+
+#: src/trigcmd.c:72
+#, c-format
+msgid "Debian %s package trigger utility.\n"
+msgstr "Утилита работы с триггерами пакетов Debian %s.\n"
+
+#: src/trigcmd.c:86
+#, c-format
+msgid ""
+"Usage: %s [<options> ...] <trigger-name>\n"
+"       %s [<options> ...] <command>\n"
+"\n"
+msgstr ""
+"Использование: %s [<параметр> ...] <имя-триггера>\n"
+"       %s [<параметры> ...] <команда>\n"
+"\n"
+
+#: src/trigcmd.c:92
+#, c-format
+msgid ""
+"Commands:\n"
+"  --check-supported                Check if the running dpkg supports "
+"triggers.\n"
+"\n"
+msgstr ""
+"Команды:\n"
+"  --check-supported                Проверить, поддерживает ли триггеры\n"
+"                                   имеющийся dpkg.\n"
+"\n"
+
+#: src/trigcmd.c:105
+#, c-format
+msgid ""
+"Options:\n"
+"  --admindir=<directory>           Use <directory> instead of %s.\n"
+"  --by-package=<package>           Override trigger awaiter (normally set\n"
+"                                     by dpkg).\n"
+"  --no-await                       No package needs to await the "
+"processing.\n"
+"  --no-act                         Just test - don't actually change "
+"anything.\n"
+"\n"
+msgstr ""
+"Параметры:\n"
+"  --admindir=<каталог>             использовать <каталог> вместо %s.\n"
+"  --by-package=<пакет>             заменить триггер awaiter (обычно\n"
+"                                   устанавливается dpkg).\n"
+"  --no-await                       не ждать обработки пакетами.\n"
+"  --no-act                         только протестировать, ничего не "
+"изменять.\n"
+"\n"
+
+#: src/trigcmd.c:162
+#, c-format
+msgid "%s: triggers data directory not yet created\n"
+msgstr "%s: каталог с данными триггеров ещё не создан\n"
+
+#: src/trigcmd.c:166
+#, c-format
+msgid "%s: trigger records not yet in existence\n"
+msgstr "%s: записи триггера пока не существуют\n"
+
+#: src/trigcmd.c:190
+msgid "dpkg-trigger --check-supported takes no arguments"
+msgstr "dpkg-trigger --check-supported запускается без аргументов"
+
+#: src/trigcmd.c:195
+msgid "dpkg-trigger takes one argument, the trigger name"
+msgstr "dpkg-trigger принимает только один аргумент, имя триггера"
+
+#: src/trigcmd.c:200
+msgid ""
+"dpkg-trigger must be called from a maintainer script (or with a --by-package "
+"option)"
+msgstr ""
+"dpkg-trigger должен вызываться из сценария сопровождающего (или с параметром "
+"--by-package)"
+
+#: src/trigcmd.c:205
+#, c-format
+msgid "dpkg-trigger: illegal awaited package name `%.250s': %.250s"
+msgstr "dpkg-trigger: неверное имя ожидаемого пакета `%.250s': %.250s"
+
+#: src/trigcmd.c:210
+#, c-format
+msgid "dpkg-trigger: invalid trigger name `%.250s': %.250s"
+msgstr "dpkg-trigger: неверное имя триггера `%.250s': %.250s"
+
+#: src/trigproc.c:230
+#, c-format
+msgid ""
+"%s: cycle found while processing triggers:\n"
+" chain of packages whose triggers are or may be responsible:\n"
+msgstr ""
+"%s: при обработке триггеров обнаружено зацикливание:\n"
+" цепочка пакетов с такими триггерами может не отвечать:\n"
+
+#: src/trigproc.c:238
+#, c-format
+msgid ""
+"\n"
+" packages' pending triggers which are or may be unresolvable:\n"
+msgstr ""
+"\n"
+" пакеты с триггерами рассмотрения могут могут быть не определены:\n"
+
+#: src/trigproc.c:261
+msgid "triggers looping, abandoned"
+msgstr "зацикливание триггеров, отмена работы"
+
+#: src/trigproc.c:288
+#, c-format
+msgid "Processing triggers for %s ...\n"
+msgstr "Обрабатываются триггеры для %s ...\n"
+
+#: src/update.c:44
+#, c-format
+msgid "--%s takes no arguments"
+msgstr "у --%s нет аргументов"
+
+#: src/update.c:48
+#, c-format
+msgid "--%s needs exactly one Packages file argument"
+msgstr "--%s может быть только один аргумент (файл Packages)"
+
+#: src/update.c:57
+msgid "unable to access dpkg status area for bulk available update"
+msgstr ""
+"не удалось втянуть информацию о доступных обновлениях, нет доступа к области "
+"состояний dpkg"
+
+#: src/update.c:59
+msgid "bulk available update requires write access to dpkg status area"
+msgstr ""
+"втягивание информации о доступных обновлениях требует доступа к области "
+"состояний dpkg на запись"
+
+#: src/update.c:66
+#, c-format
+msgid "Replacing available packages info, using %s.\n"
+msgstr "Информация о доступных пакетах заменяется содержимым файла %s.\n"
+
+#: src/update.c:69
+#, c-format
+msgid "Updating available packages info, using %s.\n"
+msgstr "Информация о доступных пакетах сливается с содержимым файла %s.\n"
+
+#: src/update.c:94
+#, c-format
+msgid "Information about %d package(s) was updated.\n"
+msgstr "Обновлена информация о %d пакетах.\n"
+
+#: src/update.c:102
+msgid "--forget-old-unavail takes no arguments"
+msgstr "параметр --forget-old-unavail не принимает аргументов"
+
+#: dpkg-deb/build.c:87
+#, c-format
+msgid "dpkg-deb - error: %s (`%s') doesn't contain any digits\n"
+msgstr "dpkg-deb: ошибка -- %s (%s) не содержит ни одной цифры\n"
+
+#: dpkg-deb/build.c:131
+#, c-format
+msgid "file name '%.50s...' is too long"
+msgstr "имя файла '%.50s...' слишком длинное"
+
+#: dpkg-deb/build.c:192
+msgid "--build needs a directory argument"
+msgstr "параметр --build требует задания в качестве аргумента имени каталога"
+
+#: dpkg-deb/build.c:202
+msgid "--build takes at most two arguments"
+msgstr "параметр --build может иметь не более двух аргументов"
+
+#: dpkg-deb/build.c:206
+#, c-format
+msgid "unable to check for existence of archive `%.250s'"
+msgstr "не удалось проверить существование архива `%.250s'"
+
+#: dpkg-deb/build.c:221
+msgid "target is directory - cannot skip control file check"
+msgstr ""
+"в качестве места назначения задан каталог, пропустить проверку управляющего "
+"файла невозможно"
+
+#: dpkg-deb/build.c:222
+#, c-format
+msgid ""
+"dpkg-deb: warning, not checking contents of control area.\n"
+"dpkg-deb: building an unknown package in `%s'.\n"
+msgstr ""
+"dpkg-deb: предупреждение -- содержимое управляющей области не проверяется.\n"
+"dpkg-deb: сборка неизвестного пакета в файл %s.\n"
+
+#: dpkg-deb/build.c:240
+msgid "package name has characters that aren't lowercase alphanums or `-+.'"
+msgstr ""
+"имя пакета содержит символы, отличные от строчных латинских букв, цифр, -, + "
+"и ."
+
+#: dpkg-deb/build.c:242
+#, c-format
+msgid "warning, `%s' contains user-defined Priority value `%s'\n"
+msgstr ""
+"предупреждение: %s содержит не предопределённое значение приоритета %s\n"
+
+#: dpkg-deb/build.c:250
+#, c-format
+msgid "warning, `%s' contains user-defined field `%s'\n"
+msgstr "предупреждение: %s содержит не предопределённое поле %s\n"
+
+#: dpkg-deb/build.c:256
+#, c-format
+msgid "%d errors in control file"
+msgstr "в управляющем файле обнаружено %d ошибок"
+
+#: dpkg-deb/build.c:267
+#, c-format
+msgid "dpkg-deb: building package `%s' in `%s'.\n"
+msgstr "dpkg-deb: сборка пакета %s в файл %s.\n"
+
+#: dpkg-deb/build.c:275
+#, c-format
+msgid "control directory has bad permissions %03lo (must be >=0755 and <=0775)"
+msgstr ""
+"у управляющего каталога установлен недопустимый режим доступа %03lo (должен "
+"быть >=0755 и <=0775)"
+
+#: dpkg-deb/build.c:286
+#, c-format
+msgid "maintainer script `%.50s' is not a plain file or symlink"
+msgstr ""
+"сценарий сопровождающего %.50s не является обычным файлом или символической "
+"ссылкой"
+
+#: dpkg-deb/build.c:288
+#, c-format
+msgid ""
+"maintainer script `%.50s' has bad permissions %03lo (must be >=0555 and "
+"<=0775)"
+msgstr ""
+"у сценария сопровождающего %.50s установлен недопустимый режим доступа %03lo "
+"(должен быть >=0755 и <=0775)"
+
+#: dpkg-deb/build.c:292
+#, c-format
+msgid "maintainer script `%.50s' is not stattable"
+msgstr "получить информацию о сценарии сопровождающего %.50s невозможно"
+
+#: dpkg-deb/build.c:302
+msgid "empty string from fgets reading conffiles"
+msgstr "при чтении списка файлов конфигурации fgets вернул пустую строку"
+
+#: dpkg-deb/build.c:304
+#, c-format
+msgid ""
+"warning, conffile name `%.50s...' is too long, or missing final newline\n"
+msgstr ""
+"предупреждение: имя файла конфигурации (%.50s...) слишком длинное или "
+"пропущен символ конца строки\n"
+
+#: dpkg-deb/build.c:317
+#, c-format
+msgid "warning, conffile filename `%s' contains trailing white spaces\n"
+msgstr ""
+"предупреждение: имя файла conffile `%s' содержит в конце пробельные символы\n"
+
+#: dpkg-deb/build.c:319
+#, c-format
+msgid "conffile `%.250s' does not appear in package"
+msgstr "файл конфигурации `%.250s' в пакете отсутствует"
+
+#: dpkg-deb/build.c:321
+#, c-format
+msgid "conffile `%.250s' is not stattable"
+msgstr "получить информацию о файле конфигурации `%.250s' невозможно"
+
+#: dpkg-deb/build.c:323
+#, c-format
+msgid "warning, conffile `%s' is not a plain file\n"
+msgstr "предупреждение: файл конфигурации `%s' не является обычным файлом\n"
+
+#: dpkg-deb/build.c:328
+msgid "error reading conffiles file"
+msgstr "ошибка чтения списка файлов конфигурации"
+
+#: dpkg-deb/build.c:331
+msgid "error opening conffiles file"
+msgstr "ошибка при открытии списка файлов конфигурации"
+
+#: dpkg-deb/build.c:334
+#, c-format
+msgid "dpkg-deb: ignoring %d warnings about the control file(s)\n"
+msgstr "dpkg-deb: проигнорировано %d предупреждений об управляющих файлах\n"
+
+#: dpkg-deb/build.c:345
+#, c-format
+msgid "unable to unbuffer `%.255s'"
+msgstr "не удалось отменить буферизацию %.255s"
+
+#: dpkg-deb/build.c:351 dpkg-deb/build.c:425 dpkg-deb/build.c:446
+#, c-format
+msgid "failed to chdir to `%.255s'"
+msgstr "не удалось перейти в каталог %.255s"
+
+#: dpkg-deb/build.c:352
+msgid "failed to chdir to .../DEBIAN"
+msgstr "не удалось перейти в каталог .../DEBIAN"
+
+#: dpkg-deb/build.c:354 dpkg-deb/build.c:427
+msgid "failed to exec tar -cf"
+msgstr "не удалось запустить tar -cf"
+
+#: dpkg-deb/build.c:360
+msgid "failed to make tmpfile (control)"
+msgstr "не удалось создать временный файл (управляющая информация)"
+
+#: dpkg-deb/build.c:361
+#, c-format
+msgid "failed to open tmpfile (control), %s"
+msgstr "не удалось открыть временный файл (управляющая информация) %s"
+
+#: dpkg-deb/build.c:364
+#, c-format
+msgid "failed to unlink tmpfile (control), %s"
+msgstr "не удалось удалить временный файл (управляющая информация) %s"
+
+#: dpkg-deb/build.c:372 dpkg-deb/build.c:401
+msgid "control"
+msgstr "управляющая информация"
+
+#: dpkg-deb/build.c:377
+msgid "failed to fstat tmpfile (control)"
+msgstr ""
+"не удалось получить информацию о временном файле (управляющая информация)"
+
+#: dpkg-deb/build.c:400
+msgid "failed to rewind tmpfile (control)"
+msgstr "не удалось перейти к началу временного файла (управляющая информация)"
+
+#: dpkg-deb/build.c:408
+msgid "failed to make tmpfile (data)"
+msgstr "не удалось создать временный файл (данные)"
+
+#: dpkg-deb/build.c:409
+#, c-format
+msgid "failed to open tmpfile (data), %s"
+msgstr "не удалось открыть временный файл (данные) %s"
+
+#: dpkg-deb/build.c:412
+#, c-format
+msgid "failed to unlink tmpfile (data), %s"
+msgstr "не удалось удалить временный файл (данные) %s"
+
+#: dpkg-deb/build.c:436 dpkg-deb/extract.c:287
+msgid "data"
+msgstr "данные"
+
+#: dpkg-deb/build.c:449
+msgid "failed to exec find"
+msgstr "не удалось запустить find"
+
+#: dpkg-deb/build.c:460 dpkg-deb/build.c:467
+msgid "failed to write filename to tar pipe (data)"
+msgstr "не удалось записать имя файла в канал программы tar (данные)"
+
+#: dpkg-deb/build.c:490
+#, c-format
+msgid "Internal error, compress_type `%i' unknown!"
+msgstr "Внутренняя ошибка, неизвестный compress_type `%i'!"
+
+#: dpkg-deb/build.c:502
+msgid "failed to rewind tmpfile (data)"
+msgstr "не удалось перейти к началу временного файла (данные)"
+
+#: dpkg-deb/build.c:503
+msgid "cat (data)"
+msgstr "cat (данные)"
+
+#: dpkg-deb/extract.c:52
+msgid "failed to exec sh -c mv foo/* &c"
+msgstr "не удалось выполнить команду sh -c mv foo/* &c"
+
+#: dpkg-deb/extract.c:60
+#, c-format
+msgid "error reading %s from file %.255s"
+msgstr "не удалось прочитать %s из файла %.255s"
+
+#: dpkg-deb/extract.c:62
+#, c-format
+msgid "unexpected end of file in %s in %.255s"
+msgstr "неожиданный конец файла, не удалось прочитать %s из файла %.255s"
+
+#: dpkg-deb/extract.c:75 dpkg-split/info.c:52
+#, c-format
+msgid "file `%.250s' is corrupt - %.250s length contains nulls"
+msgstr "файл `%.250s' повреждён -- %.250s содержит нулевые символы"
+
+#: dpkg-deb/extract.c:82
+#, c-format
+msgid "file `%.250s' is corrupt - negative member length %zi"
+msgstr "файл %.250s повреждён -- длина компонента отрицательна (%zi)"
+
+#: dpkg-deb/extract.c:84 dpkg-split/info.c:43
+#, c-format
+msgid "file `%.250s' is corrupt - bad digit (code %d) in %s"
+msgstr "файл `%.250s' повреждён -- не цифра (код символа %d) в %s"
+
+#: dpkg-deb/extract.c:97
+msgid "failed getting the current file position"
+msgstr "не удалось получить текущую позицию в файле"
+
+#: dpkg-deb/extract.c:100
+msgid "failed setting the current file position"
+msgstr "не удалось установить текущую позицию в файле"
+
+#: dpkg-deb/extract.c:124
+#, c-format
+msgid "failed to read archive `%.255s'"
+msgstr "не удалось прочитать архив `%.255s'"
+
+#: dpkg-deb/extract.c:125
+msgid "failed to fstat archive"
+msgstr "не удалось получить информацию об архиве"
+
+#: dpkg-deb/extract.c:126
+msgid "version number"
+msgstr "номер версии"
+
+#: dpkg-deb/extract.c:135
+msgid "between members"
+msgstr "данные между компонентами"
+
+#: dpkg-deb/extract.c:137 dpkg-split/info.c:95
+#, c-format
+msgid "file `%.250s' is corrupt - bad magic at end of first header"
+msgstr ""
+"файл %.250s повреждён -- недопустимый идентификатор типа в конце первого "
+"заголовка"
+
+#: dpkg-deb/extract.c:143
+#, c-format
+msgid "file `%.250s' is not a debian binary archive (try dpkg-split?)"
+msgstr ""
+"файл %.250s не является двоичным архивом debian (возможно, поможет dpkg-"
+"split)"
+
+#: dpkg-deb/extract.c:146
+msgid "header info member"
+msgstr "информационный компонент заголовка"
+
+#: dpkg-deb/extract.c:149
+msgid "archive has no newlines in header"
+msgstr "в заголовке архива нет символов конца строки"
+
+#: dpkg-deb/extract.c:152
+msgid "archive has no dot in version number"
+msgstr "в номере версии архива нет точки"
+
+#: dpkg-deb/extract.c:155
+#, c-format
+msgid "archive version %.250s not understood, get newer dpkg-deb"
+msgstr ""
+"архивы версии %.250s не поддерживаются, используйте более новый dpkg-deb"
+
+#: dpkg-deb/extract.c:164 dpkg-deb/extract.c:197
+#, c-format
+msgid "skipped member data from %s"
+msgstr "пропущены данные компонента файла %s"
+
+#: dpkg-deb/extract.c:187
+#, c-format
+msgid "file `%.250s' contains ununderstood data member %.*s, giving up"
+msgstr "файл %.250s содержит не распознаваемый компонент данных %.*s, сдаёмся"
+
+#: dpkg-deb/extract.c:193
+#, c-format
+msgid "file `%.250s' contains two control members, giving up"
+msgstr "файл %.250s содержит два управляющих компонента, сдаёмся"
+
+#: dpkg-deb/extract.c:205
+#, c-format
+msgid ""
+" new debian package, version %s.\n"
+" size %ld bytes: control archive= %zi bytes.\n"
+msgstr ""
+" новый пакет Debian, версия %s.\n"
+" размер %ld байт(а): управляющий архив длиной %zi байт(а).\n"
+
+#: dpkg-deb/extract.c:217
+msgid "control information length"
+msgstr "длина управляющей информации"
+
+#: dpkg-deb/extract.c:219
+#, c-format
+msgid "archive has malformatted control length `%s'"
+msgstr ""
+"запись о длине управляющей информации архива `%s' имеет недопустимый формат"
+
+#: dpkg-deb/extract.c:222
+#, c-format
+msgid ""
+" old debian package, version %s.\n"
+" size %ld bytes: control archive= %zi, main archive= %ld.\n"
+msgstr ""
+" старый пакет debian, версия %s.\n"
+" размер %ld байт(а): управляющий архив длиной %zi байт(а),\n"
+"основной архив длиной %ld байт(а).\n"
+
+#: dpkg-deb/extract.c:231
+msgid "control area"
+msgstr "область управляющей информации"
+
+#: dpkg-deb/extract.c:237
+#, c-format
+msgid ""
+"dpkg-deb: file looks like it might be an archive which has been\n"
+"dpkg-deb:    corrupted by being downloaded in ASCII mode\n"
+msgstr ""
+"dpkg-deb: файл выглядит так, как будто его загрузили в ASCII\n"
+"dpkg-deb:    режиме и сделали, таким образом, нечитаемым.\n"
+
+#: dpkg-deb/extract.c:242
+#, c-format
+msgid "`%.255s' is not a debian format archive"
+msgstr "`%.255s' не является архивом в формате debian"
+
+#: dpkg-deb/extract.c:255
+msgid "failed to open pipe descriptor `1' in paste"
+msgstr "не удалось открыть дескриптор потока `1' для вставки"
+
+#: dpkg-deb/extract.c:257
+msgid "failed to write to gzip -dc"
+msgstr "не удалось осуществить запись в канал gzip -dc"
+
+#: dpkg-deb/extract.c:258
+msgid "failed to close gzip -dc"
+msgstr "не удалось закрыть канал gzip -dc"
+
+#: dpkg-deb/extract.c:265
+msgid "failed to syscall lseek to files archive portion"
+msgstr ""
+"не удалось установить позицию чтения на часть архива, содержащую данные"
+
+#: dpkg-deb/extract.c:273
+msgid "failed to write to pipe in copy"
+msgstr "не удалось осуществить запись в канал ввода/вывода при копировании"
+
+#: dpkg-deb/extract.c:274
+msgid "failed to close pipe in copy"
+msgstr "не удалось закрыть канал ввода/вывода при копировании"
+
+#: dpkg-deb/extract.c:295
+msgid "failed to create directory"
+msgstr "не удалось создать каталог"
+
+#: dpkg-deb/extract.c:296
+msgid "failed to chdir to directory after creating it"
+msgstr "не удалось после создания каталога перейти в него"
+
+#: dpkg-deb/extract.c:298
+msgid "failed to chdir to directory"
+msgstr "не удалось перейти в каталог"
+
+#: dpkg-deb/extract.c:312
+msgid "failed to exec tar"
+msgstr "не удалось запустить tar"
+
+#: dpkg-deb/extract.c:335 dpkg-deb/extract.c:350 dpkg-deb/info.c:68
+#, c-format
+msgid "--%s needs a .deb filename argument"
+msgstr "--%s требует указания в качестве аргумента имени файла .deb"
+
+#: dpkg-deb/extract.c:338
+#, c-format
+msgid ""
+"--%s needs a target directory.\n"
+"Perhaps you should be using dpkg --install ?"
+msgstr ""
+"--%s требует указания каталога назначения.\n"
+"Вероятно, вам следует использовать dpkg --install"
+
+#: dpkg-deb/extract.c:341
+#, c-format
+msgid "--%s takes at most two arguments (.deb and directory)"
+msgstr "--%s принимает не более двух аргументов (имя файла .deb и каталог)"
+
+#: dpkg-deb/extract.c:352
+#, c-format
+msgid "--%s takes only one argument (.deb filename)"
+msgstr "--%s принимает только один аргумент (имя файла .deb)"
+
+#: dpkg-deb/info.c:49
+msgid "failed to chdir to `/' for cleanup"
+msgstr "при очистке не удалось перейти в каталог /"
+
+#: dpkg-deb/info.c:51
+msgid "failed to fork for cleanup"
+msgstr "при очистке не удалось разветвить процесс"
+
+#: dpkg-deb/info.c:56
+msgid "failed to wait for rm cleanup"
+msgstr ""
+"при очистке ожидание завершения выполнения команды rm завершилось неудачно"
+
+#: dpkg-deb/info.c:57
+#, c-format
+msgid "rm cleanup failed, code %d\n"
+msgstr "выполнение команды rm завершилось неудачно с кодом ошибки %d\n"
+
+#: dpkg-deb/info.c:71
+msgid "failed to make temporary directoryname"
+msgstr "не удалось сгенерировать имя временного каталога"
+
+#: dpkg-deb/info.c:76
+msgid "failed to exec rm -rf"
+msgstr "не удалось выполнить команду rm -rf"
+
+#: dpkg-deb/info.c:99
+#, c-format
+msgid "realloc failed (%zu bytes)"
+msgstr "отказ функции realloc (%zu байт)"
+
+#: dpkg-deb/info.c:108
+msgid "info_spew"
+msgstr "функция info_spew"
+
+#: dpkg-deb/info.c:110
+#, c-format
+msgid "dpkg-deb: `%.255s' contains no control component `%.255s'\n"
+msgstr "dpkg-deb: %.255s не содержит управляющего компонента %.255s\n"
+
+#: dpkg-deb/info.c:114
+#, c-format
+msgid "open component `%.255s' (in %.255s) failed in an unexpected way"
+msgstr ""
+"по непонятной причине не удалось открыть компонент %.255s (каталог %.255s)"
+
+#: dpkg-deb/info.c:120
+msgid "One requested control component is missing"
+msgstr "Отсутствует один из необходимых управляющих компонентов"
+
+#: dpkg-deb/info.c:122
+#, c-format
+msgid "%d requested control components are missing"
+msgstr "Отсутствует %d необходимых управляющих компонентов"
+
+#: dpkg-deb/info.c:135
+#, c-format
+msgid "cannot scan directory `%.255s'"
+msgstr "не удалось просмотреть каталог %.255s"
+
+#: dpkg-deb/info.c:140
+#, c-format
+msgid "cannot stat `%.255s' (in `%.255s')"
+msgstr "не удалось получить информацию о файле %.255s в каталоге %.255s"
+
+#: dpkg-deb/info.c:143
+#, c-format
+msgid "cannot open `%.255s' (in `%.255s')"
+msgstr "не удалось открыть файл %.255s в каталоге %.255s"
+
+#: dpkg-deb/info.c:157
+#, c-format
+msgid "failed to read `%.255s' (in `%.255s')"
+msgstr "ошибка чтения файла %.255s в каталоге %.255s"
+
+#: dpkg-deb/info.c:160
+#, c-format
+msgid " %7ld bytes, %5d lines   %c  %-20.127s %.127s\n"
+msgstr " %7ld байт(а), %5d строк   %c  %-20.127s %.127s\n"
+
+#: dpkg-deb/info.c:166
+#, c-format
+msgid "     not a plain file          %.255s\n"
+msgstr "     не является обычным файлом %.255s\n"
+
+#: dpkg-deb/info.c:171
+#, c-format
+msgid "failed to read `control' (in `%.255s')"
+msgstr "ошибка чтения файла control (в каталоге `%.255s')"
+
+#: dpkg-deb/info.c:172
+msgid "(no `control' file in control archive!)\n"
+msgstr "(в управляющем архиве нет файла control!)\n"
+
+#: dpkg-deb/info.c:192
+msgid "could not open the `control' component"
+msgstr "не удалось открыть компонент control"
+
+#: dpkg-deb/info.c:222
+msgid "failed during read of `control' component"
+msgstr "ошибка чтения компонента control"
+
+#: dpkg-deb/info.c:233
+msgid "Error in format"
+msgstr "Неверный формат"
+
+#: dpkg-deb/info.c:269
+msgid "--contents takes exactly one argument"
+msgstr "параметр --contents принимает ровно один аргумент"
+
+#: dpkg-deb/main.c:48
+#, c-format
+msgid "Debian `%s' package archive backend version %s.\n"
+msgstr "Программа работы с архивами пакетов Debian `%s', версия %s.\n"
+
+#: dpkg-deb/main.c:64
+#, c-format
+msgid ""
+"Commands:\n"
+"  -b|--build <directory> [<deb>]   Build an archive.\n"
+"  -c|--contents <deb>              List contents.\n"
+"  -I|--info <deb> [<cfile> ...]    Show info to stdout.\n"
+"  -W|--show <deb>                  Show information on package(s)\n"
+"  -f|--field <deb> [<cfield> ...]  Show field(s) to stdout.\n"
+"  -e|--control <deb> [<directory>] Extract control info.\n"
+"  -x|--extract <deb> <directory>   Extract files.\n"
+"  -X|--vextract <deb> <directory>  Extract & list files.\n"
+"  --fsys-tarfile <deb>             Output filesystem tarfile.\n"
+"\n"
+msgstr ""
+"Команды:\n"
+"  -b|--build <каталог> [<deb>]        собрать архив.\n"
+"  -c|--contents <deb>                 вывести список файлов архива.\n"
+"  -I|--info <deb> [<файл>...]         вывести информацию в стандартный "
+"поток\n"
+"                                      вывода.\n"
+"  -W|--show <deb>                     вывести информацию о пакете(ах).\n"
+"  -f|--field <deb> [<поле>...]        вывести поле(я) в стандартный поток\n"
+"                                      вывода.\n"
+"  -e|--control <deb> [<каталог>]      извлечь управляющую информацию.\n"
+"  -x|--extract <deb> <каталог>        извлечь файлы.\n"
+"  -X|--vextract <deb> <каталог>       извлечь файлы и вывести их список.\n"
+"  --fsys-tarfile <deb>                извлечь архив файловой системы\n"
+"                                      (файл tar).\n"
+"\n"
+
+#: dpkg-deb/main.c:83
+#, c-format
+msgid ""
+"<deb> is the filename of a Debian format archive.\n"
+"<cfile> is the name of an administrative file component.\n"
+"<cfield> is the name of a field in the main `control' file.\n"
+"\n"
+msgstr ""
+"<deb> -- имя файла архива в формате Debian.\n"
+"<файл> -- имя файла, содержащего административный компонент.\n"
+"<поле> -- название поля в основном управляющем файле.\n"
+"\n"
+
+#: dpkg-deb/main.c:89
+#, c-format
+msgid ""
+"Options:\n"
+"  --showformat=<format>            Use alternative format for --show.\n"
+"  -D                               Enable debugging output.\n"
+"  --old, --new                     Select archive format.\n"
+"  --nocheck                        Suppress control file check (build bad\n"
+"                                     packages).\n"
+"  -z#                              Set the compression level when building.\n"
+"  -Z<type>                         Set the compression type used when "
+"building.\n"
+"                                     Allowed values: gzip, bzip2, lzma, "
+"none.\n"
+"\n"
+msgstr ""
+"Параметры:\n"
+"  --showformat=<формат>               использовать альтернативный\n"
+"                                      формат вывода в команде --show.\n"
+"  -D                                  включить вывод отладочной информации.\n"
+"  --old, --new                        задать формат архива.\n"
+"  --nocheck                           не проверять управляющий файл\n"
+"                                      (собирается неправильный пакет).\n"
+"  -z#                                 режим сжатия при сборке.\n"
+"  -Z<тип>                             тип сжатия для использования\n"
+"                                      при сборке.\n"
+"                                      Допустимые значения: gzip, bzip2,\n"
+"                                      lzma, none.\n"
+"\n"
+
+#: dpkg-deb/main.c:110
+#, c-format
+msgid ""
+"\n"
+"Use `dpkg' to install and remove packages from your system, or\n"
+"`dselect' or `aptitude' for user-friendly package management.  Packages\n"
+"unpacked using `dpkg-deb --extract' will be incorrectly installed !\n"
+msgstr ""
+"\n"
+"Для установки или удаления пакетов используйте программу `dpkg'\n"
+"или дружественный интерфейс управления пакетами `dselect' или\n"
+"`aptitude'. Пакеты, распакованные с помощью dpkg-deb --extract,\n"
+"будут установлены неправильно!\n"
+
+#: dpkg-deb/main.c:119
+msgid ""
+"Type dpkg-deb --help for help about manipulating *.deb files;\n"
+"Type dpkg --help for help about installing and deinstalling packages."
+msgstr ""
+"Чтобы получить информацию о работе с файлами .deb, введите dpkg-deb --help.\n"
+"Чтобы получить информацию об установке и удалении пакетов, введите dpkg --"
+"help."
+
+#: dpkg-deb/main.c:191
+#, c-format
+msgid "unknown compression type `%s'!"
+msgstr "неизвестный тип сжатия --`%s'!"
+
+#: dpkg-split/info.c:64
+#, c-format
+msgid "file `%.250s' is corrupt - %.250s missing"
+msgstr "файл `%.250s' повреждён -- отсутствует %.250s"
+
+#: dpkg-split/info.c:67
+#, c-format
+msgid "file `%.250s' is corrupt - missing newline after %.250s"
+msgstr ""
+"файл `%.250s' повреждён -- отсутствует символ конца строки после %.250s"
+
+#: dpkg-split/info.c:91
+msgid "unable to seek back"
+msgstr "не удалось изменить позицию чтения на более раннюю"
+
+#: dpkg-split/info.c:105
+#, c-format
+msgid "file `%.250s' is corrupt - bad padding character (code %d)"
+msgstr "файл `%.250s' повреждён -- недопустимые символы заполнения (код %d)"
+
+#: dpkg-split/info.c:109
+#, c-format
+msgid "file `%.250s' is corrupt - nulls in info section"
+msgstr "файл `%.250s' повреждён -- нулевые символы в информационном разделе"
+
+#: dpkg-split/info.c:116
+#, c-format
+msgid "file `%.250s' is format version `%.250s' - you need a newer dpkg-split"
+msgstr ""
+"формат файла `%.250s' имеет версию `%.250s' -- вам нужен новый dpkg-split"
+
+#: dpkg-split/info.c:124
+#, c-format
+msgid "file `%.250s' is corrupt - bad MD5 checksum `%.250s'"
+msgstr "файл `%.250s' повреждён -- неверная сумма MD5 `%.250s'"
+
+#: dpkg-split/info.c:131
+#, c-format
+msgid "file `%.250s' is corrupt - no slash between part numbers"
+msgstr ""
+"файл `%.250s' повреждён -- отсутствует косая черта между номерами частей"
+
+#: dpkg-split/info.c:140
+#, c-format
+msgid "file `%.250s' is corrupt - bad part number"
+msgstr "файл `%.250s' повреждён -- неверный номер части"
+
+#: dpkg-split/info.c:145
+#, c-format
+msgid "file `%.250s' is corrupt - bad magic at end of second header"
+msgstr ""
+"файл `%.250s' повреждён -- недопустимый идентификатор типа в конце второго "
+"заголовка"
+
+#: dpkg-split/info.c:147
+#, c-format
+msgid "file `%.250s' is corrupt - second member is not data member"
+msgstr ""
+"файл `%.250s' повреждён -- второй компонент не является компонентом данных"
+
+#: dpkg-split/info.c:153
+#, c-format
+msgid "file `%.250s' is corrupt - wrong number of parts for quoted sizes"
+msgstr ""
+"файл `%.250s' повреждён -- неверное число частей при заданном размере части"
+
+#: dpkg-split/info.c:157
+#, c-format
+msgid "file `%.250s' is corrupt - size is wrong for quoted part number"
+msgstr "файл `%.250s' повреждён -- неправильный размер указанной части"
+
+#: dpkg-split/info.c:163
+#, c-format
+msgid "unable to fstat part file `%.250s'"
+msgstr "не удалось получить информацию о части архива `%.250s'"
+
+#: dpkg-split/info.c:169
+#, c-format
+msgid "file `%.250s' is corrupt - too short"
+msgstr "файл `%.250s' повреждён -- слишком короткий"
+
+#: dpkg-split/info.c:181 dpkg-split/info.c:222
+#, c-format
+msgid "cannot open archive part file `%.250s'"
+msgstr "не удалось открыть часть архива `%.250s'"
+
+#: dpkg-split/info.c:183
+#, c-format
+msgid "file `%.250s' is not an archive part"
+msgstr "файл `%.250s' не является частью архива"
+
+#: dpkg-split/info.c:188
+#, c-format
+msgid ""
+"%s:\n"
+"    Part format version:            %s\n"
+"    Part of package:                %s\n"
+"        ... version:                %s\n"
+"        ... MD5 checksum:           %s\n"
+"        ... length:                 %lu bytes\n"
+"        ... split every:            %lu bytes\n"
+"    Part number:                    %d/%d\n"
+"    Part length:                    %zi bytes\n"
+"    Part offset:                    %lu bytes\n"
+"    Part file size (used portion):  %lu bytes\n"
+"\n"
+msgstr ""
+"%s:\n"
+"    Версия формата части:           %s\n"
+"    Часть пакета:                   %s\n"
+"        ... версия:                 %s\n"
+"        ... сумма MD5:              %s\n"
+"        ... длина:                  %lu байт\n"
+"        ... разбивать каждые:       %lu байт\n"
+"    Номер части:                    %d/%d\n"
+"    Размер части:                   %zi байт\n"
+"    Смещение части:                 %lu байт\n"
+"    Размер файла части\n"
+"      (использовано)                %lu байт\n"
+"\n"
+
+#: dpkg-split/info.c:218
+msgid "--info requires one or more part file arguments"
+msgstr ""
+"действие --info принимает в качестве аргумента одно имя части архива или "
+"несколько"
+
+#: dpkg-split/info.c:228
+#, c-format
+msgid "file `%s' is not an archive part\n"
+msgstr "файл `%s' не является частью архива\n"
+
+#: dpkg-split/join.c:48
+#, c-format
+msgid "unable to open output file `%.250s'"
+msgstr "не удалось открыть результирующий файл `%.250s'"
+
+#: dpkg-split/join.c:52
+#, c-format
+msgid "unable to (re)open input part file `%.250s'"
+msgstr "не удалось открыть исходную часть архива `%.250s'"
+
+#: dpkg-split/join.c:68
+#, c-format
+msgid "done\n"
+msgstr "готово\n"
+
+#: dpkg-split/join.c:84
+#, c-format
+msgid "files `%.250s' and `%.250s' are not parts of the same file"
+msgstr "файлы `%.250s' и `%.250s' не являются частями одного и того же файла"
+
+#: dpkg-split/join.c:89
+#, c-format
+msgid "there are several versions of part %d - at least `%.250s' and `%.250s'"
+msgstr ""
+"присутствует несколько версий части %d -- по крайней мере, `%.250s' и `"
+"%.250s'"
+
+#: dpkg-split/join.c:102
+msgid "--join requires one or more part file arguments"
+msgstr ""
+"действие --join принимает в качестве аргумента одно имя части архива или "
+"несколько"
+
+#: dpkg-split/join.c:124
+#, c-format
+msgid "part %d is missing"
+msgstr "отсутствует часть %d"
+
+#: dpkg-split/main.c:40
+#, c-format
+msgid "Debian `%s' package split/join tool; version %s.\n"
+msgstr "Программа разбиения/объединения пакетов Debian `%s', версия %s.\n"
+
+#: dpkg-split/main.c:42
+#, c-format
+msgid "Copyright (C) 1994-1996 Ian Jackson.\n"
+msgstr "Copyright (C) 1994-1996 Ian Jackson.\n"
+
+#: dpkg-split/main.c:57
+#, c-format
+msgid ""
+"Commands:\n"
+"  -s|--split <file> [<prefix>]     Split an archive.\n"
+"  -j|--join <part> <part> ...      Join parts together.\n"
+"  -I|--info <part> ...             Display info about a part.\n"
+"  -a|--auto -o <complete> <part>   Auto-accumulate parts.\n"
+"  -l|--listq                       List unmatched pieces.\n"
+"  -d|--discard [<filename> ...]    Discard unmatched pieces.\n"
+"\n"
+msgstr ""
+"Команды:\n"
+"  -s|--split <файл> [<префикс>]       разбить архив на части.\n"
+"  -j|--join <часть> <часть> ...       объединить части.\n"
+"  -I|--info <часть> ...               вывести информацию о части.\n"
+"  -a|--auto -o <целое> <часть>        автоматически собрать части.\n"
+"  -l|--listq                          показать несовпавшие части.\n"
+"  -d|--discard [<файл> ...]           отбросить несовпавшие части.\n"
+"\n"
+
+#: dpkg-split/main.c:73
+#, c-format
+msgid ""
+"Options:\n"
+"  --depotdir <directory>           Use <directory> instead of %s/%s.\n"
+"  -S|--partsize <size>             In KiB, for -s (default is 450).\n"
+"  -o|--output <file>               For -j (default is <package>-<version>."
+"deb).\n"
+"  -Q|--npquiet                     Be quiet when -a is not a part.\n"
+"  --msdos                          Generate 8.3 filenames.\n"
+"\n"
+"Exit status: 0 = OK;  1 = -a is not a part;  2 = trouble!\n"
+msgstr ""
+"Параметры:\n"
+"  --depotdir <каталог>                использовать <каталог> вместо %s/%s.\n"
+"  -S|--partsize <размер>              в Кб, используется командой -s\n"
+"                                      (по умолчанию 450).\n"
+"  -o|--output <файл>                  используется командой -j,\n"
+"                                      (по умолчанию <пакет>-<версия>.deb).\n"
+"  -Q|--npquiet                        не предупреждать, если в -a указан\n"
+"                                      файл, не являющийся частью.\n"
+"  --msdos                             генерировать имена вида 8.3.\n"
+"\n"
+"Коды завершения: 0 = OK;  1 = -a не является частью;  2 = проблема!\n"
+
+#: dpkg-split/main.c:85
+msgid "Type dpkg-split --help for help."
+msgstr "Чтобы получить справку, введите dpkg-split --help."
+
+#: dpkg-split/main.c:95 dpkg-split/main.c:99
+#, c-format
+msgid "error reading %.250s"
+msgstr "ошибка чтения %.250s"
+
+#: dpkg-split/main.c:100
+#, c-format
+msgid "unexpected end of file in %.250s"
+msgstr "неожиданный конец файла %.250s"
+
+#: dpkg-split/main.c:111
+msgid "part size is far too large or is not positive"
+msgstr "размер части слишком велик или не положителен"
+
+#: dpkg-split/main.c:115
+#, c-format
+msgid "part size must be at least %dk (to allow for header)"
+msgstr "размер части должен быть, по крайней мере, %dКб (размер заголовка)"
+
+#: dpkg-split/queue.c:69
+#, c-format
+msgid "unable to read depot directory `%.250s'"
+msgstr "ошибка чтения рабочего каталога `%.250s'"
+
+#: dpkg-split/queue.c:107
+msgid "--auto requires the use of the --output option"
+msgstr "параметр --auto требует наличия параметра --output"
+
+#: dpkg-split/queue.c:109
+msgid "--auto requires exactly one part file argument"
+msgstr "параметр --auto принимает в точности один аргумента (имя части файла)"
+
+#: dpkg-split/queue.c:113
+#, c-format
+msgid "unable to read part file `%.250s'"
+msgstr "не удалось прочитать часть архива %.250s"
+
+#: dpkg-split/queue.c:116
+#, c-format
+msgid "File `%.250s' is not part of a multipart archive.\n"
+msgstr "Файл %.250s не является частью архива.\n"
+
+#: dpkg-split/queue.c:144
+#, c-format
+msgid "unable to reopen part file `%.250s'"
+msgstr "не удалось заново открыть часть архива %.250s"
+
+#: dpkg-split/queue.c:148
+#, c-format
+msgid "part file `%.250s' has trailing garbage"
+msgstr "лишние символы в конце части архива %.250s"
+
+#: dpkg-split/queue.c:157
+#, c-format
+msgid "unable to open new depot file `%.250s'"
+msgstr "не удалось открыть новый рабочий файл %.250s"
+
+#: dpkg-split/queue.c:161
+#, c-format
+msgid "unable to rename new depot file `%.250s' to `%.250s'"
+msgstr "не удалось переименовать новый рабочий файл %.250s в %.250s"
+
+#: dpkg-split/queue.c:163
+#, c-format
+msgid "Part %d of package %s filed (still want "
+msgstr "Часть %d пакета %s сохранена в файл (осталось создать "
+
+#: dpkg-split/queue.c:167
+msgid " and "
+msgstr " и "
+
+#: dpkg-split/queue.c:180
+#, c-format
+msgid "unable to delete used-up depot file `%.250s'"
+msgstr "не удалось удалить уже не нужный рабочий файл %.250s"
+
+#: dpkg-split/queue.c:195
+msgid "--listq does not take any arguments"
+msgstr "параметр --listq не принимает аргументов"
+
+#: dpkg-split/queue.c:198
+msgid "Junk files left around in the depot directory:\n"
+msgstr "В рабочем каталоге остались посторонние файлы:\n"
+
+#: dpkg-split/queue.c:203 dpkg-split/queue.c:227
+#, c-format
+msgid "unable to stat `%.250s'"
+msgstr "не удалось получить информацию о файле %.250s"
+
+#: dpkg-split/queue.c:206
+#, c-format
+msgid " %s (%lu bytes)\n"
+msgstr " %s (%lu байт(а))\n"
+
+#: dpkg-split/queue.c:208
+#, c-format
+msgid " %s (not a plain file)\n"
+msgstr " %s (не является обычным файлом)\n"
+
+#: dpkg-split/queue.c:213
+msgid "Packages not yet reassembled:\n"
+msgstr "Ещё не пересобранные пакеты:\n"
+
+#: dpkg-split/queue.c:229
+#, c-format
+msgid "part file `%.250s' is not a plain file"
+msgstr "часть архива %.250s не является обычным файлом"
+
+#: dpkg-split/queue.c:234
+#, c-format
+msgid "(total %lu bytes)\n"
+msgstr "(всего %lu байт(а))\n"
+
+#: dpkg-split/queue.c:257
+#, c-format
+msgid "unable to discard `%.250s'"
+msgstr "не удалось удалить файл %.250s"
+
+#: dpkg-split/queue.c:258
+#, c-format
+msgid "Deleted %s.\n"
+msgstr "%s удалён.\n"
+
+#: dpkg-split/split.c:45
+msgid "--split needs a source filename argument"
+msgstr "действие --split требует указания имени исходного файла"
+
+#: dpkg-split/split.c:48
+msgid "--split takes at most a source filename and destination prefix"
+msgstr ""
+"действие --split не принимает аргументов, помимо имени исходного файла и "
+"префикса места назначения"
+
+#: dpkg-split/split.c:62
+#, c-format
+msgid "unable to open source file `%.250s'"
+msgstr "не удалось открыть исходный файл %.250s"
+
+#: dpkg-split/split.c:63
+msgid "unable to fstat source file"
+msgstr "не удалось получить информацию об исходном файле"
+
+#: dpkg-split/split.c:64
+#, c-format
+msgid "source file `%.250s' not a plain file"
+msgstr "исходный файл %.250s не является обычным файлом"
+
+#: dpkg-split/split.c:70
+msgid "unable to exec mksplit"
+msgstr "не удалось запустить mksplit"
+
+#: scripts/cleanup-info.pl:35 scripts/dpkg-divert.pl:17
+#: scripts/dpkg-statoverride.pl:27 scripts/install-info.pl:17
+#: scripts/update-alternatives.pl:61
+#, perl-format
+msgid "Debian %s version %s.\n"
+msgstr "Debian %s, версия %s.\n"
+
+#: scripts/cleanup-info.pl:37
+msgid ""
+"\n"
+"Copyright (C) 1996 Kim-Minh Kaplan."
+msgstr ""
+"\n"
+"Copyright (C) 1996 Kim-Minh Kaplan."
+
+#: scripts/cleanup-info.pl:40 scripts/dpkg-divert.pl:23
+#: scripts/dpkg-statoverride.pl:32 scripts/install-info.pl:22
+#: scripts/update-alternatives.pl:67
+msgid ""
+"\n"
+"This is free software; see the GNU General Public Licence version 2 or\n"
+"later for copying conditions. There is NO warranty.\n"
+msgstr ""
+"\n"
+"Это свободное программное обеспечение. См. условия распространения в\n"
+"Универсальной общественной лицензии GNU версии 2 или более поздней.\n"
+"НИКАКИЕ гарантии не предоставляются.\n"
+
+#: scripts/cleanup-info.pl:48
+#, perl-format
+msgid ""
+"Usage: %s [<option> ...] [--] [<dirname>]\n"
+"\n"
+"Options:\n"
+"  --unsafe     set some additional possibly useful options.\n"
+"               warning: this option may garble an otherwise correct file.\n"
+"  --help       show this help message.\n"
+"  --version    show the version.\n"
+msgstr ""
+"Использование: %s [<параметр> ...] [--] [<каталог>]\n"
+"\n"
+"Параметры:\n"
+"  --unsafe     установить некоторые дополнительные возможно нужные "
+"параметры.\n"
+"               внимание: из-за этого параметра может быть испорчен\n"
+"               корректный файл.\n"
+"  --help       вывести это сообщение.\n"
+"  --version    вывести номер версии.\n"
+
+#: scripts/cleanup-info.pl:65 scripts/install-info.pl:508
+#, perl-format
+msgid "%s: warning - unable to unlock %s: %s"
+msgstr "%s: предупреждение -- не удалось разблокировать %s: %s"
+
+#: scripts/cleanup-info.pl:85 scripts/install-info.pl:119
+#, perl-format
+msgid "%s: unknown option `%s'"
+msgstr "%s: неизвестный параметр `%s'"
+
+#: scripts/cleanup-info.pl:93 scripts/install-info.pl:130
+#, perl-format
+msgid "%s: too many arguments"
+msgstr "%s: слишком много аргументов"
+
+#: scripts/cleanup-info.pl:100 scripts/install-info.pl:305
+#, perl-format
+msgid "%s: failed to lock dir for editing! %s"
+msgstr "%s: не удалось заблокировать каталог для редактирования! %s"
+
+#: scripts/cleanup-info.pl:102
+#, perl-format
+msgid "try deleting %s"
+msgstr "попытка удалить %s"
+
+#: scripts/cleanup-info.pl:106 scripts/install-info.pl:312
+#: scripts/update-alternatives.pl:163
+#, perl-format
+msgid "unable to open %s: %s"
+msgstr "не удалось открыть %s: %s"
+
+#: scripts/cleanup-info.pl:108 scripts/install-info.pl:482
+#, perl-format
+msgid "unable to create %s: %s"
+msgstr "не удалось создать %s: %s"
+
+#: scripts/cleanup-info.pl:119 scripts/install-info.pl:485
+#, perl-format
+msgid "unable to write %s: %s"
+msgstr "не удалось записать в %s: %s"
+
+#: scripts/cleanup-info.pl:159 scripts/install-info.pl:165
+#: scripts/install-info.pl:207 scripts/install-info.pl:314
+#, perl-format
+msgid "unable to read %s: %s"
+msgstr "не удалось прочитать %s: %s"
+
+#: scripts/cleanup-info.pl:160 scripts/install-info.pl:315
+#, perl-format
+msgid "unable to close %s after read: %s"
+msgstr "не удалось закрыть %s после чтения: %s"
+
+#: scripts/cleanup-info.pl:164 scripts/install-info.pl:486
+#: scripts/update-alternatives.pl:586
+#, perl-format
+msgid "unable to close %s: %s"
+msgstr "не удалось закрыть %s: %s"
+
+#: scripts/cleanup-info.pl:170 scripts/install-info.pl:490
+#, perl-format
+msgid "unable to backup old %s, giving up: %s"
+msgstr "не удалось создать резервную копию %s: %s"
+
+#: scripts/cleanup-info.pl:173
+#, perl-format
+msgid "failed to install %s; it will be left as %s: %s"
+msgstr "не удалось установить %s; будет оставлен %s: %s"
+
+#: scripts/cleanup-info.pl:177
+#, perl-format
+msgid "%s: unable to unlock %s: %s"
+msgstr "%s: не удалось разблокировать %s: %s"
+
+#: scripts/dpkg-divert.pl:19
+msgid ""
+"\n"
+"Copyright (C) 1995 Ian Jackson.\n"
+"Copyright (C) 2000,2001 Wichert Akkerman."
+msgstr ""
+"\n"
+"Copyright (C) 1995 Ian Jackson.\n"
+"Copyright (C) 2000,2001 Wichert Akkerman."
+
+#: scripts/dpkg-divert.pl:31
+#, perl-format
+msgid ""
+"Usage: %s [<option> ...] <command>\n"
+"\n"
+"Commands:\n"
+"  [--add] <file>           add a diversion.\n"
+"  --remove <file>          remove the diversion.\n"
+"  --list [<glob-pattern>]  show file diversions.\n"
+"  --truename <file>        return the diverted file.\n"
+"\n"
+"Options:\n"
+"  --package <package>      name of the package whose copy of <file> will "
+"not\n"
+"                             be diverted.\n"
+"  --local                  all packages' versions are diverted.\n"
+"  --divert <divert-to>     the name used by other packages' versions.\n"
+"  --rename                 actually move the file aside (or back).\n"
+"  --admindir <directory>   set the directory with the diversions file.\n"
+"  --test                   don't do anything, just demonstrate.\n"
+"  --quiet                  quiet operation, minimal output.\n"
+"  --help                   show this help message.\n"
+"  --version                show the version.\n"
+"\n"
+"When adding, default is --local and --divert <original>.distrib.\n"
+"When removing, --package or --local and --divert must match if specified.\n"
+"Package preinst/postrm scripts should always specify --package and --"
+"divert.\n"
+msgstr ""
+"Использование: %s [<параметр> ...] <команда>\n"
+"\n"
+"Команды:\n"
+"  [--add] <файл>           добавить отклонение.\n"
+"  --remove <файл>          удалить отклонение.\n"
+"  --list [<glob-шаблон>]   показать отклонённые файлы.\n"
+"  --truename <файл>        вернуть отклонённый файл.\n"
+"\n"
+"Параметры:\n"
+"  --package <пакет>        имя пакета, чья копия <файла> не будет "
+"отклонена.\n"
+"  --local                  все версии пакетов подвергаются отклонению.\n"
+"  --divert <divert-to>     имя, используемое другими версиями пакетов.\n"
+"  --rename                 фактически, переместить файл в сторону (или "
+"назад).\n"
+"  --admindir <каталог>     указать каталог с файлом diversions.\n"
+"  --test                   показать, что будет сделано ничего не меняя.\n"
+"  --quiet                  минимальный вывод на экран при работе.\n"
+"  --help                   вывести это сообщение.\n"
+"  --version                вывести номер версии.\n"
+"\n"
+"При добавлении, значения по умолчанию --local и --divert <original>."
+"distrib.\n"
+"При удалении, если заданы --package или --local, то они должны совпадать с --"
+"divert.\n"
+"В сценариях preinst/postrm пакетов всегда нужно указывать --package и --"
+"divert.\n"
+
+#: scripts/dpkg-divert.pl:76 scripts/dpkg-statoverride.pl:60
+#: scripts/update-alternatives.pl:281
+#, perl-format
+msgid "two commands specified: %s and --%s"
+msgstr "указаны две команды: %s и --%s"
+
+#: scripts/dpkg-divert.pl:109
+#, perl-format
+msgid "--%s needs a divert-to argument"
+msgstr "для --%s требуется аргумент divert-to"
+
+#: scripts/dpkg-divert.pl:111
+msgid "divert-to may not contain newlines"
+msgstr "divert-to не может содержать символов новой строки"
+
+#: scripts/dpkg-divert.pl:113
+#, perl-format
+msgid "--%s needs a <package> argument"
+msgstr "для --%s требуется аргумент <пакет>"
+
+#: scripts/dpkg-divert.pl:115
+msgid "package may not contain newlines"
+msgstr "пакет не может содержать символов новой строки"
+
+#: scripts/dpkg-divert.pl:117 scripts/dpkg-statoverride.pl:79
+#: scripts/update-alternatives.pl:334 scripts/update-alternatives.pl:337
+#, perl-format
+msgid "--%s needs a <directory> argument"
+msgstr "--%s требуется аргумент <каталог>"
+
+#: scripts/dpkg-divert.pl:120 scripts/dpkg-statoverride.pl:91
+#: scripts/update-alternatives.pl:342
+#, perl-format
+msgid "unknown option `%s'"
+msgstr "неизвестный параметр `%s'"
+
+#: scripts/dpkg-divert.pl:126
+#, perl-format
+msgid "cannot open diversions: %s"
+msgstr "не удалось открыть файл diversions: %s"
+
+#: scripts/dpkg-divert.pl:129
+msgid "missing altname"
+msgstr "отсутствует altname"
+
+#: scripts/dpkg-divert.pl:131
+msgid "missing package"
+msgstr "отсутствует пакет"
+
+#: scripts/dpkg-divert.pl:137 scripts/dpkg-divert.pl:165
+#: scripts/dpkg-divert.pl:208 scripts/dpkg-statoverride.pl:154
+#, perl-format
+msgid "--%s needs a single argument"
+msgstr "--%s нужен один аргумент"
+
+#: scripts/dpkg-divert.pl:139 scripts/dpkg-divert.pl:143
+#, perl-format
+msgid "filename \"%s\" is not absolute"
+msgstr "имя файла \"%s\" указано не с полным путём"
+
+#: scripts/dpkg-divert.pl:140 scripts/dpkg-statoverride.pl:128
+msgid "file may not contain newlines"
+msgstr "файл не может содержать символов новой строки"
+
+#: scripts/dpkg-divert.pl:141
+msgid "Cannot divert directories"
+msgstr "Нельзя отклонять каталоги"
+
+#: scripts/dpkg-divert.pl:150
+#, perl-format
+msgid "Leaving `%s'"
+msgstr "Оставляется `%s'"
+
+#: scripts/dpkg-divert.pl:153
+#, perl-format
+msgid "`%s' clashes with `%s'"
+msgstr "`%s' расходится с `%s'"
+
+#: scripts/dpkg-divert.pl:159
+#, perl-format
+msgid "Adding `%s'"
+msgstr "Добавляется `%s'"
+
+#: scripts/dpkg-divert.pl:169
+#, perl-format
+msgid ""
+"mismatch on divert-to\n"
+"  when removing `%s'\n"
+"  found `%s'"
+msgstr ""
+"несовпадение с divert-to\n"
+"  при удалении `%s'\n"
+"  найдено `%s'"
+
+#: scripts/dpkg-divert.pl:171
+#, perl-format
+msgid ""
+"mismatch on package\n"
+"  when removing `%s'\n"
+"  found `%s'"
+msgstr ""
+"несовпадение с пакетом\n"
+"  при удалении `%s'\n"
+"  найдено `%s'"
+
+#: scripts/dpkg-divert.pl:173
+#, perl-format
+msgid "Removing `%s'"
+msgstr "Удаляется `%s'"
+
+#: scripts/dpkg-divert.pl:188
+#, perl-format
+msgid "No diversion `%s', none removed"
+msgstr "Нет отклонения `%s', ничего не удалено"
+
+#: scripts/dpkg-divert.pl:218
+#, perl-format
+msgid "internal error - bad mode `%s'"
+msgstr "внутренняя ошибка -- неправильный режим `%s'"
+
+#: scripts/dpkg-divert.pl:232
+#, perl-format
+msgid "cannot stat old name `%s': %s"
+msgstr "не удалось выполнить stat старого имени `%s': %s"
+
+#: scripts/dpkg-divert.pl:234
+#, perl-format
+msgid "cannot stat new name `%s': %s"
+msgstr "не удалось выполнить stat нового имени `%s': %s"
+
+#: scripts/dpkg-divert.pl:251 scripts/dpkg-divert.pl:258
+#, perl-format
+msgid "error checking `%s': %s"
+msgstr "ошибка при проверке `%s': %s"
+
+#: scripts/dpkg-divert.pl:262
+#, perl-format
+msgid ""
+"rename involves overwriting `%s' with\n"
+"  different file `%s', not allowed"
+msgstr ""
+"переименование вызовет перезапись `%s'\n"
+"  другим файлом `%s', что не разрешено"
+
+#: scripts/dpkg-divert.pl:272
+#, perl-format
+msgid "rename: remove duplicate old link `%s': %s"
+msgstr "rename: удаление дублирующей старой ссылки `%s': %s"
+
+#: scripts/dpkg-divert.pl:274
+#, perl-format
+msgid "rename: rename `%s' to `%s': %s"
+msgstr "rename: переименование `%s' в `%s': %s"
+
+#: scripts/dpkg-divert.pl:281
+#, perl-format
+msgid "create diversions-new: %s"
+msgstr "создание diversions-new: %s"
+
+#: scripts/dpkg-divert.pl:285
+#, perl-format
+msgid "write diversions-new: %s"
+msgstr "запись diversions-new: %s"
+
+#: scripts/dpkg-divert.pl:287
+#, perl-format
+msgid "close diversions-new: %s"
+msgstr "закрытие diversions-new: %s"
+
+#: scripts/dpkg-divert.pl:289
+#, perl-format
+msgid "remove old diversions-old: %s"
+msgstr "удаление старого diversions-old: %s"
+
+#: scripts/dpkg-divert.pl:291
+#, perl-format
+msgid "create new diversions-old: %s"
+msgstr "создание нового diversions-old: %s"
+
+#: scripts/dpkg-divert.pl:293
+#, perl-format
+msgid "install new diversions: %s"
+msgstr "установка нового файла diversions: %s"
+
+#: scripts/dpkg-divert.pl:316 scripts/update-alternatives.pl:700
+#, perl-format
+msgid "internal error: %s corrupt: %s"
+msgstr "внутренняя ошибка: %s повреждён: %s"
+
+#: scripts/dpkg-statoverride.pl:29
+msgid ""
+"\n"
+"Copyright (C) 2000 Wichert Akkerman."
+msgstr ""
+"\n"
+"Copyright (C) 2000 Wichert Akkerman."
+
+#: scripts/dpkg-statoverride.pl:40
+#, perl-format
+msgid ""
+"Usage: %s [<option> ...] <command>\n"
+"\n"
+"Commands:\n"
+"  --add <owner> <group> <mode> <file>\n"
+"                           add a new entry into the database.\n"
+"  --remove <file>          remove file from the database.\n"
+"  --list [<glob-pattern>]  list current overrides in the database.\n"
+"\n"
+"Options:\n"
+"  --admindir <directory>   set the directory with the statoverride file.\n"
+"  --update                 immediately update file permissions.\n"
+"  --force                  force an action even if a sanity check fails.\n"
+"  --quiet                  quiet operation, minimal output.\n"
+"  --help                   show this help message.\n"
+"  --version                show the version.\n"
+msgstr ""
+"Использование: %s [<параметр> ...] <команда>\n"
+"\n"
+"Команды:\n"
+"  --add <владелец> <группа> <режим> <файл>\n"
+"                           добавить новую запись в базу данных.\n"
+"  --remove <файл>          удалить файл из базы данных.\n"
+"  --list [<glob-шаблон>]   список имеющихся замещений в базе данных.\n"
+"\n"
+"Параметры:\n"
+"  --admindir <каталог>     указать каталог с файлом statoverride.\n"
+"  --update                 немедленно обновить права на файл.\n"
+"  --force                  выполнить действие даже если общий контроль\n"
+"                           не прошёл.\n"
+"  --quiet                  минимальный вывод на экран при работе.\n"
+"  --help                   вывести это сообщение.\n"
+"  --version                вывести номер версии.\n"
+
+#: scripts/dpkg-statoverride.pl:98
+msgid "no mode specified"
+msgstr "не указан режим"
+
+#: scripts/dpkg-statoverride.pl:102
+msgid "--add needs four arguments"
+msgstr "для --add требуется четыре параметра"
+
+#: scripts/dpkg-statoverride.pl:110
+#, perl-format
+msgid "illegal user %s"
+msgstr "недопустимый пользователь %s"
+
+#: scripts/dpkg-statoverride.pl:113
+#, perl-format
+msgid "non-existing user %s"
+msgstr "несуществующий пользователь %s"
+
+#: scripts/dpkg-statoverride.pl:119
+#, perl-format
+msgid "illegal group %s"
+msgstr "недопустимая группа %s"
+
+#: scripts/dpkg-statoverride.pl:122
+#, perl-format
+msgid "non-existing group %s"
+msgstr "несуществующая группа %s"
+
+#: scripts/dpkg-statoverride.pl:126
+#, perl-format
+msgid "illegal mode %s"
+msgstr "недопустимый режим %s"
+
+#: scripts/dpkg-statoverride.pl:129 scripts/dpkg-statoverride.pl:156
+#: scripts/dpkg-statoverride.pl:175
+msgid "stripping trailing /"
+msgstr "удаляются конечные /"
+
+#: scripts/dpkg-statoverride.pl:132
+#, perl-format
+msgid "An override for \"%s\" already exists, "
+msgstr "Замещение для \"%s\" уже существует, "
+
+#: scripts/dpkg-statoverride.pl:134
+msgid "but --force specified so will be ignored."
+msgstr "но указан параметр --force, поэтому ошибка игнорируется."
+
+#: scripts/dpkg-statoverride.pl:136
+msgid "aborting"
+msgstr "аварийное прекращение"
+
+#: scripts/dpkg-statoverride.pl:147
+#, perl-format
+msgid "warning: --update given but %s does not exist"
+msgstr "предупреждение: указан --update, но %s не существует"
+
+#: scripts/dpkg-statoverride.pl:149
+#, perl-format
+msgid "failed to chown %s: %s"
+msgstr "не удалось выполнить chown %s: %s"
+
+#: scripts/dpkg-statoverride.pl:150
+#, perl-format
+msgid "failed to chmod %s: %s"
+msgstr "не удалось выполнить chmod %s: %s"
+
+#: scripts/dpkg-statoverride.pl:158
+msgid "No override present."
+msgstr "Нет замещений."
+
+#: scripts/dpkg-statoverride.pl:166
+msgid "warning: --update is useless for --remove"
+msgstr "предупреждение: --update бесполезен вместе с --remove"
+
+#: scripts/dpkg-statoverride.pl:193
+#, perl-format
+msgid "cannot open statoverride: %s"
+msgstr "не удалось открыть statoverride: %s"
+
+#: scripts/dpkg-statoverride.pl:199
+#, perl-format
+msgid "Multiple overrides for \"%s\", aborting"
+msgstr "Несколько замещений для \"%s\", аварийное завершение"
+
+#: scripts/dpkg-statoverride.pl:212
+#, perl-format
+msgid "cannot open new statoverride file: %s"
+msgstr "не удалось открыть новый файл statoverride: %s"
+
+#: scripts/dpkg-statoverride.pl:219
+#, perl-format
+msgid "error removing statoverride-old: %s"
+msgstr "ошибка при удалении statoverride-old: %s"
+
+#: scripts/dpkg-statoverride.pl:221
+#, perl-format
+msgid "error creating new statoverride-old: %s"
+msgstr "ошибка при создании нового statoverride-old: %s"
+
+#: scripts/dpkg-statoverride.pl:223
+#, perl-format
+msgid "error installing new statoverride: %s"
+msgstr "ошибка при установке нового statoverride: %s"
+
+#: scripts/install-info.pl:19
+msgid ""
+"\n"
+"Copyright (C) 1994,1995 Ian Jackson."
+msgstr ""
+"\n"
+"Copyright (C) 1994,1995 Ian Jackson."
+
+#: scripts/install-info.pl:31
+#, perl-format
+msgid ""
+"Usage: %s [<options> ...] [--] <filename>\n"
+"\n"
+"Options:\n"
+"  --section <regexp> <title>\n"
+"                           put the new entry in the <regex> matched section\n"
+"                           or create a new one with <title> if non-"
+"existent.\n"
+"  --menuentry=<text>       set the menu entry.\n"
+"  --description=<text>     set the description to be used in the menu "
+"entry.\n"
+"  --info-file=<path>       specify info file to install in the directory.\n"
+"  --dir-file=<path>        specify file name of info directory file.\n"
+"  --infodir=<directory>    same as '--dir-file=<directory>/dir'.\n"
+"  --info-dir=<directory>   likewise.\n"
+"  --keep-old               do not replace entries nor remove empty ones.\n"
+"  --remove                 remove the entry specified by <filename> "
+"basename.\n"
+"  --remove-exactly         remove the exact <filename> entry.\n"
+"  --test                   enables test mode (no actions taken).\n"
+"  --debug                  enables debug mode (show more information).\n"
+"  --quiet                  do not show output messages.\n"
+"  --help                   show this help message.\n"
+"  --version                show the version.\n"
+msgstr ""
+"Использование: %s [<параметры> ...] [--] <имя файла>\n"
+"\n"
+"Параметры:\n"
+"  --section <шаблон> <заголовок>\n"
+"                           поместить новую запись в раздел совпадающий\n"
+"                            с <шаблоном> или создать новый под "
+"<заголовком>,\n"
+"                           если ничего не совпало.\n"
+"  --menuentry=<текст>      указать пункт меню.\n"
+"  --description=<текст>    указать описание для пункта меню.\n"
+"  --info-file=<путь>       задать устанавливаемый в каталог файл info.\n"
+"  --dir-file=<путь>        задать имя каталога info.\n"
+"  --infodir=<каталог>      тоже что и '--dir-file=<каталог>/dir'.\n"
+"  --info-dir=<каталог>     тоже самое.\n"
+"  --keep-old               не замещать записи и не удалять пустые.\n"
+"  --remove                 удалить запись, заданную <именем файла> без "
+"пути.\n"
+"  --remove-exactly         удалить только запись с <именем файла>.\n"
+"  --test                   включить тестовый режим (изменения сделаны не "
+"будут).\n"
+"  --debug                  включить режим отладки (выводится больше "
+"информации).\n"
+"  --quiet                  минимальный вывод на экран при работе.\n"
+"  --help                   вывести это сообщение.\n"
+"  --version                вывести номер версии.\n"
+
+#: scripts/install-info.pl:97
+#, perl-format
+msgid "could not open stderr for output! %s"
+msgstr "не удалось открыть stderr для записи! %s"
+
+#: scripts/install-info.pl:101
+#, perl-format
+msgid "%s: --section needs two more args"
+msgstr "%s: для --section требуется два аргумента"
+
+#: scripts/install-info.pl:107
+#, perl-format
+msgid "%s: option --%s is deprecated (ignored)"
+msgstr "%s: параметр --%s устарел (игнорируется)"
+
+#: scripts/install-info.pl:133
+#, perl-format
+msgid "%s: --section ignored with --remove"
+msgstr "%s: --section игнорируется из-за --remove"
+
+#: scripts/install-info.pl:134
+#, perl-format
+msgid "%s: --description ignored with --remove"
+msgstr "%s: --description игнорируется из-за --remove"
+
+#: scripts/install-info.pl:137
+#, perl-format
+msgid "%s: test mode - dir file will not be updated"
+msgstr "%s: тестовый режим -- файл dir не будет изменён"
+
+#: scripts/install-info.pl:191
+#, perl-format
+msgid "%s: warning, ignoring confusing INFO-DIR-ENTRY in file."
+msgstr "%s: предупреждение: игнорируется непонятная INFO-DIR-ENTRY в файле."
+
+#: scripts/install-info.pl:200
+msgid "invalid info entry"
+msgstr "неправильная запись info"
+
+#: scripts/install-info.pl:226
+#, perl-format
+msgid ""
+"\n"
+"No `START-INFO-DIR-ENTRY' and no `This file documents'.\n"
+"%s: unable to determine description for `dir' entry - giving up\n"
+msgstr ""
+"\n"
+"Нет `START-INFO-DIR-ENTRY' и нет `This file documents'.\n"
+"%s: не удалось определить описание для записи `dir' -- прекращение попыток\n"
+
+#: scripts/install-info.pl:279
+#, perl-format
+msgid "%s: no file %s, retrieving backup file %s."
+msgstr "%s: файл %s не найден, получение резервной копии файла %s."
+
+#: scripts/install-info.pl:282 scripts/install-info.pl:292
+#, perl-format
+msgid "%s: copying %s to %s failed, giving up: %s"
+msgstr "%s: копирование %s в %s завершилось неудачно, прекращение попыток: %s"
+
+#: scripts/install-info.pl:288
+#, perl-format
+msgid "%s: no backup file %s available, retrieving default file."
+msgstr ""
+"%s: файл %s с резервной копией недоступен, получение файла по умолчанию."
+
+#: scripts/install-info.pl:297
+#, perl-format
+msgid "%s: no backup file %s available."
+msgstr "%s: файл %s с резервной копией недоступен."
+
+#: scripts/install-info.pl:298
+#, perl-format
+msgid "%s: no default file %s available, giving up."
+msgstr "%s: файл по умолчанию %s недоступен, прекращение попыток."
+
+#: scripts/install-info.pl:307
+#, perl-format
+msgid "try deleting %s?"
+msgstr "попытаться удалить %s?"
+
+#: scripts/install-info.pl:348
+#, perl-format
+msgid "%s: existing entry for `%s' not replaced"
+msgstr "%s: существующая запись для `%s' не заменена"
+
+#: scripts/install-info.pl:351
+#, perl-format
+msgid "%s: replacing existing dir entry for `%s'"
+msgstr "%s: замена существующей записи dir для `%s'"
+
+#: scripts/install-info.pl:364
+#, perl-format
+msgid "%s: creating new section `%s'"
+msgstr "%s: создание нового раздела `%s'"
+
+#: scripts/install-info.pl:367
+#, perl-format
+msgid "%s: no sections yet, creating Miscellaneous section too."
+msgstr "%s: пока разделов нет, создание также раздела Miscellaneous."
+
+#: scripts/install-info.pl:385
+#, perl-format
+msgid "%s: no section specified for new entry, placing at end"
+msgstr "%s: раздел для новой записи не указан, помещается в конец"
+
+#: scripts/install-info.pl:422
+#, perl-format
+msgid "%s: deleting entry `%s ...'"
+msgstr "%s: удаление записи `%s ...'"
+
+#: scripts/install-info.pl:428
+#, perl-format
+msgid "%s: empty section `%s' not removed"
+msgstr "%s: пустой раздел `%s' не удалён"
+
+#: scripts/install-info.pl:431
+#, perl-format
+msgid "%s: deleting empty section `%s'"
+msgstr "%s: удаляется пустой раздел `%s'"
+
+#: scripts/install-info.pl:438
+#, perl-format
+msgid "%s: no entry for file `%s' and menu entry `%s'"
+msgstr "%s: нет записи для файла `%s' и записи меню `%s'"
+
+#: scripts/install-info.pl:440
+#, perl-format
+msgid "%s: no entry for file `%s'"
+msgstr "%s: нет записи для файла `%s'"
+
+#: scripts/install-info.pl:493
+#, perl-format
+msgid "unable to install new %s: %s"
+msgstr "не удалось установить новый %s: %s"
+
+#: scripts/install-info.pl:496
+#, perl-format
+msgid "unable to unlock %s: %s"
+msgstr "не удалось выполнить unlock %s: %s"
+
+#: scripts/install-info.pl:498
+#, perl-format
+msgid "%s: could not backup %s in %s: %s"
+msgstr "%s: не удалось создать резервную копию %s в %s: %s"
+
+#: scripts/install-info.pl:515
+#, perl-format
+msgid "unable to read %s: %d"
+msgstr "не удалось прочитать %s: %d"
+
+#: scripts/install-info.pl:519
+#, perl-format
+msgid "dbg: %s"
+msgstr "dbg: %s"
+
+#: scripts/update-alternatives.pl:63
+msgid ""
+"\n"
+"Copyright (C) 1995 Ian Jackson.\n"
+"Copyright (C) 2000-2002 Wichert Akkerman."
+msgstr ""
+"\n"
+"Copyright (C) 1995 Ian Jackson.\n"
+"Copyright (C) 2000-2002 Wichert Akkerman."
+
+#: scripts/update-alternatives.pl:75
+#, perl-format
+msgid ""
+"Usage: %s [<option> ...] <command>\n"
+"\n"
+"Commands:\n"
+"  --install <link> <name> <path> <priority>\n"
+"    [--slave <link> <name> <path>] ...\n"
+"                           add a group of alternatives to the system.\n"
+"  --remove <name> <path>   remove <path> from the <name> group alternative.\n"
+"  --remove-all <name>      remove <name> group from the alternatives "
+"system.\n"
+"  --auto <name>            switch the master link <name> to automatic mode.\n"
+"  --display <name>         display information about the <name> group.\n"
+"  --list <name>            display all targets of the <name> group.\n"
+"  --config <name>          show alternatives for the <name> group and ask "
+"the\n"
+"                           user to select which one to use.\n"
+"  --set <name> <path>      set <path> as alternative for <name>.\n"
+"  --all                    call --config on all alternatives.\n"
+"\n"
+"<link> is the symlink pointing to %s/<name>.\n"
+"  (e.g. /usr/bin/pager)\n"
+"<name> is the master name for this link group.\n"
+"  (e.g. pager)\n"
+"<path> is the location of one of the alternative target files.\n"
+"  (e.g. /usr/bin/less)\n"
+"<priority> is an integer; options with higher numbers have higher priority "
+"in\n"
+"  automatic mode.\n"
+"\n"
+"Options:\n"
+"  --altdir <directory>     change the alternatives directory.\n"
+"  --admindir <directory>   change the administrative directory.\n"
+"  --verbose                verbose operation, more output.\n"
+"  --quiet                  quiet operation, minimal output.\n"
+"  --help                   show this help message.\n"
+"  --version                show the version.\n"
+msgstr ""
+"Использование: %s [<параметр> ...] <команда>\n"
+"\n"
+"Команды:\n"
+"  --install <ссылка> <имя> <путь> <приоритет>\n"
+"    [--slave <ссылка> <имя> <путь>] ...\n"
+"                           добавить группу альтернатив в систему.\n"
+"  --remove <имя> <путь>    удалить <путь> из группы альтернатив <имя>.\n"
+"  --remove-all <имя>       удалить группу с <именем> из альтернатив в "
+"системе.\n"
+"  --auto <имя>             переключить мастер ссылку <имя> в режим авто.\n"
+"  --display <имя>          вывести информацию о группе с <именем>.\n"
+"  --list <имя>             вывести все назначения группы с <именем>.\n"
+"  --config <имя>           вывести альтернативы для группы с <именем> и\n"
+"                           спросить пользователя какую использовать.\n"
+"  --set <имя> <путь>       установить <путь> как альтернативу для <имени>.\n"
+"  --all                    вызвать --config для всех альтернатив.\n"
+"\n"
+"<ссылка> это символическая ссылка, указывающая на %s/<имя>.\n"
+"  (например /usr/bin/pager)\n"
+"<имя> это мастер имя для группы ссылок.\n"
+"  (например pager)\n"
+"<путь> это расположение одного из альтернативных файлов назначения.\n"
+"  (например /usr/bin/less)\n"
+"<приоритет> целое число; параметры с большими числами имеют больший "
+"приоритет\n"
+"  в автоматическом режиме.\n"
+"\n"
+"Параметры:\n"
+"  --altdir <каталог>       изменить каталог альтернатив.\n"
+"  --admindir <каталог>     изменить административный каталог.\n"
+"  --verbose                выводить подробности хода работы.\n"
+"  --quiet                  минимальный вывод на экран при работе.\n"
+"  --help                   вывести это сообщение.\n"
+"  --version                вывести номер версии.\n"
+
+#: scripts/update-alternatives.pl:127
+msgid "invalid update mode"
+msgstr "неправильный режим обновления"
+
+#: scripts/update-alternatives.pl:131
+#, perl-format
+msgid "duplicate slave %s"
+msgstr "повторение подчинённого %s"
+
+#: scripts/update-alternatives.pl:134
+#, perl-format
+msgid "slave link same as main link %s"
+msgstr "совпадение подчинённой ссылки с главной ссылкой %s"
+
+#: scripts/update-alternatives.pl:135
+#, perl-format
+msgid "duplicate slave link %s"
+msgstr "повторение подчинённой ссылки %s"
+
+#: scripts/update-alternatives.pl:139
+#, perl-format
+msgid "duplicate path %s"
+msgstr "повторение пути %s"
+
+#: scripts/update-alternatives.pl:145
+#, perl-format
+msgid "priority %s %s"
+msgstr "приоритет %s %s"
+
+#: scripts/update-alternatives.pl:152
+#, perl-format
+msgid ""
+"Alternative for %s points to %s - which wasn't found.  Removing from list of "
+"alternatives."
+msgstr ""
+"Альтернатива для %s указывает на %s, которая не найдена. Удаляется из списка "
+"альтернатив."
+
+#: scripts/update-alternatives.pl:192
+#, perl-format
+msgid "%s - status is %s."
+msgstr "состояние %s: %s."
+
+#: scripts/update-alternatives.pl:196
+#, perl-format
+msgid " link currently points to %s"
+msgstr " ссылка сейчас указывает на %s"
+
+#: scripts/update-alternatives.pl:198
+msgid " link currently absent"
+msgstr " ссылка сейчас отсутствует"
+
+#: scripts/update-alternatives.pl:200
+#, perl-format
+msgid " link unreadable - %s"
+msgstr " ссылка не читается - %s"
+
+#: scripts/update-alternatives.pl:204
+#, perl-format
+msgid "%s - priority %s"
+msgstr "приоритет %s: %s"
+
+#: scripts/update-alternatives.pl:208
+#, perl-format
+msgid " slave %s: %s"
+msgstr " подчинённый %s: %s"
+
+#: scripts/update-alternatives.pl:213
+msgid "No versions available."
+msgstr "Нет доступных версий."
+
+#: scripts/update-alternatives.pl:215
+#, perl-format
+msgid "Current `best' version is %s."
+msgstr "Текущая `лучшая' версия: %s."
+
+#: scripts/update-alternatives.pl:232
+#, perl-format
+msgid ""
+"warning: %s is supposed to be a symlink to %s, \n"
+"or nonexistent; however, readlink failed: %s"
+msgstr ""
+"предупреждение: предполагалось, что %s является символической ссылкой на %s\n"
+"или не существует; однако, функция readlink завершилась неудачно: %s"
+
+#: scripts/update-alternatives.pl:244
+#, perl-format
+msgid "Leaving %s (%s) pointing to %s."
+msgstr "Оставляется %s (%s), указывающая на %s."
+
+#: scripts/update-alternatives.pl:247
+#, perl-format
+msgid "Updating %s (%s) to point to %s."
+msgstr "Обновляется %s (%s), указывающая на %s."
+
+#: scripts/update-alternatives.pl:256
+#, perl-format
+msgid "Using '%s' to provide '%s'."
+msgstr "Используется `%s' для предоставления `%s'."
+
+#: scripts/update-alternatives.pl:270 scripts/update-alternatives.pl:614
+#, perl-format
+msgid "Removing %s (%s), not appropriate with %s."
+msgstr "Удаляется %s (%s) не соответствующая %s."
+
+#: scripts/update-alternatives.pl:288
+#, perl-format
+msgid "unable to remove %s: %s"
+msgstr "не удалось удалить %s: %s"
+
+#: scripts/update-alternatives.pl:301
+#, perl-format
+msgid "unknown argument `%s'"
+msgstr "неизвестный аргумент `%s'"
+
+#: scripts/update-alternatives.pl:312
+msgid "--install needs <link> <name> <path> <priority>"
+msgstr "для --install требуется указать <ссылку> <имя> <путь> <приоритет>"
+
+#: scripts/update-alternatives.pl:314
+msgid "priority must be an integer"
+msgstr "приоритет должен быть целым числом"
+
+#: scripts/update-alternatives.pl:318
+#, perl-format
+msgid "--%s needs <name> <path>"
+msgstr "для --%s требуется <имя> <путь>"
+
+#: scripts/update-alternatives.pl:323
+#, perl-format
+msgid "--%s needs <name>"
+msgstr "для --%s требуется <имя>"
+
+#: scripts/update-alternatives.pl:327
+msgid "--slave needs <link> <name> <path>"
+msgstr "для --slave требуются аргументы <ссылка> <имя> <путь>"
+
+#: scripts/update-alternatives.pl:329
+#, perl-format
+msgid "slave name %s duplicated"
+msgstr "повторяющееся подчинённое имя %s"
+
+#: scripts/update-alternatives.pl:330
+#, perl-format
+msgid "slave link %s duplicated"
+msgstr "повторяющаяся подчинённая ссылка %s"
+
+#: scripts/update-alternatives.pl:347
+#, perl-format
+msgid "name %s is both primary and slave"
+msgstr "имя %s принадлежит и мастеру и подчинённому"
+
+#: scripts/update-alternatives.pl:349
+#, perl-format
+msgid "link %s is both primary and slave"
+msgstr "ссылка %s принадлежит и мастеру и подчинённому"
+
+#: scripts/update-alternatives.pl:352
+msgid ""
+"need --display, --config, --set, --install, --remove, --all, --remove-all or "
+"--auto"
+msgstr ""
+"требуется --display, --config, --set, --install, --remove, --all, --remove-"
+"all или --auto"
+
+#: scripts/update-alternatives.pl:354
+msgid "--slave only allowed with --install"
+msgstr "команда --slave возможна только вместе с --install"
+
+#: scripts/update-alternatives.pl:367
+#, perl-format
+msgid "No alternatives for %s."
+msgstr "Нет альтернатив для %s."
+
+#: scripts/update-alternatives.pl:414
+#, perl-format
+msgid "Setting up automatic selection of %s."
+msgstr "Настройка автоматического выбора %s."
+
+#: scripts/update-alternatives.pl:428
+#, perl-format
+msgid ""
+"%s has been changed (manually or by a script).\n"
+"Switching to manual updates only."
+msgstr ""
+"%s была изменена (вручную или сценарием).\n"
+"Переключение на режим только ручного обновления."
+
+#: scripts/update-alternatives.pl:440
+#, perl-format
+msgid ""
+"Checking available versions of %s, updating links in %s ...\n"
+"(You may modify the symlinks there yourself if desired - see `man ln'.)"
+msgstr ""
+"Проверка доступных версий %s, обновление ссылок в %s ...\n"
+"(Вы можете изменить символические ссылки, если хотите -- смотрите `man ln'.)"
+
+#: scripts/update-alternatives.pl:446
+#, perl-format
+msgid "Renaming %s link from %s to %s."
+msgstr "Переименовывается ссылка %s из %s в %s."
+
+#: scripts/update-alternatives.pl:449 scripts/update-alternatives.pl:473
+#, perl-format
+msgid "unable to rename %s to %s: %s"
+msgstr "не удалось переименовать %s в %s: %s"
+
+#: scripts/update-alternatives.pl:468
+#, perl-format
+msgid "slave link name %s duplicated"
+msgstr "повторяется имя подчинённой ссылки %s"
+
+#: scripts/update-alternatives.pl:470
+#, perl-format
+msgid "Renaming %s slave link from %s to %s."
+msgstr "Переименовывается подчинённая ссылка %s из %s в %s."
+
+#: scripts/update-alternatives.pl:487
+msgid "Removing manually selected alternative - switching to auto mode"
+msgstr ""
+"Удаляется альтернатива выбранная вручную -- переключение в автоматический "
+"режим"
+
+#: scripts/update-alternatives.pl:501
+#, perl-format
+msgid "Alternative %s for %s not registered, not removing."
+msgstr "Альтернатива %s для %s не зарегистрирована, не удаляется."
+
+#: scripts/update-alternatives.pl:528
+#, perl-format
+msgid "Discarding obsolete slave link %s (%s)."
+msgstr "Отбрасывается устаревшая подчинённая ссылка %s (%s)."
+
+#: scripts/update-alternatives.pl:547
+#, perl-format
+msgid "Automatic updates of %s are disabled, leaving it alone."
+msgstr "Автоматическое обновление %s выключено, оставлено как есть."
+
+#: scripts/update-alternatives.pl:549
+#, perl-format
+msgid "To return to automatic updates use `update-alternatives --auto %s'."
+msgstr ""
+"Чтобы вернуться в автоматический режим выполните команду `update-"
+"alternatives --auto %s'."
+
+#: scripts/update-alternatives.pl:553
+#, perl-format
+msgid "Recovering from previous failed update of %s ..."
+msgstr "Восстановление раннее неудачного обновления %s ..."
+
+#: scripts/update-alternatives.pl:567
+#, perl-format
+msgid "unable to open %s for write: %s"
+msgstr "не удалось открыть %s на запись: %s"
+
+#: scripts/update-alternatives.pl:590
+#, perl-format
+msgid "Last package providing %s (%s) removed, deleting it."
+msgstr "Последний пакет, предоставлявший %s (%s) удалён, удаление."
+
+#: scripts/update-alternatives.pl:629
+#, perl-format
+msgid ""
+"There is no program which provides %s.\n"
+"Nothing to configure.\n"
+msgstr ""
+"Нет программы, которая предоставляет %s.\n"
+"Настраивать нечего.\n"
+
+#: scripts/update-alternatives.pl:635
+#, perl-format
+msgid ""
+"There is only 1 program which provides %s\n"
+"(%s). Nothing to configure.\n"
+msgstr ""
+"Есть только одна программа, которая предоставляет %s\n"
+"(%s). Настраивать нечего.\n"
+
+#: scripts/update-alternatives.pl:640
+#, perl-format
+msgid ""
+"There are %s alternatives which provide `%s'.\n"
+"\n"
+"  Selection    Alternative\n"
+"-----------------------------------------------\n"
+msgstr ""
+"Есть %s альтернатив, которые предоставляют `%s'.\n"
+"\n"
+"  Выбор        Альтернатива\n"
+"-----------------------------------------------\n"
+
+#: scripts/update-alternatives.pl:650
+msgid "Press enter to keep the default[*], or type selection number: "
+msgstr ""
+"Нажмите enter, чтобы сохранить значение по умолчанию[*], или введите "
+"выбранное число: "
+
+#: scripts/update-alternatives.pl:682
+#, perl-format
+msgid "Cannot find alternative `%s'."
+msgstr "Не удалось найти альтернативу `%s'."
+
+#: scripts/update-alternatives.pl:687 scripts/update-alternatives.pl:690
+#, perl-format
+msgid "error writing stdout: %s"
+msgstr "ошибка записи в stdout: %s"
+
+#: scripts/update-alternatives.pl:689
+#, perl-format
+msgid "newlines prohibited in update-alternatives files (%s)"
+msgstr "символы новой строки запрещены в файлах update-alternatives (%s)"
+
+#: scripts/update-alternatives.pl:694
+#, perl-format
+msgid "error or eof reading %s for %s (%s)"
+msgstr "ошибка или конец файла при чтении %s для %s (%s)"
+
+#: scripts/update-alternatives.pl:696
+#, perl-format
+msgid "missing newline after %s"
+msgstr "пропущен символ новой строки после %s"
+
+#: scripts/update-alternatives.pl:708
+#, perl-format
+msgid "unable to make %s a symlink to %s: %s"
+msgstr "не удалось создать символическую ссылку %s на %s: %s"
+
+#: scripts/update-alternatives.pl:713
+#, perl-format
+msgid "unable to install %s as %s: %s"
+msgstr "не удалось установить %s как %s: %s"
+
+#: scripts/update-alternatives.pl:716
+#, perl-format
+msgid "Serious problem: %s"
+msgstr "Серьёзная проблема: %s"

@@ -1,0 +1,27 @@
+<settings>
+    <setting id="API" value="" />
+    <setting id="Debug" value="false" />
+    <setting id="LatLon" value="false" />
+    <setting id="Location1" value="New York (US)" />
+    <setting id="Location1ID" value="5128581" />
+    <setting id="Location1deg" value="[40.714272, -74.005966]" />
+    <setting id="Location2" value="" />
+    <setting id="Location2ID" value="" />
+    <setting id="Location2deg" value="" />
+    <setting id="Location3" value="" />
+    <setting id="Location3ID" value="" />
+    <setting id="Location3deg" value="" />
+    <setting id="Location4" value="" />
+    <setting id="Location4ID" value="" />
+    <setting id="Location4deg" value="" />
+    <setting id="Location5" value="" />
+    <setting id="Location5ID" value="" />
+    <setting id="Location5deg" value="" />
+    <setting id="Map" value="true" />
+    <setting id="Station" value="false" />
+    <setting id="StationID" value="" />
+    <setting id="Weekend" value="0" />
+    <setting id="Zoom" value="4" />
+    <setting id="oldloc" value="5128581" />
+    <setting id="oldtime" value="1474729399" />
+</settings>

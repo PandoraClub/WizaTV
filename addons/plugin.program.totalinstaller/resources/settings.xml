@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="noobsandnerds login">
+		<setting id="addonid" default="plugin.program.totalinstaller" visible="false"/>
+        <setting id="login" label="Use noobsandnerds login (unlock features)" type="bool" default="false" visible="true"/>
+		<setting id="username" label="Username" type="text" default="" visible="true"  enable="!eq(-1,false)"/>
+		<setting id="password" label="Password" type="text" default="" visible="true"   enable="!eq(-2,false)"  option="hidden"/>
+ 		<setting id="dummy" label="[COLOR=yellow]Click here to check login credentials[/COLOR]" type="action" action="XBMC.RunScript(special://home/addons/plugin.program.totalinstaller/checkLogin.py)" option="close" visible="true"/>
+		<setting type="lsep" label="[CR]If you don't already have an account you can register for free."/>
+		<setting type="lsep" label="Adding login info will unlock all the latest features!"/>
+		<setting type="lsep" label="[CR]Visit www.noobsandnerds.com and click on the forum link."/>
+   	</category>
+
+	<category label="Show/Hide Content">
+		<setting id="addonportal" type="bool" label="Add-On Portal Section[CR]" default="true"/>
+		<setting id="communitybuilds" type="bool" label="Community Builds Section" default="true"/>
+		<setting id="versionoverride" type="bool" label="- Show ALL Builds (some of these may not be compatible)[CR]" default="false" enable="!eq(-1,false)"/>
+        <setting id="private" type="bool" label="- Show private content" default="false" enable="!eq(-2,false)"/>
+		<setting id="hardwareportal" type="bool" label="Hardware Reviews Section[CR]" default="true"/>
+		<setting id="latestnews" type="bool" label="Latest News Section[CR]" default="true"/>
+		<setting id="maintenance" type="bool" label="Maintenance Section[CR]" default="true"/>
+		<setting id="tutorialportal" type="bool" label="Tutorials Section[CR]" default="true"/>
+		<setting id="adult" type="bool" label="Enable XXX Content[CR]" default="false"/>
+		<setting id="enablekeyword" type="bool" label="Enable my own keyword[CR]" default="false"/>
+		<setting id="keywordname" label="Keyword Name" type="text" default="" visible="true"  enable="!eq(-1,false)"/>
+		<setting id="keywordpath" label="Keyword URL (e.g.http://urlshortbot.com/noobs)" type="text" default="" visible="true"   enable="!eq(-2,false)"/>
+	</category>
+
+	<category label="Tutorials">
+		<setting id="tutorial_manual_search" type="bool" label="Tutorials - Enable Manual Search" default="true" visible="true"/>
+		<setting id="tutorial_all" type="bool" label="Tutorials - Enable All Guides" default="true" visible="true"/>
+		<setting id="tutorial_kodi" type="bool" label="Tutorials - Enable Kodi Specific" default="true" visible="true"/>
+		<setting id="tutorial_xbmc4xbox" type="bool" label="Tutorials - Enable XBMC4Xbox Specific" default="false" visible="true"/>
+		<setting id="tutorial_android" type="bool" label="Tutorials - Enable Android" default="true" visible="true"/>
+		<setting id="tutorial_atv" type="bool" label="Tutorials - Enable ATV" default="false" visible="true"/>
+		<setting id="tutorial_ios" type="bool" label="Tutorials - Enable ATV2/iOS" default="true" visible="true"/>
+		<setting id="tutorial_linux" type="bool" label="Tutorials - Enable Linux" default="true" visible="true"/>
+		<setting id="tutorial_pure_linux" type="bool" label="Tutorials - Enable Pure Linux" default="true" visible="true"/>
+		<setting id="tutorial_openelec" type="bool" label="Tutorials - Enable OpenELEC" default="true" visible="true"/>
+		<setting id="tutorial_osmc" type="bool" label="Tutorials - Enable OSMC" default="false" visible="true"/>
+		<setting id="tutorial_osx" type="bool" label="Tutorials - Enable OSX" default="true" visible="true"/>
+		<setting id="tutorial_raspbmc" type="bool" label="Tutorials - Enable Raspbmc" default="false" visible="true"/>
+		<setting id="tutorial_windows" type="bool" label="Tutorials - Enable Windows" default="true" visible="true"/>
+		<setting id="tutorial_allwinner" type="bool" label="Tutorials - Enable Allwinner Devices" default="false" visible="true"/>
+		<setting id="tutorial_aftv" type="bool" label="Tutorials - Enable Amazon Fire TV Devices" default="true" visible="true"/>
+		<setting id="tutorial_amlogic" type="bool" label="Tutorials - Enable AMLogic Devices" default="false" visible="true"/>
+		<setting id="tutorial_boxee" type="bool" label="Tutorials - Enable Boxee" default="false" visible="true"/>
+		<setting id="tutorial_intel" type="bool" label="Tutorials - Enable Intel Devices" default="false" visible="true"/>
+		<setting id="tutorial_rpi" type="bool" label="Tutorials - Enable Raspberry Pi" default="false" visible="true"/>
+		<setting id="tutorial_rockchip" type="bool" label="Tutorials - Enable Rockchip" default="false" visible="true"/>
+		<setting id="tutorial_xbox" type="bool" label="Tutorials - Enable Xbox" default="false" visible="true"/>
+	</category>
+
+    <category label="Community Builds">
+		<setting type="lsep" label="Backup/Download Details"/>
+        <setting id="zip" type="folder" label="Choose Backup Storage Location" default=""/>
+ 		<setting id="dummy" label="[COLOR=yellow]Click here to check download path[/COLOR]" type="action" action="XBMC.RunScript(special://home/addons/plugin.program.totalinstaller/checkPath.py)" option="close"/>
+		<setting type="lsep" label="[CR]"/>
+		<setting id="localcopy" type="bool" label="Keep local copies of downloaded builds" default="false"/>
+		<setting id="mastercopy" type="bool" label="Create full duplicate backup AS WELL as a universal build" default="false"/>
+		<setting id="favourites" type="bool" label="Keep my favourites when installing a build" default="false"/>
+		<setting id="sources" type="bool" label="Keep my sources when installing a build" default="false"/>
+		<setting id="wizard" type="bool" label="Use Third Party Community Builds" default="false"/>
+        <setting id="wizardurl1" type="text" label="Set 1st Community Build URL" default="" visible="!eq(-1,false)"/>
+        <setting id="wizardname1" type="text" label="Set 1st CB List Name" default="" visible="!eq(-2,false)"/>
+        <setting id="wizardurl2" type="text" label="Set 2nd Community Build URL" default="" visible="!eq(-3,false)"/>
+        <setting id="wizardname2" type="text" label="Set 2nd CB List Name" default="" visible="!eq(-4,false)"/>
+        <setting id="wizardurl3" type="text" label="Set 3rd Community Build URL" default="" visible="!eq(-5,false)"/>
+        <setting id="wizardname3" type="text" label="Set 3rd CB List Name" default="" visible="!eq(-6,false)"/>
+        <setting id="wizardurl4" type="text" label="Set 4th Community Build URL" default="" visible="!eq(-7,false)"/>
+        <setting id="wizardname4" type="text" label="Set 4th CB List Name" default="" visible="!eq(-8,false)"/>
+        <setting id="wizardurl5" type="text" label="Set 5th Community Build URL" default="" visible="!eq(-9,false)"/>
+        <setting id="wizardname5" type="text" label="Set 5th CB List Name" default="" visible="!eq(-10,false)"/>
+	</category>
+
+<!--	<category label="Announcements">
+		<setting id="startupvideo" type="bool" label="Check for important announcement video on startup" default="false" visible="false"/>
+        <setting id="startupvideopath" type="folder" default="http://noobsandnerds.com/TI/check.txt" visible="false"/>
+		<setting id="mynotifycheck" type="bool" label="Show important announcements from noobsandnerds" default="false" visible="false"/>
+		<setting id="cbnotifycheck" type="bool" label="Show important announcement from Community Build author" default="false" visible="false"/>
+	</category>-->
+
+    <category label="Maintenance">
+	        <setting id="internetcheck" type="bool" label="Warn if not connected to internet" default="false" />
+		<setting id="cleancache" type="bool" label="Automatically clean cache" default="false"/>
+		<setting type="lsep" label="Will clear any old thumbnails not accessed in the past 14 days."/>
+		<setting type="lsep" label="[CR][CR]"/>
+		<setting id="debug" type="bool" label="Enable debugging - use if having problems with CP addon" default="false"/>
+	    	<setting id="email" type="text" label="E-Mail Address (used for log uploader)"/>
+		<setting type="lsep" label="[CR][CR]"/>
+ 		<setting id="dummy" label="[COLOR=yellow]Click here to upload a log[/COLOR]" type="action" action="XBMC.RunScript(special://home/addons/plugin.program.totalinstaller/uploadLog.py)" option="close"/>
+		<setting type="lsep" label="Once your log is uploaded you will receive an email with the link."/>
+		<setting type="lsep" label="[CR][CR]"/>
+ 		<setting id="dummy" label="[COLOR=yellow]Click here to reset your add-on[/COLOR]" type="action" action="XBMC.RunScript(special://home/addons/plugin.program.totalinstaller/resetAddon.py)" option="close"/>
+		<setting type="lsep" label="Use this option if you're encountering problems with the add-on not"/>
+		<setting type="lsep" label="loading correctly (script errors)."/>
+    </category>
+
+</settings>

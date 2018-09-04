@@ -1,0 +1,152 @@
+.TH dpkg\-genchanges 1 "2007-07-18" "Debian Project" "dpkg utilities"
+.SH NAME
+dpkg\-genchanges \- generate Debian .changes files
+.
+.SH SYNOPSIS
+.B dpkg\-genchanges
+.RI [ options ]
+.br
+.
+.SH DESCRIPTION
+.B dpkg\-genchanges
+reads information from an unpacked and built Debian source tree and
+from the files it has generated and generates a Debian upload control
+file
+.RB ( .changes " file)."
+.
+.SH OPTIONS
+.TP
+.BR \-b ", " \-B
+Specifies that a binary-only build is taking place (no source files are
+to be included). There's no distinction between \fB\-b\fP and \fB\-B\fP,
+the produced
+.B .changes
+file will include whatever files were created by the
+.B binary\-*
+target(s) of the package being built.
+.TP
+.B \-S
+Specifies that only the source should be uploaded (no binary packages
+will be included).
+.PP
+The \fB-s\fP\fIx\fP options control whether the original source archive is
+included in the upload if any source is being generated (i.e.
+.BR \-b " or " \-B
+haven't been used).
+.TP
+.B \-si
+By default, or if specified, the original source will be included only if
+the upstream version number (the version without epoch and without Debian
+revision) differs from the upstream version number of the previous
+changelog entry.
+.TP
+.B \-sa
+Forces the inclusion of the original source.
+.TP
+.B \-sd
+Forces the exclusion of the original source and includes only the diff.
+.fi
+.TP
+.BI \-v version
+Causes changelog information from all versions strictly later than
+.I version
+to be used.
+.TP
+.BI \-C changesdescription
+Read the description of the changes from the file
+.I changesdescription
+rather than using the information from the source tree's changelog
+file.
+.TP
+.BI \-m maintaineraddress
+Use
+.I maintaineraddress
+as the name and email address of the maintainer for this package,
+rather than using the information from the source tree's control file.
+.TP
+.BI \-e maintaineraddress
+Use
+.I maintaineraddress
+as the name and email address of the maintainer for this upload,
+rather than using the information from the source tree's changelog.
+.TP
+.BI \-V name = value
+Set an output substitution variable.
+See \fBdeb\-substvars\fP(5) for a discussion of output substitution.
+.TP
+.BI \-T substvarsfile
+Read substitution variables in
+.IR substvarsfile ;
+the default is
+.BR debian/substvars .
+No variable substitution is done on any of the fields that are output,
+however the special variable \fIFormat\fR will override the field of the
+same name.
+.TP
+.BI \-D field = value
+Override or add an output control file field.
+.TP
+.BI \-U field
+Remove an output control file field.
+.TP
+.BI \-c controlfile
+Specifies the main source control file to read information from. The
+default is
+.BR debian/control .
+.TP
+.BI \-l changelogfile
+Specifies the change log file to read information from. The
+default is
+.BR debian/changelog .
+.TP
+.BI \-f fileslistfile
+Read the list of files to be uploaded here, rather than using
+.BR debian/files .
+.TP
+.BI \-F changelogformat
+Specifies the format of the changelog. By default the format is read
+from a special line near the bottom of the changelog or failing that
+defaults to the debian standard format.
+.TP
+.BI \-u uploadfilesdir
+Look for the files to be uploaded in
+.I uploadfilesdir
+rather than
+.B ..
+.RB ( dpkg\-genchanges
+needs to find these files so that it can include their sizes and
+checksums in the
+.B .changes
+file).
+.TP
+.B \-q
+Usually
+.B dpkg\-genchanges
+will produce informative messages on standard error, for example about
+how many of the package's source files are being uploaded.
+.B \-q
+suppresses these messages.
+.TP
+.BR \-h ", " \-\-help
+Show the usage message and exit.
+.TP
+.BR \-\-version
+Show the version and exit.
+.
+.SH FILES
+.TP
+.B debian/files
+The list of generated files which are part of the upload being
+prepared.
+.B dpkg\-genchanges
+reads the data here when producing a
+.B .changes
+file.
+.
+.SH AUTHORS
+Copyright (C) 1995-1996 Ian Jackson
+.br
+Copyright (C) 2000 Wichert Akkerman
+.sp
+This is free software; see the GNU General Public Licence version 2 or later
+for copying conditions. There is NO WARRANTY.

@@ -1,0 +1,170 @@
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH dpkg\-query 1 2007\-07\-18 Debian\-Projekt dpkg\-Programmsammlung
+.SH NAME
+dpkg\-query \- ein Werkzeug, um die dpkg\-Datenbank abzufragen
+.
+.SH ÜBERSICHT
+\fBdpkg\-query\fP [\fIOption\fP...] \fIBefehl\fP
+.
+.SH BESCHREIBUNG
+\fBdpkg\-query\fP ist ein Werkzeug, um Informationen über Pakete zu zeigen, die
+in der \fBdpkg\fP\-Datenbank aufgeführt sind.
+.
+.SH BEFEHLE
+.TP 
+\fB\-l\fP, \fB\-\-list\fP \fIPaketname\-Muster\fP ...
+Liste Pakete auf, deren Namen auf ein bestimmtes Muster passt. Falls kein
+\fIPaketname\-Muster\fP angegeben ist, liste alle Pakete in
+\fI/var/lib/dpkg/status\fP auf, die nicht mit dem Status »purge« (endgültig
+entfernen) markiert sind. Beachten Sie, dass Sie wahrscheinlich
+\fIPaketname\-Muster\fP durch Anführungszeichen schützen müssen, um die Shell an
+der Dateinamen\-Expansion zu hindern. Folgender Befehl listet beispielsweise
+alle Paketnamen, die mit »libc6« beginnen, auf:
+
+.nf
+  \fBdpkg\-query \-l \(aqlibc6*\(aq\fP
+.fi
+
+Das Ausgabeformat dieser Option kann nicht konfiguriert werden, variiert
+aber automatisch mit der Terminalbreite. Die Ausgabe ist für menschliche
+Leser gedacht und nicht leicht maschinenlesbar. Lesen Sie über die Optionen
+\fB\-W\fP (\fB\-\-show\fP) und \fB\-\-showformat\fP, um das Ausgabeformat zu
+konfigurieren.
+.TP 
+\fB\-W\fP, \fB\-\-show\fP \fIPaketname\-Muster\fP ...
+Genau wie die \fB\-\-list\fP\-Option wird dies alle Pakete, die auf das angegebene
+Muster passen, aufführen. Allerdings kann die Ausgabe mit der
+\fB\-\-showformat\fP\-Option angepasst werden. Im Standardausgabeformat wird eine
+Zeile pro passendem Paket ausgegeben, wobei in jeder Zeile Name und
+installierte Version des Pakets getrennt durch einen Tabulator enthalten
+sind.
+.TP 
+\fB\-s\fP, \fB\-\-status\fP \fIPaketname\fP ...
+Berichte Zustand des angegebenen Paketes. Dies zeigt nur den Eintrag in der
+Datenbank der Zustände der installierten Pakete.
+.TP 
+\fB\-L\fP, \fB\-\-listfiles\fP \fIPaketname\fP ...
+Aufführen von Dateien, die durch \fIPaketname\fP installiert wurden. Beachten
+Sie aber, dass Dateien, die durch Paket\-spezifische Installationsskripte
+erstellt wurden, nicht aufgeführt werden.
+.TP 
+\fB\-S\fP, \fB\-\-search\fP \fIDateiname\-Suchmuster\fP ...
+Suche nach einem Dateinamen aus einem installierten Paket. Alle
+Standard\-Jokerzeichen (»wildcards«) der Shell können in diesem Muster
+verwandt werden. Dieser Befehl wird weder die zusätzlichen Dateien, die
+durch Betreuer\-Skripte erstellt wurden, noch Alternativen aufführen.
+.TP 
+\fB\-p\fP, \fB\-\-print\-avail\fP \fIPaketname\fP
+Zeige Details über \fIPaketname\fP an, wie sie in \fI/var/lib/dpkg/available\fP
+enthalten sind.
+.TP 
+\fB\-h\fP, \fB\-\-help\fP
+Zeige den Bedienungshinweis und beende.
+.TP 
+\fB\-\-version\fP
+Gebe die Version aus und beende sich.
+.TP 
+\fB\-\-licence\fP, \fB\-\-license\fP
+Zeigt die Kopier\-Lizenzierungsbedingungen und beendet sich.
+.
+.SH OPTIONEN
+.TP 
+\fB\-\-admindir=\fP\fIVerz\fP
+Ändert den Ablageort der \fBdpkg\fP\-Datenbank. Der Standardort ist
+\fI/var/lib/dpkg\fP.
+.TP 
+\fB\-f\fP, \fB\-\-showformat=\fP\fIFormat\fP
+Diese Option wird dazu verwendet, das Format der Ausgabe anzugeben, das
+\fB\-\-show\fP verwenden wird. Das Format ist eine Zeichenkette, die für jedes
+aufgeführte Paket ausgegeben wird.
+
+In der Formatzeichenkette leitet \(lq\fB\e\fP\(rq Escape\-Sequenzen ein:
+
+.nf
+    \fB\en\fP  Zeilenumbruch
+    \fB\er\fP  Wagenrücklauf
+    \fB\et\fP  Tabulator
+.fi
+
+\(lq\fB\e\fP\(rq vor einem anderen Zeichen unterdrückt jede spezielle Bedeutung
+des folgenden Zeichens. Dies ist für \(lq\fB\e\fP\(rq und \(lq\fB$\fP\(rq
+nützlich.
+
+Paketinformationen können einbezogen werden, indem Variablenreferenzen auf
+Paketfelder eingefügt werden. Hierbei wird folgende Syntax verwendet:
+\(lq\fB${\fP\fIFeld\fP[\fB;\fP\fIBreite\fP]\fB}\fP\(rq. Felder werden rechtsbündig
+ausgegeben, falls die Breite nicht negativ ist und somit linksbündige
+Ausgabe erfolgt. Die folgenden \fIFeld\fPer werden verstanden:
+
+.nf
+    \fBArchitecture\fP
+    \fBBugs\fP
+    \fBConffiles\fP
+    \fBConfig\-Version\fP
+    \fBConflicts\fP
+    \fBBreaks\fP
+    \fBDepends\fP
+    \fBDescription\fP
+    \fBEnhances\fP
+    \fBEssential\fP
+    \fBFilename\fP
+    \fBHomepage\fP
+    \fBInstalled\-Size\fP
+    \fBMD5sum\fP
+    \fBMSDOS\-Filename\fP
+    \fBMaintainer\fP
+    \fBOrigin\fP
+    \fBPackage\fP
+    \fBPre\-Depends\fP
+    \fBPriority\fP
+    \fBProvides\fP
+    \fBRecommends\fP
+    \fBReplaces\fP
+    \fBRevision\fP
+    \fBSection\fP
+    \fBSize\fP
+    \fBSource\fP
+    \fBStatus\fP
+    \fBSuggests\fP
+    \fBTag\fP
+    \fBVersion\fP
+.fi
+
+Die Standard\-Formatzeichenkette ist
+\(lq\fB${Package}\et${Version}\en\fP\(rq. Tatsächlich können auch alle anderen
+Felder, die in der Statusdatei gefunden werden können
+(d.h. benutzerdefinierte Felder), abgefragt werden. Sie werden so
+dargestellt, wie sie gefunden werden, es erfolgt keine Umwandlung oder
+Fehlerüberprüfung. Um den Namen des Dpkg\-Betreuers und die installierte
+Version zu erhalten, könnten Sie folgendes ausführen:
+
+.nf
+  \fBdpkg\-query \-W \-f=\(aq${Package} ${Version}\et${Maintainer}\en\(aq dpkg\fP
+.fi
+.
+.SH UMGEBUNG
+.TP 
+\fBCOLUMNS\fP
+Diese Einstellung beeinflusst die Ausgabe der \fB\-\-list\fP\-Option durch
+Verändern der Breite ihrer Ausgabe.
+.
+.SH AUTOR
+Copyright (C) 2001 Wichert Akkerman
+.sp
+Dies ist Freie Software; lesen Sie die GNU General Public License Version 2
+oder neuer für die Kopierbedingungen. Es gibt KEINE Haftung.
+.
+.SH ÜBERSETZUNG
+Die deutsche Übersetzung wurde 2004, 2006-2008 von Helge Kreutzmann
+<debian@helgefjell.de>, 2007 von Florian Rehnisch <eixman@gmx.de> und
+2008 von Sven Joachim <svenjoac@gmx.de>
+angefertigt. Diese Übersetzung ist Freie Dokumentation; lesen Sie die
+GNU General Public License Version 2 oder neuer für die Kopierbedingungen.
+Es gibt KEINE HAFTUNG.
+.SH "SIEHE AUCH"
+\fBdpkg\fP(1).
+

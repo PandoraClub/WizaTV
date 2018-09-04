@@ -1,0 +1,59 @@
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH deb\-triggers 5 09\-04\-2008 "Projet Debian" "Utilitaires de dpkg"
+.SH NOM
+deb\-triggers \- actions différées du paquet
+.
+.SH SYNOPSIS
+actions différées
+.
+.SH DESCRIPTION
+Un paquet déclare ses relations avec des actions différées en incluant un
+fichier \fItriggers\fP dans son archive de contrôle (c.\-à\-d. \fIDEBIAN/triggers\fP
+au moment de la création du paquet).
+.PP
+Ce fichier contient des directives, une par ligne. Les mises en page et
+autres espaces ainsi que ce qui suit le caractère \fB"#"\fP sont sautés, et les
+lignes vides seront ignorés.
+.PP
+Les directives actuellement reconnues sont\ :
+.PP
+.in +5
+\fBinterest\fP \fInom\-action\-différée\fP
+.PP
+.in +5
+Indique que le paquet est associé à une action différée. Toutes les actions
+différées associées au paquet doivent être listées en utilisant cette
+directive depuis le fichier de contrôle des actions différées.
+.PP
+.in +5
+\fBactivate\fP \fInom\-action\-différée\fP
+.PP
+.in +5
+Cette directive permet que tout changement dans l'état de ce paquet active
+l'action différée spécifiée. L'action différée sera activée au début des
+opérations suivantes\ : dépaquetage, configuration, suppression (y compris
+en cas de remplacement par un paquet conflictuel), purge et déconfiguration.
+.PP
+.in +5
+Si ce paquet disparaît durant le dépaquetage d'un autre paquet, l'action
+différée sera activée lorsque la disparition est constatée vers la fin du
+dépaquetage. L'exécution d'une action différée, et donc le passage du statut
+triggers\-awaited (action\-différée\-attendue) à installed (installé), ne
+provoquera pas l'activation. Dans le cas d'un dépaquetage, les actions
+différées listées dans l'ancienne et la nouvelle version du paquet seront
+activées.
+.PP
+Les directives inconnues sont des erreurs qui empêcheront l'installation du
+paquet.
+.
+.SH "VOIR AUSSI"
+\fBdpkg\-trigger\fP(1), \fBdpkg\fP(1).
+.SH TRADUCTION
+Ariel VARDI <ariel.vardi@freesbee.fr>, 2002.
+Philippe Batailler, 2006.
+Nicolas François, 2006.
+Veuillez signaler toute erreur à <debian\-l10n\-french@lists.debian.org>.

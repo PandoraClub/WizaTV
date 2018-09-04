@@ -1,0 +1,45 @@
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH dpkg\-checkbuilddeps 1 2008\-03\-14 Debianprojektet dpkg\-verktygen
+.SH NAMN
+dpkg\-checkbuilddeps \- kontrollera byggberoenden och \-konflikter
+.
+.SH SYNOPS
+\fBdpkg\-checkbuilddeps\fP [\fIflaggor\fP] [\fIkontrollfil\fP]
+.
+.SH BESKRIVNING
+Detta program kontrollerar installerade paket på systemet mot byggberoenden
+och \-konflikter som listas i filen control. Om de inte uppfylls, visas de
+och programmet avslutas med en felstatus som inte är noll.
+.P
+Som standard läses \fIdebian/control\fP, men ett alternativt kontrollfilnamn
+kan anges på kommandoraden.
+.
+.SH FLAGGOR
+.TP 
+\fB\-\-admindir=\fP\fIkat\fP
+Ändra platsen för \fBdpkg\fP\-databasen. Förval är \fI/var/lib/dpkg\fP.
+.TP 
+\fB\-B\fP
+Ignorera \fIBuild\-Depends\-Indep\fP\-rader. Använd om inga arkitekturoberoende
+paket skall byggas.
+.TP 
+\fB\-d\fP \fIbyggberoendesträng\fP
+.TP 
+\fB\-c\fP \fIbyggkonfliktsträng\fP
+Använd de angivna byggberoendena/\-konflikterna istället för de som står i
+filen \fIdebian/control\fP.
+.TP 
+\fB\-h\fP
+Visar hjälpskärm och avslutar.
+.
+.SH FÖRFATTARE
+Upphovsrättsskyddat © 2001 Joey Hess
+.sp
+Detta är fri programvara; se GNU General Public License version 2 eller
+senare för kopieringsvillkor. Det finns INGEN GARANTI.
+.SH "ÖVERSÄTTNING"
+Peter Krefting och Daniel Nylander.

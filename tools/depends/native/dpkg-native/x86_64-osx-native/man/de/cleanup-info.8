@@ -1,0 +1,68 @@
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH cleanup\-info 8 2007\-07\-18 Debian\-Projekt dpkg\-Hilfsprogramme
+.SH NAME
+cleanup\-info \- räumt den Müll von schwindelhaften install\-info auf
+.
+.SH ÜBERSICHT
+\fBcleanup\-info\fP [\fIOptionen\fP] [\fB\-\-\fP] [\fIVerzeichnisname\fP]
+.
+.SH BESCHREIBUNG
+\fBcleanup\-info\fP ist ein Perl\-Skript das versucht, den Müll aufzuräumen, den
+ein schwindelhaftes \fBinstall\-info\fP(8) hinterlassen haben könnte. Es sammelt
+alle Bereiche mit der gleichen Überschrift in einen einzelnen zusammen. Es
+versucht, pfiffig über Groß\-/Kleinschreibung und angehängte
+Doppelpunkte/Leerzeichen zu sein.
+.br
+Weitere Aufräumarbeiten beinhalten die Entfernung leerer Bereiche und das
+Zusammenquetschen leerer Zeilen (nur im Bereich der Einträge).
+.sp
+Die Reihenfolge der Bereiche wird erhalten (der erste aufgetretene Bereich
+zählt). Die Reihenfolge der Einträge innerhalb eines Bereichs wird erhalten.
+.sp
+Bitte seien Sie \fBextrem vorsichtig\fP bei der Verwendung dieses
+Hilfswerkzeuges \- es könnte nicht 100 % sicher sein. cleanup\-info versucht
+vorsichtig mit Ihrer Info\-Dir\-Datei zu sein, aber nur bis es sie
+schreibt. Sie sollten eine Sicherheitskopie anlegen, bevor sie dies Skript
+verwenden.
+.
+.SH OPTIONEN
+.TP 
+\fB\-\-unsafe\fP
+Stelle einige zusätzliche möglicherweise nützliche Optionen ein.
+.br
+\fBWarnung: die »\-\-unsafe«\-Option kann eine ansonsten korrekte Datei
+verstümmeln!\fP
+.TP 
+\fB\-\-help\fP
+Zeige den Bedienungshinweis und beende.
+.TP 
+\fB\-\-version\fP
+Gebe die Version aus und beende sich.
+.
+.SH DATEIEN
+.TP 
+\fI/usr/info/dir\fP oder \fI<Verzeichnisname>/dir\fP
+Die info\-Verzeichnisdatei. Die Lock\-Datei heißt genauso, mit dem
+».lock«\-Suffix.
+.
+.SH FEHLER
+Wahrscheinlich viele.
+.
+.SH ÜBERSETZUNG
+Die deutsche Übersetzung wurde 2004, 2006-2008 von Helge Kreutzmann
+<debian@helgefjell.de>, 2007 von Florian Rehnisch <eixman@gmx.de> und
+2008 von Sven Joachim <svenjoac@gmx.de>
+angefertigt. Diese Übersetzung ist Freie Dokumentation; lesen Sie die
+GNU General Public License Version 2 oder neuer für die Kopierbedingungen.
+Es gibt KEINE HAFTUNG.
+.SH "SIEHE AUCH"
+\fBinstall\-info\fP(8), \fBinfo\fP(1).
+.SH AUTOR
+Copyright (C) 1996 Kim\-Minh Kaplan
+.sp
+Dies ist Freie Software; lesen Sie die GNU General Public License Version 2
+oder neuer für die Kopierbedingungen. Es gibt KEINE Haftung.

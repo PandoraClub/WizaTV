@@ -1,0 +1,240 @@
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH dpkg\-buildpackage 1 2008\-08\-15 Debianprojektet dpkg\-verktygen
+.SH NAMN
+dpkg\-buildpackage \- bygg binär\- eller källkodspaket från källkod
+.
+.SH SYNOPS
+\fBdpkg\-buildpackage\fP [\fIflaggor\fP]
+.
+.SH BESKRIVNING
+\fBdpkg\-buildpackage\fP är ett styrskript som kan användas för att göra det
+enklare att automatisera paketbyggning.
+.
+.SH FLAGGOR
+.TP 
+\fB\-b\fP
+Anger att enbart binära paket skall byggas, inga källkodsfiler byggs
+och/eller distribueras.
+.TP 
+\fB\-B\fP
+Anger ett rent binärbygge, inte heller kommer några arkitekturoberoende
+binärpaket att skapas.
+.TP 
+\fB\-S\fP
+Endast källkod byggs, inga binärpaket behöver byggas.
+.PP
+Flaggorna \fB\-s\fP\fIx\fP styr huruvida det ursprungliga källkodsarkivet skall
+inkluderas i insändningen om källkod genereras (dvs. \fB\-b\fP eller \fB\-B\fP inte
+har använts).
+.TP 
+\fB\-si\fP
+Som standard, eller om den anges, kommer originalkällkoden endast att
+inkluderas om uppströmsversionsnumret (versionsnumret utan epok och utan
+Debianuppdateringsnummer) skiljer sig från uppströmsversionsnumret i
+föregående ändringsloggspost.
+.TP 
+\fB\-sa\fP
+Bifogar alltid originalkällkoden.
+.TP 
+\fB\-sd\fP
+Bifogar inte originalkällkoden, utan enbart differensfilen.
+.TP 
+\fB\-a\fP\fIarkitektur\fP
+Ange Debianarkitekturen vi bygger för. Arkitekturen för maskinen vi bygger
+på bestäms automatiskt, och är även standard för värdmaskinen.
+
+Om värdarkitekturen skiljer sig från byggarkitekturen (till exempel vid
+korskompilering), och om miljövariabeln \fBPKG_CONFIG_LIBDIR\fP inte är satt,
+så kommer den att sättas till ett värde lämpligt för korskompilering
+("/usr/\fIgnu\-systemtyp\fP/lib/pkgconfig/:/usr/share/pkgconfig").
+.TP 
+\fB\-t\fP\fIgnu\-systemtyp\fP
+Ange GNU\-systemtyp vi bygger för. Den kan användas i stället för \-a eller
+som ett komplement för att överstyra standard\-GNU\-systemtypen för
+Debian\-målarkitekturen.
+.TP 
+\fB\-j\fP\fIjobb\fP
+Antalet jobb som tillåts att köras samtidigt, motsvarar \fBmake\fP(1)\-flaggan
+med samma namn. Lägger till sig själv i miljövariabeln MAKEFLAGS, vilket får
+alla påföljande make\-anrop att ärva flaggan. Lägger även till flaggan
+\fBparallel=\fP\fIjobb\fP till miljövariabeln DEB_BUILD_OPTIONS, vilket gör det
+möjligt för debian/rules\-filer att använda informationen för egna
+ändamål. Värdet \fBparallel=\fP\fIjobb\fP i miljövariablen DEB_BUILD_OPTIONS
+kommer att överstyra värdet för \fB\-j\fP om den flaggan ges.
+.TP 
+\fB\-v\fP\fIversion\fP
+Använd ändringsloggsinformation för alla versioner som är strikt senare än
+\fIversion\fP.
+.TP 
+\fB\-C\fP\fIändringsbeskrivning\fP
+Läs beskrivningen av ändringarna från filen \fIändringsbeskrivning\fP istället
+för att använda information från källkodsträdets changelog\-fil.
+.TP 
+\fB\-m\fP\fIpaketansvarige\-adress\fP
+Använd \fIpaketansvarige\-adress\fP som namn och e\-postadress till ansvarig för
+detta paket, istället för att använda informationen från källkodsträdets
+control\-fil.
+.TP 
+\fB\-e\fP\fIpaketansvarige\-adress\fP
+Använd \fIpaketansvarige\-adress\fP som namn och e\-postadress till ansvarig för
+denna insändning, istället för att använda informationen från
+källkodsträdets changelog\-fil.
+.TP 
+\fB\-D\fP
+Kontrollera beroenden och konflikter, avbryt om de inte uppfylls.
+.TP 
+\fB\-d\fP
+Kontrollera inte byggberoenden eller \-konflikter.
+.TP 
+\fB\-E\fP
+Gör vissa varningar till fel. Används endast av \fBdpkg\-source\fP, men
+\fBdpkg\-buildpackage\fP känner igen det och sänder det vidare till
+\fBdpkg\-source\fP.
+.TP 
+\fB\-W\fP
+Slår av tidigare satt \fB\-E\fP. Används endast av \fBdpkg\-source\fP, men
+\fBdpkg\-buildpackage\fP känner igen det och sänder det vidare till
+\fBdpkg\-source\fP.
+.TP 
+\fB\-nc\fP
+Städa inte källkodsträdet (implicerar \fB\-b\fP).
+.TP 
+\fB\-tc\fP
+Städa källkodsträdet (använder \fIfå\-root\-kommando\fP \fBdebian/rules clean\fP)
+efter att paketet har byggts.
+.TP 
+\fB\-r\fP\fIfå\-root\-kommando\fP
+När \fBdpkg\-buildpackages\fP behöver exekvera delar av byggprocessen som root
+sätter den kommandot som skall exekveras efter \fIfå\-root\-kommando\fP om ett
+sådant har angivits. Om inte kommer \fBfakeroot\fP att användas som standard,
+om kommandot existerar. \fIfå\-root\-kommando\fP måste börja med namnet på det
+faktiska kommandot som skall anropas samt de parametrar det skall anropas
+med. \fIfå\-root\-kommando\fP kan innehålla parametrar (de måste vara avdelade
+med blanksteg) men inga skalmetatecken. \fIfå\-root\-kommando\fP kan typiskt vara
+\fBfakeroot\fP, \fBsudo\fP, \fBsuper\fP eller \fBreally\fP. \fBsu\fP är inte lämpligt
+eftersom det kräver flaggan \fB\-c\fP för att köra ett kommando och även då kan
+det bara starta användarens skal med \fB\-c\fP istället för att sända flaggor
+individuellt till kommandot som skall startas.
+.TP 
+\fB\-R\fP\fIregelfil\fP
+För att bygga ett Debianpaket körs normalt kommandot \fBdebian/rules\fP med
+flera olika standardparametrar. Den här flaggan gör det möjligt att använda
+ett annat programanrop för att bygga paketet (det kan innehålla
+blankstegsavdelade parametrar). Den kan även användas för att exekvera
+standardregelfilen med ett annat make\-program (till exempel genom att
+använda \fB/usr/local/bin/make \-f debian/rules\fP som \fIregelfil\fP).
+.TP 
+\fB\-p\fP\fIsigneringskommando\fP
+När \fBdpkg\-buildpackage\fP måste exekvera GPG eller PGP för att signera ett
+källkodsstyrfil (\fB.dsc\fP) eller en \fB.changes\fP\-fil kör det
+\fIsigneringskommando\fP (det letar i \fBPATH\fP om så behövs) istället för
+\fBpgp\fP. \fIsigneringskommando\fP får de argument \fBpgp\fP skulle ha fått. Om
+\fIsigneringskommando\fP tar kommandon enligt GPG\- istället för PGP\-stil måste
+du ge flaggan \fB\-sgpg\fP. \fIsigneringskommando\fP får inte innehålla blanksteg
+eller andra skalmetatecken.
+.TP 
+\fB\-k\fP\fInyckel\-id\fP
+Ange nyckel\-id att använda vid signering av paket.
+.TP 
+\fB\-us\fP
+Signera inte källkodspaketet.
+.TP 
+\fB\-uc\fP
+Signera inte .changes\-filen.
+.TP 
+\fB\-i\fP[\fIreguljärt\-uttryck\fP]
+Sänds vidare utan ändringar till \fBdpkg\-source\fP.
+.TP 
+\fB\-I\fP\fI[mönster]\fP
+Sänds vidare utan ändringar till \fBdpkg\-source\fP. Kan repeteras flera gånger.
+.TP 
+\fB\-s\fP[\fBnsAkurKUR\fP]
+Sänds vidare utan ändringar till \fBdpkg\-source\fP.
+.TP 
+\fB\-z\fP, \fB\-Z\fP
+Sänds vidare utan ändringar till \fBdpkg\-source\fP.
+.TP 
+\fB\-\-admindir=\fP\fIkat\fP
+Ändra platsen för \fBdpkg\fP\-databasen. Förval är \fI/var/lib/dpkg\fP.
+.TP 
+\fB\-h\fP, \fB\-\-help\fP
+Visar hjälpskärm och avslutar.
+.TP 
+\fB\-\-version\fP
+Visar version och avslutar.
+.
+.SH MILJÖVARIABLER
+Ett antal miljövariabler som väljer kompilator\- och länkarflaggor återställs
+till standardvärden såvida de inte redan har satts i miljön. Observera att
+denna mekanism introducerades först i dpkg\-dev version 1.14.17 och att inte
+alla \fIrules\fP\-filer och byggverktyg ännu godtar dessa variabler.
+.TP 
+\fBCFLAGS\fP
+Optimeringsflaggor som sänds till Debians byggsystem och kan/bör överstyras
+av paketet som byggs om så behövs (standardvärde: \fB\-g \-O2\fP, eller \fB\-g \-O0\fP
+om \fBnoopt\fP anges i DEB_BUILD_OPTIONS). Överstyrda flaggor kan användas för
+att explicit välja en högre optimeringsnivå, eller för att förbigå
+kompilatorfel som bara ses med vissa optimeringsnivåer (den sist satta
+optimeringsnivån "vinner").
+.TP 
+\fBCFLAGS_APPEND\fP
+Optimeringsflaggor som läggs till kompilatorflaggorna, vilka inte får
+skrivas över av paketet (används huvudsakligen för
+testbyggen). Standardvärde: tomt.
+.TP 
+\fBCXXFLAGS\fP
+Samma som \fBCFLAGS\fP för C++\-källkod.
+.TP 
+\fBCXXFLAGS_APPEND\fP
+Samma som \fBCFLAGS_APPEND\fP för C++\-källkod.
+.TP 
+\fBFFLAGS\fP
+Samma som \fBCFLAGS\fP för Fortrankällkod.
+.TP 
+\fBFFLAGS_APPEND\fP
+Samma som \fBCFLAGS_APPEND\fP för Fortrankällkod.
+.TP 
+\fBCPPFLAGS\fP
+Förprocessorflaggor som sänds till Debians byggsystem och kan/bör överstyras
+av paketet som byggs om så behövs (standardvärde: tomt). Detta makro används
+sällan (de flesta byggsystem använder helt enkelt \fBCFLAGS\fP istället för
+\fBCPPFLAGS\fP).
+.TP 
+\fBCPPFLAGS_APPEND\fP
+Förprocessorflaggor som läggs till förprocessorflaggorna, vilka inte får
+skrivas över av paketet (används huvudsakligen för
+testbyggen). Standardvärde: tomt.
+.TP 
+\fBLDFLAGS\fP
+Flaggor som sänds till kompilatorn vid länkning av binärer eller delade
+objekt (om länkaren anropas direkt måste \fB\-Wl\fP och \fB,\fP tas bort från dessa
+flaggor). Standardvärde: tomt.
+.TP 
+\fBLDFLAGS_APPEND\fP
+Flaggor som läggs till kompilatorflaggorna vid länkning av kod, vilka inte
+får skrivas över av paketet (används huvudsakligen för
+testbyggen). Standardvärde: tomt.
+.
+.SH PROGRAMFEL
+Det borde vara möjligt att ange blanksteg och skalmetatecken i, och
+inledande argument för, \fIfå\-root\-kommando\fP och \fIsigneringskommando\fP.
+.
+.SH "SE ÄVEN"
+\fBdpkg\-source\fP(1), \fBdpkg\-architecture\fP(1), \fBdpkg\-genchanges\fP(1),
+\fBgpg\fP(1), \fBpgp\fP(1).
+.
+.SH FÖRFATTARE
+Upphovsrättsskyddad © 1995\-1996 Ian Jackson
+.br
+Upphovsrättsskyddat © 2000 Wichert Akkerman
+.br
+Upphovsrättsskyddat © 2007 Frank Lichtenheld
+.sp
+Detta är fri programvara; se GNU General Public License version 2 eller
+senare för kopieringsvillkor. Det finns INGEN GARANTI.
+.SH "ÖVERSÄTTNING"
+Peter Krefting och Daniel Nylander.

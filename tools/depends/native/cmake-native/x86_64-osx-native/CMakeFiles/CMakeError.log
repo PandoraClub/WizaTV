@@ -1,0 +1,1796 @@
+Determining if the environ exist failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_03ec6/fast"
+make -f CMakeFiles/cmTC_03ec6.dir/build.make CMakeFiles/cmTC_03ec6.dir/build
+Building C object CMakeFiles/cmTC_03ec6.dir/CheckSymbolExists.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_03ec6.dir/CheckSymbolExists.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'environ'
+  return ((int*)(&environ))[argc];
+                  ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_03ec6.dir/CheckSymbolExists.c.o] Error 1
+make[3]: *** [cmTC_03ec6/fast] Error 2
+
+File /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef environ
+  return ((int*)(&environ))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Checking for non-standard argument to stl allocator<>::max_size failed to compile with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Source/kwsys/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_462ba/fast"
+make -f CMakeFiles/cmTC_462ba.dir/build.make CMakeFiles/cmTC_462ba.dir/build
+Building CXX object CMakeFiles/cmTC_462ba.dir/kwsysPlatformTestsCXX.cxx.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/g++   -DKWSYS_STL_HAVE_STD=1 -DTEST_KWSYS_STL_HAS_ALLOCATOR_MAX_SIZE_ARGUMENT -I/Users/Shared/xbmc-depends/buildtools-native/include   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_462ba.dir/kwsysPlatformTestsCXX.cxx.o -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Source/kwsys/kwsysPlatformTestsCXX.cxx
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Source/kwsys/kwsysPlatformTestsCXX.cxx:256:14: error: too many arguments to function call, expected 0, have 1
+  a.max_size(sizeof(int));
+  ~~~~~~~~~~ ^~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:1665:5: note: 'max_size' declared here
+    _LIBCPP_INLINE_VISIBILITY size_type max_size() const _NOEXCEPT
+    ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__config:204:35: note: expanded from macro '_LIBCPP_INLINE_VISIBILITY'
+#define _LIBCPP_INLINE_VISIBILITY __attribute__ ((__visibility__("hidden"), __always_inline__))
+                                  ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_462ba.dir/kwsysPlatformTestsCXX.cxx.o] Error 1
+make[3]: *** [cmTC_462ba/fast] Error 2
+
+
+Checking whether "<>" is needed for template friends failed to compile with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Source/kwsys/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_68c8e/fast"
+make -f CMakeFiles/cmTC_68c8e.dir/build.make CMakeFiles/cmTC_68c8e.dir/build
+Building CXX object CMakeFiles/cmTC_68c8e.dir/kwsysPlatformTestsCXX.cxx.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/g++   -DTEST_KWSYS_CXX_HAS_NULL_TEMPLATE_ARGS -I/Users/Shared/xbmc-depends/buildtools-native/include   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_68c8e.dir/kwsysPlatformTestsCXX.cxx.o -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Source/kwsys/kwsysPlatformTestsCXX.cxx
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Source/kwsys/kwsysPlatformTestsCXX.cxx:146:46: error: 'x' is a private member of 'A<int>'
+template <class T> int f(A<T>& a) { return a.x = 0; }
+                                             ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Source/kwsys/kwsysPlatformTestsCXX.cxx:147:14: note: in instantiation of function template specialization 'f<int>' requested here
+template int f(A<int>&);
+             ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Source/kwsys/kwsysPlatformTestsCXX.cxx:143:7: note: declared private here
+  int x;
+      ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_68c8e.dir/kwsysPlatformTestsCXX.cxx.o] Error 1
+make[3]: *** [cmTC_68c8e/fast] Error 2
+
+
+Checking whether struct stat has st_mtim member failed to compile with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Source/kwsys/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_7fc8a/fast"
+make -f CMakeFiles/cmTC_7fc8a.dir/build.make CMakeFiles/cmTC_7fc8a.dir/build
+Building CXX object CMakeFiles/cmTC_7fc8a.dir/kwsysPlatformTestsCXX.cxx.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/g++   -DTEST_KWSYS_STAT_HAS_ST_MTIM -I/Users/Shared/xbmc-depends/buildtools-native/include   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_7fc8a.dir/kwsysPlatformTestsCXX.cxx.o -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Source/kwsys/kwsysPlatformTestsCXX.cxx
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Source/kwsys/kwsysPlatformTestsCXX.cxx:285:15: error: no member named 'st_mtim' in 'stat'
+  (void)stat1.st_mtim.tv_sec;
+        ~~~~~ ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Source/kwsys/kwsysPlatformTestsCXX.cxx:286:15: error: no member named 'st_mtim' in 'stat'
+  (void)stat1.st_mtim.tv_nsec;
+        ~~~~~ ^
+2 errors generated.
+make[4]: *** [CMakeFiles/cmTC_7fc8a.dir/kwsysPlatformTestsCXX.cxx.o] Error 1
+make[3]: *** [cmTC_7fc8a/fast] Error 2
+
+
+Checking whether C++ compiler has '__int64' failed to compile with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Source/kwsys/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_42ea3/fast"
+make -f CMakeFiles/cmTC_42ea3.dir/build.make CMakeFiles/cmTC_42ea3.dir/build
+Building CXX object CMakeFiles/cmTC_42ea3.dir/kwsysPlatformTestsCXX.cxx.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/g++   -DTEST_KWSYS_CXX_HAS___INT64 -I/Users/Shared/xbmc-depends/buildtools-native/include   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_42ea3.dir/kwsysPlatformTestsCXX.cxx.o -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Source/kwsys/kwsysPlatformTestsCXX.cxx
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Source/kwsys/kwsysPlatformTestsCXX.cxx:126:1: error: unknown type name '__int64'
+__int64 f(__int64 n) { return n; }
+^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Source/kwsys/kwsysPlatformTestsCXX.cxx:126:11: error: unknown type name '__int64'
+__int64 f(__int64 n) { return n; }
+          ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Source/kwsys/kwsysPlatformTestsCXX.cxx:129:3: error: unknown type name '__int64'
+  __int64 n = 0;
+  ^
+3 errors generated.
+make[4]: *** [CMakeFiles/cmTC_42ea3.dir/kwsysPlatformTestsCXX.cxx.o] Error 1
+make[3]: *** [cmTC_42ea3/fast] Error 2
+
+
+Determining size of __int64 failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_95959/fast"
+make -f CMakeFiles/cmTC_95959.dir/build.make CMakeFiles/cmTC_95959.dir/build
+Building C object CMakeFiles/cmTC_95959.dir/KWSYS_SIZEOF___INT64.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_95959.dir/KWSYS_SIZEOF___INT64.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/KWSYS_SIZEOF___INT64.c
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/KWSYS_SIZEOF___INT64.c:19:12: error: use of undeclared identifier '__int64'
+  ('0' + ((SIZE / 10000)%10)),
+           ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/KWSYS_SIZEOF___INT64.c:17:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(__int64))
+                     ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/KWSYS_SIZEOF___INT64.c:20:12: error: use of undeclared identifier '__int64'
+  ('0' + ((SIZE / 1000)%10)),
+           ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/KWSYS_SIZEOF___INT64.c:17:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(__int64))
+                     ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/KWSYS_SIZEOF___INT64.c:21:12: error: use of undeclared identifier '__int64'
+  ('0' + ((SIZE / 100)%10)),
+           ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/KWSYS_SIZEOF___INT64.c:17:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(__int64))
+                     ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/KWSYS_SIZEOF___INT64.c:22:12: error: use of undeclared identifier '__int64'
+  ('0' + ((SIZE / 10)%10)),
+           ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/KWSYS_SIZEOF___INT64.c:17:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(__int64))
+                     ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/KWSYS_SIZEOF___INT64.c:23:12: error: use of undeclared identifier '__int64'
+  ('0' +  (SIZE    % 10)),
+           ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/KWSYS_SIZEOF___INT64.c:17:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(__int64))
+                     ^
+5 errors generated.
+make[4]: *** [CMakeFiles/cmTC_95959.dir/KWSYS_SIZEOF___INT64.c.o] Error 1
+make[3]: *** [cmTC_95959/fast] Error 2
+
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/KWSYS_SIZEOF___INT64.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(__int64))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Checking whether CXX compiler has environ in stdlib.h failed to compile with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Source/kwsys/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_1c07a/fast"
+make -f CMakeFiles/cmTC_1c07a.dir/build.make CMakeFiles/cmTC_1c07a.dir/build
+Building CXX object CMakeFiles/cmTC_1c07a.dir/kwsysPlatformTestsCXX.cxx.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/g++   -DTEST_KWSYS_CXX_HAS_ENVIRON_IN_STDLIB_H -I/Users/Shared/xbmc-depends/buildtools-native/include   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_1c07a.dir/kwsysPlatformTestsCXX.cxx.o -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Source/kwsys/kwsysPlatformTestsCXX.cxx
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Source/kwsys/kwsysPlatformTestsCXX.cxx:450:13: error: use of undeclared identifier 'environ'
+  char* e = environ[0];
+            ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_1c07a.dir/kwsysPlatformTestsCXX.cxx.o] Error 1
+make[3]: *** [cmTC_1c07a/fast] Error 2
+
+
+Checking whether CXX compiler has utimensat failed to compile with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Source/kwsys/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_67524/fast"
+make -f CMakeFiles/cmTC_67524.dir/build.make CMakeFiles/cmTC_67524.dir/build
+Building CXX object CMakeFiles/cmTC_67524.dir/kwsysPlatformTestsCXX.cxx.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/g++   -DTEST_KWSYS_CXX_HAS_UTIMENSAT -I/Users/Shared/xbmc-depends/buildtools-native/include   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_67524.dir/kwsysPlatformTestsCXX.cxx.o -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Source/kwsys/kwsysPlatformTestsCXX.cxx
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Source/kwsys/kwsysPlatformTestsCXX.cxx:511:34: error: use of undeclared identifier 'UTIME_OMIT'
+  struct timespec times[2] = {{0,UTIME_OMIT},{0,UTIME_NOW}};
+                                 ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Source/kwsys/kwsysPlatformTestsCXX.cxx:511:49: error: use of undeclared identifier 'UTIME_NOW'
+  struct timespec times[2] = {{0,UTIME_OMIT},{0,UTIME_NOW}};
+                                                ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Source/kwsys/kwsysPlatformTestsCXX.cxx:512:10: error: use of undeclared identifier 'utimensat'
+  return utimensat(AT_FDCWD, "/example", times, AT_SYMLINK_NOFOLLOW);
+         ^
+3 errors generated.
+make[4]: *** [CMakeFiles/cmTC_67524.dir/kwsysPlatformTestsCXX.cxx.o] Error 1
+make[3]: *** [cmTC_67524/fast] Error 2
+
+
+Checking whether CXX compiler has rlimit64 failed to compile with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Source/kwsys/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_cb9c9/fast"
+make -f CMakeFiles/cmTC_cb9c9.dir/build.make CMakeFiles/cmTC_cb9c9.dir/build
+Building CXX object CMakeFiles/cmTC_cb9c9.dir/kwsysPlatformTestsCXX.cxx.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/g++   -DKWSYS_HAS_LFS=1 -DTEST_KWSYS_CXX_HAS_RLIMIT64 -I/Users/Shared/xbmc-depends/buildtools-native/include   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_cb9c9.dir/kwsysPlatformTestsCXX.cxx.o -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Source/kwsys/kwsysPlatformTestsCXX.cxx
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Source/kwsys/kwsysPlatformTestsCXX.cxx:465:19: error: variable has incomplete type 'struct rlimit64'
+  struct rlimit64 rlim;
+                  ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Source/kwsys/kwsysPlatformTestsCXX.cxx:465:10: note: forward declaration of 'rlimit64'
+  struct rlimit64 rlim;
+         ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_cb9c9.dir/kwsysPlatformTestsCXX.cxx.o] Error 1
+make[3]: *** [cmTC_cb9c9/fast] Error 2
+
+
+Checking whether CXX compiler has _atoi64 failed to compile with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Source/kwsys/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_bc547/fast"
+make -f CMakeFiles/cmTC_bc547.dir/build.make CMakeFiles/cmTC_bc547.dir/build
+Building CXX object CMakeFiles/cmTC_bc547.dir/kwsysPlatformTestsCXX.cxx.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/g++   -DTEST_KWSYS_CXX_HAS__ATOI64 -I/Users/Shared/xbmc-depends/buildtools-native/include   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_bc547.dir/kwsysPlatformTestsCXX.cxx.o -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Source/kwsys/kwsysPlatformTestsCXX.cxx
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Source/kwsys/kwsysPlatformTestsCXX.cxx:493:27: error: use of undeclared identifier '_atoi64'
+  return static_cast<int>(_atoi64(str));
+                          ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_bc547.dir/kwsysPlatformTestsCXX.cxx.o] Error 1
+make[3]: *** [cmTC_bc547/fast] Error 2
+
+
+Performing C SOURCE FILE Test HAVE_INLINE failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_0d10d/fast"
+make -f CMakeFiles/cmTC_0d10d.dir/build.make CMakeFiles/cmTC_0d10d.dir/build
+Building C object CMakeFiles/cmTC_0d10d.dir/src.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -DHAVE_INLINE -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_0d10d.dir/src.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_0d10d
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_0d10d.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc  -I/Users/Shared/xbmc-depends/buildtools-native/include  -DHAVE_INLINE -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -L/Users/Shared/xbmc-depends/buildtools-native/lib  CMakeFiles/cmTC_0d10d.dir/src.c.o  -o cmTC_0d10d  
+Undefined symbols for architecture x86_64:
+  "_test", referenced from:
+      _main in src.c.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[4]: *** [cmTC_0d10d] Error 1
+make[3]: *** [cmTC_0d10d/fast] Error 2
+
+Source file was:
+inline int test (void) {return 0;}
+int main (void) {return test();}
+Performing C SOURCE FILE Test HAVE___INLINE failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_34a4b/fast"
+make -f CMakeFiles/cmTC_34a4b.dir/build.make CMakeFiles/cmTC_34a4b.dir/build
+Building C object CMakeFiles/cmTC_34a4b.dir/src.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -DHAVE___INLINE -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_34a4b.dir/src.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_34a4b
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_34a4b.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc  -I/Users/Shared/xbmc-depends/buildtools-native/include  -DHAVE___INLINE -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -L/Users/Shared/xbmc-depends/buildtools-native/lib  CMakeFiles/cmTC_34a4b.dir/src.c.o  -o cmTC_34a4b  
+Undefined symbols for architecture x86_64:
+  "_test", referenced from:
+      _main in src.c.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[4]: *** [cmTC_34a4b] Error 1
+make[3]: *** [cmTC_34a4b/fast] Error 2
+
+Source file was:
+__inline int test (void) {return 0;}
+int main (void) {return test();}
+Determining if the include file byteswap.h exists failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_5a713/fast"
+make -f CMakeFiles/cmTC_5a713.dir/build.make CMakeFiles/cmTC_5a713.dir/build
+Building C object CMakeFiles/cmTC_5a713.dir/CheckIncludeFile.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_5a713.dir/CheckIncludeFile.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: 'byteswap.h' file not found
+#include <byteswap.h>
+         ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_5a713.dir/CheckIncludeFile.c.o] Error 1
+make[3]: *** [cmTC_5a713/fast] Error 2
+
+
+Performing C SOURCE FILE Test HAVE_BSWAP_16 failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_ada0a/fast"
+make -f CMakeFiles/cmTC_ada0a.dir/build.make CMakeFiles/cmTC_ada0a.dir/build
+Building C object CMakeFiles/cmTC_ada0a.dir/src.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -DHAVE_BSWAP_16 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_ada0a.dir/src.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/src.c
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/src.c:1:9: fatal error: 'byteswap.h' file not found
+#include<byteswap.h>
+        ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_ada0a.dir/src.c.o] Error 1
+make[3]: *** [cmTC_ada0a/fast] Error 2
+
+Source file was:
+#include<byteswap.h>
+int main(void){bswap_16(0);return 0;}
+Performing C SOURCE FILE Test HAVE_BSWAP_32 failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_d477b/fast"
+make -f CMakeFiles/cmTC_d477b.dir/build.make CMakeFiles/cmTC_d477b.dir/build
+Building C object CMakeFiles/cmTC_d477b.dir/src.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -DHAVE_BSWAP_32 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_d477b.dir/src.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/src.c
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/src.c:1:9: fatal error: 'byteswap.h' file not found
+#include<byteswap.h>
+        ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_d477b.dir/src.c.o] Error 1
+make[3]: *** [cmTC_d477b/fast] Error 2
+
+Source file was:
+#include<byteswap.h>
+int main(void){bswap_32(0);return 0;}
+Performing C SOURCE FILE Test HAVE_BSWAP_64 failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_b1062/fast"
+make -f CMakeFiles/cmTC_b1062.dir/build.make CMakeFiles/cmTC_b1062.dir/build
+Building C object CMakeFiles/cmTC_b1062.dir/src.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -DHAVE_BSWAP_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_b1062.dir/src.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/src.c
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/src.c:1:9: fatal error: 'byteswap.h' file not found
+#include<byteswap.h>
+        ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_b1062.dir/src.c.o] Error 1
+make[3]: *** [cmTC_b1062/fast] Error 2
+
+Source file was:
+#include<byteswap.h>
+int main(void){bswap_64(0);return 0;}
+Determining if the system is big endian passed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_2cfee/fast"
+make -f CMakeFiles/cmTC_2cfee.dir/build.make CMakeFiles/cmTC_2cfee.dir/build
+Building C object CMakeFiles/cmTC_2cfee.dir/TestEndianess.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_2cfee.dir/TestEndianess.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/TestEndianess.c
+Linking C executable cmTC_2cfee
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_2cfee.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc  -I/Users/Shared/xbmc-depends/buildtools-native/include   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -L/Users/Shared/xbmc-depends/buildtools-native/lib  CMakeFiles/cmTC_2cfee.dir/TestEndianess.c.o  -o cmTC_2cfee  
+
+TestEndianess.c:
+/* A 16 bit integer is required. */
+typedef unsigned short cmakeint16;
+
+/* On a little endian machine, these 16bit ints will give "THIS IS LITTLE ENDIAN."
+   On a big endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_little[] =  {0x4854, 0x5349, 0x4920, 0x2053, 0x494c, 0x5454, 0x454c, 0x4520, 0x444e, 0x4149, 0x2e4e, 0x0000};
+
+/* on a big endian machine, these 16bit ints will give "THIS IS BIG ENDIAN."
+   On a little endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_big[] =     {0x5448, 0x4953, 0x2049, 0x5320, 0x4249, 0x4720, 0x454e, 0x4449, 0x414e, 0x2e2e, 0x0000};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_little[argc];
+  require += info_big[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of __int64 failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_34c78/fast"
+make -f CMakeFiles/cmTC_34c78.dir/build.make CMakeFiles/cmTC_34c78.dir/build
+Building C object CMakeFiles/cmTC_34c78.dir/__INT64.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_34c78.dir/__INT64.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/__INT64.c
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/__INT64.c:19:12: error: use of undeclared identifier '__int64'
+  ('0' + ((SIZE / 10000)%10)),
+           ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/__INT64.c:17:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(__int64))
+                     ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/__INT64.c:20:12: error: use of undeclared identifier '__int64'
+  ('0' + ((SIZE / 1000)%10)),
+           ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/__INT64.c:17:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(__int64))
+                     ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/__INT64.c:21:12: error: use of undeclared identifier '__int64'
+  ('0' + ((SIZE / 100)%10)),
+           ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/__INT64.c:17:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(__int64))
+                     ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/__INT64.c:22:12: error: use of undeclared identifier '__int64'
+  ('0' + ((SIZE / 10)%10)),
+           ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/__INT64.c:17:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(__int64))
+                     ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/__INT64.c:23:12: error: use of undeclared identifier '__int64'
+  ('0' +  (SIZE    % 10)),
+           ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/__INT64.c:17:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(__int64))
+                     ^
+5 errors generated.
+make[4]: *** [CMakeFiles/cmTC_34c78.dir/__INT64.c.o] Error 1
+make[3]: *** [cmTC_34c78/fast] Error 2
+
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/__INT64.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(__int64))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of unsigned __int64 failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_f5512/fast"
+make -f CMakeFiles/cmTC_f5512.dir/build.make CMakeFiles/cmTC_f5512.dir/build
+Building C object CMakeFiles/cmTC_f5512.dir/UNSIGNED___INT64.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_f5512.dir/UNSIGNED___INT64.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/UNSIGNED___INT64.c
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/UNSIGNED___INT64.c:19:12: error: expected ')'
+  ('0' + ((SIZE / 10000)%10)),
+           ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/UNSIGNED___INT64.c:17:31: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(unsigned __int64))
+                              ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/UNSIGNED___INT64.c:19:12: note: to match this '('
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/UNSIGNED___INT64.c:17:21: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(unsigned __int64))
+                    ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/UNSIGNED___INT64.c:20:12: error: expected ')'
+  ('0' + ((SIZE / 1000)%10)),
+           ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/UNSIGNED___INT64.c:17:31: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(unsigned __int64))
+                              ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/UNSIGNED___INT64.c:20:12: note: to match this '('
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/UNSIGNED___INT64.c:17:21: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(unsigned __int64))
+                    ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/UNSIGNED___INT64.c:21:12: error: expected ')'
+  ('0' + ((SIZE / 100)%10)),
+           ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/UNSIGNED___INT64.c:17:31: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(unsigned __int64))
+                              ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/UNSIGNED___INT64.c:21:12: note: to match this '('
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/UNSIGNED___INT64.c:17:21: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(unsigned __int64))
+                    ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/UNSIGNED___INT64.c:22:12: error: expected ')'
+  ('0' + ((SIZE / 10)%10)),
+           ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/UNSIGNED___INT64.c:17:31: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(unsigned __int64))
+                              ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/UNSIGNED___INT64.c:22:12: note: to match this '('
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/UNSIGNED___INT64.c:17:21: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(unsigned __int64))
+                    ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/UNSIGNED___INT64.c:23:12: error: expected ')'
+  ('0' +  (SIZE    % 10)),
+           ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/UNSIGNED___INT64.c:17:31: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(unsigned __int64))
+                              ^
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/UNSIGNED___INT64.c:23:12: note: to match this '('
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/UNSIGNED___INT64.c:17:21: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(unsigned __int64))
+                    ^
+5 errors generated.
+make[4]: *** [CMakeFiles/cmTC_f5512.dir/UNSIGNED___INT64.c.o] Error 1
+make[3]: *** [cmTC_f5512/fast] Error 2
+
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CheckTypeSize/UNSIGNED___INT64.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(unsigned __int64))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the function BZ2_bzCompressInit exists in the cmbzip2 failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_95dd6/fast"
+make -f CMakeFiles/cmTC_95dd6.dir/build.make CMakeFiles/cmTC_95dd6.dir/build
+Building C object CMakeFiles/cmTC_95dd6.dir/CheckFunctionExists.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_95dd6.dir/CheckFunctionExists.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Modules/CheckFunctionExists.c
+Linking C executable cmTC_95dd6
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_95dd6.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc  -I/Users/Shared/xbmc-depends/buildtools-native/include  -w -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -L/Users/Shared/xbmc-depends/buildtools-native/lib  CMakeFiles/cmTC_95dd6.dir/CheckFunctionExists.c.o  -o cmTC_95dd6  -lcmbzip2 
+ld: library not found for -lcmbzip2
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[4]: *** [cmTC_95dd6] Error 1
+make[3]: *** [cmTC_95dd6/fast] Error 2
+
+
+Determining if files sys/types.h;ctype.h;copyfile.h;direct.h exist failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_edf51/fast"
+make -f CMakeFiles/cmTC_edf51.dir/build.make CMakeFiles/cmTC_edf51.dir/build
+Building C object CMakeFiles/cmTC_edf51.dir/CheckIncludeFiles.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_edf51.dir/CheckIncludeFiles.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:5:10: fatal error: 'direct.h' file not found
+#include <direct.h>
+         ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_edf51.dir/CheckIncludeFiles.c.o] Error 1
+make[3]: *** [cmTC_edf51/fast] Error 2
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <copyfile.h>
+#include <direct.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;copyfile.h;dlfcn.h;errno.h;ext2fs/ext2_fs.h exist failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_da903/fast"
+make -f CMakeFiles/cmTC_da903.dir/build.make CMakeFiles/cmTC_da903.dir/build
+Building C object CMakeFiles/cmTC_da903.dir/CheckIncludeFiles.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_da903.dir/CheckIncludeFiles.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:7:10: fatal error: 'ext2fs/ext2_fs.h' file not found
+#include <ext2fs/ext2_fs.h>
+         ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_da903.dir/CheckIncludeFiles.c.o] Error 1
+make[3]: *** [cmTC_da903/fast] Error 2
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <copyfile.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <ext2fs/ext2_fs.h>
+
+
+int main(void){return 0;}
+
+Performing C SOURCE FILE Test HAVE_WORKING_EXT2_IOC_GETFLAGS failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_ca0e0/fast"
+make -f CMakeFiles/cmTC_ca0e0.dir/build.make CMakeFiles/cmTC_ca0e0.dir/build
+Building C object CMakeFiles/cmTC_ca0e0.dir/src.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w -DHAVE_WORKING_EXT2_IOC_GETFLAGS -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_ca0e0.dir/src.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/src.c
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/src.c:2:10: fatal error: 'ext2fs/ext2_fs.h' file not found
+#include <ext2fs/ext2_fs.h>
+         ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_ca0e0.dir/src.c.o] Error 1
+make[3]: *** [cmTC_ca0e0/fast] Error 2
+
+Source file was:
+#include <sys/ioctl.h>
+#include <ext2fs/ext2_fs.h>
+int main(void) { return EXT2_IOC_GETFLAGS; }
+Determining if files sys/types.h;ctype.h;copyfile.h;dlfcn.h;errno.h;fcntl.h;grp.h;inttypes.h;io.h exist failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_9f3a8/fast"
+make -f CMakeFiles/cmTC_9f3a8.dir/build.make CMakeFiles/cmTC_9f3a8.dir/build
+Building C object CMakeFiles/cmTC_9f3a8.dir/CheckIncludeFiles.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_9f3a8.dir/CheckIncludeFiles.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:10:10: fatal error: 'io.h' file not found
+#include <io.h>
+         ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_9f3a8.dir/CheckIncludeFiles.c.o] Error 1
+make[3]: *** [cmTC_9f3a8/fast] Error 2
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <copyfile.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <inttypes.h>
+#include <io.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;copyfile.h;dlfcn.h;errno.h;fcntl.h;grp.h;inttypes.h;langinfo.h;limits.h;linux/types.h exist failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_2ec72/fast"
+make -f CMakeFiles/cmTC_2ec72.dir/build.make CMakeFiles/cmTC_2ec72.dir/build
+Building C object CMakeFiles/cmTC_2ec72.dir/CheckIncludeFiles.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_2ec72.dir/CheckIncludeFiles.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:12:10: fatal error: 'linux/types.h' file not found
+#include <linux/types.h>
+         ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_2ec72.dir/CheckIncludeFiles.c.o] Error 1
+make[3]: *** [cmTC_2ec72/fast] Error 2
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <copyfile.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <inttypes.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <linux/types.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;copyfile.h;dlfcn.h;errno.h;fcntl.h;grp.h;inttypes.h;langinfo.h;limits.h;linux/fiemap.h exist failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_582b8/fast"
+make -f CMakeFiles/cmTC_582b8.dir/build.make CMakeFiles/cmTC_582b8.dir/build
+Building C object CMakeFiles/cmTC_582b8.dir/CheckIncludeFiles.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_582b8.dir/CheckIncludeFiles.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:12:10: fatal error: 'linux/fiemap.h' file not found
+#include <linux/fiemap.h>
+         ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_582b8.dir/CheckIncludeFiles.c.o] Error 1
+make[3]: *** [cmTC_582b8/fast] Error 2
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <copyfile.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <inttypes.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <linux/fiemap.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;copyfile.h;dlfcn.h;errno.h;fcntl.h;grp.h;inttypes.h;langinfo.h;limits.h;linux/fs.h exist failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_b1a77/fast"
+make -f CMakeFiles/cmTC_b1a77.dir/build.make CMakeFiles/cmTC_b1a77.dir/build
+Building C object CMakeFiles/cmTC_b1a77.dir/CheckIncludeFiles.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_b1a77.dir/CheckIncludeFiles.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:12:10: fatal error: 'linux/fs.h' file not found
+#include <linux/fs.h>
+         ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_b1a77.dir/CheckIncludeFiles.c.o] Error 1
+make[3]: *** [cmTC_b1a77/fast] Error 2
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <copyfile.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <inttypes.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <linux/fs.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;copyfile.h;dlfcn.h;errno.h;fcntl.h;grp.h;inttypes.h;langinfo.h;limits.h;linux/magic.h exist failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_2de93/fast"
+make -f CMakeFiles/cmTC_2de93.dir/build.make CMakeFiles/cmTC_2de93.dir/build
+Building C object CMakeFiles/cmTC_2de93.dir/CheckIncludeFiles.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_2de93.dir/CheckIncludeFiles.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:12:10: fatal error: 'linux/magic.h' file not found
+#include <linux/magic.h>
+         ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_2de93.dir/CheckIncludeFiles.c.o] Error 1
+make[3]: *** [cmTC_2de93/fast] Error 2
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <copyfile.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <inttypes.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <linux/magic.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;copyfile.h;dlfcn.h;errno.h;fcntl.h;grp.h;inttypes.h;langinfo.h;limits.h;locale.h;memory.h;paths.h;poll.h;process.h exist failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_28b81/fast"
+make -f CMakeFiles/cmTC_28b81.dir/build.make CMakeFiles/cmTC_28b81.dir/build
+Building C object CMakeFiles/cmTC_28b81.dir/CheckIncludeFiles.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_28b81.dir/CheckIncludeFiles.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:16:10: fatal error: 'process.h' file not found
+#include <process.h>
+         ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_28b81.dir/CheckIncludeFiles.c.o] Error 1
+make[3]: *** [cmTC_28b81/fast] Error 2
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <copyfile.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <inttypes.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <locale.h>
+#include <memory.h>
+#include <paths.h>
+#include <poll.h>
+#include <process.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;copyfile.h;dlfcn.h;errno.h;fcntl.h;grp.h;inttypes.h;langinfo.h;limits.h;locale.h;memory.h;paths.h;poll.h;pwd.h;regex.h;signal.h;spawn.h;stdarg.h;stdint.h;stdlib.h;string.h;strings.h;sys/acl.h;sys/cdefs.h;sys/ioctl.h;sys/mkdev.h exist failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_9de40/fast"
+make -f CMakeFiles/cmTC_9de40.dir/build.make CMakeFiles/cmTC_9de40.dir/build
+Building C object CMakeFiles/cmTC_9de40.dir/CheckIncludeFiles.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_9de40.dir/CheckIncludeFiles.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:28:10: fatal error: 'sys/mkdev.h' file not found
+#include <sys/mkdev.h>
+         ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_9de40.dir/CheckIncludeFiles.c.o] Error 1
+make[3]: *** [cmTC_9de40/fast] Error 2
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <copyfile.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <inttypes.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <locale.h>
+#include <memory.h>
+#include <paths.h>
+#include <poll.h>
+#include <pwd.h>
+#include <regex.h>
+#include <signal.h>
+#include <spawn.h>
+#include <stdarg.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/acl.h>
+#include <sys/cdefs.h>
+#include <sys/ioctl.h>
+#include <sys/mkdev.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;copyfile.h;dlfcn.h;errno.h;fcntl.h;grp.h;inttypes.h;langinfo.h;limits.h;locale.h;memory.h;paths.h;poll.h;pwd.h;regex.h;signal.h;spawn.h;stdarg.h;stdint.h;stdlib.h;string.h;strings.h;sys/acl.h;sys/cdefs.h;sys/ioctl.h;sys/mount.h;sys/param.h;sys/poll.h;sys/select.h;sys/stat.h;sys/statfs.h exist failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_6aa2a/fast"
+make -f CMakeFiles/cmTC_6aa2a.dir/build.make CMakeFiles/cmTC_6aa2a.dir/build
+Building C object CMakeFiles/cmTC_6aa2a.dir/CheckIncludeFiles.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_6aa2a.dir/CheckIncludeFiles.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:33:10: fatal error: 'sys/statfs.h' file not found
+#include <sys/statfs.h>
+         ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_6aa2a.dir/CheckIncludeFiles.c.o] Error 1
+make[3]: *** [cmTC_6aa2a/fast] Error 2
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <copyfile.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <inttypes.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <locale.h>
+#include <memory.h>
+#include <paths.h>
+#include <poll.h>
+#include <pwd.h>
+#include <regex.h>
+#include <signal.h>
+#include <spawn.h>
+#include <stdarg.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/acl.h>
+#include <sys/cdefs.h>
+#include <sys/ioctl.h>
+#include <sys/mount.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/select.h>
+#include <sys/stat.h>
+#include <sys/statfs.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;copyfile.h;dlfcn.h;errno.h;fcntl.h;grp.h;inttypes.h;langinfo.h;limits.h;locale.h;memory.h;paths.h;poll.h;pwd.h;regex.h;signal.h;spawn.h;stdarg.h;stdint.h;stdlib.h;string.h;strings.h;sys/acl.h;sys/cdefs.h;sys/ioctl.h;sys/mount.h;sys/param.h;sys/poll.h;sys/select.h;sys/stat.h;sys/statvfs.h;sys/time.h;sys/utime.h exist failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_149d5/fast"
+make -f CMakeFiles/cmTC_149d5.dir/build.make CMakeFiles/cmTC_149d5.dir/build
+Building C object CMakeFiles/cmTC_149d5.dir/CheckIncludeFiles.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_149d5.dir/CheckIncludeFiles.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:35:10: fatal error: 'sys/utime.h' file not found
+#include <sys/utime.h>
+         ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_149d5.dir/CheckIncludeFiles.c.o] Error 1
+make[3]: *** [cmTC_149d5/fast] Error 2
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <copyfile.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <inttypes.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <locale.h>
+#include <memory.h>
+#include <paths.h>
+#include <poll.h>
+#include <pwd.h>
+#include <regex.h>
+#include <signal.h>
+#include <spawn.h>
+#include <stdarg.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/acl.h>
+#include <sys/cdefs.h>
+#include <sys/ioctl.h>
+#include <sys/mount.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/select.h>
+#include <sys/stat.h>
+#include <sys/statvfs.h>
+#include <sys/time.h>
+#include <sys/utime.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;copyfile.h;dlfcn.h;errno.h;fcntl.h;grp.h;inttypes.h;langinfo.h;limits.h;locale.h;memory.h;paths.h;poll.h;pwd.h;regex.h;signal.h;spawn.h;stdarg.h;stdint.h;stdlib.h;string.h;strings.h;sys/acl.h;sys/cdefs.h;sys/ioctl.h;sys/mount.h;sys/param.h;sys/poll.h;sys/select.h;sys/stat.h;sys/statvfs.h;sys/time.h;sys/utsname.h;sys/vfs.h exist failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_c58a5/fast"
+make -f CMakeFiles/cmTC_c58a5.dir/build.make CMakeFiles/cmTC_c58a5.dir/build
+Building C object CMakeFiles/cmTC_c58a5.dir/CheckIncludeFiles.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_c58a5.dir/CheckIncludeFiles.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:36:10: fatal error: 'sys/vfs.h' file not found
+#include <sys/vfs.h>
+         ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_c58a5.dir/CheckIncludeFiles.c.o] Error 1
+make[3]: *** [cmTC_c58a5/fast] Error 2
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <copyfile.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <inttypes.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <locale.h>
+#include <memory.h>
+#include <paths.h>
+#include <poll.h>
+#include <pwd.h>
+#include <regex.h>
+#include <signal.h>
+#include <spawn.h>
+#include <stdarg.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/acl.h>
+#include <sys/cdefs.h>
+#include <sys/ioctl.h>
+#include <sys/mount.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/select.h>
+#include <sys/stat.h>
+#include <sys/statvfs.h>
+#include <sys/time.h>
+#include <sys/utsname.h>
+#include <sys/vfs.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;copyfile.h;dlfcn.h;errno.h;fcntl.h;grp.h;inttypes.h;langinfo.h;limits.h;locale.h;memory.h;paths.h;poll.h;pwd.h;regex.h;signal.h;spawn.h;stdarg.h;stdint.h;stdlib.h;string.h;strings.h;sys/acl.h;sys/cdefs.h;sys/ioctl.h;sys/mount.h;sys/param.h;sys/poll.h;sys/select.h;sys/stat.h;sys/statvfs.h;sys/time.h;sys/utsname.h;sys/wait.h;time.h;unistd.h;utime.h;wchar.h;wctype.h;windows.h exist failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_1448c/fast"
+make -f CMakeFiles/cmTC_1448c.dir/build.make CMakeFiles/cmTC_1448c.dir/build
+Building C object CMakeFiles/cmTC_1448c.dir/CheckIncludeFiles.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_1448c.dir/CheckIncludeFiles.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:42:10: fatal error: 'windows.h' file not found
+#include <windows.h>
+         ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_1448c.dir/CheckIncludeFiles.c.o] Error 1
+make[3]: *** [cmTC_1448c/fast] Error 2
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <copyfile.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <inttypes.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <locale.h>
+#include <memory.h>
+#include <paths.h>
+#include <poll.h>
+#include <pwd.h>
+#include <regex.h>
+#include <signal.h>
+#include <spawn.h>
+#include <stdarg.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/acl.h>
+#include <sys/cdefs.h>
+#include <sys/ioctl.h>
+#include <sys/mount.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/select.h>
+#include <sys/stat.h>
+#include <sys/statvfs.h>
+#include <sys/time.h>
+#include <sys/utsname.h>
+#include <sys/wait.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <wchar.h>
+#include <wctype.h>
+#include <windows.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;copyfile.h;dlfcn.h;errno.h;fcntl.h;grp.h;inttypes.h;langinfo.h;limits.h;locale.h;memory.h;paths.h;poll.h;pwd.h;regex.h;signal.h;spawn.h;stdarg.h;stdint.h;stdlib.h;string.h;strings.h;sys/acl.h;sys/cdefs.h;sys/ioctl.h;sys/mount.h;sys/param.h;sys/poll.h;sys/select.h;sys/stat.h;sys/statvfs.h;sys/time.h;sys/utsname.h;sys/wait.h;time.h;unistd.h;utime.h;wchar.h;wctype.h;wincrypt.h exist failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_1a648/fast"
+make -f CMakeFiles/cmTC_1a648.dir/build.make CMakeFiles/cmTC_1a648.dir/build
+Building C object CMakeFiles/cmTC_1a648.dir/CheckIncludeFiles.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_1a648.dir/CheckIncludeFiles.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:42:10: fatal error: 'wincrypt.h' file not found
+#include <wincrypt.h>
+         ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_1a648.dir/CheckIncludeFiles.c.o] Error 1
+make[3]: *** [cmTC_1a648/fast] Error 2
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <copyfile.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <inttypes.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <locale.h>
+#include <memory.h>
+#include <paths.h>
+#include <poll.h>
+#include <pwd.h>
+#include <regex.h>
+#include <signal.h>
+#include <spawn.h>
+#include <stdarg.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/acl.h>
+#include <sys/cdefs.h>
+#include <sys/ioctl.h>
+#include <sys/mount.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/select.h>
+#include <sys/stat.h>
+#include <sys/statvfs.h>
+#include <sys/time.h>
+#include <sys/utsname.h>
+#include <sys/wait.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <wchar.h>
+#include <wctype.h>
+#include <wincrypt.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;copyfile.h;dlfcn.h;errno.h;fcntl.h;grp.h;inttypes.h;langinfo.h;limits.h;locale.h;memory.h;paths.h;poll.h;pwd.h;regex.h;signal.h;spawn.h;stdarg.h;stdint.h;stdlib.h;string.h;strings.h;sys/acl.h;sys/cdefs.h;sys/ioctl.h;sys/mount.h;sys/param.h;sys/poll.h;sys/select.h;sys/stat.h;sys/statvfs.h;sys/time.h;sys/utsname.h;sys/wait.h;time.h;unistd.h;utime.h;wchar.h;wctype.h;winioctl.h exist failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_841ab/fast"
+make -f CMakeFiles/cmTC_841ab.dir/build.make CMakeFiles/cmTC_841ab.dir/build
+Building C object CMakeFiles/cmTC_841ab.dir/CheckIncludeFiles.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_841ab.dir/CheckIncludeFiles.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:42:10: fatal error: 'winioctl.h' file not found
+#include <winioctl.h>
+         ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_841ab.dir/CheckIncludeFiles.c.o] Error 1
+make[3]: *** [cmTC_841ab/fast] Error 2
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <copyfile.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <inttypes.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <locale.h>
+#include <memory.h>
+#include <paths.h>
+#include <poll.h>
+#include <pwd.h>
+#include <regex.h>
+#include <signal.h>
+#include <spawn.h>
+#include <stdarg.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/acl.h>
+#include <sys/cdefs.h>
+#include <sys/ioctl.h>
+#include <sys/mount.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/select.h>
+#include <sys/stat.h>
+#include <sys/statvfs.h>
+#include <sys/time.h>
+#include <sys/utsname.h>
+#include <sys/wait.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <wchar.h>
+#include <wctype.h>
+#include <winioctl.h>
+
+
+int main(void){return 0;}
+
+Determining if the function MD5Init exists in the md failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_ff7d9/fast"
+make -f CMakeFiles/cmTC_ff7d9.dir/build.make CMakeFiles/cmTC_ff7d9.dir/build
+Building C object CMakeFiles/cmTC_ff7d9.dir/CheckFunctionExists.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w -DCHECK_FUNCTION_EXISTS=MD5Init -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_ff7d9.dir/CheckFunctionExists.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ff7d9
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_ff7d9.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc  -I/Users/Shared/xbmc-depends/buildtools-native/include  -w -DCHECK_FUNCTION_EXISTS=MD5Init -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -L/Users/Shared/xbmc-depends/buildtools-native/lib  CMakeFiles/cmTC_ff7d9.dir/CheckFunctionExists.c.o  -o cmTC_ff7d9  -lmd 
+ld: library not found for -lmd
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[4]: *** [cmTC_ff7d9] Error 1
+make[3]: *** [cmTC_ff7d9/fast] Error 2
+
+
+Determining if the _CrtSetReportMode exist failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_8baaa/fast"
+make -f CMakeFiles/cmTC_8baaa.dir/build.make CMakeFiles/cmTC_8baaa.dir/build
+Building C object CMakeFiles/cmTC_8baaa.dir/CheckSymbolExists.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_8baaa.dir/CheckSymbolExists.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckSymbolExists.c:2:10: fatal error: 'crtdbg.h' file not found
+#include <crtdbg.h>
+         ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_8baaa.dir/CheckSymbolExists.c.o] Error 1
+make[3]: *** [cmTC_8baaa/fast] Error 2
+
+File /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <crtdbg.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _CrtSetReportMode
+  return ((int*)(&_CrtSetReportMode))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function futimens exists failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_29d45/fast"
+make -f CMakeFiles/cmTC_29d45.dir/build.make CMakeFiles/cmTC_29d45.dir/build
+Building C object CMakeFiles/cmTC_29d45.dir/CheckFunctionExists.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w -DCHECK_FUNCTION_EXISTS=futimens -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_29d45.dir/CheckFunctionExists.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Modules/CheckFunctionExists.c
+Linking C executable cmTC_29d45
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_29d45.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc  -I/Users/Shared/xbmc-depends/buildtools-native/include  -w -DCHECK_FUNCTION_EXISTS=futimens -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -L/Users/Shared/xbmc-depends/buildtools-native/lib  CMakeFiles/cmTC_29d45.dir/CheckFunctionExists.c.o  -o cmTC_29d45  
+Undefined symbols for architecture x86_64:
+  "_futimens", referenced from:
+      _main in CheckFunctionExists.c.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[4]: *** [cmTC_29d45] Error 1
+make[3]: *** [cmTC_29d45/fast] Error 2
+
+
+Determining if the function futimesat exists failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_be8fe/fast"
+make -f CMakeFiles/cmTC_be8fe.dir/build.make CMakeFiles/cmTC_be8fe.dir/build
+Building C object CMakeFiles/cmTC_be8fe.dir/CheckFunctionExists.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w -DCHECK_FUNCTION_EXISTS=futimesat -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_be8fe.dir/CheckFunctionExists.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Modules/CheckFunctionExists.c
+Linking C executable cmTC_be8fe
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_be8fe.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc  -I/Users/Shared/xbmc-depends/buildtools-native/include  -w -DCHECK_FUNCTION_EXISTS=futimesat -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -L/Users/Shared/xbmc-depends/buildtools-native/lib  CMakeFiles/cmTC_be8fe.dir/CheckFunctionExists.c.o  -o cmTC_be8fe  
+Undefined symbols for architecture x86_64:
+  "_futimesat", referenced from:
+      _main in CheckFunctionExists.c.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[4]: *** [cmTC_be8fe] Error 1
+make[3]: *** [cmTC_be8fe/fast] Error 2
+
+
+Determining if the function strncpy_s exists failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_3b524/fast"
+make -f CMakeFiles/cmTC_3b524.dir/build.make CMakeFiles/cmTC_3b524.dir/build
+Building C object CMakeFiles/cmTC_3b524.dir/CheckFunctionExists.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w -DCHECK_FUNCTION_EXISTS=strncpy_s -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_3b524.dir/CheckFunctionExists.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Modules/CheckFunctionExists.c
+Linking C executable cmTC_3b524
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_3b524.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc  -I/Users/Shared/xbmc-depends/buildtools-native/include  -w -DCHECK_FUNCTION_EXISTS=strncpy_s -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -L/Users/Shared/xbmc-depends/buildtools-native/lib  CMakeFiles/cmTC_3b524.dir/CheckFunctionExists.c.o  -o cmTC_3b524  
+Undefined symbols for architecture x86_64:
+  "_strncpy_s", referenced from:
+      _main in CheckFunctionExists.c.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[4]: *** [cmTC_3b524] Error 1
+make[3]: *** [cmTC_3b524/fast] Error 2
+
+
+Determining if the function utimensat exists failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_e7859/fast"
+make -f CMakeFiles/cmTC_e7859.dir/build.make CMakeFiles/cmTC_e7859.dir/build
+Building C object CMakeFiles/cmTC_e7859.dir/CheckFunctionExists.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w -DCHECK_FUNCTION_EXISTS=utimensat -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_e7859.dir/CheckFunctionExists.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e7859
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_e7859.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc  -I/Users/Shared/xbmc-depends/buildtools-native/include  -w -DCHECK_FUNCTION_EXISTS=utimensat -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -L/Users/Shared/xbmc-depends/buildtools-native/lib  CMakeFiles/cmTC_e7859.dir/CheckFunctionExists.c.o  -o cmTC_e7859  
+Undefined symbols for architecture x86_64:
+  "_utimensat", referenced from:
+      _main in CheckFunctionExists.c.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[4]: *** [cmTC_e7859] Error 1
+make[3]: *** [cmTC_e7859/fast] Error 2
+
+
+Determining if the function _ctime64_s exists failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_f7b35/fast"
+make -f CMakeFiles/cmTC_f7b35.dir/build.make CMakeFiles/cmTC_f7b35.dir/build
+Building C object CMakeFiles/cmTC_f7b35.dir/CheckFunctionExists.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w -DCHECK_FUNCTION_EXISTS=_ctime64_s -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_f7b35.dir/CheckFunctionExists.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f7b35
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_f7b35.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc  -I/Users/Shared/xbmc-depends/buildtools-native/include  -w -DCHECK_FUNCTION_EXISTS=_ctime64_s -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -L/Users/Shared/xbmc-depends/buildtools-native/lib  CMakeFiles/cmTC_f7b35.dir/CheckFunctionExists.c.o  -o cmTC_f7b35  
+Undefined symbols for architecture x86_64:
+  "__ctime64_s", referenced from:
+      _main in CheckFunctionExists.c.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[4]: *** [cmTC_f7b35] Error 1
+make[3]: *** [cmTC_f7b35/fast] Error 2
+
+
+Determining if the function _fseeki64 exists failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_69321/fast"
+make -f CMakeFiles/cmTC_69321.dir/build.make CMakeFiles/cmTC_69321.dir/build
+Building C object CMakeFiles/cmTC_69321.dir/CheckFunctionExists.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w -DCHECK_FUNCTION_EXISTS=_fseeki64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_69321.dir/CheckFunctionExists.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Modules/CheckFunctionExists.c
+Linking C executable cmTC_69321
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_69321.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc  -I/Users/Shared/xbmc-depends/buildtools-native/include  -w -DCHECK_FUNCTION_EXISTS=_fseeki64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -L/Users/Shared/xbmc-depends/buildtools-native/lib  CMakeFiles/cmTC_69321.dir/CheckFunctionExists.c.o  -o cmTC_69321  
+Undefined symbols for architecture x86_64:
+  "__fseeki64", referenced from:
+      _main in CheckFunctionExists.c.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[4]: *** [cmTC_69321] Error 1
+make[3]: *** [cmTC_69321/fast] Error 2
+
+
+Determining if the function _get_timezone exists failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_f11c1/fast"
+make -f CMakeFiles/cmTC_f11c1.dir/build.make CMakeFiles/cmTC_f11c1.dir/build
+Building C object CMakeFiles/cmTC_f11c1.dir/CheckFunctionExists.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w -DCHECK_FUNCTION_EXISTS=_get_timezone -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_f11c1.dir/CheckFunctionExists.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f11c1
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_f11c1.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc  -I/Users/Shared/xbmc-depends/buildtools-native/include  -w -DCHECK_FUNCTION_EXISTS=_get_timezone -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -L/Users/Shared/xbmc-depends/buildtools-native/lib  CMakeFiles/cmTC_f11c1.dir/CheckFunctionExists.c.o  -o cmTC_f11c1  
+Undefined symbols for architecture x86_64:
+  "__get_timezone", referenced from:
+      _main in CheckFunctionExists.c.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[4]: *** [cmTC_f11c1] Error 1
+make[3]: *** [cmTC_f11c1/fast] Error 2
+
+
+Determining if the function _localtime64_s exists failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_ab318/fast"
+make -f CMakeFiles/cmTC_ab318.dir/build.make CMakeFiles/cmTC_ab318.dir/build
+Building C object CMakeFiles/cmTC_ab318.dir/CheckFunctionExists.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w -DCHECK_FUNCTION_EXISTS=_localtime64_s -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_ab318.dir/CheckFunctionExists.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ab318
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_ab318.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc  -I/Users/Shared/xbmc-depends/buildtools-native/include  -w -DCHECK_FUNCTION_EXISTS=_localtime64_s -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -L/Users/Shared/xbmc-depends/buildtools-native/lib  CMakeFiles/cmTC_ab318.dir/CheckFunctionExists.c.o  -o cmTC_ab318  
+Undefined symbols for architecture x86_64:
+  "__localtime64_s", referenced from:
+      _main in CheckFunctionExists.c.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[4]: *** [cmTC_ab318] Error 1
+make[3]: *** [cmTC_ab318/fast] Error 2
+
+
+Determining if the function _mkgmtime64 exists failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_5c3dc/fast"
+make -f CMakeFiles/cmTC_5c3dc.dir/build.make CMakeFiles/cmTC_5c3dc.dir/build
+Building C object CMakeFiles/cmTC_5c3dc.dir/CheckFunctionExists.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w -DCHECK_FUNCTION_EXISTS=_mkgmtime64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_5c3dc.dir/CheckFunctionExists.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Modules/CheckFunctionExists.c
+Linking C executable cmTC_5c3dc
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_5c3dc.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc  -I/Users/Shared/xbmc-depends/buildtools-native/include  -w -DCHECK_FUNCTION_EXISTS=_mkgmtime64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -L/Users/Shared/xbmc-depends/buildtools-native/lib  CMakeFiles/cmTC_5c3dc.dir/CheckFunctionExists.c.o  -o cmTC_5c3dc  
+Undefined symbols for architecture x86_64:
+  "__mkgmtime64", referenced from:
+      _main in CheckFunctionExists.c.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[4]: *** [cmTC_5c3dc] Error 1
+make[3]: *** [cmTC_5c3dc/fast] Error 2
+
+
+Determining if the function cygwin_conv_path exists failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_3c270/fast"
+make -f CMakeFiles/cmTC_3c270.dir/build.make CMakeFiles/cmTC_3c270.dir/build
+Building C object CMakeFiles/cmTC_3c270.dir/CheckFunctionExists.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w -DCHECK_FUNCTION_EXISTS=cygwin_conv_path -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_3c270.dir/CheckFunctionExists.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Modules/CheckFunctionExists.c
+Linking C executable cmTC_3c270
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_3c270.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc  -I/Users/Shared/xbmc-depends/buildtools-native/include  -w -DCHECK_FUNCTION_EXISTS=cygwin_conv_path -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -L/Users/Shared/xbmc-depends/buildtools-native/lib  CMakeFiles/cmTC_3c270.dir/CheckFunctionExists.c.o  -o cmTC_3c270  
+Undefined symbols for architecture x86_64:
+  "_cygwin_conv_path", referenced from:
+      _main in CheckFunctionExists.c.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[4]: *** [cmTC_3c270] Error 1
+make[3]: *** [cmTC_3c270/fast] Error 2
+
+
+Performing C SOURCE FILE Test MAJOR_IN_MKDEV failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_7c79c/fast"
+make -f CMakeFiles/cmTC_7c79c.dir/build.make CMakeFiles/cmTC_7c79c.dir/build
+Building C object CMakeFiles/cmTC_7c79c.dir/src.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w -DMAJOR_IN_MKDEV -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_7c79c.dir/src.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/src.c
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/src.c:1:10: fatal error: 'sys/mkdev.h' file not found
+#include <sys/mkdev.h>
+         ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_7c79c.dir/src.c.o] Error 1
+make[3]: *** [cmTC_7c79c/fast] Error 2
+
+Source file was:
+#include <sys/mkdev.h>
+int main() { return major(256); }
+Performing C SOURCE FILE Test MAJOR_IN_SYSMACROS failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_6ae00/fast"
+make -f CMakeFiles/cmTC_6ae00.dir/build.make CMakeFiles/cmTC_6ae00.dir/build
+Building C object CMakeFiles/cmTC_6ae00.dir/src.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w -DMAJOR_IN_SYSMACROS -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_6ae00.dir/src.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/src.c
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/src.c:1:10: fatal error: 'sys/sysmacros.h' file not found
+#include <sys/sysmacros.h>
+         ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_6ae00.dir/src.c.o] Error 1
+make[3]: *** [cmTC_6ae00/fast] Error 2
+
+Source file was:
+#include <sys/sysmacros.h>
+int main() { return major(256); }
+Performing C SOURCE FILE Test HAVE_STRUCT_TM___TM_GMTOFF failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_c3723/fast"
+make -f CMakeFiles/cmTC_c3723.dir/build.make CMakeFiles/cmTC_c3723.dir/build
+Building C object CMakeFiles/cmTC_c3723.dir/src.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w -DHAVE_STRUCT_TM___TM_GMTOFF -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_c3723.dir/src.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/src.c
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/src.c:7:19: error: no member named '__tm_gmtoff' in 'struct tm'; did you mean 'tm_gmtoff'?
+   if (sizeof(tmp.__tm_gmtoff))
+                  ^~~~~~~~~~~
+                  tm_gmtoff
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/include/time.h:83:7: note: 'tm_gmtoff' declared here
+        long    tm_gmtoff;      /* offset from CUT in seconds */
+                ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_c3723.dir/src.c.o] Error 1
+make[3]: *** [cmTC_c3723/fast] Error 2
+
+Source file was:
+
+#include <time.h>
+
+int main()
+{
+   static struct tm tmp;
+   if (sizeof(tmp.__tm_gmtoff))
+      return 0;
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STATFS_F_NAMEMAX failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_b0039/fast"
+make -f CMakeFiles/cmTC_b0039.dir/build.make CMakeFiles/cmTC_b0039.dir/build
+Building C object CMakeFiles/cmTC_b0039.dir/src.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w -DHAVE_STRUCT_STATFS_F_NAMEMAX -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_b0039.dir/src.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/src.c
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/src.c:8:19: error: no member named 'f_namemax' in 'struct statfs'
+   if (sizeof(tmp.f_namemax))
+              ~~~ ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_b0039.dir/src.c.o] Error 1
+make[3]: *** [cmTC_b0039/fast] Error 2
+
+Source file was:
+
+#include <sys/param.h>
+#include <sys/mount.h>
+
+int main()
+{
+   static struct statfs tmp;
+   if (sizeof(tmp.f_namemax))
+      return 0;
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT_ST_MTIM_TV_NSEC failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_0b60a/fast"
+make -f CMakeFiles/cmTC_0b60a.dir/build.make CMakeFiles/cmTC_0b60a.dir/build
+Building C object CMakeFiles/cmTC_0b60a.dir/src.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w -DHAVE_STRUCT_STAT_ST_MTIM_TV_NSEC -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_0b60a.dir/src.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/src.c
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/src.c:8:19: error: no member named 'st_mtim' in 'struct stat'
+   if (sizeof(tmp.st_mtim.tv_nsec))
+              ~~~ ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_0b60a.dir/src.c.o] Error 1
+make[3]: *** [cmTC_0b60a/fast] Error 2
+
+Source file was:
+
+#include <sys/types.h>
+#include <sys/stat.h>
+
+int main()
+{
+   static struct stat tmp;
+   if (sizeof(tmp.st_mtim.tv_nsec))
+      return 0;
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT_ST_MTIME_N failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_9af1e/fast"
+make -f CMakeFiles/cmTC_9af1e.dir/build.make CMakeFiles/cmTC_9af1e.dir/build
+Building C object CMakeFiles/cmTC_9af1e.dir/src.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w -DHAVE_STRUCT_STAT_ST_MTIME_N -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_9af1e.dir/src.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/src.c
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/src.c:8:19: error: no member named 'st_mtime_n' in 'struct stat'
+   if (sizeof(tmp.st_mtime_n))
+              ~~~ ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_9af1e.dir/src.c.o] Error 1
+make[3]: *** [cmTC_9af1e/fast] Error 2
+
+Source file was:
+
+#include <sys/types.h>
+#include <sys/stat.h>
+
+int main()
+{
+   static struct stat tmp;
+   if (sizeof(tmp.st_mtime_n))
+      return 0;
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT_ST_UMTIME failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_8051b/fast"
+make -f CMakeFiles/cmTC_8051b.dir/build.make CMakeFiles/cmTC_8051b.dir/build
+Building C object CMakeFiles/cmTC_8051b.dir/src.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w -DHAVE_STRUCT_STAT_ST_UMTIME -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_8051b.dir/src.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/src.c
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/src.c:8:19: error: no member named 'st_umtime' in 'struct stat'
+   if (sizeof(tmp.st_umtime))
+              ~~~ ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_8051b.dir/src.c.o] Error 1
+make[3]: *** [cmTC_8051b/fast] Error 2
+
+Source file was:
+
+#include <sys/types.h>
+#include <sys/stat.h>
+
+int main()
+{
+   static struct stat tmp;
+   if (sizeof(tmp.st_umtime))
+      return 0;
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT_ST_MTIME_USEC failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_4b791/fast"
+make -f CMakeFiles/cmTC_4b791.dir/build.make CMakeFiles/cmTC_4b791.dir/build
+Building C object CMakeFiles/cmTC_4b791.dir/src.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w -DHAVE_STRUCT_STAT_ST_MTIME_USEC -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_4b791.dir/src.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/src.c
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/src.c:8:19: error: no member named 'st_mtime_usec' in 'struct stat'; did you mean 'st_mtimespec'?
+   if (sizeof(tmp.st_mtime_usec))
+                  ^~~~~~~~~~~~~
+                  st_mtimespec
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/include/sys/stat.h:182:13: note: 'st_mtimespec' declared here
+struct stat __DARWIN_STRUCT_STAT64;
+            ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/include/sys/stat.h:166:2: note: expanded from macro '__DARWIN_STRUCT_STAT64'
+        __DARWIN_STRUCT_STAT64_TIMES \
+        ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/include/sys/stat.h:130:18: note: expanded from macro '__DARWIN_STRUCT_STAT64_TIMES'
+        struct timespec st_mtimespec;           /* time of last data modification */ \
+                        ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_4b791.dir/src.c.o] Error 1
+make[3]: *** [cmTC_4b791/fast] Error 2
+
+Source file was:
+
+#include <sys/types.h>
+#include <sys/stat.h>
+
+int main()
+{
+   static struct stat tmp;
+   if (sizeof(tmp.st_mtime_usec))
+      return 0;
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STATVFS_F_IOSIZE failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_14420/fast"
+make -f CMakeFiles/cmTC_14420.dir/build.make CMakeFiles/cmTC_14420.dir/build
+Building C object CMakeFiles/cmTC_14420.dir/src.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include  -w -DHAVE_STRUCT_STATVFS_F_IOSIZE -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_14420.dir/src.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/src.c
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/src.c:8:19: error: no member named 'f_iosize' in 'struct statvfs'
+   if (sizeof(tmp.f_iosize))
+              ~~~ ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_14420.dir/src.c.o] Error 1
+make[3]: *** [cmTC_14420/fast] Error 2
+
+Source file was:
+
+#include <sys/types.h>
+#include <sys/statvfs.h>
+
+int main()
+{
+   static struct statvfs tmp;
+   if (sizeof(tmp.f_iosize))
+      return 0;
+  return 0;
+}
+
+Determining if the system is big endian passed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_832c7/fast"
+make -f CMakeFiles/cmTC_832c7.dir/build.make CMakeFiles/cmTC_832c7.dir/build
+Building C object CMakeFiles/cmTC_832c7.dir/TestEndianess.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_832c7.dir/TestEndianess.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/TestEndianess.c
+Linking C executable cmTC_832c7
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_832c7.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc  -I/Users/Shared/xbmc-depends/buildtools-native/include   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -L/Users/Shared/xbmc-depends/buildtools-native/lib  CMakeFiles/cmTC_832c7.dir/TestEndianess.c.o  -o cmTC_832c7  
+
+TestEndianess.c:
+/* A 16 bit integer is required. */
+typedef unsigned short cmakeint16;
+
+/* On a little endian machine, these 16bit ints will give "THIS IS LITTLE ENDIAN."
+   On a big endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_little[] =  {0x4854, 0x5349, 0x4920, 0x2053, 0x494c, 0x5454, 0x454c, 0x4520, 0x444e, 0x4149, 0x2e4e, 0x0000};
+
+/* on a big endian machine, these 16bit ints will give "THIS IS BIG ENDIAN."
+   On a little endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_big[] =     {0x5448, 0x4953, 0x2049, 0x5320, 0x4249, 0x4720, 0x454e, 0x4449, 0x414e, 0x2e2e, 0x0000};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_little[argc];
+  require += info_big[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the include file elf.h exists failed with the following output:
+Change Dir: /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/Xcode.app/Contents/Developer/usr/bin/make" "cmTC_c2d0a/fast"
+make -f CMakeFiles/cmTC_c2d0a.dir/build.make CMakeFiles/cmTC_c2d0a.dir/build
+Building C object CMakeFiles/cmTC_c2d0a.dir/CheckIncludeFile.c.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc   -I/Users/Shared/xbmc-depends/buildtools-native/include   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk   -o CMakeFiles/cmTC_c2d0a.dir/CheckIncludeFile.c.o   -c /Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: 'elf.h' file not found
+#include <elf.h>
+         ^
+1 error generated.
+make[4]: *** [CMakeFiles/cmTC_c2d0a.dir/CheckIncludeFile.c.o] Error 1
+make[3]: *** [cmTC_c2d0a/fast] Error 2
+
+
+Looking for a Fortran compiler failed with the following output:
+-- The Fortran compiler identification is unknown
+CMake Error at CMakeLists.txt:2 (project):
+  No CMAKE_Fortran_COMPILER could be found.
+
+  Tell CMake where to find the compiler by setting either the environment
+  variable "FC" or the CMake cache entry CMAKE_Fortran_COMPILER to the full
+  path to the compiler, or to the compiler name if it is in the PATH.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Tests/CMakeFiles/CheckFortran/CMakeFiles/CMakeOutput.log".
+See also "/Users/osx/Desktop/kodi/xbmc/tools/depends/native/cmake-native/x86_64-osx-native/Tests/CMakeFiles/CheckFortran/CMakeFiles/CMakeError.log".
+

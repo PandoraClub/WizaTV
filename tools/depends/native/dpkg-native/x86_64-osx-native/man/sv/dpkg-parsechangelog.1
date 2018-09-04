@@ -1,0 +1,126 @@
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH dpkg\-parsechangelog 1 2008\-01\-13 Debianprojektet dpkg\-verktygen
+.SH NAMN
+dpkg\-parsechangelog \- tolka Debians ändringsloggar
+.
+.SH SYNOPS
+\fBdpkg\-parsechangelog\fP [\fIflaggor\fP]
+.
+.SH BESKRIVNING
+\fBdpkg\-parsechangelog\fP läser och tolkar ändringsloggen i ett uppackat
+Debiankällkodsträd och visar informationen i den på standard ut i en
+maskinläsbar form.
+.
+.SH FLAGGOR
+.TP 
+\fB\-l\fP\fIändringsloggfil\fP
+Anger ändringsloggfilen som information skall läsas från. Standardvärdet är
+\fBdebian/changelog\fP.
+.TP 
+\fB\-F\fP\fIändringsloggformat\fP
+Anger format på ändringsloggen. Som standard läses formatet från en speciell
+rad nära slutet av ändringsloggen, eller så används Debians standardformat
+om ingen information hittas.
+.TP 
+\fB\-L\fP\fIbibliotekskatalog\fP
+Ange en ytterligare katalog att söka i efter parserskript. Katalogen söks
+genom innan standardkatalogerna, vilka för närvarande är
+\fB/usr/local/lib/dpkg/parsechangelog\fP och \fB/usr/lib/dpkg/parsechangelog\fP.
+.TP 
+\fB\-h\fP, \fB\-\-help\fP
+Visar hjälpskärm och avslutar.
+.TP 
+\fB\-\-version\fP
+Visar version och avslutar.
+.SS Parserflaggor
+Följande flaggor kan användas för att styra utdata från ändringsloggparsern,
+t.ex. omfånget av poster eller formatet på utdata. De måste stödas av
+parserskriptet i fråga. Se även \fBVARNINGAR\fP.
+.TP 
+\fB\-\-format\fP \fIutdataformat\fP
+Välj utdataformat. Stödda format är för närvarande \fIdpkg\fP och
+\fIrfc822\fP. \fIdpkg\fP är det klassiska utdataformatet (från innan denna flagga
+var tillgänglig) och förvalet. Det består av ett stycke i Debians
+control\-format (se \fBdeb\-control\fP(5)). Om mer än en post önskas tas de
+flesta fält från den senaste posten, förutom om annat anges:
+.RS
+.TP 
+\fBSource:\fP <paketnamn>
+.TP 
+\fBVersion:\fP <versions>
+.TP 
+\fBDescription:\fP <målutgåva>
+.TP 
+\fBUrgency:\fP <brådska>
+Högsta brådskan av alla de inkluderade posterna används.
+.TP 
+\fBMaintainer:\fP <författare>
+.TP 
+\fBDate:\fP <datum>
+.TP 
+\fBCloses:\fP <nummer på felrapport>
+Closes\-fältet i alla inkluderade poster slås samman.
+.TP 
+\fBChanges:\fP <poster från ändringsloggen>
+Texten i alla ändringsloggposter slås samman. För att göra fältet till
+giltigt flerradsfält i Debian\-control\-format ersätts tomma rader med en
+ensam punkt och alla rader får ett teckens indrag. Exakt innehåll beror på
+formatet på ändringsloggen.
+.RE
+.IP
+Ytterligare användardefinierade fält kan finnas.
+.IP
+\fBrfc822\fP\-formatet använder samma fält, men ger ett separat stycke för varje
+ändringsloggspost så att all metadata för varje post behålls.
+.TP 
+\fB\-\-since\fP, \fB\-s\fP, \fB\-v\fP \fIversion\fP
+ta med alla poster efter \fIversion\fP.
+.TP 
+\fB\-\-until\fP, \fB\-u\fP \fIversion\fP
+ta med alla ändringar före \fIversion\fP.
+.TP 
+\fB\-\-from\fP, \fB\-f\fP \fIversion\fP
+ta med alla ändringar från och med \fIversion\fP.
+.TP 
+\fB\-\-to\fP, \fB\-t\fP \fIversion\fP
+ta med alla ändringar till och med \fIversion\fP.
+.TP 
+\fB\-\-count\fP, \fB\-c\fP, \fB\-n\fP \fIantal\fP
+ta med \fIantal\fP ändringar från början (eller slutet om \fIantal\fP är lägre än
+0).
+.TP 
+\fB\-\-offset\fP, \fB\-o\fP \fIantal\fP
+ändra startpunkt för \-\-count, räknat från början (eller slutet om \fIantal\fP
+är lägre än 0).
+.TP 
+\fB\-\-all\fP
+ta med alla ändringar.
+.
+.SH VARNINGAR
+Ingen av \fBparserflaggorna\fP, bortsett \-v, stöds enbart i \fBdpkg\fP version
+1.14.16 och senare. Tredjepartsparsrar för andra ändringsloggformat än
+\fIdebian\fP kanske inte stöder alla flaggor.
+.
+.SH FILER
+.TP 
+\fBdebian/changelog\fP
+Ändringsloggsfilen, används för att hämta versionsberoende information om
+källkodspaketet, till exempel brådska och utgåva för en insändning,
+ändringarna som utförts sedan en specifik version och själva versionsnumret
+på källkoden.
+.
+.SH FÖRFATTARE
+Upphovsrättsskyddad © 1995\-1996 Ian Jackson
+.br
+Upphovsrättsskyddat © 2000 Wichert Akkerman
+.br
+Upphovsrättsskyddat © 2007, 2008 Frank Lichtenheld
+.sp
+Detta är fri programvara; se GNU General Public License version 2 eller
+senare för kopieringsvillkor. Det finns INGEN GARANTI.
+.SH "ÖVERSÄTTNING"
+Peter Krefting och Daniel Nylander.

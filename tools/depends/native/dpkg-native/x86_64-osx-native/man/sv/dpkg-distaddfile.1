@@ -1,0 +1,51 @@
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH dpkg\-distaddfile 1 2007\-03\-07 Debianprojektet dpkg\-verktygen
+.SH NAMN
+dpkg\-distaddfile \- lägg till poster i debian/files
+.
+.SH SYNOPS
+\fBdpkg\-distaddfile\fP [\fIflaggor\fP]\fI filnamn sektion prioritet\fP
+.
+.SH BESKRIVNING
+\fBdpkg\-distaddfile\fP lägger till en post för en namngiven fil i
+\fBdebian/files\fP.
+
+Det tar tre argument som inte är flaggor \- filnamn, sektion och prioritet
+för \fB.changes\fP\-filen.
+
+Filnamnet anges relativt till katalogen där \fBdpkg\-genchanges\fP förväntas
+finna filerna, normalt \fB..\fP, snarare än som en sökväg relativ till den
+aktuella katalogen när \fBdpkg\-distaddfile\fP körs.
+.
+.SH FLAGGOR
+.TP 
+\fB\-f\fP\fIfillisfile\fP
+Läs eller skriv listan över filer som skall sändas in här, istället för att
+använda \fBdebian/file\fP.
+.TP 
+\fB\-h\fP, \fB\-\-help\fP
+Visar hjälpskärm och avslutar.
+.TP 
+\fB\-\-version\fP
+Visar version och avslutar.
+.
+.SH FILER
+.TP 
+\fBdebian/files\fP
+Listan över genererade filer so ingår i insändningen som
+förbereds. \fBdpkg\-distaddfile\fP kan användas för att lägga till ytterligare
+filer.
+.
+.SH FÖRFATTARE
+Upphovsrättsskyddad © 1995\-1996 Ian Jackson
+.br
+Upphovsrättsskyddat © 2000 Wichert Akkerman
+.sp
+Detta är fri programvara; se GNU General Public License version 2 eller
+senare för kopieringsvillkor. Det finns INGEN GARANTI.
+.SH "ÖVERSÄTTNING"
+Peter Krefting och Daniel Nylander.

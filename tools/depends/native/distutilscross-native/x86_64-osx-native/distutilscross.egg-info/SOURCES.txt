@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+distutilscross/__init__.py
+distutilscross/crosscompile.py
+distutilscross.egg-info/PKG-INFO
+distutilscross.egg-info/SOURCES.txt
+distutilscross.egg-info/dependency_links.txt
+distutilscross.egg-info/entry_points.txt
+distutilscross.egg-info/top_level.txt

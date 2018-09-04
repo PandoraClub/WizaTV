@@ -1,0 +1,257 @@
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH dpkg\-buildpackage 1 2008\-08\-15 "Projekt Debiana" "programy pomocnicze dpkg"
+.SH NAZWA
+dpkg\-buildpackage \- buduje pakiety ¼ród³owe lub binarne ze ¼róde³
+.
+.SH SK£ADNIA
+\fBdpkg\-buildpackage\fP [\fIopcje\fP]
+.
+.SH OPIS
+\fBdpkg\-buildpackage\fP jest skryptem kontrolnym, którego mo¿na u¿yæ do
+zautomatyzowania budowania pakietu.
+.
+.SH OPCJE
+.TP 
+\fB\-b\fP
+Okre¶la budowanie tylko pakietów binarnych, ¿adne pliki ¼ród³owe nie bêd±
+budowane ani dystrybuowane
+.TP 
+\fB\-B\fP
+Okre¶la budowanie tylko pakietów binarnych, bez dystrybuowania ¿adnych
+pakietów binarnych niezale¿nych od architektury.
+.TP 
+\fB\-S\fP
+Okre¶la budowanie tylko pakietów ¼ród³owych, bez budowania pakietów
+binarnych.
+.PP
+Opcje \fB\-s\fP\fIx\fP okre¶laj±, czy do wydania do³±czane s± oryginalne pliki
+¼ród³owe, je¿eli zostanie wygenerowany choæ jeden z nich (tj. nie u¿yto
+opcji \fB\-b\fP lub \fB\-B\fP).
+.TP 
+\fB\-si\fP
+Domy¶lnie lub je¶li to okre¶lono, oryginalne ¼ród³a bêd± do³±czone tylko
+je¶li numer oryginalnej wersji autora programu (tzn. wersja bez epoki i bez
+numeru rewizji Debiana) ró¿ni siê od numeru wersji autora programu z
+poprzedniego wpisu dziennika zmian.
+.TP 
+\fB\-sa\fP
+Wymusza do³±czenie oryginalnych ¼róde³.
+.TP 
+\fB\-sd\fP
+Wymusza pominiêcie oryginalnych ¼róde³ i do³±czenie tylko pliku ró¿nic
+(diff).
+.TP 
+\fB\-a\fP\fIarchitektura\fP
+Okre¶la architekturê Debiana dla której jest budowany pakiet. Architektura
+komputera, na której jest budowany pakiet, jest okre¶lana automatycznie i
+stanowi równie¿ domy¶ln± architekturê docelow±.
+
+Je¶li architektura docelowa ró¿ni siê od architektury u¿ywanej podczas
+budowania (jak ma to miejsce przy kompilacji skro¶nej), oraz je¶li zmienna
+¶rodowiska \fBPKG_CONFIG_LIBDIR\fP nie jest ustawiona, wtedy jest ustawiana na
+warto¶æ nadaj±c± siê do kompilacji skro¶nej
+("/usr/\fItyp\-systemu\-gnu\fP/lib/pkgconfig/:/usr/share/pkgconfig").
+.TP 
+\fB\-t\fP\fItyp\-systemu\-gnu\fP
+Okre¶la typ systemu GNU, dla którego budujemy. Mo¿e byæ u¿yte zamiast \-a lub
+jako uzupe³nienie do nadpisania domy¶lnego typu systemu GNU docelowej
+architektury Debiana.
+.TP 
+\fB\-j\fP\fIzadania\fP
+Liczba zadañ, które mog± zostaæ równocze¶nie uruchomione, odpowiednik opcji
+\fBmake\fP(1) o tej samej nazwie. Dodaje siê do zmiennej ¶rodowiskowej
+MAKEFLAGS, co powinno spowodowaæ, ¿e wszystkie kolejne wywo³ania programu
+make odziedzicz± tê opcjê. Tak¿e dodaje \fBparallel=\fP\fIzadania\fP do zmiennej
+¶rodowiskowej DEB_BUILD_OPTIONS, co pozwala plikom debian/rules na
+korzystanie z tej informacji dla ich w³asnych celów.Warto¶æ
+\fBparallel=\fP\fIzadania\fP zmiennej ¶rodowiska DEB_BUILD_OPTIONS nadpisze
+warto¶æ przekazan± w opcji \fB\-j\fP, je¶li j± podano.
+.TP 
+\fB\-v\fP\fIwersja\fP
+U¿ywa informacji z dziennika zmian ze wszystkich wersji pó¼niejszych ni¿
+\fIwersja\fP.
+.TP 
+\fB\-C\fP\fIopis_zmian\fP
+Czyta opis zmian z pliku \fIopis_zmian\fP, zamiast u¿ywaæ informacji z
+dziennika zmian z katalogu ze ¼ród³ami.
+.TP 
+\fB\-m\fP\fIadres opiekuna\fP
+U¿ywa \fIadresu_opiekuna\fP jako nazwy i adresu e\-mail opiekuna tego pakietu,
+zamiast pobieraæ te warto¶ci z pliku kontrolnego z katalogu ze ¼ród³ami.
+.TP 
+\fB\-e\fP\fIadres_opiekuna\fP
+U¿ywa \fIadresu_opiekuna\fP jako nazwy i adresu e\-mail opiekuna tego wydania,
+zamiast pobieraæ te warto¶ci z dziennika zmian z katalogu ze ¼ród³ami.
+.TP 
+\fB\-D\fP
+Sprawdza zale¿no¶ci i konflikty czasu budowania, przerywa dzia³anie z
+b³êdem, je¿eli nie bêd± spe³nione.
+.TP 
+\fB\-d\fP
+Nie sprawdza zale¿no¶ci czasu budowania ani konfliktów.
+.TP 
+\fB\-E\fP
+Przekszta³ca pewne ostrze¿enia w b³êdy. Tylko \fBdpkg\-source\fP u¿ywa tej
+opcji, jednak¿e \fBdpkg\-buildpackage\fP rozpoznaje j± i przekazuje niezmienion±
+do \fBdpkg\-source\fP.
+.TP 
+\fB\-W\fP
+Neguje poprzednio ustawione \fB\-E\fP. Tylko \fBdpkg\-source\fP u¿ywa tej opcji,
+jednak¿e \fBdpkg\-buildpackage\fP rozpoznaje j± i przekazuje niezmienion± do
+\fBdpkg\-source\fP.
+.TP 
+\fB\-nc\fP
+Nie czy¶ci katalogu ze ¼ród³ami (implikuje \fB\-b\fP).
+.TP 
+\fB\-tc\fP
+Po zbudowaniu pakietu czy¶ci katalog ze ¼ród³ami (u¿ywaj±c
+\fIgain\-root\-command\fP \fBdebian/rules clean\fP).
+.TP 
+\fB\-r\fP\fIpolecenie\-uzyskiwania\-praw\-administratora\fP
+Kiedy \fBdpkg\-buildpackage\fP potrzebuje wykonaæ czê¶æ procesu budowania jako
+administrator, poprzedza wykonywane polecenia
+\fIpoleceniem\-uzyskiwania\-praw\-administratora\fP, je¶li takowe zosta³o
+podane. Je¶li natomiast nie zosta³o podane, zostanie domy¶lnie u¿yte
+polecenie \fBfakeroot\fP, o ile jest
+dostêpne. \fIpolecenie\-uzyskiwania\-praw\-administratora\fP powinno zaczynaæ siê
+nazw± programu dostêpnego przez zmienn± systemow± \fBPATH\fP, któremu bêd±
+przekazywane argumenty w postaci w³a¶ciwego programu do wykonania oraz jego
+parametrów. \fIpolecenie\-uzyskiwania\-praw\-administratora\fP mo¿e samo zawieraæ
+parametry (musz± byæ one rozdzielone spacjami), ale nie mo¿e zawieraæ
+metaznaków pow³oki. \fIpoleceniem\-uzyskiwania\-praw\-administratora\fP mog±
+typowo byæ \fBfakeroot\fP, \fBsudo\fP, \fBsuper\fP lub \fBreally\fP. \fBsu\fP nie nadaje
+siê do tego celu, poniewa¿ mo¿e tylko wywo³aæ pow³okê u¿ytkownika u¿ywaj±c
+\fB\-c\fP zamiast przekazywaæ indywidualnie argumenty dla polecenia do
+wykonania.
+.TP 
+\fB\-R\fP\fIplik_rules\fP
+Budowanie pakietu Debiana zwykle wymaga wywo³ania \fBdebian/rules\fP jako
+polecenia z kilkoma standardowymi parametrami. U¿ywaj±c tej opcji mo¿na
+podaæ wywo³anie innego programu, który pos³u¿y do zbudowania pakietu (mo¿e
+tak¿e zawieraæ dodatkowe parametry rozdzielone spacjami). Mo¿e byæ tak¿e
+u¿yta do wykonania standardowego pliku regu³ z u¿yciem innego programu make
+(np. podaj±c \fB/usr/local/bin/make \-f debian/rules\fP jako \fIplik_rules\fP).
+.TP 
+\fB\-p\fP\fIpolecenie\-podpisywania\fP
+Gdy \fBdpkg\-buildpackage\fP bêdzie potrzebowa³ wywo³aæ GPG lub PGP aby podpisaæ
+plik kontrolny ¼róde³ (\fB.dsc\fP) lub plik \fB.changes\fP, zostanie uruchomione
+\fIpolecenie\-podpisywania\fP (w razie konieczno¶ci przeszukuj±c \fBPATH\fP)
+zamiast \fBpgp\fP. Parametry normalnie przekazywane do \fBpgp\fP zostan±
+przekazane do \fIpolecenia\-podpisywania\fP. Je¶li \fIpolecenie\-podpisywania\fP
+przyjmuje argumenty w stylu GPG zamiast atylu PGP, nale¿y u¿yæ opcji
+\fB\-sgpg\fP. \fIpolecenie\-podpisywania\fP nie powinno zawieraæ spacji ani innych
+metaznaków pow³oki.
+.TP 
+\fB\-k\fP\fIid\-klucza\fP
+Okre¶la ID klucza u¿ywanego do podpisywania pakietów.
+.TP 
+\fB\-us\fP
+Nie próbuje podpisywaæ pakietów.
+.TP 
+\fB\-uc\fP
+Nie próbuje podpisywaæ plików .changes.
+.TP 
+\fB\-i\fP[\fIwyra¿_regularne\fP]
+Przekazywana bez zmian do \fBdpkg\-source\fP.
+.TP 
+\fB\-I\fP\fI[wzorzec]\fP
+Przekazywana bez zmian do \fBdpkg\-source\fP. Mo¿e byæ powtórzona wiele razy.
+.TP 
+\fB\-s\fP[\fBnsAkurKUR\fP]
+Przekazywana bez zmian do \fBdpkg\-source\fP.
+.TP 
+\fB\-z\fP, \fB\-Z\fP
+Przekazywana bez zmian do \fBdpkg\-source\fP.
+.TP 
+\fB\-\-admindir=\fP\fIkatalog\fP
+Zmienia po³o¿enie bazy danych \fBdpkg\fP. Domy¶lnie jest to \fI/var/lib/dpkg\fP.
+.TP 
+\fB\-h\fP, \fB\-\-help\fP
+Wy¶wietla informacjê o u¿ytkowaniu i koñczy dzia³anie.
+.TP 
+\fB\-\-version\fP
+Wy¶wietla informacjê o wersji i pomy¶lnie koñczy dzia³anie.
+.
+.SH ¦RODOWISKO
+Odpowiednie zmienne ¶rodowiska do okre¶lania opcji kompilatora i linkera s±
+ustawiane na warto¶ci domy¶lne, chyba ¿e ju¿ s± ustawione w
+¶rodowisku. Nale¿y zauwa¿yæ, ¿e ten mechanizm zosta³ wprowadzony dopiero w
+wersji 1.14.17 dpkg\-dev i jeszcze nie wszystkie pliki \fIrules\fP i narzêdzia
+do budowania pakietów honoruj± te zmienne.
+.TP 
+\fBCFLAGS\fP
+Opcje optymalizacji, które s± przekazywane do systemu budowania Debiana i
+mog±/powinny byæ nadpisane przy budowaniu pakietu je¶li jest to potrzebne
+(warto¶æ domy¶lna: \fB\-g \-O2\fP, lub \fB\-g\ \-O0\fP je¶li opcja \fBnoopt\fP jest
+podana w DEB_BUILD_OPTIONS). Nadpisywanie opcji mo¿e byæ u¿yte w celu
+ustawienia wy¿szego poziomu optymalizacji lub radzenia sobie z b³êdami
+kompilatora, które pojawiaj± siê przy niektórych poziomach optymalizacji
+(poziom okre¶lony w ostatniej opcji "zwyciê¿a").
+.TP 
+\fBCFLAGS_APPEND\fP
+Opcje optymalizacji dodawane do flag kompilatora, które nie mog± byæ
+nadpisane przez pakiet (g³ównie u¿ywane dla testów budowania). Warto¶æ
+domy¶lna: puste.
+.TP 
+\fBCXXFLAGS\fP
+To samo co \fBCFLAGS\fP dla ¼róde³ C++.
+.TP 
+\fBCXXFLAGS_APPEND\fP
+To samo co \fBCFLAGS_APPEND\fP dla ¼róde³ C++.
+.TP 
+\fBFFLAGS\fP
+To samo co \fBCFLAGS\fP dla ¼róde³ w Fortranie.
+.TP 
+\fBFFLAGS_APPEND\fP
+To samo co \fBCFLAGS_APPEND\fP dla ¼róde³ w Fortranie.
+.TP 
+\fBCPPFLAGS\fP
+Flagi preprocesora, które s± przekazywane do systemu budowania Debiana i
+mog±/powinny byæ nadpisane przy budowaniu pakietu je¶li jest to potrzebne
+(warto¶æ domy¶lna: puste). To makro jest rzadko stosowane (wiêkszo¶æ
+systemów budowania u¿ywa po prostu \fBCFLAGS\fP zamiast \fBCPPFLAGS\fP).
+.TP 
+\fBCPPFLAGS_APPEND\fP
+Flagi dodawane do flag preprocesora, które nie mog± byæ nadpisane przez
+pakiet (g³ównie u¿ywane dla testów budowania). Warto¶æ domy¶lna: puste.
+.TP 
+\fBLDFLAGS\fP
+Opcje przekazywane do kompilatora podczas ³±czenia plików wykonywalnych lub
+wspó³dzielonych bibliotek (je¶li linker jest wywo³ywany bezpo¶rednio, \fB\-Wl\fP
+i \fB,\fP musz± byæ usuniête z tych opcji). Warto¶æ domy¶lna: puste.
+.TP 
+\fBLDFLAGS_APPEND\fP
+Opcje optymalizacji dodawane do flag kompilatora podczas ³±czenia kodu,
+które nie mog± byæ nadpisane przez pakiet (g³ównie u¿ywane dla testów
+budowania). Warto¶æ domy¶lna: puste.
+.
+.SH B£ÊDY
+Powinno byæ mo¿liwe podanie spacji, metaznaków pow³oki oraz argumentów dla
+\fIgain\-root\-command\fP oraz \fIsign\-command\fP.
+.
+.SH "ZOBACZ TAK¯E"
+\fBdpkg\-source\fP(1), \fBdpkg\-architecture\fP(1), \fBdpkg\-genchanges\fP(1),
+\fBgpg\fP(1), \fBpgp\fP(1).
+.
+.SH AUTORZY
+Copyright (C) 1995\-1996 Ian Jackson
+.br
+Copyright (C) 2000 Wichert Akkerman
+.br
+Copyright (C) 2007 Frank Lichtenheld
+.sp
+Niniejszy program jest oprogramowaniem wolnym, sprawd¼ Powszechn± Licencjê
+Publiczn± GNU w wersji drugiej lub pó¼niejszej, by dowiedzieæ siê o
+warunkach dystrybucji. Brak JAKIEJKOLWIEK gwarancji.
+.SH "T£UMACZE"
+Piotr Roszatycki <dexter@debian.org>, 1999
+.br
+Bartosz Feñski <fenio@debian.org>, 2004-2005
+.br
+Robert Luberda <robert@debian.org>, 2006-2008
+.br
+Wiktor Wandachowicz <siryes@gmail.com>, 2008

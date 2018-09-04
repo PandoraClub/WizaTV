@@ -1,0 +1,26 @@
+Metadata-Version: 1.0
+Name: distutilscross
+Version: 0.1
+Summary: Cross Compile Python Extensions
+Home-page: http://bitbucket.org/lambacck/distutilscross/
+Author: Chris Lambacher
+Author-email: chris@kateandchris.net
+License: MIT
+Description: Really it lets you cross build binary extensions.
+        
+        You need to export PYTHONXCPREFIX and LDFLAGS, something like:
+        $ export PYTHONXCPREFIX=/opt/eldk/ppc_4xxFP/usr
+        $ export LDFLAGS="-L/opt/eldk/ppc_4xxFP/lib -L/opt/eldk/ppc_4xxFP/usr/lib"
+        
+        It should pick up the correct include paths from the PYTHONXCPREFIX. To build
+        use:
+        $ python setup.py build -x
+        To make a cross compiled egg:
+        $ python setup.py build -x bdist_egg --plat-name linux-ppc --exclude-source-files
+        
+Keywords: distutils setuptools egg compile cross-compile
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Build Tools

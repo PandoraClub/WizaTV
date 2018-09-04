@@ -1,0 +1,320 @@
+.\" update\-alternatives.8
+.\" This man page is copyright 1997 Charles Briscoe-Smith
+.\" This is free documentation; you can redistribute it and/or modify
+.\" it under the terms of the GNU General Public License as published
+.\" by the Free Software Foundation; either version 2 of the License, or
+.\" (at your option) any later version.  There is NO WARRANTY.  You can
+.\" find the GNU GPL in /usr/share/common-licenses/GPL on any Debian system.
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH update\-alternatives 8 2007\-07\-18 Debian\-Projekt dpkg\-Hilfsprogramme
+.SH NAME
+update\-alternatives \- Verwaltung symbolischer Links zur Bestimmung von
+Standardwerten für Befehle
+.
+.SH ÜBERSICHT
+\fBupdate\-alternatives\fP [\fIOptionen\fP] \fIBefehl\fP
+.
+.SH BESCHREIBUNG
+\fBupdate\-alternatives\fP erzeugt, entfernt, verwaltet und zeigt die
+Informationen über die symbolischen Links, die das »Debian
+Alternativ\-System« bilden, an.
+.PP
+Es ist möglich, mehrere Programme, die die gleiche oder ähnliche
+Funktionalität bereitstellen, gleichzeitig auf einem System zu
+installieren. Beispielsweise sind auf vielen Systemen mehrere Texteditoren
+gleichzeitig installiert. Dies gibt den Benutzern eines Systems die
+Möglichkeit, falls gewünscht, jeweils einen anderen Editor zu verwenden,
+allerdings wird es damit für ein Programm schwierig, einen guten Wahl für
+einen Editor zum Starten zu treffen, falls der Benutzer keine spezielle Wahl
+getroffen hat.
+.PP
+Debians Alternativ\-System hat das Ziel, dieses Problem zu lösen. Ein
+generischer Name im Dateisystem wird von allen Dateien, die austauschbare
+Funktionalität bereitstellen, verwendet. Das Alternativ\-System bestimmt
+zusammen mit dem Systemadministrator welche Datei tatsächlich durch diesen
+generischen Namen referenziert wird. Falls beispielsweise sowohl der
+Texteditor \fBed\fP(1) als auch \fBnvi\fP(1) im System installiert sind, wird das
+Alternativ\-System dafür sorgen, dass der generische Name \fI/usr/bin/editor\fP
+standardmäßig auf \fI/usr/bin/nvi\fP zeigt. Der Systemadministrator kann dies
+Ändern und dafür sorgen, dass er stattdessen auf \fI/usr/bin/ed\fP zeigt, und
+das Alternativ\-System wird diese Einstellung nicht verändern, bis es
+explizit dazu aufgefordert wird.
+.PP
+Der generische Name ist nicht ein direkter symbolischer Link auf die
+ausgewählte Alternative. Stattdessen ist es ein symbolischer Link auf einen
+Namen im \fIAlternativ\-Verzeichnis\fP, welches wiederum ein symbolischer Link
+auf die tatsächlich referenzierte Datei ist. Dies ist so realisiert, damit
+die Änderungen des Systemadministrators auf das \fI/etc\fP Verzeichnis
+beschränkt bleiben: der FHS (siehe dort) erklärt warum dies eine Gute Idee
+ist.
+.PP
+Für jedes Paket, das eine Datei mit einer bestimmten Funktionalität
+bereitstellt, wird bei der Installation, der Änderung oder der Entfernung
+\fBupdate\-alternatives\fP aufgerufen, um die Informationen über diese Datei im
+Alternativ\-System zu aktualisieren. \fBupdate\-alternatives\fP wird gewöhnlich
+vom \fBpostinst\fP\- oder \fBprerm\fP\-Skript eines Debian\-Paketes aufgerufen.
+.PP
+Es ist oft sinnvoll, dass eine Reihe von Alternativen synchronisiert werden,
+so dass sie als Gruppe geändert werden; wenn beispielsweise mehrere
+Versionen des \fBvi\fP(1) Editors installiert sind, sollte die Handbuchseite,
+die durch \fI/usr/share/man/man1/vi.1\fP referenziert wird, zu dem ausführbaren
+Programm, dass durch \fI/usr/bin/vi\fP referenziert wird,
+gehören. \fBupdate\-alternatives\fP erledigt dies mit Hilfe von \fIMaster\-\fP und
+\fISlave\-Links\fP; wird der Master\-Link geändert, wird auch jeder zugehörige
+Slave\-Link geändert. Ein Master\-Link und seine zugehörigen Slave\-Links
+bilden zusammen eine \fILink\-Gruppe\fP.
+.PP
+Eine Linkgruppe ist zu jeder Zeit in einem der beiden Modi: automatisch oder
+manuell. Ist eine Gruppe im automatischen Modus, dann wird das
+Alternativ\-System bei der Paketinstallation und \-entfernung automatisch
+entscheiden, ob und wie die Links aktualisiert werden. Im manuellen Modus
+ändert das Alternativ\-System die Links nicht; die Entscheidung verbleibt
+beim Systemadministrator.
+.PP
+Beim erstmaligen Einführen in das System befindet sich eine Linkgruppe im
+automatischen Modus. Führt der Systemadministrator Änderungen an den
+automatischen Einstellungen des Systems durch, wird dies beim nächsten
+Aufruf von \fBupdate\-alternatives\fP auf die Linkgruppe bemerkt und die Gruppe
+wird automatisch in den manuellen Modus umgeschaltet.
+.PP
+Jede Alternative hat eine ihr zugeordnete \fIPriorität\fP. Befindet sich eine
+Linkgruppe im automatischen Modus, zeigen die Mitglieder einer Gruppe auf
+die Alternative mit der höchsten Priorität.
+.PP
+Wird die \fI\-\-config\fP\-Option verwendet, dann zeigt \fBupdate\-alternatives\fP
+alle Auswahlmöglichkeiten für die Link\-Gruppe an, für die der gegebene
+\fIName\fP der Master\-Link ist. Die aktuelle Auswahl ist mit »*« markiert, und
+die Auswahl mit der höchsten Priorität mit »+«. Sie werden dann aufgefordert
+anzugeben, Ihre Auswahl bezüglich der Linkgruppe anzugeben. Sobald Sie eine
+Änderung durchführen, befindet sich die Linkgruppe nicht mehr im
+\fIautomatischen\fP Modus. Sie müssen dann die \fI\-\-auto\fP Option verwenden, um
+wieder in den automatischen Zustand zurückzukehren.
+.PP
+Falls Sie nicht\-interaktiv konfigurieren möchten, können Sie stattdessen die
+\fI\-\-set\fP Option verwenden (siehe unten).
+.PP
+Verschiedene Pakete, die die gleiche Datei bereitstellen, müssen dies
+\fBkooperativ\fP durchführen. Das bedeutet, dass in diesem Fall die Verwendung
+von \fBupdate\-alternatives\fP für alle beteiligten Pakete \fBzwingend\fP ist. Es
+ist nicht möglich, sich über eine Datei in einem Paket hinwegzusetzen,
+welches den \fBupdate\-alternatives\fP\-Mechanismus nicht verwendet.
+.
+.SH BEGRIFFE
+Da die Tätigkeiten von \fBupdate\-alternatives\fP recht komplex sind, sollen
+einige spezielle Begriffe helfen, seine Vorgehensweise zu erläutern.
+.TP 
+generischer Name
+Ein Name wie \fI/usr/bin/editor\fP, der sich über das Alternativ\-System auf
+eine Reihe von Dateien mit ähnlicher Funktionalität bezieht.
+.TP 
+Symlink
+Ohne weitere Angabe bedeutet dies ein symbolischer Link im
+Alternativ\-Verzeichnis: einer derer, die vom Systemadministrator angepasst
+werden sollen.
+.TP 
+Alternative
+Der Name einer speziellen Datei im Dateisystem, die mittels eines
+generischen Namens über das Alternativ\-System zugreifbar gemacht werden
+kann.
+.TP 
+Alternativ\-Verzeichnis
+Ein Verzeichnis, standardmäßig \fI/etc/alternatives\fP, das die Symlinks
+enthält.
+.TP 
+administratives Verzeichnis
+Ein Verzeichnis, standardmäßig \fI/var/lib/dpkg/alternatives\fP, das die
+\fBupdate\-alternatives\fP Zustandsinformationen enthält.
+.TP 
+Linkgruppe
+Ein Satz zusammengehörender Symlinks, die als Gruppe aktualisiert werden
+sollen.
+.TP 
+Master\-Link
+Der Link in einer Linkgruppe der bestimmt, wie die anderen Links in der
+Gruppe konfiguriert werden.
+.TP 
+Slave\-Link
+Ein Link in einer Linkgruppe, der durch die Einstellung des Master\-Links
+bestimmt wird.
+.TP 
+automatischer Modus
+Ist eine Linkgruppe im automatischen Modus, dann sorgt das Alternativ\-System
+dafür, dass die Links in der Gruppe auf die für die Gruppe passende
+Alternative mit der höchsten Priorität zeigen.
+.TP 
+manueller Modus
+Ist eine Linkgruppe im manuellen Modus, dann führt das Alternativ\-System
+keine Änderungen an den Einstellungen des Systemadministrators durch.
+.
+.SH BEFEHLE
+.TP 
+\fB\-\-install\fP \fIGenname Symlink Altern Priorität\fP [\fB\-\-slave\fP \fIGenname Symlink Altern\fP] ...
+Füge eine Gruppe von Alternativen zum System hinzu. \fIGenname\fP ist der
+generische Name des Master\-Links, \fISymlink\fP ist der Name seines Symlinks im
+Alternativ\-Verzeichnis und \fIAltern\fP ist die Alternative, die für den
+Master\-Link eingeführt wird. Die Argumente nach \fB\-\-slave\fP sind der
+generische Name, Symlink\-Name in dem Alternativ\-Verzeichnis und die
+Alternative für den Slave\-Link. Null oder mehrere \fB\-\-slave\fP\-Optionen, jede
+von drei Argumenten gefolgt, können spezifiziert werden.
+.IP
+Falls der angegebene Master\-Symlink bereits in den Datensätzen des
+Alternativ\-Systems existiert, dann wird die angegebene Information als neuer
+Satz von Alternativen für die Gruppe hinzugefügt. Andernfalls wird eine neue
+Gruppe im automatischen Modus mit dieser Information hinzugefügt. Falls die
+Gruppe im automatischen Modus ist, und die Priorität der neu hinzugefügten
+Alternative höher ist als alle installierten Alternativen für diese Gruppe,
+dann werden die Symlinks aktualisiert, um auf die neu hinzugefügte
+Alternative zu zeigen.
+.TP 
+\fB\-\-set\fP \fIName Pfad\fP
+Setzt das Programm \fIPfad\fP als Alternative für \fIName\fP. Dies ist äquivalent
+zu \fI\-\-config\fP, ist aber nicht interaktiv und kann somit geskriptet werden.
+.TP 
+\fB\-\-remove\fP \fIName Pfad\fP
+Entferne eine Alternative und alle zugehörigen Slave\-Links. \fIName\fP ist ein
+Name im Alternativ\-Verzeichnis, und \fIPfad\fP ist ein absoluter Dateiname zu
+dem \fIName\fP gelinkt werden könnte. Falls \fIName\fP tatsächlich nach \fIPfad\fP
+gelinkt ist, dann wird \fIName\fP aktualisiert um auf eine andere geeignete
+Alternative zu zeigen, oder entfernt, falls keine solche Alternative übrig
+bleibt. Zugehörige Slave\-Links werden entsprechend aktualisiert oder
+entfernt. Falls der Link derzeit nicht auf \fIPfad\fP zeigt, werden keine Links
+geändert; nur die Information über die Alternative wird entfernt.
+.TP 
+\fB\-\-remove\-all\fP \fIName\fP
+Entferne alle Alternativen und deren zugehörige Slave\-Links. \fIName\fP ist ein
+Name im Alternativ\-Verzeichnis.
+.TP 
+\fB\-\-all\fP
+Rufe \fB\-\-config\fP für alle Alternativen auf.
+.TP 
+\fB\-\-auto\fP \fILink\fP
+Überführt den Master\-Link \fILink\fP in den automatischen Modus. Bei diesem
+Prozess werden dieser Symlink und seine Slave\-Links aktualisiert, um auf die
+installierte Alternative mit höchster Priorität zu zeigen.
+.TP 
+\fB\-\-display\fP \fILink\fP
+Zeige Informationen über die Linkgruppe an, von der \fILink\fP der Master\-Link
+ist. Die angezeigten Informationen enthalten den Modus der Gruppe
+(automatisch oder manuell), auf welche Alternative der Symlink derzeit
+zeigt, welche weiteren Alternativen zur Verfügung stehen (und ihre
+zugehörigen Slave\-Alternativen), und die installierte Alternative mit der
+höchsten Priorität.
+.TP 
+\fB\-\-list\fP \fILink\fP
+Zeige alle Ziele der Linkgruppe an.
+.TP 
+\fB\-\-config\fP \fILink\fP
+Zeige die verfügbaren Alternativen für eine Linkgruppe an und erlaube es dem
+Benutzer interaktiv auszuwählen, welche zu benutzen ist. Die Linkgruppe wird
+aktualisiert und aus dem \fIautomatischen\fP Modus genommen.
+.TP 
+\fB\-\-help\fP
+Zeige den Bedienungshinweis und beende.
+.TP 
+\fB\-\-version\fP
+Gebe die Version aus und beende sich.
+.
+.SH OPTIONEN
+.TP 
+\fB\-\-altdir\fP\fI Verzeichnis\fP
+Spezifiziert das Alternativ\-Verzeichnis, wenn sich dieses von der
+Standardeinstellung unterscheiden soll.
+.TP 
+\fB\-\-admindir\fP\fI Verzeichnis\fP
+Spezifiziert das administrative Verzeichnis, wenn sich dieses von der
+Standardeinstellung unterscheiden soll.
+.TP 
+\fB\-\-verbose\fP
+Erzeugt mehr Kommentare über die Tätigkeit von \fBupdate\-alternatives\fP.
+.TP 
+\fB\-\-quiet\fP
+Erzeuge keine Kommentare, es sei denn, ein Fehler tritt auf. Diese Option
+ist noch nicht implementiert.
+.
+.SH DATEIEN
+.TP 
+\fI/etc/alternatives/\fP
+Das standardmäßige Alternativ\-Verzeichnis. Kann mittels der Option
+\fB\-\-altdir\fP geändert werden.
+.TP 
+\fI/var/lib/dpkg/alternatives/\fP
+Das standardmäßige administrative Verzeichnis. Kann mittels der
+\fB\-\-admindir\fP Option geändert werden.
+.
+.SH RÜCKGABEWERT
+.IP 0
+Die angeforderte Aktion wurde erfolgreich ausgeführt.
+.IP 2
+Beim Lesen der Kommandozeile oder beim Ausführen der Aktion traten Probleme
+auf.
+.
+.SH DIAGNOSE
+\fBupdate\-alternatives\fP quatscht ohne Unterlass über seine Aktivitäten auf
+seinem Standardausgabekanal. Falls Probleme auftreten, gibt
+\fBupdate\-alternatives\fP eine Fehlermeldung auf seinem Standardfehlerkanal aus
+und beendet sich mit dem Exit\-Status 2. Die Diagnostiken sollten
+selbsterklärend sein; falls Sie dies nicht so empfinden, melden Sie dies
+bitte als Fehler.
+.
+.SH BEISPIELE
+Es gibt mehrere Pakete, die einen zum \fBvi\fP\-kompatiblen Texteditor
+bereitstellen, beispielsweise \fBnvi\fP und \fBvim\fP. Welcher benutzt wird, wird
+durch die Linkgruppe \fBvi\fP eingestellt, welche Links für das Programm selber
+und die zugehörige Handbuchseite beinhaltet.
+.PP
+Um alle verfügbaren Programme anzuzeigen, die \fBvi\fP bereitstellen, und die
+dazu gehörigen Einstellungen, benutzen Sie die \fI\-\-display\fP Aktion:
+.RS
+.PP
+\fBupdate\-alternatives \-\-display vi\fP
+.RE
+.PP
+Um eine bestimmte \fBvi\fP\-Implementation auszuwählen, benutzen Sie als Root
+den folgenden Befehl und wählen dann eine Zahl aus der Liste aus:
+.RS
+.PP
+\fBupdate\-alternatives \-\-config vi\fP
+.RE
+.PP
+Um zur automatischen Auswahl der \fBvi\fP\-Implementation zurückzukehren, führen
+Sie folgendes als Root aus:
+.RS
+.PP
+\fBupdate\-alternatives \-\-auto vi\fP
+.RE
+.
+.SH FEHLER
+Falls Sie einen Fehler finden, melden Sie ihn bitte über das Debian
+Fehlerverfolgungssystem, oder, falls dies nicht möglich ist, schicken Sie
+eine E\-Mail (auf Englisch) direkt an den Autor.
+.PP
+Falls Sie einen Unterschied zwischen der Implementation von
+\fBupdate\-alternatives\fP und dieser Handbuchseite finden, ist dies ein Fehler,
+entweder in der Implementation oder in der Dokumentation; bitte melden Sie
+dies.
+.
+.SH AUTOR
+Copyright (C) 1995 Ian Jackson
+.sp
+Dies ist Freie Software; lesen Sie die GNU General Public License Version 2
+oder neuer für die Kopierbedingungen. Es gibt KEINE Haftung.
+.PP
+Diese Handbuchseite ist Copyright 1997,1998 durch Charles Briscoe\-Smith.
+.sp
+Dies ist Freie Dokumentation; lesen Sie die GNU General Public License
+Version 2 oder neuer für die Kopierbedingungen. Es gibt KEINE Haftung.
+.
+.SH ÜBERSETZUNG
+Die deutsche Übersetzung wurde 2004, 2006-2008 von Helge Kreutzmann
+<debian@helgefjell.de>, 2007 von Florian Rehnisch <eixman@gmx.de> und
+2008 von Sven Joachim <svenjoac@gmx.de>
+angefertigt. Diese Übersetzung ist Freie Dokumentation; lesen Sie die
+GNU General Public License Version 2 oder neuer für die Kopierbedingungen.
+Es gibt KEINE HAFTUNG.
+.SH "SIEHE AUCH"
+\fBln\fP(1), FHS, der Dateisystem Hierarchie\-Standard (Filesystem Hierarchy
+Standard).

@@ -1,0 +1,67 @@
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH cleanup\-info 8 2007\-07\-18 "Projekt Debiana" "programy pomocnicze dpkg"
+.SH NAZWA
+cleanup\-info \- robi porz±dek po dzia³aniu fa³szywego install\-info
+.
+.SH SK£ADNIA
+\fBcleanup\-info\fP [\fIopcje\fP] [\fB\-\-\fP] [\fInazwa_katalogu\fP]
+.
+.SH OPIS
+\fBcleanup\-info\fP jest skryptem Perla, który stara siê uporz±dkowaæ ba³agan,
+który móg³ stworzyæ fa³szywy \fBinstall\-info\fP(8). £±czy wszystkie sekcje
+maj±ce ten sam nag³ówek w jedn±. Stara siê m±drze wychwyciæ ró¿ne przypadki
+oraz koñcowe dwukropki/spacje.
+.br
+Inne porz±dki dotycz± usuwania pustych sekcji i ³±czenie pustych linii
+(tylko w czê¶ciach wpisów).
+.sp
+Zachowywany jest porz±dek sekcji (liczy siê tylko pierwsze napotkanie
+sekcji). Zachowywany jest równie¿ porz±dek wpisów w danej sekcji.
+.sp
+Proszê zachowaæ \fBszczególn± ostro¿no¶æ\fP, u¿ywaj±c tego programu \- mo¿e nie
+byæ ca³kiem bezpieczny. cleanup\-info stara siê ostro¿nie obchodziæ siê z
+plikiem dir, ale tylko do czasu, gdy go zapisze. Przed u¿yciem tego skryptu,
+powinno siê zrobiæ kopiê zapasow± pliku dir.
+.
+.SH OPCJE
+.TP 
+\fB\-\-unsafe\fP
+Ustawia kilka opcji dodatkowych, a byæ mo¿e u¿ytecznych.
+.br
+\fBOstrze¿enie: opcja "\-\-unsafe" mo¿e uszkodziæ poprawny plik!\fP
+.TP 
+\fB\-\-help\fP
+Wy¶wietla informacjê o u¿ytkowaniu i koñczy dzia³anie.
+.TP 
+\fB\-\-version\fP
+Wy¶wietla informacjê o wersji i pomy¶lnie koñczy dzia³anie.
+.
+.SH PLIKI
+.TP 
+\fI/usr/info/dir\fP lub \fI<nazwa_katalogu>/dir\fP
+Plik z katalogiem info. Plik blokady ma tê sam± nazwê z do³±czonym sufiksem
+".lock".
+.
+.SH B£ÊDY
+Prawdopodobnie wiele.
+.
+.SH "ZOBACZ TAK¯E"
+\fBinstall\-info\fP(8), \fBinfo\fP(1).
+.SH AUTOR
+Copyright (C) 1996 Kim\-Minh Kaplan
+.sp
+Niniejszy program jest oprogramowaniem wolnym, sprawd¼ Powszechn± Licencjê
+Publiczn± GNU w wersji drugiej lub pó¼niejszej, by dowiedzieæ siê o
+warunkach dystrybucji. Brak JAKIEJKOLWIEK gwarancji.
+.SH "T£UMACZE"
+Piotr Roszatycki <dexter@debian.org>, 1999
+.br
+Bartosz Feñski <fenio@debian.org>, 2004-2005
+.br
+Robert Luberda <robert@debian.org>, 2006-2008
+.br
+Wiktor Wandachowicz <siryes@gmail.com>, 2008

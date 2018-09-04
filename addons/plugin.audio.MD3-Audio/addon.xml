@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+	<addon id="plugin.audio.MD3-Audio" version="1.0.2" name="MD3 Audio" provider-name="Mucky Duck">
+		<requires>
+			<import addon="xbmc.python"   version="2.1.0"/>
+            <import addon="script.module.t0mm0.common" version="2.0.0"/>
+			<import addon="repository.mdrepo"/>
+        </requires>
+		<extension point="xbmc.python.pluginsource" library="default.py">
+			<provides>audio</provides>
+		</extension>
+		<extension point="xbmc.addon.metadata">
+			<summary lang="en">Free Radio And Mp3 Streaming</summary>
+			<description lang="en">Free MP3 streaming Of Your Favourite Songs And Radio Stations</description>
+			<disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon</disclaimer>
+			<platform>all</platform>
+			<license>GNU GENERAL PUBLIC LICENSE. Version 3, June 2007</license>
+			<language>en</language>
+		</extension>
+	</addon>

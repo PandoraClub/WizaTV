@@ -1,0 +1,52 @@
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH dpkg\-checkbuilddeps 1 2008\-03\-14 Debian\-Projekt dpkg\-Hilfsprogramme
+.SH NAME
+dpkg\-checkbuilddeps \- überprüfe Bauabhängigkeiten und \-konflikte
+.
+.SH ÜBERSICHT
+\fBdpkg\-checkbuilddeps\fP [\fIOptionen\fP] [\fIBefehlsdatei\fP]
+.
+.SH BESCHREIBUNG
+Dieses Programm überprüft die im System installierten Pakete gegen die
+Bauabhängigkeiten und Baukonflikte, die in der Steuerdatei aufgeführt
+sind. Falls welche davon nicht erfüllt sind, zeigt es diese an und beendet
+sich mit einem von Null verschiedenen Rückgabewert.
+.P
+Standardmäßig wird \fIdebian/control\fP gelesen, aber ein alternativer
+Steuerdateiname kann auf der Kommandozeile angegeben werden.
+.
+.SH OPTIONEN
+.TP 
+\fB\-\-admindir=\fP\fIVerz\fP
+Ändert den Ablageort der \fBdpkg\fP\-Datenbank. Der Standardort ist
+\fI/var/lib/dpkg\fP.
+.TP 
+\fB\-B\fP
+Ignoriere \fIBuild\-Depends\-Indep\fP\-Zeilen. Verwenden Sie dies, wenn keine
+arch\-indep\-Pakete gebaut werden.
+.TP 
+\fB\-d \fP\fIZeichenkette\-für\-Bauabhängigkeiten\fP
+.TP 
+\fB\-c \fP\fIZeichenkette\-für\-Baukonflikte\fP
+Verwende die angegebenen Bauabhängigkeiten/\-konflikte statt denen der Datei
+\fIdebian/control\fP.
+.TP 
+\fB\-h\fP
+Zeige den Bedienungshinweis und beende.
+.
+.SH AUTOR
+Copyright (C) 2001 Joey Hess
+.sp
+Dies ist Freie Software; lesen Sie die GNU General Public License Version 2
+oder neuer für die Kopierbedingungen. Es gibt KEINE Haftung.
+.SH ÜBERSETZUNG
+Die deutsche Übersetzung wurde 2004, 2006-2008 von Helge Kreutzmann
+<debian@helgefjell.de>, 2007 von Florian Rehnisch <eixman@gmx.de> und
+2008 von Sven Joachim <svenjoac@gmx.de>
+angefertigt. Diese Übersetzung ist Freie Dokumentation; lesen Sie die
+GNU General Public License Version 2 oder neuer für die Kopierbedingungen.
+Es gibt KEINE HAFTUNG.

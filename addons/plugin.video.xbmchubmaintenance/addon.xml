@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.xbmchubmaintenance" version="2.1.6"
+	name="Maintenance Tool" provider-name="tvaddons.ag">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="plugin.video.youtube" />
+    <import addon="script.module.addon.common" />
+    <import addon="script.module.metahandler" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Maintenance Tool</summary>
+    <description lang="en">Maintenance Tool is your one stop tool for all fixes and information.</description>
+    <platform>all</platform>
+    <forum>http://forums.tvaddons.ag/forums/130-MAINTENANCE-TOOL</forum>
+    <website>http://www.tvaddons.ag/</website>
+  </extension>
+</addon>

@@ -1,0 +1,5968 @@
+# translation of eu.po to Euskara
+# translation of dpkg-trunk-eu.po to
+# Copyright (C) 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
+#
+# Jordi Blasi <valpur@euskalnet.net>, 2004.
+# Piarres Beobide <pi@beobide.net>, 2004, 2005, 2006, 2007, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: dpkg\n"
+"Report-Msgid-Bugs-To: debian-dpkg@lists.debian.org\n"
+"POT-Creation-Date: 2010-10-31 11:39+0100\n"
+"PO-Revision-Date: 2009-01-05 00:15+0200\n"
+"Last-Translator: Piarres Beobide <pi@beobide.net>\n"
+"Language-Team: Euskara <debian-l10n-basque@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: lib/compat.c:46
+msgid "unable to open tmpfile for vsnprintf"
+msgstr "ezin da vsnprintf-en aldiroko fitxategia ireki"
+
+#: lib/compat.c:48
+msgid "unable to rewind at start of vsnprintf"
+msgstr "ezin da joan vsnprintf-en hasierara"
+
+#: lib/compat.c:49
+msgid "unable to truncate in vsnprintf"
+msgstr "ezin da trunkatu vsnprintf-en"
+
+#: lib/compat.c:51
+msgid "write error in vsnprintf"
+msgstr "idazketa errorea vsnprintf-en"
+
+#: lib/compat.c:52
+msgid "unable to flush in vsnprintf"
+msgstr "ezin da hustu vsnprintf-en"
+
+#: lib/compat.c:53
+msgid "unable to stat in vsnprintf"
+msgstr "ezin da vsnprintf-en atzitu"
+
+#: lib/compat.c:54
+msgid "unable to rewind in vsnprintf"
+msgstr "ezin da vsnprintf-en hasierara joan"
+
+#: lib/compat.c:62
+msgid "read error in vsnprintf truncated"
+msgstr "irakurketa errorea vsnprintf-en trunkatuta"
+
+#: lib/compat.c:89
+#, c-format
+msgid "System error no.%d"
+msgstr "%d. sistema errorea"
+
+#: lib/compat.c:99
+#, c-format
+msgid "Signal no.%d"
+msgstr "%d. seinalea"
+
+#: lib/compression.c:34
+#, c-format
+msgid "%s: failed to exec '%s %s'"
+msgstr "%s: huts egin du '%s %s' exekutatzean"
+
+#: lib/compression.c:62
+#, c-format
+msgid "%s: internal gzip error: `%s'"
+msgstr "%s: barneko gzip errorea: `%s'"
+
+#: lib/compression.c:85
+#, c-format
+msgid "%s: internal bzip2 error: `%s'"
+msgstr "%s: barneko bzip2 errorea: `%s'"
+
+#: lib/compression.c:97
+#, c-format
+msgid "%s: decompression"
+msgstr "%s: deskonpresioa"
+
+#: lib/compression.c:132
+#, c-format
+msgid "%s: internal gzip error: read: `%s'"
+msgstr "%s: barneko gzip errorea: irakurtzean: `%s'"
+
+#: lib/compression.c:142
+#, c-format
+msgid "%s: internal gzip error: write: `%s'"
+msgstr "%s: barneko gzip errorea: idaztean: `%s'"
+
+#: lib/compression.c:145
+#, c-format
+msgid "%s: internal gzip error: read(%i) != write(%i)"
+msgstr "%s: barneko gzip errorea: irakurri (%i) != idatzi (%i)"
+
+#: lib/compression.c:167
+#, c-format
+msgid "%s: internal bzip2 error: read: `%s'"
+msgstr "%s: barneko bzip2 errorea: irakurtzean: `%s'"
+
+#: lib/compression.c:177
+#, c-format
+msgid "%s: internal bzip2 error: write: `%s'"
+msgstr "%s: barneko bzip2 errorea: idaztean: `%s'"
+
+#: lib/compression.c:180
+#, c-format
+msgid "%s: internal bzip2 error: read(%i) != write(%i)"
+msgstr "%s: barneko bzip2 errorea: irakurri (%i) != idatzi (%i)"
+
+#: lib/compression.c:195
+#, c-format
+msgid "%s: compression"
+msgstr "%s: konpresioa"
+
+#: lib/database.c:195
+#, c-format
+msgid "size %7d occurs %5d times\n"
+msgstr "%7d tamaina %5d aldiz\n"
+
+#: lib/database.c:196
+msgid "failed write during hashreport"
+msgstr "huts egin du hasreport-ean zehar idaztean"
+
+#: lib/dbmodify.c:60
+#, c-format
+msgid ""
+"updates directory contains file `%.250s' whose name is too long (length=%d, "
+"max=%d)"
+msgstr ""
+"eguneratzeen direktorioak `%.250s' fitxategia dauka, eta izen hori luzeegia "
+"da (luzera=%d, geh.=%d)"
+
+#: lib/dbmodify.c:64
+#, c-format
+msgid ""
+"updates directory contains files with different length names (both %d and %d)"
+msgstr ""
+"eguneratzeen direktorioak luzera desberdineko izenak dituzten fitxategiak "
+"dauzka (%d eta %d)"
+
+#: lib/dbmodify.c:78
+#, c-format
+msgid "cannot scan updates directory `%.255s'"
+msgstr "ezin da aztertu `%.255s' eguneratzeen direktorioa"
+
+#: lib/dbmodify.c:94
+#, c-format
+msgid "failed to remove incorporated update file %.255s"
+msgstr "huts egin du %.255s eguneratze fitxategi inkorporatua kentzean"
+
+#: lib/dbmodify.c:112 src/archives.c:654 dpkg-deb/build.c:343
+#, c-format
+msgid "unable to create `%.255s'"
+msgstr "ezin da`%.255s' sortu"
+
+#: lib/dbmodify.c:116
+#, c-format
+msgid "unable to fill %.250s with padding"
+msgstr "ezin da bete %.250s betegarriarekin"
+
+#: lib/dbmodify.c:118
+#, c-format
+msgid "unable to flush %.250s after padding"
+msgstr "ezin da %.250s hustu bete ondoren"
+
+#: lib/dbmodify.c:120
+#, c-format
+msgid "unable to seek to start of %.250s after padding"
+msgstr "ezin da joan %.250s(r)en hasierara bete ondoren"
+
+#: lib/dbmodify.c:157
+msgid "requested operation requires superuser privilege"
+msgstr "eskatutako eragiketak supererabiltzaile baimena behar du"
+
+#: lib/dbmodify.c:162
+msgid "unable to access dpkg status area"
+msgstr "ezin da sartu dpkg egoera eremuan"
+
+#: lib/dbmodify.c:164
+msgid "operation requires read/write access to dpkg status area"
+msgstr "eragiketak dpkg egoera eremuan irakurri/idazteko sarbidea behar du"
+
+#: lib/dbmodify.c:215
+#, c-format
+msgid "failed to remove my own update file %.255s"
+msgstr "huts egin du nire %.255s eguneratze fitxategia kentzean"
+
+#: lib/dbmodify.c:253
+#, c-format
+msgid "unable to write updated status of `%.250s'"
+msgstr "ezin da egoera eguneratua idatzi - `%.250s'"
+
+#: lib/dbmodify.c:255
+#, c-format
+msgid "unable to flush updated status of `%.250s'"
+msgstr "ezin da egoera eguneratua hustu - `%.250s'"
+
+#: lib/dbmodify.c:257
+#, c-format
+msgid "unable to truncate for updated status of `%.250s'"
+msgstr "ezin da egoera eguneratua trunkatu - `%.250s'"
+
+#: lib/dbmodify.c:259
+#, c-format
+msgid "unable to fsync updated status of `%.250s'"
+msgstr "ezin da egoera eguneratua sinkronizatu - `%.250s'"
+
+#: lib/dbmodify.c:261
+#, c-format
+msgid "unable to close updated status of `%.250s'"
+msgstr "ezin da egoera eguneratua itxi - `%.250s'"
+
+#: lib/dbmodify.c:264
+#, c-format
+msgid "unable to install updated status of `%.250s'"
+msgstr "ezin da egoera eguneratua instalatu - `%.250s'"
+
+#: lib/dump.c:346
+#, c-format
+msgid "failed to write details of `%.50s' to `%.250s'"
+msgstr "huts egin du `%.50s'(r)en xehetasunak `%.250s'-en idaztean"
+
+#: lib/dump.c:373
+#, c-format
+msgid "failed to open `%s' for writing %s information"
+msgstr "huts egin du `%s' irekitzean %s informazioa idazteko"
+
+#: lib/dump.c:376
+msgid "unable to set buffering on status file"
+msgstr "ezin da bufferrik ezarri egoera fitxategian"
+
+#: lib/dump.c:387
+#, c-format
+msgid "failed to write %s record about `%.50s' to `%.250s'"
+msgstr "huts egin du %s erregistroa idaztean `%.50s'(r)i buruz - `%.250s'"
+
+#: lib/dump.c:395
+#, c-format
+msgid "failed to flush %s information to `%.250s'"
+msgstr "huts egin du %s informazioa hustean - `%.250s'"
+
+#: lib/dump.c:397
+#, c-format
+msgid "failed to fsync %s information to `%.250s'"
+msgstr "huts egin du %s informazioa sinkronizatzean - `%.250s'"
+
+#: lib/dump.c:399
+#, c-format
+msgid "failed to close `%.250s' after writing %s information"
+msgstr "huts egin du `%.250s' ixtean %s informazioa idatzi ondoren"
+
+#: lib/dump.c:403
+#, c-format
+msgid "failed to link `%.250s' to `%.250s' for backup of %s info"
+msgstr ""
+"huts egin du `%.250s' eta `%.250s' estekatzean, %s informazioaren babeskopia "
+"egiteko"
+
+#: lib/dump.c:406
+#, c-format
+msgid "failed to install `%.250s' as `%.250s' containing %s info"
+msgstr "huts egin du `%.250s' `%.250s' gisa instalatzean %s informazioarekin"
+
+#: lib/ehandle.c:85
+#, c-format
+msgid ""
+"%s: unrecoverable fatal error, aborting:\n"
+" %s\n"
+msgstr ""
+"%s: errore konponezina, uzten:\n"
+" %s\n"
+
+#: lib/ehandle.c:101
+msgid "out of memory pushing error handler: "
+msgstr "memoriarik ez errore kudeatzailearentzat: "
+
+#: lib/ehandle.c:117
+#, c-format
+msgid ""
+"%s: error while cleaning up:\n"
+" %s\n"
+msgstr ""
+"%s: errorea garbitzean:\n"
+" %s\n"
+
+#: lib/ehandle.c:132
+#, c-format
+msgid "dpkg: too many nested errors during error recovery !!\n"
+msgstr "dpkg: habiaratutako errore gehiegi errore konponketan !!\n"
+
+#: lib/ehandle.c:207
+msgid "out of memory for new cleanup entry with many arguments"
+msgstr "memoriarik ez argumentu ugaridun garbiketa-sarrerarentzat"
+
+#: lib/ehandle.c:219
+msgid "out of memory for new cleanup entry"
+msgstr "memoriarik ez garbiketa-sarrera berriarentzat"
+
+#: lib/ehandle.c:309
+#, c-format
+msgid "error writing `%s'"
+msgstr "errorea `%s' idaztean"
+
+#: lib/ehandle.c:313
+#, c-format
+msgid "%s:%d: internal error `%s'\n"
+msgstr "%s:%d: `%s' barne errorea\n"
+
+#: lib/fields.c:44
+#, c-format
+msgid "%s is missing"
+msgstr "%s falta da"
+
+#: lib/fields.c:57
+#, c-format
+msgid "`%.*s' is not allowed for %s"
+msgstr "`%.*s' - ez du baimenik honetarako: %s"
+
+#: lib/fields.c:64
+#, c-format
+msgid "junk after %s"
+msgstr "honen ondorengoak baztergarriak: %s"
+
+#: lib/fields.c:74
+#, c-format
+msgid "invalid package name (%.250s)"
+msgstr "pakete izen baliogabea (%.250s)"
+
+#: lib/fields.c:91
+#, c-format
+msgid "empty file details field `%s'"
+msgstr "fitxategi xehetasun `%s' eremua hutsik dago"
+
+#: lib/fields.c:94
+#, c-format
+msgid "file details field `%s' not allowed in status file"
+msgstr "fitxategi xehetasun `%s' eremua ez da onartzen egoera fitxategian"
+
+#: lib/fields.c:104
+#, c-format
+msgid "too many values in file details field `%s' (compared to others)"
+msgstr "fitxategi xehetasun `%s' eremuan balio gehiegi (beste batzuen aldean)"
+
+#: lib/fields.c:117
+#, c-format
+msgid "too few values in file details field `%s' (compared to others)"
+msgstr "fitxategi xehetasun `%s' eremuan balio gutxiegi (beste batzuen aldean)"
+
+#: lib/fields.c:133
+msgid "yes/no in boolean field"
+msgstr "bai/ez eremu boolearrean"
+
+#: lib/fields.c:152
+msgid "word in `priority' field"
+msgstr "`priority' eremuko hitza"
+
+#: lib/fields.c:166
+msgid "value for `status' field not allowed in this context"
+msgstr "`status' eremuko balioa ez da onartzen testuinguru honetan"
+
+#: lib/fields.c:170
+msgid "first (want) word in `status' field"
+msgstr "`status' eremuko lehenengo (nahia) hitza"
+
+#: lib/fields.c:173
+msgid "second (error) word in `status' field"
+msgstr "`status' eremuko bigarren (errorea) hitza"
+
+#: lib/fields.c:179
+msgid "third (status) word in `status' field"
+msgstr "`status' eremuko hirugarren (egoera-)hitza"
+
+#: lib/fields.c:190
+#, c-format
+msgid "error in Version string `%.250s': %.250s"
+msgstr "errorea `%.250s' bertsio katean: %.250s"
+
+#: lib/fields.c:201
+msgid "obsolete `Revision' or `Package-Revision' field used"
+msgstr "`Revision' edo `Package-Revision' eremu zaharkituak erabili dira"
+
+#: lib/fields.c:219
+msgid "value for `config-version' field not allowed in this context"
+msgstr "`config-version' eremuko balioa ez da onartzen testuinguru honetan"
+
+#: lib/fields.c:223
+#, c-format
+msgid "error in Config-Version string `%.250s': %.250s"
+msgstr "errorea `%.250s' Config-Version katean: %.250s"
+
+#: lib/fields.c:248
+#, c-format
+msgid "value for `conffiles' has malformatted line `%.*s'"
+msgstr "`conffiles' balioak `%.*s' lerroa gaizki formateatua dauka"
+
+#: lib/fields.c:266
+#, c-format
+msgid "value for `conffiles' has line starting with non-space `%c'"
+msgstr ""
+"`conffiles' balioko lerroa zuriunea ez den `%c' karakterearekin hasten da"
+
+#: lib/fields.c:282
+msgid "root or null directory is listed as a conffile"
+msgstr "erro direktorioa edo direktorio baliogabea conffile gisa zerrendatu da"
+
+#: lib/fields.c:338
+#, c-format
+msgid ""
+"`%s' field, missing package name, or garbage where package name expected"
+msgstr ""
+"`%s' eremua, pakete izena falta, edo zaborra pakete izena espero zen lekuan"
+
+#: lib/fields.c:341
+#, c-format
+msgid "`%s' field, invalid package name `%.255s': %s"
+msgstr "`%s' eremua, `%.255s' pakete izen baliogabea: %s"
+
+#: lib/fields.c:372
+#, c-format
+msgid ""
+"`%s' field, reference to `%.255s':\n"
+" bad version relationship %c%c"
+msgstr ""
+"`%s' eremua, honekiko erreferentzia: `%.255s':\n"
+" %c%c bertsio erlazio okerra"
+
+#: lib/fields.c:378
+#, c-format
+msgid ""
+"`%s' field, reference to `%.255s':\n"
+" `%c' is obsolete, use `%c=' or `%c%c' instead"
+msgstr ""
+"`%s' eremua, honekiko erreferentzia: `%.255s':\n"
+" `%c' zaharkitua dago; horren ordez, erabili `%c=' edo `%c%c'"
+
+#: lib/fields.c:388
+#, c-format
+msgid ""
+"`%s' field, reference to `%.255s':\n"
+" implicit exact match on version number, suggest using `=' instead"
+msgstr ""
+"`%s' eremua, honekiko erreferentzia: `%.255s':\n"
+" balio zehatz inplizitua bertsio zenbakian; horren ordez `=' erabiltzea "
+"gomendatzen da"
+
+#: lib/fields.c:395
+msgid "Only exact versions may be used for Provides"
+msgstr "Bertsio zehatzak bakarrik erabil daitezke Provides eremuan"
+
+#: lib/fields.c:399
+#, c-format
+msgid ""
+"`%s' field, reference to `%.255s':\n"
+" version value starts with non-alphanumeric, suggest adding a space"
+msgstr ""
+"`%s' eremua, honekiko erreferentzia: `%.255s':\n"
+" bertsio balioa alfanumerikoa ez den batekin hasten da; zuriune bat gehitzea "
+"gomendatzen da"
+
+#: lib/fields.c:414 lib/fields.c:417
+#, c-format
+msgid "`%s' field, reference to `%.255s': version contains `%c'"
+msgstr "`%s' eremua, honekiko erreferentzia: `%.255s': bertsioak `%c' dauka"
+
+#: lib/fields.c:420
+#, c-format
+msgid "`%s' field, reference to `%.255s': version unterminated"
+msgstr "`%s' eremua, honekiko erreferentzia: `%.255s': bertsio osatugabea"
+
+#: lib/fields.c:430
+#, c-format
+msgid "`%s' field, reference to `%.255s': error in version: %.255s"
+msgstr "`%s' eremua, erreferentzia: `%.255s': errorea bertsioan: %.255s"
+
+#: lib/fields.c:439
+#, c-format
+msgid "`%s' field, syntax error after reference to package `%.255s'"
+msgstr "`%s' eremua, sintaxi errorea`%.255s' pakete erreferentziaren ondoren"
+
+#: lib/fields.c:447
+#, c-format
+msgid "alternatives (`|') not allowed in %s field"
+msgstr "aukera alternatiborik (`|') ez da onartzen %s eremuan"
+
+#: lib/fields.c:508
+msgid "value for `triggers-pending' field not allowed in this context"
+msgstr "`triggers-pending' eremuko balioa ez da onartzen testuinguru honetan"
+
+#: lib/fields.c:514
+#, c-format
+msgid "illegal pending trigger name `%.255s': %s"
+msgstr "legezkanpoko burutu gabeko `%.255s' abiarazle izena: %s"
+
+#: lib/fields.c:518
+#, c-format
+msgid "duplicate pending trigger `%.255s'"
+msgstr "bikoizturiko burutu gabeko `%.255s' abiarazlea"
+
+#: lib/fields.c:533
+msgid "value for `triggers-awaited' field not allowed in this context"
+msgstr "`triggers-awaited' eremuko balioa ez da onartzen testuinguru honetan"
+
+#: lib/fields.c:539
+#, c-format
+msgid "illegal package name in awaited trigger `%.255s': %s"
+msgstr "legezkanpoko pakete izena espero zen `%.255s' abiarazlean: %s"
+
+#: lib/fields.c:545
+#, c-format
+msgid "duplicate awaited trigger package `%.255s'"
+msgstr "bikoizturiko espero zen `%.255s' abiarazle paketea"
+
+#: lib/lock.c:47
+msgid "unable to unlock dpkg status database"
+msgstr "ezin da desblokeatu dpkg egoeraren datu-basea"
+
+#: lib/lock.c:99
+msgid "you do not have permission to lock the dpkg status database"
+msgstr "ez duzu baimenik dpkg egoeraren datu-basea blokeatzeko"
+
+#: lib/lock.c:100
+msgid "unable to open/create status database lockfile"
+msgstr "ezin da ireki/sortu egoeraren datu-basea blokeatzeko fitxategia"
+
+#: lib/lock.c:105
+msgid "unable to lock dpkg status database"
+msgstr "ezin da blokeatu dpkg egoeraren datu-basea"
+
+#: lib/lock.c:106
+msgid "status database area is locked by another process"
+msgstr "egoeraren datu-basea beste prozesuren batek blokeatuta dauka"
+
+#: lib/log.c:51
+#, c-format
+msgid "couldn't open log `%s': %s\n"
+msgstr "ezin da `%s' arazpen fitxategia ireki: %s\n"
+
+#: lib/mlib.c:51
+#, c-format
+msgid "malloc failed (%ld bytes)"
+msgstr "malloc-ek huts egin du (%ld byte)"
+
+#: lib/mlib.c:64
+#, c-format
+msgid "realloc failed (%ld bytes)"
+msgstr "realloc-ek huts egin du (%ld byte)"
+
+#: lib/mlib.c:78
+msgid "failed to allocate memory"
+msgstr "huts egin du memoria atzitzerakoan"
+
+#: lib/mlib.c:85
+#, c-format
+msgid "%s (subprocess): %s\n"
+msgstr "%s (azpiprozesua): %s\n"
+
+#: lib/mlib.c:99
+msgid "fork failed"
+msgstr "huts egin du sardetzean"
+
+#: lib/mlib.c:112
+#, c-format
+msgid "failed to dup for std%s"
+msgstr "std%s: dup egiteak huts egin du"
+
+#: lib/mlib.c:113
+#, c-format
+msgid "failed to dup for fd %d"
+msgstr "fd %d: dup egiteak huts egin du"
+
+#: lib/mlib.c:119
+msgid "failed to create pipe"
+msgstr "huts egin du kanalizazioa sortzean"
+
+#: lib/mlib.c:128
+#, c-format
+msgid "dpkg: warning - %s returned error exit status %d\n"
+msgstr "dpkg: abisua - %s: %d errorea eman du irteeran\n"
+
+#: lib/mlib.c:130
+#, c-format
+msgid "subprocess %s returned error exit status %d"
+msgstr "%s azpiprozesuak %d errorea eman du irteeran"
+
+#: lib/mlib.c:135
+#, c-format
+msgid "dpkg: warning - %s killed by signal (%s)%s\n"
+msgstr "dpkg: abisua - %s hil du (%s)%s seinaleak\n"
+
+#: lib/mlib.c:136 lib/mlib.c:139
+msgid ", core dumped"
+msgstr ", nukleoa iraulirik"
+
+#: lib/mlib.c:138
+#, c-format
+msgid "subprocess %s killed by signal (%s)%s"
+msgstr "%s azpiprozesua hil du (%s)%s seinaleak"
+
+#: lib/mlib.c:141
+#, c-format
+msgid "subprocess %s failed with wait status code %d"
+msgstr "%s azpiprozesuak huts egin du itxaroteko %d egoera kodearekin"
+
+#: lib/mlib.c:151
+#, c-format
+msgid "wait for %s failed"
+msgstr "huts egin du %s(r)i itxarotean"
+
+#: lib/mlib.c:159
+#, c-format
+msgid "unable to read filedescriptor flags for %.250s"
+msgstr "ezin da irakurri fitxategi-deskriptorea - %.250s"
+
+#: lib/mlib.c:161
+#, c-format
+msgid "unable to set close-on-exec flag for %.250s"
+msgstr "ezin da ezarri close-on-exec bandera - %.250s"
+
+#: lib/mlib.c:215
+#, c-format
+msgid "failed in buffer_write(fd) (%i, ret=%li): %s"
+msgstr "huts egin du - buffer_write(fd) (%i, ret=%li): %s"
+
+#: lib/mlib.c:222
+#, c-format
+msgid "eof in buffer_write(stream): %s"
+msgstr "fitxategi-amaiera: buffer_write(stream): %s"
+
+#: lib/mlib.c:224
+#, c-format
+msgid "error in buffer_write(stream): %s"
+msgstr "errorea: buffer_write(stream): %s"
+
+#: lib/mlib.c:230
+#, c-format
+msgid "unknown data type `%i' in buffer_write\n"
+msgstr "`%i' datu mota ezezaguna: buffer_write\n"
+
+#: lib/mlib.c:246
+#, c-format
+msgid "failed in buffer_read(fd): %s"
+msgstr "huts egin du: buffer_read(fd): %s"
+
+#: lib/mlib.c:253
+#, c-format
+msgid "error in buffer_read(stream): %s"
+msgstr "errorea: buffer_read(stream): %s"
+
+#: lib/mlib.c:256
+#, c-format
+msgid "unknown data type `%i' in buffer_read\n"
+msgstr "`%i' datu mota ezezaguna: buffer_read\n"
+
+#: lib/mlib.c:352
+#, c-format
+msgid "failed in buffer_copy (%s)"
+msgstr "huts egin du: buffer_copy (%s)"
+
+#: lib/mlib.c:353
+#, c-format
+msgid "short read in buffer_copy (%s)"
+msgstr "irakurketa laburra: buffer_copy (%s)"
+
+#: lib/myopt.c:40
+#, c-format
+msgid "failed to open configuration file `%.255s' for reading"
+msgstr "huts egin du `%.255s' konfigurazio fitxategia irakurtzeko irekitzean"
+
+#: lib/myopt.c:73
+#, c-format
+msgid "configuration error: unknown option %s"
+msgstr "konfigurazio errorea: %s aukera ezezaguna"
+
+#: lib/myopt.c:76
+#, c-format
+msgid "configuration error: %s needs a value"
+msgstr "konfigurazio errorea: %s(e)k balio bat behar du"
+
+#: lib/myopt.c:81
+#, c-format
+msgid "configuration error: %s does not take a value"
+msgstr "konfigurazio errorea: %s(e)k ez du baliorik hartzen"
+
+#: lib/myopt.c:86
+#, c-format
+msgid "read error in configuration file `%.255s'"
+msgstr "irakurketa errorea `%.255s' konfigurazio fitxategian"
+
+#: lib/myopt.c:87
+#, c-format
+msgid "error closing configuration file `%.255s'"
+msgstr "errorea `%.255s' konfigurazio fitxategia ixtean"
+
+#: lib/myopt.c:129
+#, c-format
+msgid "unknown option --%s"
+msgstr "--%s aukera ezezaguna"
+
+#: lib/myopt.c:133
+#, c-format
+msgid "--%s option takes a value"
+msgstr "--%s aukerak balio bat hartzen du"
+
+#: lib/myopt.c:138
+#, c-format
+msgid "--%s option does not take a value"
+msgstr "--%s aukerak ez du baliorik hartzen"
+
+#: lib/myopt.c:145
+#, c-format
+msgid "unknown option -%c"
+msgstr "-%c aukera ezezaguna"
+
+#: lib/myopt.c:150
+#, c-format
+msgid "-%c option takes a value"
+msgstr "-%c aukerak balio bat hartzen du"
+
+#: lib/myopt.c:158
+#, c-format
+msgid "-%c option does not take a value"
+msgstr "-%c aukerak ez du baliorik hartzen"
+
+#: lib/myopt-util.c:50
+msgid "cannot open GPL file"
+msgstr "ezin da GPL fitxategia ireki "
+
+#: lib/parse.c:108
+#, c-format
+msgid "failed to open package info file `%.255s' for reading"
+msgstr ""
+"huts egin du `%.255s' paketearen informazio fitxategia irakurtzeko irekitzean"
+
+#: lib/parse.c:113
+#, c-format
+msgid "can't stat package info file `%.255s'"
+msgstr "ezin da stat egin `%.255s' paketearen informazio fitxategian"
+
+#: lib/parse.c:118
+#, c-format
+msgid "can't mmap package info file `%.255s'"
+msgstr "ezin da mmap egin `%.255s' paketearen informazio fitxategian"
+
+#: lib/parse.c:122
+#, c-format
+msgid "copy info file `%.255s'"
+msgstr "kopiatu `%.255s' informazio fitxategia"
+
+#: lib/parse.c:154
+#, c-format
+msgid "EOF after field name `%.*s'"
+msgstr "EOF `%.*s' eremu izenaren ondoren"
+
+#: lib/parse.c:157
+#, c-format
+msgid "newline in field name `%.*s'"
+msgstr "lerro-jauzia `%.*s' eremu izenean"
+
+#: lib/parse.c:160
+#, c-format
+msgid "MSDOS EOF (^Z) in field name `%.*s'"
+msgstr "MSDOS EOF (^Z) `%.*s' eremu izenean"
+
+#: lib/parse.c:163
+#, c-format
+msgid "field name `%.*s' must be followed by colon"
+msgstr "`%.*s' eremu izenaren ondoren bi puntu behar dira"
+
+#: lib/parse.c:171
+#, c-format
+msgid "EOF before value of field `%.*s' (missing final newline)"
+msgstr "EOF `%.*s' eremuko balioaren aurretik (amaierako lerro-jauzia falta)"
+
+#: lib/parse.c:175
+#, c-format
+msgid "MSDOS EOF char in value of field `%.*s' (missing newline?)"
+msgstr "MSDOS EOF karakterea `%.*s' eremuko balioan (lerro-jauzia falta?)"
+
+#: lib/parse.c:189
+#, c-format
+msgid "EOF during value of field `%.*s' (missing final newline)"
+msgstr "EOF `%.*s' eremuko balioan (amaierako lerro-jauzia falta da)"
+
+#: lib/parse.c:212
+#, c-format
+msgid "duplicate value for `%s' field"
+msgstr "balio bikoiztua `%s' eremuan"
+
+#: lib/parse.c:217
+#, c-format
+msgid "user-defined field name `%.*s' too short"
+msgstr "erabiltzaileak definitutako `%.*s' eremu izena laburregia da"
+
+#: lib/parse.c:222
+#, c-format
+msgid "duplicate value for user-defined field `%.*s'"
+msgstr "balio bikoiztua erabiltzaileak definitutako `%.*s' eremuan"
+
+#: lib/parse.c:235
+msgid "several package info entries found, only one allowed"
+msgstr ""
+"paketearen informazio-sarrera bat baino gehiago dago; bat bakarrik onartzen "
+"da"
+
+#: lib/parse.c:261
+msgid "Configured-Version for package with inappropriate Status"
+msgstr "Paketearen 'Configured-Version' egoera desegokiarekin"
+
+#: lib/parse.c:271
+#, c-format
+msgid "package has status %s but triggers are awaited"
+msgstr "paketak %s egoera zuen baina abiarazleak espero dira"
+
+#: lib/parse.c:275
+msgid "package has status triggers-awaited but no triggers awaited"
+msgstr "paketeak `triggers-awaited' egoera du baina ez zen abiarazlerik espero"
+
+#: lib/parse.c:281
+#, c-format
+msgid "package has status %s but triggers are pending"
+msgstr "paketeak %s egoera du baina abiarazleak falta dira"
+
+#: lib/parse.c:285
+msgid "package has status triggers-pending but no triggers pending"
+msgstr "paketeak `triggers-pending' egoera du baina ez da abiarazlerik falta"
+
+#: lib/parse.c:295
+msgid "Package which in state not-installed has conffiles, forgetting them"
+msgstr ""
+"Instalatu gabeko egoeran konfigurazioa-fitxategiak dituen paketea: ahaztu "
+"egingo dira"
+
+#: lib/parse.c:362
+#, c-format
+msgid "failed to close after read: `%.255s'"
+msgstr "huts egin du irakurri ondoren ixtean: `%.255s'"
+
+#: lib/parse.c:363
+#, c-format
+msgid "no package information in `%.255s'"
+msgstr "pakete informaziorik ez: `%.255s'"
+
+#: lib/parsehelp.c:38
+#, c-format
+msgid "failed to read `%s' at line %d"
+msgstr "huts egin du `%s' irakurtzean %d lerroan"
+
+#: lib/parsehelp.c:41
+#, c-format
+msgid "warning, in file `%.255s' near line %d"
+msgstr "abisua, `%.255s' fitxategian, %d lerrotik gertu"
+
+#: lib/parsehelp.c:44
+#, c-format
+msgid "parse error, in file `%.255s' near line %d"
+msgstr "analisi errorea, `%.255s' fitxategian, %d lerrotik gertu"
+
+#: lib/parsehelp.c:48
+#, c-format
+msgid " package `%.255s'"
+msgstr " `%.255s' paketea"
+
+#: lib/parsehelp.c:59
+msgid "failed to write parsing warning"
+msgstr "huts egin du analisi abisua idaztean"
+
+#: lib/parsehelp.c:121
+msgid "may not be empty string"
+msgstr "baliteke kate hutsa ez izatea"
+
+#: lib/parsehelp.c:122
+msgid "must start with an alphanumeric"
+msgstr "alfanumeriko batekin hasi behar du"
+
+#: lib/parsehelp.c:131
+#, c-format
+msgid "character `%c' not allowed (only letters, digits and characters `%s')"
+msgstr "`%c' karakterea ez da onartzen (letrak, digituak eta %s bakarrik)"
+
+#: lib/parsehelp.c:186
+msgid "<none>"
+msgstr "<bat ere ez>"
+
+#: lib/parsehelp.c:201
+msgid "version string is empty"
+msgstr "bertsio katea hutsik dago"
+
+#: lib/parsehelp.c:212
+msgid "version string has embedded spaces"
+msgstr "bertsio kateak zuriune kapsulatuak ditu"
+
+#: lib/parsehelp.c:217
+msgid "epoch in version is not number"
+msgstr "bertsioko aroa ez da zenbaki bat"
+
+#: lib/parsehelp.c:218
+msgid "nothing after colon in version number"
+msgstr "ez dago ezer bi puntuen ondoren bertsio zenbakian"
+
+#: lib/parsehelp.c:240
+#, c-format
+msgid "missing %s"
+msgstr "%s falta da"
+
+#: lib/parsehelp.c:244
+#, c-format
+msgid "empty value for %s"
+msgstr "%s: balio hutsa"
+
+#: lib/showpkg.c:70
+#, c-format
+msgid "invalid character `%c' in field width\n"
+msgstr "baliogabeko `%c' karakterea eremu zabaleran\n"
+
+#: lib/showpkg.c:157
+#, c-format
+msgid "Closing brace missing in format\n"
+msgstr "Itxierako giltza falta da formatuan\n"
+
+#: lib/trigdeferred.l:62
+#, c-format
+msgid "invalid package name `%.250s' in triggers deferred file `%.250s'"
+msgstr ""
+"`%.250s' pakete izen baliogabea `%.250s' baztertutako abiarazle fitxategian"
+
+#: lib/trigdeferred.l:71
+#, c-format
+msgid "truncated triggers deferred file `%.250s'"
+msgstr "trunkatutako `%.250s' baztertutako abiarazle fitxategia"
+
+#: lib/trigdeferred.l:75
+#, c-format
+msgid "syntax error in triggers deferred file `%.250s' at character `%s'%s"
+msgstr ""
+"sintaxi errorea `%.250s' baztertutako abiarazle fitxategiko `%s'%s "
+"karakterean"
+
+#: lib/trigdeferred.l:112
+#, c-format
+msgid "unable to open/create triggers lockfile `%.250s'"
+msgstr "ezin da ireki/sortu `%.250s' abiarazle blokeo fitxategia"
+
+#: lib/trigdeferred.l:119
+msgid "unable to lock triggers area"
+msgstr "ezin da abiarazle eremua blokeatu"
+
+#: lib/trigdeferred.l:130
+#, c-format
+msgid "unable to stat triggers deferred file `%.250s'"
+msgstr "ezin da `%.250s' baztertutako abiarazle fitxategiaren egoera eskuratu"
+
+#: lib/trigdeferred.l:144
+#, c-format
+msgid "unable to open triggers deferred file `%.250s'"
+msgstr "ezin da ireki iturburuko `%.250s' baztertutako abiarazle fitxategia"
+
+#: lib/trigdeferred.l:158
+#, c-format
+msgid "unable to open/create new triggers deferred file `%.250s'"
+msgstr "ezin da ireki/sortu `%.250s' baztertutako abiarazle fitxategi berria"
+
+#: lib/trigdeferred.l:178
+#, c-format
+msgid "error reading triggers deferred file `%.250s'"
+msgstr "errorea `%.250s' baztertutako abiarazle fitxategia irakurtzean"
+
+#: lib/trigdeferred.l:186
+#, c-format
+msgid "unable to write new triggers deferred file `%.250s'"
+msgstr "ezin da idatzi baztertutako abiarazle `%.250s' fitxategi berrian"
+
+#: lib/trigdeferred.l:191
+#, c-format
+msgid "unable to close new triggers deferred file `%.250s'"
+msgstr "ezin da itxi `%.250s' baztertutako abiarazle fitxategi berria"
+
+#: lib/trigdeferred.l:195
+#, c-format
+msgid "unable to install new triggers deferred file `%.250s'"
+msgstr "ezin da instalatu `%.250s' baztertutako abiarazle fitxategi berria"
+
+#: lib/triglib.c:42
+msgid "empty trigger names are not permitted"
+msgstr "izen hutsa duten abiarazleak ez dira onartzen"
+
+#: lib/triglib.c:46
+msgid "trigger name contains invalid character"
+msgstr "abiarazle izenak karaktere baliogabea du"
+
+#: lib/triglib.c:302
+#, c-format
+msgid ""
+"invalid or unknown syntax in trigger name `%.250s' (in trigger interests for "
+"package `%.250s')"
+msgstr ""
+"Sintaxi baliogabe edo ezezaguna `%.250s' abiarazle izenean (`%.250s' "
+"paketearentzat abiarazle interesetan)"
+
+#: lib/triglib.c:337
+#, c-format
+msgid "failed to open trigger interest list file `%.250s'"
+msgstr "hts `%.250s' abiarazle interes zerrenda fitxategia irekitzean"
+
+#: lib/triglib.c:366
+#, c-format
+msgid "failed to rewind trigger interest file `%.250s'"
+msgstr "Huts `%.250s' abiarazle interes zerrenda fitxategia atzeratzean"
+
+#: lib/triglib.c:371
+#, c-format
+msgid ""
+"trigger interest file `%.250s' syntax error; illegal package name `%.250s': "
+"%.250s"
+msgstr ""
+"`%.250s' abiarazle interes fitxategi sintaxi errorea; legezkanpoko `%.250s' "
+"pakete izena: %.250s"
+
+#: lib/triglib.c:393
+#, c-format
+msgid "unable to create new trigger interest file `%.250s'"
+msgstr "ezin da `%.250s' abiarazle interes fitxategi berria sortu"
+
+#: lib/triglib.c:405
+#, c-format
+msgid "unable to write new trigger interest file `%.250s'"
+msgstr "ezin da `%.250s' abiarazle interes fitxategi berria idatzi"
+
+#: lib/triglib.c:410
+#, c-format
+msgid "unable to install new trigger interest file `%.250s'"
+msgstr "ezin da `%.250s' abiarazle interes fitxategi berria instalatu"
+
+#: lib/triglib.c:467
+#, c-format
+msgid ""
+"duplicate file trigger interest for filename `%.250s' and package `%.250s'"
+msgstr ""
+"bikoizturiko fitxategi abiarazle interesa `%.250s' fitxategian eta`%.250s' "
+"paketean"
+
+#: lib/triglib.c:490
+#, c-format
+msgid "unable to create new file triggers file `%.250s'"
+msgstr "ezin da `%.250s' fitxategi abiarazle fitxategi berria sortu"
+
+#: lib/triglib.c:499
+#, c-format
+msgid "unable to write new file triggers file `%.250s'"
+msgstr "ezin da `%.250s' fitxategi abiarazle fitxategi berria idatzi"
+
+#: lib/triglib.c:504
+#, c-format
+msgid "unable to install new file triggers file as `%.250s'"
+msgstr "ezin da `%.250s' fitxategi abiarazle fitxategi berria instalatu"
+
+#: lib/triglib.c:525
+#, c-format
+msgid "unable to read file triggers file `%.250s'"
+msgstr "ezin da irakurri `%.250s' fitxategi abiarazle fitxategia"
+
+#: lib/triglib.c:533
+#, c-format
+msgid "syntax error in file triggers file `%.250s'"
+msgstr "sintaxi errorea `%.250s' fitxategi abiarazle fitxategian"
+
+#: lib/triglib.c:537
+#, c-format
+msgid ""
+"file triggers record mentions illegal package name `%.250s' (for interest in "
+"file `%.250s'): %.250s"
+msgstr ""
+"fitxategi abiarazle grabaketak legezkanpoko `%.250s' pakete izena aipatyzen "
+"du (`%.250s' fitxategiaren interesentzat): %.250s"
+
+#: lib/triglib.c:631
+#, c-format
+msgid ""
+"triggers ci file `%.250s' contains illegal trigger syntax in trigger name `"
+"%.250s': %.250s"
+msgstr ""
+"`%.250s' abiarazle ci fitxategiak legezkanpoko abiarazle sintaxia du `"
+"%.250s' abiarazle izenean: %.250s"
+
+#: lib/triglib.c:651
+#, c-format
+msgid "unable to open triggers ci file `%.250s'"
+msgstr "ezin da `%.250s' abiarazle ci fitxategia ireki"
+
+#: lib/triglib.c:666
+msgid "triggers ci file contains unknown directive syntax"
+msgstr "abiarazle ci fitxategiak direktiba sintaxi ezezaguna du"
+
+#: lib/triglib.c:675
+#, c-format
+msgid "triggers ci file contains unknown directive `%.250s'"
+msgstr "abiarazle ci fitxategiak `%.250s' direktiba ezezaguna du"
+
+#: lib/triglib.c:730
+#, c-format
+msgid "unable to create triggers state directory `%.250s'"
+msgstr "ezin da sortu `%.250s' abiarazle egoera direktorioa"
+
+#: lib/triglib.c:733
+#, c-format
+msgid "unable to set ownership of triggers state directory `%.250s'"
+msgstr "ezin da `%.250s' abiarazle egoera direktorioaren jabetza ezarri"
+
+#: lib/utils.c:50
+#, c-format
+msgid "read error in `%.250s'"
+msgstr "irakurketa errorea `%.250s'-(e)n"
+
+#: lib/utils.c:55
+#, c-format
+msgid "fgets gave an empty string from `%.250s'"
+msgstr "fgets-ek kate huts bat eman du`%.250s'-(e)tik"
+
+#: lib/utils.c:57
+#, c-format
+msgid "too-long line or missing newline in `%.250s'"
+msgstr "lerro luzeegia edo lerro berria falta da `%.250s'-(e)n"
+
+#: lib/utils.c:69
+#, c-format
+msgid "unexpected eof reading `%.250s'"
+msgstr "ustekabeko fitxategi amaiera `%.250s'-(e)n"
+
+#: lib/varbuf.c:109
+msgid "failed to realloc for variable buffer"
+msgstr "realloc-ek huts egin du aldagaiaren bufferrean"
+
+#: src/archives.c:209
+msgid "process_archive ...  already disappeared !"
+msgstr "process_archive ...  desagertu da !"
+
+#: src/archives.c:229
+msgid "error reading from dpkg-deb pipe"
+msgstr "errorea dpkg-deb kanalizaziotik irakurtzean"
+
+#: src/archives.c:266
+#, c-format
+msgid "error setting timestamps of `%.255s'"
+msgstr "errorea data-zigiluak ezartzean: `%.255s'"
+
+#: src/archives.c:273 src/archives.c:671
+#, c-format
+msgid "error setting ownership of `%.255s'"
+msgstr "errorea jabetza ezartzean: `%.255s'"
+
+#: src/archives.c:275 src/archives.c:674
+#, c-format
+msgid "error setting permissions of `%.255s'"
+msgstr "errorea baimenak ezartzean: `%.255s'"
+
+#: src/archives.c:341
+#, c-format
+msgid "failed to stat (dereference) existing symlink `%.250s'"
+msgstr ""
+"Ezin da dagoen`%.250s' lotura sinbolikoaren egoera eskuratu (erreferentzia "
+"kenduta)"
+
+#: src/archives.c:362
+#, c-format
+msgid ""
+"failed to stat (dereference) proposed new symlink target `%.250s' for "
+"symlink `%.250s'"
+msgstr ""
+"Ezin da proposaturiko`%.250s' helburuaren egoera eskuratu `%.250s' lotura "
+"sinbolikorako (erreferentzia kenduta)"
+
+#: src/archives.c:414
+#, c-format
+msgid ""
+"trying to overwrite `%.250s', which is the diverted version of `"
+"%.250s' (package: %.100s)"
+msgstr ""
+"`%.250s' gainidazten saiatzen, zein `%.250s' desbideratutako bertsio bat da "
+"(paketea: %.100s)"
+
+#: src/archives.c:420
+#, c-format
+msgid "trying to overwrite `%.250s', which is the diverted version of `%.250s'"
+msgstr ""
+"`%.250s' gaindiazten saiatzen , zein`%.250s'-en desbideratutako bertsio bat "
+"den"
+
+#: src/archives.c:443
+#, c-format
+msgid "unable to stat `%.255s' (which I was about to install)"
+msgstr "ezin da `%.255s' atzitu (eta instalatzera nindoan)"
+
+#: src/archives.c:451
+#, c-format
+msgid ""
+"unable to clean up mess surrounding `%.255s' before installing another "
+"version"
+msgstr ""
+"ezin da garbitu `%.255s' inguruko nahastea, beste bertsio bat instalatu "
+"aurretik"
+
+#: src/archives.c:457
+#, c-format
+msgid "unable to stat restored `%.255s' before installing another version"
+msgstr ""
+"ezin da atzitu leheneratutako `%.255s' beste bertsio bat instalatu aurretik"
+
+#: src/archives.c:492
+#, c-format
+msgid "archive contained object `%.255s' of unknown type 0x%x"
+msgstr "artxiboko `%.255s' objektua mota ezezagunekoa da: 0x%x"
+
+#: src/archives.c:553
+#, c-format
+msgid "Replacing files in old package %s ...\n"
+msgstr "%s pakete zaharreko fitxategiak ordezten...\n"
+
+#: src/archives.c:556
+#, c-format
+msgid "Replaced by files in installed package %s ...\n"
+msgstr "Instalaturiko %s paketeak ordezturiko fitxategiak...\n"
+
+#: src/archives.c:562
+#, c-format
+msgid ""
+"trying to overwrite directory `%.250s' in package %.250s with nondirectory"
+msgstr ""
+"%2$.250s paketeko `%1$.250s' direktorioa direktorioa ez den batekin "
+"gainidazten saiatzen ari da"
+
+#: src/archives.c:572
+#, c-format
+msgid "trying to overwrite `%.250s', which is also in package %.250s"
+msgstr "`%.250s' gainidazten saiatzen ari da; %.250s paketean ere badago"
+
+#: src/archives.c:591
+#, c-format
+msgid "gobble replaced file `%.255s'"
+msgstr "irakurri eta alde batetara utzi ordezturiko `%.255s' fitxategia"
+
+#: src/archives.c:659
+#, c-format
+msgid "backend dpkg-deb during `%.255s'"
+msgstr "atzealdeko dpkg-deb-en iraupena: `%.255s'"
+
+#: src/archives.c:677
+#, c-format
+msgid "error closing/writing `%.255s'"
+msgstr "errorea `%.255s' ixtean/idaztean"
+
+#: src/archives.c:682
+#, c-format
+msgid "error creating pipe `%.255s'"
+msgstr "errorea `%.255s' kanalizazioa sortzean"
+
+#: src/archives.c:688 src/archives.c:694
+#, c-format
+msgid "error creating device `%.255s'"
+msgstr "errorea `%.255s' gailua sortzean"
+
+#: src/archives.c:703
+#, c-format
+msgid "error creating hard link `%.255s'"
+msgstr "errorea `%.255s' esteka fisikoa sortzean"
+
+#: src/archives.c:710
+#, c-format
+msgid "error creating symbolic link `%.255s'"
+msgstr "errorea `%.255s' esteka sinbolikoa sortzean"
+
+#: src/archives.c:716 src/archives.c:721
+#, c-format
+msgid "error setting ownership of symlink `%.255s'"
+msgstr "errorea `%.255s' esteka sinbolikoaren jabetza ezartzean"
+
+#: src/archives.c:727
+#, c-format
+msgid "error creating directory `%.255s'"
+msgstr "errorea `%.255s' direktorioa sortzean"
+
+#: src/archives.c:762
+#, c-format
+msgid "unable to move aside `%.255s' to install new version"
+msgstr "ezin da joan `%.255s'(e)ra bertsio berria instalatzeko"
+
+#: src/archives.c:771
+#, c-format
+msgid "unable to read link `%.255s'"
+msgstr "ezin da irakurri `%.255s' esteka"
+
+#: src/archives.c:775
+#, c-format
+msgid "unable to make backup symlink for `%.255s'"
+msgstr "ezin da esteka sinbolikoaren babeskopia egin: `%.255s'"
+
+#: src/archives.c:778 src/archives.c:781
+#, c-format
+msgid "unable to chown backup symlink for `%.255s'"
+msgstr "ezin da esteka sinbolikoaren babeskopiaren 'chown' egin: `%.255s'"
+
+#: src/archives.c:786
+#, c-format
+msgid "unable to make backup link of `%.255s' before installing new version"
+msgstr ""
+"bertsio berria instalatu aurretik ezin da estekaren babeskopia egin: `%.255s'"
+
+#: src/archives.c:811
+#, c-format
+msgid "unable to install new version of `%.255s'"
+msgstr "ezin da `%.255s' bertsio berria instalatu"
+
+#: src/archives.c:858
+#, c-format
+msgid ""
+"dpkg: warning - ignoring dependency problem with %s:\n"
+"%s"
+msgstr ""
+"dpkg: abisua - %s-ren dependentzia arazoari ezikusia egiten:\n"
+"%s"
+
+#: src/archives.c:865
+#, c-format
+msgid ""
+"dpkg: warning - considering deconfiguration of essential\n"
+" package %s, to enable %s.\n"
+msgstr ""
+"dpkg: abisua - %s funtsezko paketea konfigurazioa kentzea\n"
+" aztertzen, %s gaitu ahal izateko.\n"
+
+#: src/archives.c:869
+#, c-format
+msgid ""
+"dpkg: no, %s is essential, will not deconfigure\n"
+" it in order to enable %s.\n"
+msgstr ""
+"dpkg: ez, %s funtsezkoa da, ez da konfigurazioa kenduko\n"
+" %s gaitu ahal izateko.\n"
+
+#: src/archives.c:883
+#, c-format
+msgid ""
+"dpkg: no, cannot proceed with %s (--auto-deconfigure will help):\n"
+"%s"
+msgstr ""
+"dpkg: ez, ezin da %s -rekin aurrera jarraitu (ikus --auto-deconfigure):\n"
+"%s"
+
+#: src/archives.c:893
+#, c-format
+msgid "removal of %.250s"
+msgstr "%.250s ezabatzea"
+
+#: src/archives.c:920
+#, c-format
+msgid "installation of %.250s"
+msgstr "%.250s instalatzea"
+
+#: src/archives.c:921
+#, c-format
+msgid ""
+"dpkg: considering deconfiguration of %s, which would be broken by %s ...\n"
+msgstr ""
+"dpkg: %s-ren konfigurazio kentzea kontutan hartzen, zein %s-ek apur "
+"dezake ... \n"
+
+#: src/archives.c:928
+#, c-format
+msgid "dpkg: yes, will deconfigure %s (broken by %s).\n"
+msgstr "dpkg: bai, %s konfigurazioa kenduko da, (%s-ek apurtua).\n"
+
+#: src/archives.c:932 src/archives.c:1057
+#, c-format
+msgid ""
+"dpkg: regarding %s containing %s:\n"
+"%s"
+msgstr ""
+"dpkg: %2$s daukan %1$s(r)i dagokionez:\n"
+"%3$s"
+
+#: src/archives.c:940
+#, c-format
+msgid "dpkg: warning - ignoring breakage, may proceed anyway !\n"
+msgstr ""
+"dpkg: abisua - apurketari ez ikusi egin zaio, hala ere aurrera jarraitzen!\n"
+
+#: src/archives.c:946
+#, c-format
+msgid ""
+"installing %.250s would break %.250s, and\n"
+" deconfiguration is not permitted (--auto-deconfigure might help)"
+msgstr ""
+"%.250s instalatzeak %.250s apur dezake, eta\n"
+" konfigurazio kentzea ez da baimentzen (--auto-deconfigure lagungarri izan "
+"daiteke)"
+
+#: src/archives.c:950
+#, c-format
+msgid "installing %.250s would break existing software"
+msgstr "%.250s instalatzeak instalaturik dagoen softwarea apurtu dezake"
+
+#: src/archives.c:983
+#, c-format
+msgid "dpkg: considering removing %s in favour of %s ...\n"
+msgstr "dpkg: %s kentzea aztertzen, %s jartzeko...\n"
+
+#: src/archives.c:989
+#, c-format
+msgid "%s is not properly installed - ignoring any dependencies on it.\n"
+msgstr "%s ez dago ondo instalatuta - mendekotasunei ez ikusi egingo zaie.\n"
+
+#: src/archives.c:1018
+#, c-format
+msgid "dpkg: may have trouble removing %s, as it provides %s ...\n"
+msgstr ""
+"dpkg: beharbada arazoak egongo dira %s kentzeko, %s hornitzen\n"
+" baitu...\n"
+
+#: src/archives.c:1033
+#, c-format
+msgid ""
+"dpkg: package %s requires reinstallation, but will remove anyway as you "
+"request.\n"
+msgstr ""
+"dpkg: %s paketea berriro instalatu behar da, baina kendu egingo da eskatu "
+"bezala.\n"
+
+#: src/archives.c:1036
+#, c-format
+msgid "dpkg: package %s requires reinstallation, will not remove.\n"
+msgstr "dpkg: %s paketea berriro instalatu behar da, ez da kenduko.\n"
+
+#: src/archives.c:1043
+#, c-format
+msgid "package %s has too many Conflicts/Replaces pairs"
+msgstr "%s paketeak Elkar-jotze/Ordezte bikote gehiegi ditu"
+
+#: src/archives.c:1049
+#, c-format
+msgid "dpkg: yes, will remove %s in favour of %s.\n"
+msgstr "dpkg: bai, %s kenduko da, eta %s jarri.\n"
+
+#: src/archives.c:1060
+#, c-format
+msgid "conflicting packages - not installing %.250s"
+msgstr "gatazkan dauden paketeak - %.250s ez da instalatuko"
+
+#: src/archives.c:1061
+#, c-format
+msgid "dpkg: warning - ignoring conflict, may proceed anyway !\n"
+msgstr "dpkg: abisua - gatazkari ez ikusi egin zaio, jarrai daiteke !\n"
+
+#: src/archives.c:1102
+#, c-format
+msgid "--%s --recursive needs at least one path argument"
+msgstr "--%s --recursive: bide-izenaren argumentu bat behar du gutxienez"
+
+#: src/archives.c:1134
+msgid "failed to exec find for --recursive"
+msgstr "--recursive: huts egin du bilaketa exekutatzean"
+
+#: src/archives.c:1139
+msgid "failed to fdopen find's pipe"
+msgstr "fdopen-ek huts egin du find-en kanalizazioarekin"
+
+#: src/archives.c:1145
+msgid "error reading find's pipe"
+msgstr "errorea find-en kanalizazioa irakurtzean"
+
+#: src/archives.c:1146
+msgid "error closing find's pipe"
+msgstr "errorea find-en kanalizazioa ixtean"
+
+#: src/archives.c:1149
+#, c-format
+msgid "find for --recursive returned unhandled error %i"
+msgstr "--recursive bilaketak maneiatu gabeko %i errorea itzuli du"
+
+#: src/archives.c:1152
+msgid "searched, but found no packages (files matching *.deb)"
+msgstr "bilatu bai, baina ez da paketerik aurkitu (*.deb fitxategiak)"
+
+#: src/archives.c:1168
+#, c-format
+msgid "--%s needs at least one package archive file argument"
+msgstr "--%s: pakete artxiboaren fitxategi argumentu bat behar du gutxienez"
+
+#: src/archives.c:1240
+#, c-format
+msgid "Selecting previously deselected package %s.\n"
+msgstr "Aurrez ez hautaturiko %s paketea hautatzen.\n"
+
+#: src/archives.c:1245
+#, c-format
+msgid "Skipping deselected package %s.\n"
+msgstr "Hautapena kendutako %s paketea saltatzen.\n"
+
+#: src/archives.c:1262
+#, c-format
+msgid "Version %.250s of %.250s already installed, skipping.\n"
+msgstr "%2$.250s %1$.250s bertsioa instalatuta dago, saltatu egingo da.\n"
+
+#: src/archives.c:1272
+#, c-format
+msgid "%s - warning: downgrading %.250s from %.250s to %.250s.\n"
+msgstr "%s - abisua: %.250s aurreko bertsiora itzultzen (%.250s -> %.250s).\n"
+
+#: src/archives.c:1278
+#, c-format
+msgid "Will not downgrade %.250s from version %.250s to %.250s, skipping.\n"
+msgstr ""
+"%.250s ez da aurreko bertsiora itzuliko (%.250s -> %.250s), saltatzen.\n"
+
+#: src/cleanup.c:83
+#, c-format
+msgid ""
+"unable to remove newly-installed version of `%.250s' to allow reinstallation "
+"of backup copy"
+msgstr ""
+"ezin da kendu instalatu berri den `%.250s' bertsioa babeskopia berriro "
+"instalatzea onartzeko"
+
+#: src/cleanup.c:90
+#, c-format
+msgid "unable to restore backup version of `%.250s'"
+msgstr "`%.250s': ezin da babeskopia bertsioa leheneratu"
+
+#: src/cleanup.c:94
+#, c-format
+msgid "unable to remove newly-installed version of `%.250s'"
+msgstr "`Ezin da %.250s'-ren instalatu berri den bertsioa kendu"
+
+#: src/cleanup.c:101
+#, c-format
+msgid "unable to remove newly-extracted version of `%.250s'"
+msgstr "`%.250s': ezin da atera berri den bertsioa kendu"
+
+#: src/configure.c:90
+#, c-format
+msgid "no package named `%s' is installed, cannot configure"
+msgstr "`%s' izeneko paketerik ez dago instalatuta, ezin da konfiguratu"
+
+#: src/configure.c:92
+#, c-format
+msgid "package %.250s is already installed and configured"
+msgstr "%.250s paketea instalatuta eta konfiguratuta dago lehendik"
+
+#: src/configure.c:94
+#, c-format
+msgid ""
+"package %.250s is not ready for configuration\n"
+" cannot configure (current status `%.250s')"
+msgstr ""
+"%.250s paketea ez dago prest konfiguratzeko\n"
+" ezin da konfiguratu (uneko egoera: `%.250s')"
+
+#: src/configure.c:124
+#, c-format
+msgid ""
+"dpkg: dependency problems prevent configuration of %s:\n"
+"%s"
+msgstr ""
+"dpkg: ezin da %s konfiguratu, mendekotasun arazoak direla eta:\n"
+"%s"
+
+#: src/configure.c:127
+msgid "dependency problems - leaving unconfigured"
+msgstr "mendekotasun arazoak - konfiguratu gabe uzten ari da"
+
+#: src/configure.c:131
+#, c-format
+msgid ""
+"dpkg: %s: dependency problems, but configuring anyway as you request:\n"
+"%s"
+msgstr ""
+"dpkg: %s: mendekotasun arazoak, baina eskatu bezala konfiguratuko da:\n"
+"%s"
+
+#: src/configure.c:139
+msgid ""
+"Package is in a very bad inconsistent state - you should\n"
+" reinstall it before attempting configuration."
+msgstr ""
+"Paketearen egoera inkoherentea da - berriro instalatu\n"
+" behar duzu, konfiguratzen saiatu aurretik."
+
+#: src/configure.c:142
+#, c-format
+msgid "Setting up %s (%s) ...\n"
+msgstr "%s (%s) konfiguratzen...\n"
+
+#: src/configure.c:192
+#, c-format
+msgid "unable to stat new dist conffile `%.250s'"
+msgstr "ezin da atzitu `%.250s' dist conffile berria"
+
+#: src/configure.c:202 src/configure.c:441
+#, c-format
+msgid "unable to stat current installed conffile `%.250s'"
+msgstr "ezin da atzitu instalatuta dagoen `%.250s' conffile-a"
+
+#: src/configure.c:211
+#, c-format
+msgid ""
+"\n"
+"Configuration file `%s', does not exist on system.\n"
+"Installing new config file as you request.\n"
+msgstr ""
+"\n"
+"`%s' konfigurazio fitxategia ez dago sisteman.\n"
+"Konfigurazio fitxategi berria zuk eskatu bezala instalatzen.\n"
+
+#: src/configure.c:245
+#, c-format
+msgid "dpkg: %s: warning - failed to remove old backup `%.250s': %s\n"
+msgstr ""
+"dpkg: %s: abisua - huts egin du `%.250s' babeskopia zaharra kentzean : %s\n"
+
+#: src/configure.c:254
+#, c-format
+msgid "dpkg: %s: warning - failed to rename `%.250s' to `%.250s': %s\n"
+msgstr ""
+"dpkg: %s: abisua - huts egin du `%.250s' -> `%.250s' izena aldatzean: %s\n"
+
+#: src/configure.c:262
+#, c-format
+msgid "dpkg: %s: warning - failed to remove `%.250s': %s\n"
+msgstr "dpkg: %s: abisua - huts egin du `%.250s' kentzean: %s\n"
+
+#: src/configure.c:270
+#, c-format
+msgid "dpkg: %s: warning - failed to remove old distrib version `%.250s': %s\n"
+msgstr ""
+"dpkg: %s: abisua - huts egin du `%.250s' banaketa zaharra kentzean: %s\n"
+
+#: src/configure.c:275
+#, c-format
+msgid "dpkg: %s: warning - failed to remove `%.250s' (before overwrite): %s\n"
+msgstr ""
+"dpkg: %s: abisua - huts egin du `%.250s' kentzean (gainidatzi aurretik): %s\n"
+
+#: src/configure.c:280
+#, c-format
+msgid "dpkg: %s: warning - failed to link `%.250s' to `%.250s': %s\n"
+msgstr "dpkg: %s: abisua - huts egin du `%.250s' eta `%.250s' estekatzean:%s\n"
+
+#: src/configure.c:284
+#, c-format
+msgid "Installing new version of config file %s ...\n"
+msgstr "%s konfigurazio fitxategiaren bertsio berria instalatzen...\n"
+
+#: src/configure.c:289
+#, c-format
+msgid "unable to install `%.250s' as `%.250s'"
+msgstr "ezin da `%.250s' instalatu `%.250s' gisa"
+
+#: src/configure.c:346
+#, c-format
+msgid ""
+"dpkg: %s: warning - unable to stat config file `%s'\n"
+" (= `%s'): %s\n"
+msgstr ""
+"dpkg: %s: abisua - ezin da atzitu `%s' konfigurazio fitxategia\n"
+" (= `%s'): %s\n"
+
+#: src/configure.c:357
+#, c-format
+msgid ""
+"dpkg: %s: warning - config file `%s' is a circular link\n"
+" (= `%s')\n"
+msgstr ""
+"dpkg: %s: abisua - `%s' konfigurazio fitxategia esteka\n"
+" zirkular bat da \n"
+" (= `%s')\n"
+
+#: src/configure.c:370
+#, c-format
+msgid ""
+"dpkg: %s: warning - unable to readlink conffile `%s'\n"
+" (= `%s'): %s\n"
+msgstr ""
+"dpkg: %s: abisua - ezin da `%s' konfigurazio fitxategiko\n"
+"esteka irakurri\n"
+" (= `%s'): %s\n"
+
+#: src/configure.c:390
+#, c-format
+msgid ""
+"dpkg: %s: warning - conffile `%.250s' resolves to degenerate filename\n"
+" (`%s' is a symlink to `%s')\n"
+msgstr ""
+"dpkg: %s: abisua - badirudi `%.250s' konfigurazio fitxategia \n"
+" fitxategi izen endekatua dela (`%s' `%s'(r)en esteka sinbolikoa da)\n"
+
+#: src/configure.c:403
+#, c-format
+msgid ""
+"dpkg: %s: warning - conffile `%.250s' is not a plain file or symlink (= `%"
+"s')\n"
+msgstr ""
+"dpkg: %s: abisua - `%.250s' konf. fitxategia ez da fitxategi arrunta, ezta "
+"esteka sinbolikoa ere (= `%s')\n"
+
+#: src/configure.c:421
+msgid "md5hash"
+msgstr "md5hash"
+
+#: src/configure.c:427
+#, c-format
+msgid "dpkg: %s: warning - unable to open conffile %s for hash: %s\n"
+msgstr ""
+"dpkg: %s: abisua - ezin da %s konfigurazio fitxategia ireki  hash egiteko: %"
+"s\n"
+
+#: src/configure.c:445
+#, c-format
+msgid "unable to change ownership of new dist conffile `%.250s'"
+msgstr "ezin da aldatu `%.250s' konfigurazio fitxategi berriaren jabetza"
+
+#: src/configure.c:448
+#, c-format
+msgid "unable to set mode of new dist conffile `%.250s'"
+msgstr ""
+"ezin da ezarri banaketa berriaren `%.250s' konfigurazio fitxategiaren modua"
+
+#: src/configure.c:478
+#, c-format
+msgid "failed to run %s (%.250s)"
+msgstr "huts egin du %s  exekutatzean (%.250s)"
+
+#: src/configure.c:487 src/configure.c:525
+msgid "wait for shell failed"
+msgstr "huts egin du shell-i itxarotean"
+
+#: src/configure.c:507
+msgid "Type `exit' when you're done.\n"
+msgstr "Idatzi `exit' amaitutakoan.\n"
+
+#: src/configure.c:516
+#, c-format
+msgid "failed to exec shell (%.250s)"
+msgstr "huts egin du shell exekutatzean (%.250s)"
+
+#: src/configure.c:528
+msgid "Don't forget to foreground (`fg') this process when you're done !\n"
+msgstr "Amaitutakoan, ez ahaztu prozesua aurreko planora ekartzea (`fg')!\n"
+
+#: src/configure.c:555
+#, c-format
+msgid ""
+"\n"
+"Configuration file `%s'"
+msgstr ""
+"\n"
+"`%s' konfigurazio fitxategia"
+
+#: src/configure.c:557
+#, c-format
+msgid " (actually `%s')"
+msgstr " (benetan `%s')"
+
+#: src/configure.c:561
+#, c-format
+msgid ""
+"\n"
+" ==> File on system created by you or by a script.\n"
+" ==> File also in package provided by package maintainer.\n"
+msgstr ""
+"\n"
+" ==> Zuk edo script batek sortutako fitxategia.\n"
+" ==> Pakete-mantentzaileak paketearekin batera hornitutako fitxategia.\n"
+
+#: src/configure.c:566
+#, c-format
+msgid ""
+"\n"
+"     Not modified since installation.\n"
+msgstr ""
+"\n"
+"     Instalatu zenetik ez da aldatu.\n"
+
+#: src/configure.c:568
+#, c-format
+msgid ""
+"\n"
+" ==> Modified (by you or by a script) since installation.\n"
+msgstr ""
+"\n"
+" ==> Instalatu zenetik aldatu da (zuk edo script batek).\n"
+
+#: src/configure.c:569
+#, c-format
+msgid ""
+"\n"
+" ==> Deleted (by you or by a script) since installation.\n"
+msgstr ""
+"\n"
+" ==> Instalatu zenetik ezabatua (zuk edo script batek).\n"
+
+#: src/configure.c:572
+#, c-format
+msgid " ==> Package distributor has shipped an updated version.\n"
+msgstr " ==> Pakete banatzaileak bertsio eguneratu bat bidali du.\n"
+
+#: src/configure.c:573
+#, c-format
+msgid "     Version in package is the same as at last installation.\n"
+msgstr "     Paketeko bertsioa azken instalazioko bera da.\n"
+
+#: src/configure.c:580
+#, c-format
+msgid " ==> Using new file as you requested.\n"
+msgstr " ==> Fitxategi berri bat erabiltzen ari da, zuk eskatu bezala.\n"
+
+#: src/configure.c:584
+#, c-format
+msgid " ==> Using current old file as you requested.\n"
+msgstr " ==> Uneko fitxategi zaharra erabiltzen ari da, zuk eskatu bezala.\n"
+
+#: src/configure.c:594
+#, c-format
+msgid " ==> Keeping old config file as default.\n"
+msgstr " ==> Lehenespenez konfigurazio fitxategi zaharra mantentzen.\n"
+
+#: src/configure.c:598
+#, c-format
+msgid " ==> Using new config file as default.\n"
+msgstr " ==> Lehenespenez konfigurazio fitxategi berria erabiltzen.\n"
+
+#: src/configure.c:606
+#, c-format
+msgid ""
+"   What would you like to do about it ?  Your options are:\n"
+"    Y or I  : install the package maintainer's version\n"
+"    N or O  : keep your currently-installed version\n"
+"      D     : show the differences between the versions\n"
+"      Z     : background this process to examine the situation\n"
+msgstr ""
+"   Zer egin nahi duzu honekin ?  Aukera hauek dituzu:\n"
+"    Y edo I : pakete mantentzailearen bertsioa instalatzea\n"
+"    N edo O : instalatuta dagoen bertsioa mantentzea\n"
+"      D     : bertsioen arteko ezberdintasunak ikustea\n"
+"      Z     : prozesua atzeko planora eramatea egoera aztertzeko\n"
+
+#: src/configure.c:613
+#, c-format
+msgid " The default action is to keep your current version.\n"
+msgstr " Ekintza lehenetsia instalatuta dagoen bertsioa mantentzea da.\n"
+
+#: src/configure.c:615
+#, c-format
+msgid " The default action is to install the new version.\n"
+msgstr " Ekintza lehenetsia bertsio berria instalatzea da.\n"
+
+#: src/configure.c:621
+msgid "[default=N]"
+msgstr "[lehenetsia=N]"
+
+#: src/configure.c:622
+msgid "[default=Y]"
+msgstr "[lehenetsia=Y]"
+
+#: src/configure.c:622
+msgid "[no default]"
+msgstr "[lehenespenik ez]"
+
+#: src/configure.c:625
+msgid "error writing to stderr, discovered before conffile prompt"
+msgstr ""
+"errorea stderr idaztean, konfigurazio fitxategiaren gonbitaren aurretik "
+"aurkitu da"
+
+#: src/configure.c:632
+msgid "read error on stdin at conffile prompt"
+msgstr "irakurketa errorea stdin-en konfigurazio fitxategiaren gonbitean"
+
+#: src/configure.c:633
+msgid "EOF on stdin at conffile prompt"
+msgstr "EOF stdin-en konfigurazio fitxategiaren gonbitean"
+
+#: src/depcon.c:77
+#, c-format
+msgid "unable to check for existence of `%.250s'"
+msgstr "ezin da begiratu `%.250s' dagoen"
+
+#: src/depcon.c:156
+#, c-format
+msgid "%s depends on %s"
+msgstr "%s paketea %s-ren mendekoa da"
+
+#: src/depcon.c:159
+#, c-format
+msgid "%s pre-depends on %s"
+msgstr "%s paketea %s-ren aurremendekoa da"
+
+#: src/depcon.c:162
+#, c-format
+msgid "%s recommends %s"
+msgstr "%s-ek %s gomendatzen du"
+
+#: src/depcon.c:165
+#, c-format
+msgid "%s suggests %s"
+msgstr "%s-ek %s iradokitzen du"
+
+#: src/depcon.c:168
+#, c-format
+msgid "%s breaks %s"
+msgstr "%s-ek %s hausten du"
+
+#: src/depcon.c:171
+#, c-format
+msgid "%s conflicts with %s"
+msgstr "%s-ek %s-rekin elkar-jotzen du"
+
+#: src/depcon.c:174
+#, c-format
+msgid "%s enhances %s"
+msgstr "%s-ek %s hobetzen du"
+
+#: src/depcon.c:268
+#, c-format
+msgid "  %.250s is to be removed.\n"
+msgstr "  %.250s kendu behar da.\n"
+
+#: src/depcon.c:271
+#, c-format
+msgid "  %.250s is to be deconfigured.\n"
+msgstr "  %.250s konfigurazioa kenduko da.\n"
+
+#: src/depcon.c:275
+#, c-format
+msgid "  %.250s is to be installed, but is version %.250s.\n"
+msgstr "  %.250s instalatu behar da, baina bertsioa %.250s da.\n"
+
+#: src/depcon.c:284
+#, c-format
+msgid "  %.250s is installed, but is version %.250s.\n"
+msgstr "  %.250s instalatuta dago, baina bertsioa %.250s da.\n"
+
+#: src/depcon.c:300
+#, c-format
+msgid "  %.250s is unpacked, but has never been configured.\n"
+msgstr "  %.250s deskonprimituta dago, baina oraindik ez da konfiguratu.\n"
+
+#: src/depcon.c:304
+#, c-format
+msgid "  %.250s is unpacked, but is version %.250s.\n"
+msgstr "  %.250s deskonprimituta dago, baina bertsioa %.250s da.\n"
+
+#: src/depcon.c:310
+#, c-format
+msgid "  %.250s latest configured version is %.250s.\n"
+msgstr "  %.250s: azken konfiguratutako bertsioa %.250s da.\n"
+
+#: src/depcon.c:320
+#, c-format
+msgid "  %.250s is %s.\n"
+msgstr "  %.250s %s da.\n"
+
+#: src/depcon.c:356
+#, c-format
+msgid "  %.250s provides %.250s but is to be removed.\n"
+msgstr "  %.250s: %.250s hornitzen du, baina kendu egin behar da.\n"
+
+#: src/depcon.c:360
+#, c-format
+msgid "  %.250s provides %.250s but is to be deconfigured.\n"
+msgstr "  %.250s: %.250s hornitzen du, baina konfigurazioa kendu behar da.\n"
+
+#: src/depcon.c:365
+#, c-format
+msgid "  %.250s provides %.250s but is %s.\n"
+msgstr "  %.250s: %.250s hornitzen du, baina %s da.\n"
+
+#: src/depcon.c:379
+#, c-format
+msgid "  %.250s is not installed.\n"
+msgstr "  %.250s ez dago instalatuta.\n"
+
+#: src/depcon.c:410
+#, c-format
+msgid "  %.250s (version %.250s) is to be installed.\n"
+msgstr "  %.250s (%.250s bertsioa) instalatu behar da.\n"
+
+#: src/depcon.c:432
+#, c-format
+msgid "  %.250s (version %.250s) is present and %s.\n"
+msgstr "  %.250s (%.250s bertsioa) dago eta %s.\n"
+
+#: src/depcon.c:457
+#, c-format
+msgid "  %.250s provides %.250s and is to be installed.\n"
+msgstr "  %.250s: %.250s hornitzen du, baina instalatu egin behar da.\n"
+
+#: src/depcon.c:497
+#, c-format
+msgid "  %.250s provides %.250s and is present and %s.\n"
+msgstr "  %.250s-ek %.250s hornitzen du, dago eta %s da.\n"
+
+#: src/enquiry.c:56 src/query.c:61 src/query.c:104
+msgid "(no description available)"
+msgstr "(azalpena ez dago erabilgarri)"
+
+#: src/enquiry.c:81
+msgid ""
+"The following packages are in a mess due to serious problems during\n"
+"installation.  They must be reinstalled for them (and any packages\n"
+"that depend on them) to function properly:\n"
+msgstr ""
+"Pakete hauek gaizki daude, instalazioan zehar arazo larriak egon\n"
+"direlako. Berriro instalatu behar dira (eta beren mende dauden\n"
+"pakete guztiak) ondo lan egiteko:\n"
+
+#: src/enquiry.c:86
+msgid ""
+"The following packages have been unpacked but not yet configured.\n"
+"They must be configured using dpkg --configure or the configure\n"
+"menu option in dselect for them to work:\n"
+msgstr ""
+"Pakete hauek deskonprimitu dira, baina oraindik ez dira konfiguratu.\n"
+"Konfiguratzeko, erabili dpkg --configure edo configure menu aukera\n"
+"dselect-en:\n"
+
+#: src/enquiry.c:91
+msgid ""
+"The following packages are only half configured, probably due to problems\n"
+"configuring them the first time.  The configuration should be retried using\n"
+"dpkg --configure <package> or the configure menu option in dselect:\n"
+msgstr ""
+"Pakete hauek ez daude guztiz konfiguratuta, beharbada konfiguratu ziren\n"
+"lehenengo aldian arazoak egon zirelako. Saiatu berriro konfiguratzen\n"
+"dpkg --configure <paketea> erabiliz edo configure menu-aukerarekin\n"
+"dselect-en:\n"
+
+#: src/enquiry.c:96
+msgid ""
+"The following packages are only half installed, due to problems during\n"
+"installation.  The installation can probably be completed by retrying it;\n"
+"the packages can be removed using dselect or dpkg --remove:\n"
+msgstr ""
+"Pakete hauek ez daude guztiz konfiguratuta, instalazioan zehar arazoak\n"
+"egon direlako. Saiatu berriro instalatzen; paketeak kentzeko, erabili\n"
+"dselect edo dpkg --remove:\n"
+
+#: src/enquiry.c:101
+msgid ""
+"The following packages are awaiting processing of triggers that they\n"
+"have activated in other packages.  This processing can be requested using\n"
+"dselect or dpkg --configure --pending (or dpkg --triggers-only):\n"
+msgstr ""
+"Hurrengo paketeak beste pakete batziuetan abiarazirik dituzten \n"
+"abiarazleen prozesatzea itxoiten ari dira.  Prozesatze hauek dselect edo\n"
+" dpkg --configure --pending (edo dpkg --triggers-only) erabilaiz eskatu "
+"daitezke:\n"
+
+#: src/enquiry.c:106
+msgid ""
+"The following packages have been triggered, but the trigger processing\n"
+"has not yet been done.  Trigger processing can be requested using\n"
+"dselect or dpkg --configure --pending (or dpkg --triggers-only):\n"
+msgstr ""
+"Hurrengo paketeak abiaraziak izan dira, baina abiarazle prozesatzea\n"
+"ez da amaitu oraindik.  Prozesatze hauek dselect edo dpkg --configure --"
+"pending \n"
+" (edo dpkg --triggers-only) erabilaiz eskatu daitezke:\n"
+
+#: src/enquiry.c:131
+msgid "--audit does not take any arguments"
+msgstr "--audit: ez du argumenturik hartzen"
+
+#: src/enquiry.c:168
+msgid "<unknown>"
+msgstr "<ezezaguna>"
+
+#: src/enquiry.c:185
+msgid "--yet-to-unpack does not take any arguments"
+msgstr "--yet-to-unpack: ez du argumenturik hartzen"
+
+#: src/enquiry.c:224
+#, c-format
+msgid " %d in %s: "
+msgstr " %d - %s: "
+
+#: src/enquiry.c:239
+#, c-format
+msgid " %d packages, from the following sections:"
+msgstr " %d pakete, ondoko sekzioetan:"
+
+#: src/enquiry.c:258
+msgid "--assert-* does not take any arguments"
+msgstr "--assert-*: ez du argumenturik hartzen"
+
+#: src/enquiry.c:275
+#, c-format
+msgid ""
+"Version of dpkg with working epoch support not yet configured.\n"
+" Please use `dpkg --configure dpkg', and then try again.\n"
+msgstr ""
+"Ez da konfiguratu aroa onartzen duen dpkg bertsiorik. Erabili.\n"
+" `dpkg --configure dpkg', eta saiatu berriro.\n"
+
+#: src/enquiry.c:279
+#, c-format
+msgid "dpkg not recorded as installed, cannot check for epoch support !\n"
+msgstr ""
+"badirudi dpkg ez dagoela instalatuta, ezin da bilatu aroaren euskarria !\n"
+
+#: src/enquiry.c:322
+msgid "--predep-package does not take any argument"
+msgstr "--predep-package: ez du argumenturik hartzen"
+
+#: src/enquiry.c:375
+#, c-format
+msgid ""
+"dpkg: cannot see how to satisfy pre-dependency:\n"
+" %s\n"
+msgstr ""
+"dpkg: ezin da ikusi nola bete aurremendekotasuna:\n"
+" %s\n"
+
+#: src/enquiry.c:376
+#, c-format
+msgid "cannot satisfy pre-dependencies for %.250s (wanted due to %.250s)"
+msgstr ""
+"%.250s: ezin dira aurremendekotasunak bete (hau dela eta behar dira: %.250s)"
+
+#: src/enquiry.c:394
+msgid "--print-architecture does not take any argument"
+msgstr "--print-architecture: ez du argumenturik hartzen"
+
+#: src/enquiry.c:436
+msgid ""
+"--compare-versions takes three arguments: <version> <relation> <version>"
+msgstr ""
+"--compare-versions: hiru argumentu hartzen ditu: <version> <relation> "
+"<version>"
+
+#: src/enquiry.c:441
+msgid "--compare-versions bad relation"
+msgstr "--compare-versions: okerreko erlazioa"
+
+#: src/enquiry.c:446 src/enquiry.c:457
+#, c-format
+msgid "dpkg: version '%s' has bad syntax: %s\n"
+msgstr "dpkg: %s bertsioak okerreko sintaxia du: %s\n"
+
+#: src/errors.c:57
+#, c-format
+msgid ""
+"%s: error processing %s (--%s):\n"
+" %s\n"
+msgstr ""
+"%s: errorea %s prozesatzean (--%s):\n"
+" %s\n"
+
+#: src/errors.c:64
+msgid ""
+"dpkg: failed to allocate memory for new entry in list of failed packages."
+msgstr ""
+"dpkg: ezin izan da memoriarik esleitu huts egindako paketeen zerrendan "
+"sarrera berria gehitzeko."
+
+#: src/errors.c:74
+#, c-format
+msgid "dpkg: too many errors, stopping\n"
+msgstr "dpkg: errore gehiegi, gelditu egingo da\n"
+
+#: src/errors.c:80
+msgid "Errors were encountered while processing:\n"
+msgstr "Erroreak aurkitu dira prozesatzerakoan:\n"
+
+#: src/errors.c:87
+msgid "Processing was halted because there were too many errors.\n"
+msgstr "Prozesua geldiarazi da errore gehiegi zeudelako.\n"
+
+#: src/errors.c:95
+#, c-format
+msgid "Package %s was on hold, processing it anyway as you request\n"
+msgstr "%s paketea atxikitzeko zen, baina zuk eskatu bezala prozesatuko da\n"
+
+#: src/errors.c:99
+#, c-format
+msgid ""
+"Package %s is on hold, not touching it.  Use --force-hold to override.\n"
+msgstr ""
+"%s paketea atxikita dago, ez da ukituko.  Erabili --force-hold\n"
+"gainidazteko.\n"
+
+#: src/errors.c:108
+msgid ""
+"dpkg - warning, overriding problem because --force enabled:\n"
+" "
+msgstr ""
+"dpkg - abisua, gainidazteko arazoa --force gaituta dagoelako:\n"
+" "
+
+#: src/filesdb.c:135
+#, c-format
+msgid "unable to open files list file for package `%.250s'"
+msgstr "ezin da ireki `%.250s' paketearen fitxategi zerrendaren fitxategia"
+
+#: src/filesdb.c:140
+#, c-format
+msgid ""
+"dpkg: serious warning: files list file for package `%.250s' missing, "
+"assuming package has no files currently installed.\n"
+msgstr ""
+"dpkg: abisu larria: `%.250s' paketearen fitxategi zerrendaren "
+"fitxategiafalta da, paketeak ez duela fitxategirik instalatuta "
+"ondorioztatuko da.\n"
+
+#: src/filesdb.c:157
+#, c-format
+msgid "files list for package `%.250s'"
+msgstr "`%.250s' paketearen fitxategi zerrenda"
+
+#: src/filesdb.c:170
+#, c-format
+msgid "files list file for package `%.250s' contains empty filename"
+msgstr ""
+"`%.250s' paketearen fitxategi zerrendaren fitxategiak fitxategi izen huts "
+"bat dauka"
+
+#: src/filesdb.c:182
+#, c-format
+msgid "error closing files list file for package `%.250s'"
+msgstr "errorea `%.250s' paketearen fitxategi zerrendaren fitxategia ixtean"
+
+#: src/filesdb.c:215
+#, c-format
+msgid "(Reading database ... "
+msgstr "(Datu-basea irakurtzen ... "
+
+#: src/filesdb.c:224
+#, c-format
+msgid "%d files and directories currently installed.)\n"
+msgstr "%d fitxategi eta direktorio daude instalatuta orain.)\n"
+
+#: src/filesdb.c:255
+#, c-format
+msgid "unable to create updated files list file for package %s"
+msgstr "ezin da sortu %s paketearen fitxategi zerrenda eguneratua"
+
+#: src/filesdb.c:265
+#, c-format
+msgid "failed to write to updated files list file for package %s"
+msgstr "huts egin du %s paketearen fitxategi zerrenda eguneratua idaztean"
+
+#: src/filesdb.c:267
+#, c-format
+msgid "failed to flush updated files list file for package %s"
+msgstr "ezin da hustu %s paketearen fitxategi zerrendako eguneratua"
+
+#: src/filesdb.c:269
+#, c-format
+msgid "failed to sync updated files list file for package %s"
+msgstr ""
+"ezin da sinkronizatu %s paketearen fitxategi zerrendaren fitxategi eguneratua"
+
+#: src/filesdb.c:272
+#, c-format
+msgid "failed to close updated files list file for package %s"
+msgstr "huts egin du %s paketearen fitxategi zerrendaren fitxategia ixtean"
+
+#: src/filesdb.c:274
+#, c-format
+msgid "failed to install updated files list file for package %s"
+msgstr ""
+"huts egin du %s paketearen fitxategi zerrendaren fitxategi eguneratua "
+"instalatzean"
+
+#: src/filesdb.c:339
+msgid "failed to open statoverride file"
+msgstr "huts egin du statoverride fitxategia irekitzean"
+
+#: src/filesdb.c:343
+msgid "failed to fstat statoverride file"
+msgstr "fstat-ek huts egin du statoverride fitxategiarekin"
+
+#: src/filesdb.c:346
+msgid "failed to fstat previous statoverride file"
+msgstr "fstat-ek huts egin du aurreko statoverride fitxategiarekin"
+
+#: src/filesdb.c:365
+#, c-format
+msgid "statoverride file `%.250s'"
+msgstr "statoverride `%.250s' fitxategia"
+
+#: src/filesdb.c:378
+msgid "statoverride file contains empty line"
+msgstr "statoverride fitxategiak lerro huts bat dauka"
+
+#: src/filesdb.c:463
+msgid "failed to open diversions file"
+msgstr "huts egin du desbideratzeen fitxategia irekitzean"
+
+#: src/filesdb.c:467
+msgid "failed to fstat previous diversions file"
+msgstr "fstat-ek huts egin du aurreko desbideratzeen fitxategiarekin"
+
+#: src/filesdb.c:469
+msgid "failed to fstat diversions file"
+msgstr "fstat-ek huts egin du desbideratzeen fitxategiarekin"
+
+#: src/filesdb.c:501
+#, c-format
+msgid "conflicting diversions involving `%.250s' or `%.250s'"
+msgstr "desbideratze gatazkatsuak: `%.250s' edo `%.250s'"
+
+#: src/filesdb.c:510
+msgid "read error in diversions [i]"
+msgstr "irakurketa errorea desbideratzeetan [i]"
+
+#: src/help.c:41
+msgid "not installed"
+msgstr "instalatu gabe"
+
+#: src/help.c:42
+msgid "not installed but configs remain"
+msgstr "ez dago instalatuta baina konfigurazioa gelditzen da"
+
+#: src/help.c:43
+msgid "broken due to failed removal or installation"
+msgstr "hautsita kentzean edo instalatzen huts egin duelako"
+
+#: src/help.c:44
+msgid "unpacked but not configured"
+msgstr "deskonprimituta baina konfiguratu gabe"
+
+#: src/help.c:45
+msgid "broken due to postinst failure"
+msgstr "hautsita postinst-en hutsegitea dela eta"
+
+#: src/help.c:46
+msgid "awaiting trigger processing by another package"
+msgstr "beste pakete bat prozesatzen ari den abiarazlea itxoiten"
+
+#: src/help.c:47
+msgid "triggered"
+msgstr "abiarazia"
+
+#: src/help.c:48
+msgid "installed"
+msgstr "instalatuta"
+
+#: src/help.c:97
+msgid "dpkg - error: PATH is not set.\n"
+msgstr "dpkg - errorea: PATH ez da ezarri.\n"
+
+#: src/help.c:112
+#, c-format
+msgid "dpkg: `%s' not found on PATH.\n"
+msgstr "dpkg: `%s' ez da aurkitu PATH aldagaian.\n"
+
+#: src/help.c:119
+#, c-format
+msgid ""
+"%d expected program(s) not found on PATH.\n"
+"NB: root's PATH should usually contain /usr/local/sbin, /usr/sbin and /sbin."
+msgstr ""
+"espero ziren %d programa ez dira aurkitu PATH aldagaian.\n"
+"NB: erroaren PATHak hauek izan ohi ditu:\n"
+"/usr/local/sbin, /usr/sbin eta /sbin."
+
+#: src/help.c:155
+#, c-format
+msgid "failed to chroot to `%.250s'"
+msgstr "%.250s: huts egin du chroot egitean "
+
+#: src/help.c:204
+#, c-format
+msgid "error un-catching signal %s: %s\n"
+msgstr "errorea %s seinalea harrapatu ez delako: %s\n"
+
+#: src/help.c:222
+#, c-format
+msgid "unable to ignore signal %s before running script"
+msgstr "ezin zaio ez ikusi egin %s seinaleari script-a exekutatu aurretik"
+
+#: src/help.c:267
+#, c-format
+msgid "unable to set execute permissions on `%.250s'"
+msgstr "`%.250s': ezin da exekutatzeko baimenik ezarri"
+
+#: src/help.c:287
+msgid "unable to setenv for maint script"
+msgstr "Ezin da mantenu skriptaren ingurunea ezarri (setenv)"
+
+#: src/help.c:319
+#, c-format
+msgid "unable to stat installed %s script `%.250s'"
+msgstr "ezin da atzitu instalatuta dagoen `%2$.250s' %1$s script-a"
+
+#: src/help.c:321 src/help.c:411 src/help.c:432
+#, c-format
+msgid "unable to execute %s"
+msgstr "Ezin da %s exekutatu"
+
+#: src/help.c:377
+#, c-format
+msgid "unable to stat new %s script `%.250s'"
+msgstr "ezin da atzitu `%2$.250s' %1$s script berria"
+
+#: src/help.c:379
+#, c-format
+msgid "unable to execute new %s"
+msgstr "ezin da exekutatu %s berria"
+
+#: src/help.c:399
+#, c-format
+msgid "old %s script"
+msgstr "%s script zaharra"
+
+#: src/help.c:407
+#, c-format
+msgid "dpkg: warning - unable to stat %s `%.250s': %s\n"
+msgstr "dpkg: abisua - ezin  da %s `%.250s' atzitu: %s\n"
+
+#: src/help.c:416
+#, c-format
+msgid "dpkg - trying script from the new package instead ...\n"
+msgstr "dpkg - pakete berriaren script-arekin saiatzen ...\n"
+
+#: src/help.c:423
+#, c-format
+msgid "new %s script"
+msgstr "%s script berria"
+
+#: src/help.c:427
+msgid "there is no script in the new version of the package - giving up"
+msgstr "ez dago script-ik paketearen bertsio berrian - uzten ari da"
+
+#: src/help.c:429
+#, c-format
+msgid "unable to stat %s `%.250s'"
+msgstr "ezin da %s `%.250s' atzitu"
+
+#: src/help.c:433
+#, c-format
+msgid "dpkg: ... it looks like that went OK.\n"
+msgstr "dpkg: ... badirudi dena ondo joan dela.\n"
+
+#: src/help.c:524
+msgid "unlink"
+msgstr "askatu"
+
+#: src/help.c:538
+msgid "chmod"
+msgstr "chmod"
+
+#: src/help.c:554 src/processarc.c:747
+msgid "delete"
+msgstr "ezabatu"
+
+#: src/help.c:564
+#, c-format
+msgid "failed to %s `%%.255s'"
+msgstr "huts egin du  `%%.255s'-ri %s egitean"
+
+#: src/help.c:570 dpkg-deb/info.c:54
+msgid "failed to exec rm for cleanup"
+msgstr "huts egin du rm garbitzeko exekutatzean"
+
+#: src/main.c:46
+#, c-format
+msgid "Debian `%s' package management program version %s.\n"
+msgstr "Debian pakete kudeaketarako `%s' programaren %sbertsioa.\n"
+
+#: src/main.c:48 src/query.c:457 src/trigcmd.c:76 dpkg-deb/main.c:50
+#: dpkg-split/main.c:43
+#, c-format
+msgid ""
+"This is free software; see the GNU General Public License version 2 or\n"
+"later for copying conditions. There is NO warranty.\n"
+"See %s --license for copyright and license details.\n"
+msgstr ""
+"Software hau librea da; kopiatzeko baldintzen berri izateko, ikus\n"
+"GNU Lizentzia Publiko Orokorraren 2 bertsioa edo berriagoa.\n"
+"EZ dago bermerik.\n"
+"Ikus %s --licence xehetasun gehiago izateko.\n"
+
+#: src/main.c:61 src/query.c:470 dpkg-deb/main.c:60 dpkg-split/main.c:53
+#, c-format
+msgid ""
+"Usage: %s [<option> ...] <command>\n"
+"\n"
+msgstr ""
+"Erabilera: %s [<aukera> ...] <komandoa>\n"
+"\n"
+
+#: src/main.c:65
+#, c-format
+msgid ""
+"Commands:\n"
+"  -i|--install       <.deb file name> ... | -R|--recursive <directory> ...\n"
+"  --unpack           <.deb file name> ... | -R|--recursive <directory> ...\n"
+"  -A|--record-avail  <.deb file name> ... | -R|--recursive <directory> ...\n"
+"  --configure        <package> ... | -a|--pending\n"
+"  --triggers-only    <package> ... | -a|--pending\n"
+"  -r|--remove        <package> ... | -a|--pending\n"
+"  -P|--purge         <package> ... | -a|--pending\n"
+"  --get-selections [<pattern> ...] Get list of selections to stdout.\n"
+"  --set-selections                 Set package selections from stdin.\n"
+"  --clear-selections               Deselect every non-essential package.\n"
+"  --update-avail <Packages-file>   Replace available packages info.\n"
+"  --merge-avail <Packages-file>    Merge with info from file.\n"
+"  --clear-avail                    Erase existing available info.\n"
+"  --forget-old-unavail             Forget uninstalled unavailable pkgs.\n"
+"  -s|--status <package> ...        Display package status details.\n"
+"  -p|--print-avail <package> ...   Display available version details.\n"
+"  -L|--listfiles <package> ...     List files `owned' by package(s).\n"
+"  -l|--list [<pattern> ...]        List packages concisely.\n"
+"  -S|--search <pattern> ...        Find package(s) owning file(s).\n"
+"  -C|--audit                       Check for broken package(s).\n"
+"  --print-architecture             Print dpkg architecture.\n"
+"  --compare-versions <a> <op> <b>  Compare version numbers - see below.\n"
+"  --force-help                     Show help on forcing.\n"
+"  -Dh|--debug=help                 Show help on debugging.\n"
+"\n"
+msgstr ""
+"Komandoak:\n"
+"  -i|--install      <.deb fitxategi izena> ... | -R|--recursive <dir> ...\n"
+"  --unpack          <.deb fitxategi izena> ... | -R|--recursive <dir> ...\n"
+"  -A|--record-avail <.deb fitxategi izena> ... | -R|--recursive <dir> ...\n"
+"  --configure              <pakete izena> ... | -a|--pending\n"
+"  --triggers-only    <pakete izena> ... | -a|--pending\n"
+"  -r|--remove | -P|--purge <pakete izena> ... | -a|--pending\n"
+"  -P|--purge         <pakete izena>... | -a|--pending\n"
+"  --get-selections [<patroia> ...]    aukeraketa zerrenda bistarazi\n"
+"  --set-selections                    sarrera estandarretik artu aukeraketa "
+"zerrenda\n"
+"  --clear-selections                 beharrezko ez diren paketeen aukeraketa "
+"ezabatu\n"
+"  --update-avail <Pakete-fitx>      pakete eskuragarrien argibideak "
+"eguneratu\n"
+"  --merge-avail <Pakete-fitx>       fitxategiko argibideekin batu\n"
+"  --clear-avail                       dagoen eskuragarrien argibideak "
+"ezabatu\n"
+"  --forget-old-unavail                ahaztu pakete ez instalatu eta ez "
+"eskuragarrien argibideak\n"
+"  -s|--status <pakete-izena> ...      pakete egoera xehetasunak bistarazi\n"
+"  -p|--print-avail <pakete-izena> ... pakete eskuragarriaren xehetasunak "
+"bistarazi\n"
+"  -L|--listfiles <pakete-izena> ...   pakete(ar)en fitxategiak zerrendatu\n"
+"  -l|--list [<pattern> ...]           paketeak laburki zerrendatu\n"
+"  -S|--search <patroia> ...           fitxategi hau(ek) dituzten paketea(k) "
+"bilatu\n"
+"  -C|--audit                          Apurturiko paketeak egiaztatu\n"
+"  --print-architecture                helburu arkitektura bistarazi (GCC "
+"erabiltzen du)\n"
+"  --compare-versions <a> <rel> <b>    bertsio zenbakiak parekatu berago "
+"ikusi\n"
+"  --force-help                        Indartze aukeren laguntza bistarazi\n"
+"  -Dh|--debug=help                    arazpen aukeren laguntza bistarazi\n"
+"\n"
+
+#: src/main.c:93 src/query.c:484 src/trigcmd.c:98 dpkg-deb/main.c:77
+#: dpkg-split/main.c:67
+#, c-format
+msgid ""
+"  -h|--help                        Show this help message.\n"
+"  --version                        Show the version.\n"
+"  --license|--licence              Show the copyright licensing terms.\n"
+"\n"
+msgstr ""
+"  --help | --version                  Laguntza testu hau bistarazi\n"
+"  --version                           Bertsio zenbakia bistarazi\n"
+"  --licence                           Kopia eskubide lizentzia bistarazi\n"
+"\n"
+
+#: src/main.c:99
+#, c-format
+msgid ""
+"Use dpkg -b|--build|-c|--contents|-e|--control|-I|--info|-f|--field|\n"
+" -x|--extract|-X|--vextract|--fsys-tarfile  on archives (type %s --help).\n"
+"\n"
+msgstr ""
+"Erabili dpkg -b|--build|-c|--contents|-e|--control|-I|--info|-f|--field|\n"
+" -x|--extract|-X|--vextract|--fsys-tarfile  fitxategietan (sar %s --help.)\n"
+"\n"
+
+#: src/main.c:104
+#, c-format
+msgid ""
+"For internal use: dpkg --assert-support-predepends | --predep-package |\n"
+"  --assert-working-epoch | --assert-long-filenames | --assert-multi-conrep.\n"
+"\n"
+msgstr ""
+"Barne erabilpenerako: dpkg --assert-support-predepends | --predep-package \n"
+"  --assert-working-epoch | --assert-long-filenames | --assert-multi-conrep\n"
+"\n"
+
+#: src/main.c:109
+#, c-format
+msgid ""
+"Options:\n"
+"  --admindir=<directory>     Use <directory> instead of %s.\n"
+"  --root=<directory>         Install on a different root directory.\n"
+"  --instdir=<directory>      Change installation dir without changing admin "
+"dir.\n"
+"  -O|--selected-only         Skip packages not selected for install/"
+"upgrade.\n"
+"  -E|--skip-same-version     Skip packages whose same version is installed.\n"
+"  -G|--refuse-downgrade      Skip packages with earlier version than "
+"installed.\n"
+"  -B|--auto-deconfigure      Install even if it would break some other "
+"package.\n"
+"  --[no-]triggers            Skip or force consequential trigger "
+"processing.\n"
+"  --no-debsig                Do not try to verify package signatures.\n"
+"  --no-act|--dry-run|--simulate\n"
+"                             Just say what we would do - don't do it.\n"
+"  -D|--debug=<octal>         Enable debugging (see -Dhelp or --debug=help).\n"
+"  --status-fd <n>            Send status change updates to file descriptor "
+"<n>.\n"
+"  --log=<filename>           Log status changes and actions to <filename>.\n"
+"  --ignore-depends=<package>,...\n"
+"                             Ignore dependencies involving <package>.\n"
+"  --force-...                Override problems (see --force-help).\n"
+"  --no-force-...|--refuse-...\n"
+"                             Stop when problems encountered.\n"
+"  --abort-after <n>          Abort after encountering <n> errors.\n"
+"\n"
+msgstr ""
+"Aukerak:\n"
+"  --admindir=<direktorioa>        <direktorioa> erabiltzen du %s-ren ordez\n"
+"  --root=<karpeta>                Erroa <karpeta>-an duen beste sistema "
+"batetan instalatu.\n"
+"  --instdir=<directory>           Instalakuntza erroa aldatu kudeatze "
+"karpeta aldatu gabe.\n"
+"  -O|--selected-only              instalatu/eguneratzeko aukeratuak ez "
+"dauden paketeak                                                alde batetara "
+"utzi.\n"
+"  -E|--skip-same-version          Bertsio berdina instalaturik duten "
+"paketeak alde                                                   batetara "
+"utzi.\n"
+"  -G|--refuse-downgrade           Bertsio berriagoa instalaturik duten "
+"paketeak alde                                                 batetara "
+"utzi.\n"
+"  -B|--auto-deconfigure           Instalatu nahiz honek beste paketeren "
+"bat                                                          apurtu.\n"
+"  --no-debsig                     Ez saiatu pakete sinadurak egiaztatzen\n"
+"  --no-act|--dry-run|--simulate.\n"
+"                                  Zer egingo lukeen ematen du - baina ez du "
+"ezer egingo.\n"
+"  -D|--debug=<octal>              Arazpena gaitu (ikusi -Dhelp edo --"
+"debug=help).\n"
+"  --status-fd <n>                 Bidali egoera aldaketa eguneraketak "
+"<n>                                                            fitxategi "
+"argibidera.\n"
+"  --log=<filename>                Erregistro egoera aldaketak <filename>-"
+"rentzat.\n"
+"  --ignore-depends=<paketea>,...  Alde batetara utzi <paketea>-ri "
+"buruzko                                                            "
+"dependetzi arazoak.\n"
+"  --force-...                     Arazoak alde batetara utzi - (--force-help "
+"begiratu).\n"
+"  --no-force-...|--refuse-...     Geratu arazoak aurkitzerakoan.\n"
+"  --abort-after <n>               Utzi <n> errore aurkitzerakoan.\n"
+"\n"
+
+#: src/main.c:133
+#, c-format
+msgid ""
+"Comparison operators for --compare-versions are:\n"
+"  lt le eq ne ge gt       (treat empty version as earlier than any "
+"version);\n"
+"  lt-nl le-nl ge-nl gt-nl (treat empty version as later than any version);\n"
+"  < << <= = >= >> >       (only for compatibility with control file "
+"syntax).\n"
+"\n"
+msgstr ""
+" --compare-versions-rekin erabiltze parekatze operadoreak:\n"
+" lt le eq ne ge gt       (ez dagoen bertsioa beste edozein bertsioren "
+"aurreko bezala kudeatu );\n"
+" lt-nl le-nl ge-nl gt-nl (ez dagoen bertsioa beste edozein bertsio baino "
+"berriago bezala kudeatu);\n"
+" < << <= = >= >> >       (kontrol fitxategi sintaxirekin bateratzeko "
+"bakarrik).\n"
+"\n"
+
+#: src/main.c:140
+#, c-format
+msgid "Use `dselect' or `aptitude' for user-friendly package management.\n"
+msgstr ""
+"`dselect' edo 'aptitude' erabili pakete kudeaketa lagungarriago bat "
+"izateko.\n"
+
+#: src/main.c:147
+msgid ""
+"Type dpkg --help for help about installing and deinstalling packages [*];\n"
+"Use `dselect' or `aptitude' for user-friendly package management;\n"
+"Type dpkg -Dhelp for a list of dpkg debug flag values;\n"
+"Type dpkg --force-help for a list of forcing options;\n"
+"Type dpkg-deb --help for help about manipulating *.deb files;\n"
+"Type dpkg --license for copyright license and lack of warranty (GNU GPL) "
+"[*].\n"
+"\n"
+"Options marked [*] produce a lot of output - pipe it through `less' or "
+"`more' !"
+msgstr ""
+"Idatzi dpkg --help paketeak instalatu/desinstalatzeko laguntza jasotzeko "
+"[*];\n"
+"Erabili `dselect'  edo `aptitude' pakete kudeatzaile lagungarriago bat "
+"izateko;\n"
+"Idatzi dpkg -Dhelp dpkg arazpen bandera balioei buruz laguntza jasotzeko;\n"
+"Idatzi dpkg --force-help indartze aukerei buruz buruz laguntza jasotzeko;\n"
+"Idatzi dpkg-deb --help *.deb fitxategian eraldatzeari buruz laguntza "
+"jasotzeko;\n"
+"Idatzi dpkg --licence kopiatze eskubide, lizentzia eta berma eza jasotzeko "
+"(GNU-GPL) [*].\n"
+"\n"
+" [*] duten aukerek irteera luze bat dute - `less' edo `more' bidez erabili!"
+
+#: src/main.c:205 src/query.c:527 dpkg-deb/main.c:174 dpkg-split/main.c:152
+#, c-format
+msgid "conflicting actions -%c (--%s) and -%c (--%s)"
+msgstr "ekintza gatazkatsuak -%c (--%s) eta -%c (--%s)"
+
+#: src/main.c:211
+#, c-format
+msgid "Warning: obsolete option `--%s'\n"
+msgstr "Kontuz: aukera zaharkitua `--%s'\n"
+
+#: src/main.c:219
+#, c-format
+msgid ""
+"%s debugging option, --debug=<octal> or -D<octal>:\n"
+"\n"
+" number  ref. in source   description\n"
+"      1   general           Generally helpful progress information\n"
+"      2   scripts           Invocation and status of maintainer scripts\n"
+"     10   eachfile          Output for each file processed\n"
+"    100   eachfiledetail    Lots of output for each file processed\n"
+"     20   conff             Output for each configuration file\n"
+"    200   conffdetail       Lots of output for each configuration file\n"
+"     40   depcon            Dependencies and conflicts\n"
+"    400   depcondetail      Lots of dependencies/conflicts output\n"
+"  10000   triggers          Trigger activation and processing\n"
+"  20000   triggersdetail    Lots of output regarding triggers\n"
+"  40000   triggersstupid    Silly amounts of output regarding triggers\n"
+"   1000   veryverbose       Lots of drivel about eg the dpkg/info directory\n"
+"   2000   stupidlyverbose   Insane amounts of drivel\n"
+"\n"
+"Debugging options are be mixed using bitwise-or.\n"
+"Note that the meanings and values are subject to change.\n"
+msgstr ""
+"%s arazketa aukera, --debug=<octal> edo -D<octal>:\n"
+"\n"
+" zenbakia iturburu-erref.  azalpena\n"
+"      1   general           Progresioari buruzko informazio lagungarria\n"
+"      2   scripts           Mantentzaile-scripten deia eta egoera\n"
+"     10   eachfile          Prozesatutako fitxategi bakoitzaren irteera\n"
+"    100   eachfiledetail    Prozesatutako fitxategi bakoitzaren irteera "
+"xehea\n"
+"     20   conff             Konfigurazio fitxategi bakoitzaren irteera\n"
+"    200   conffdetail       Konfigurazio fitxategi bakoitzaren irteera "
+"xehea\n"
+"     40   depcon            Mendekotasunak eta gatazkak\n"
+"    400   depcondetail      Mendekotasunen eta gatazken irteera xehea\n"
+"   1000   veryverbose       dpkg/info direktorioari buruzko azalpen luzeak\n"
+"   2000   stupidlyverbose   Amaigabeko jarioa\n"
+"\n"
+"Arazketa aukerak OR logikoarekin konbina daitezke.\n"
+"Kontuan hartu esanahiak eta balioak alda daitezkeela.\n"
+
+#: src/main.c:243
+msgid "--debug requires an octal argument"
+msgstr "--debug: octal argumentu bat behar du"
+
+#: src/main.c:267
+#, c-format
+msgid "null package name in --ignore-depends comma-separated list `%.250s'"
+msgstr ""
+"pakete izen nulua --ignore-depends komaz bereizitako `%.250s' zerrendan"
+
+#: src/main.c:273
+#, c-format
+msgid "--ignore-depends requires a legal package name. `%.250s' is not; %s"
+msgstr "--ignore-depends: legezko pakete izena behar du. `%.250s' ez da; %s"
+
+#: src/main.c:289 src/main.c:300
+#, c-format
+msgid "invalid integer for --%s: `%.250s'"
+msgstr "baliogabeko osokoa --%s: `%.250s'"
+
+#: src/main.c:302
+msgid "<package status and progress file descriptor>"
+msgstr "<pakete egoera eta aurrerapen fitxategi deskribatzailea>"
+
+#: src/main.c:322
+#, c-format
+msgid ""
+"%s forcing options - control behaviour when problems found:\n"
+"  warn but continue:  --force-<thing>,<thing>,...\n"
+"  stop with error:    --refuse-<thing>,<thing>,... | --no-force-<thing>,...\n"
+" Forcing things:\n"
+"  all [!]                Set all force options\n"
+"  downgrade [*]          Replace a package with a lower version\n"
+"  configure-any          Configure any package which may help this one\n"
+"  hold                   Process incidental packages even when on hold\n"
+"  bad-path               PATH is missing important programs, problems "
+"likely\n"
+"  not-root               Try to (de)install things even when not root\n"
+"  overwrite              Overwrite a file from one package with another\n"
+"  overwrite-diverted     Overwrite a diverted file with an undiverted "
+"version\n"
+"  bad-verify             Install a package even if it fails authenticity "
+"check\n"
+"  depends-version [!]    Turn dependency version problems into warnings\n"
+"  depends [!]            Turn all dependency problems into warnings\n"
+"  confnew [!]            Always use the new config files, don't prompt\n"
+"  confold [!]            Always use the old config files, don't prompt\n"
+"  confdef [!]            Use the default option for new config files if one\n"
+"                         is available, don't prompt. If no default can be "
+"found,\n"
+"                         you will be prompted unless one of the confold or\n"
+"                         confnew options is also given\n"
+"  confmiss [!]           Always install missing config files\n"
+"  breaks [!]             Install even if it would break another package\n"
+"  conflicts [!]          Allow installation of conflicting packages\n"
+"  architecture [!]       Process even packages with wrong architecture\n"
+"  overwrite-dir [!]      Overwrite one package's directory with another's "
+"file\n"
+"  remove-reinstreq [!]   Remove packages which require installation\n"
+"  remove-essential [!]   Remove an essential package\n"
+"\n"
+"WARNING - use of options marked [!] can seriously damage your installation.\n"
+"Forcing options marked [*] are enabled by default.\n"
+msgstr ""
+"%s behartzeko aukerak - arazoak daudenean portaera kontrolatzeko:\n"
+"  abisatu baina jarraitu:  --force-<thing>,<thing>,...\n"
+"  geldiarazi errorearekin: --refuse-<thing>,<thing>,... | --no-force-"
+"<thing>,...\n"
+" Gauzak behartzea:\n"
+"  all [!]                Ezarri behartzeko aukera guztiak\n"
+"  downgrade [*]          Ordeztu pakete bat bertsio aharragoarekin\n"
+"  configure-any          Konfiguratu honi lagun diezaiokeen edozein pakete\n"
+"  hold                   Prozesatu sor litezkeen paketeak atxikitzekoak \n"
+"                         badira ere\n"
+"  bad-path               PATHean programa garrantzitsuak falta dira, \n"
+"                         arazoak sor litezke\n"
+"  not-root               Saiatu (des)instalatzen root ez izan arren\n"
+"  overwrite              Gainidatzi pakete bateko fitxategi bat beste "
+"batekin\n"
+"  overwrite-diverted     Gainidatzi fitxategi desbideratu bat desbideratu \n"
+"                         gabeko bertsio batekin\n"
+"  bad-verify             Instalatu paketeak autentikotasun-azterketa \n"
+"                         gainditu ez badute ere\n"
+"  depends-version [!]    Bihurtu abisu mendekotasun bertsioaren arazoak\n"
+"  depends [!]            Bihurtu abisu mendekotasun arazo guztiak\n"
+"  confnew [!]            Erabili beti konf. fitxategi berriak, ez abisatu\n"
+"  confold [!]            Erabili beti konf. fitxategi zaharrak, ez abisatu\n"
+"  confdef [!]            Baldin badago, erabili konf. fitxategi berrien \n"
+"                         aukera lehenetsia; ez galdetu. Lehenetsirik ez \n"
+"                         badago, galdetu egingo du, confold edo confnew \n"
+"                         aukeretako bat eman ez bada\n"
+"  confmiss [!]           Instalatu beti falta diren konf. fitxategiak\n"
+"  breaks [!]             Instalatu nahi beste paketeren bat hautsi\n"
+"  conflicts [!]          Onartu pakete gatazkatsuak instalatzea\n"
+"  architecture [!]       Okerreko arkitektura duten paketeak ere prozesatu\n"
+"  overwrite-dir [!]      Gainidatzi pakete baten direktorioa beste baten \n"
+"                         fitxategiarekin\n"
+"  remove-reinstreq [!]   Kendu instalazioa behar duten paketeak\n"
+"  remove-essential [!]   Kendu funtsezko pakete bat\n"
+"\n"
+"KONTUZ - [!] marka duten aukerak erabiltzeak instalazioa larriki honda "
+"dezake.\n"
+"[*] marka duten behartzeko aukerak gaituta daude lehenespenez.\n"
+
+#: src/main.c:368
+#, c-format
+msgid "unknown force/refuse option `%.*s'"
+msgstr "`%.*s' behartzeko/uko egiteko aukera ezezaguna"
+
+#: src/main.c:373
+#, c-format
+msgid "Warning: obsolete force/refuse option `%s'\n"
+msgstr "Kontuz: indartze/ukatze aukera zaharkitua `--%s'\n"
+
+#: src/main.c:522
+#, c-format
+msgid "failed to exec %s"
+msgstr "huts egin du %s exekutatzean"
+
+#: src/main.c:537
+msgid "--command-fd takes one argument, not zero"
+msgstr "--command-fd: argumentu bat hartzen du, ez 0"
+
+#: src/main.c:539
+msgid "--command-fd only takes one argument"
+msgstr "--command-fd: argumentu bat bakarrik hartzen du"
+
+#: src/main.c:541
+msgid "invalid number for --command-fd"
+msgstr "--command-fd: baliogabeko zenbakia"
+
+#: src/main.c:543
+#, c-format
+msgid "couldn't open `%i' for stream"
+msgstr "ezin izan da `%i' ireki korronterako"
+
+#: src/main.c:568
+#, c-format
+msgid "unexpected eof before end of line %d"
+msgstr "ustekabeko eof %d lerroa amaitu aurretik"
+
+#: src/main.c:613 src/main.c:628 src/query.c:563 dpkg-deb/main.c:199
+#: dpkg-split/main.c:165
+msgid "need an action option"
+msgstr "ekintza aukera bat behar da"
+
+#: src/packages.c:105
+#, c-format
+msgid "--%s --pending does not take any non-option arguments"
+msgstr "--%s --pending: ez du hartzen aukerakoa ez den argumenturik"
+
+#: src/packages.c:143 src/query.c:296
+#, c-format
+msgid "--%s needs at least one package name argument"
+msgstr "--%s: pakete izenaren argumentu bat behar du gutxienez"
+
+#: src/packages.c:150
+msgid ""
+"you must specify packages by their own names, not by quoting the names of "
+"the files they come in"
+msgstr ""
+"paketeen izenak zehaztu behar dituzu, ez paketeen barruko fitxategien izenak"
+
+#: src/packages.c:191
+#, c-format
+msgid "Package %s listed more than once, only processing once.\n"
+msgstr ""
+"%s paketea behin baino gehiagotan azaltzen da, baina behin bakarrik "
+"prozesatuko da.\n"
+
+#: src/packages.c:195
+#, c-format
+msgid ""
+"More than one copy of package %s has been unpacked\n"
+" in this run !  Only configuring it once.\n"
+msgstr ""
+"%s paketearen kopia bat baino gehiago deskonprimitu da\n"
+" exekuzio honetan!  Behin bakarrik konfiguratuko da.\n"
+
+#: src/packages.c:242
+#, c-format
+msgid ""
+"package %.250s is not ready for trigger processing\n"
+" (current status `%.250s' with no pending triggers)"
+msgstr ""
+"%.250s paketea ez dago prest abiarazle prozesurako\n"
+" (uneko egoera: `%.250s' eta ez da abiarazlerik falta)"
+
+#: src/packages.c:338
+#, c-format
+msgid "  Package %s which provides %s is to be removed.\n"
+msgstr "  %s paketea, %s hornitzen duena kendu egingo da.\n"
+
+#: src/packages.c:341
+#, c-format
+msgid "  Package %s is to be removed.\n"
+msgstr "  %s paketea kendu egingo da.\n"
+
+#: src/packages.c:358
+#, c-format
+msgid "  Version of %s on system is %s.\n"
+msgstr "  %s-ren sistemako bertsioa %s da.\n"
+
+#: src/packages.c:379
+#, c-format
+msgid "  Package %s which provides %s awaits trigger processing.\n"
+msgstr "  %s paketea, %s hornitzen abiarzle prozesua itxoiten du.\n"
+
+#: src/packages.c:383
+#, c-format
+msgid "  Package %s awaits trigger processing.\n"
+msgstr "  %s paketeak abiarazle prozesua itxoiten du.\n"
+
+#: src/packages.c:414
+#, c-format
+msgid "dpkg: also configuring `%s' (required by `%s')\n"
+msgstr "dpkg: `%s' ere konfiguratzen ari da (honek behar du: `%s')\n"
+
+#: src/packages.c:420
+#, c-format
+msgid "  Package %s which provides %s is not configured yet.\n"
+msgstr "  %s paketea, %s hornitzen duena oraindik ez dago konfiguraturik.\n"
+
+#: src/packages.c:423
+#, c-format
+msgid "  Package %s is not configured yet.\n"
+msgstr "  %s paketea ez dago konfiguratuta oraindik.\n"
+
+#: src/packages.c:434
+#, c-format
+msgid "  Package %s which provides %s is not installed.\n"
+msgstr "  %s paketea, %s hornitzen duena ez dago instalaturik.\n"
+
+#: src/packages.c:437
+#, c-format
+msgid "  Package %s is not installed.\n"
+msgstr "  %s paketea ez dago instalatuta.\n"
+
+#: src/packages.c:475
+#, c-format
+msgid " %s (%s) breaks %s and is %s.\n"
+msgstr " %s (%s) -ek %s apurtzen du eta %s da.\n"
+
+#: src/packages.c:483
+#, c-format
+msgid "  %s (%s) provides %s.\n"
+msgstr "  %s (%s) -ek %s hornitzen du.\n"
+
+#: src/packages.c:488
+#, c-format
+msgid "  Version of %s to be configured is %s.\n"
+msgstr "  Konfiguratuko den %s-ren bertsioa %s da.\n"
+
+#: src/packages.c:588
+msgid " depends on "
+msgstr " honen mendekoa da: "
+
+#: src/packages.c:594
+msgid "; however:\n"
+msgstr "; nolanahi ere:\n"
+
+#: src/processarc.c:109
+msgid "cannot access archive"
+msgstr "ezin da sartu artxiboan"
+
+#: src/processarc.c:119
+#, c-format
+msgid "error ensuring `%.250s' doesn't exist"
+msgstr "errorea `%.250s' ez dagoela ziurtatzean"
+
+#: src/processarc.c:124
+msgid "failed to exec dpkg-split to see if it's part of a multiparter"
+msgstr ""
+"huts egin du dpkg-split exekutatzean fitxategi zatitu baten zati ote den "
+"begiratzeko"
+
+#: src/processarc.c:127
+msgid "wait for dpkg-split failed"
+msgstr "huts egin du dpkg-split-i itxarotean"
+
+#: src/processarc.c:133
+msgid "reassembled package file"
+msgstr "pakete fitxategia berriz muntatu da"
+
+#: src/processarc.c:148
+#, c-format
+msgid "Authenticating %s ...\n"
+msgstr "%s autentifikatzen...\n"
+
+#: src/processarc.c:153
+msgid "failed to execl debsig-verify"
+msgstr "huts egin du debsig-verify exekutatzean (execl)"
+
+#: src/processarc.c:159
+#, c-format
+msgid "Verification on package %s failed!"
+msgstr "Huts egin du %s paketea egiaztatzean!"
+
+#: src/processarc.c:161
+#, c-format
+msgid ""
+"Verification on package %s failed,\n"
+"but installing anyway as you request.\n"
+msgstr ""
+"Huts egin du %s paketea egiaztatzean,\n"
+"baina eskatu bezala instalatuko da.\n"
+
+#: src/processarc.c:164
+#, c-format
+msgid "passed\n"
+msgstr "gaindituta\n"
+
+#: src/processarc.c:173
+msgid "unable to get unique filename for control info"
+msgstr "ezin da lortu fitxategi izen bakarra kontrol-informaziorako"
+
+#: src/processarc.c:195
+msgid "failed to exec dpkg-deb to extract control information"
+msgstr "huts egin du dpkg-deb exekutatzean kontrol-informazioa ateratzeko"
+
+#: src/processarc.c:212
+#, c-format
+msgid "Recorded info about %s from %s.\n"
+msgstr "%s(r)i buruzko informazioa erregistratu da %s(e)tik.\n"
+
+#: src/processarc.c:221
+#, c-format
+msgid "package architecture (%s) does not match system (%s)"
+msgstr "paketearen arkitektura (%s) ez dator bat sistemarekin (%s)"
+
+#: src/processarc.c:276
+#, c-format
+msgid ""
+"dpkg: regarding %s containing %s, pre-dependency problem:\n"
+"%s"
+msgstr ""
+"dpkg: %2$s daukan %1$s: aurremendekotasun arazoa:\n"
+"%3$s"
+
+#: src/processarc.c:279
+#, c-format
+msgid "pre-dependency problem - not installing %.250s"
+msgstr "aurremendekotasun arazoa: %.250s ez da instalatuko"
+
+#: src/processarc.c:280
+#, c-format
+msgid "dpkg: warning - ignoring pre-dependency problem !\n"
+msgstr "dpkg: abisua - aurremendekotasun arazoari ez ikusi egingo zaio !\n"
+
+#: src/processarc.c:295
+#, c-format
+msgid "Preparing to replace %s %s (using %s) ...\n"
+msgstr "%s %s ordezteko prestatzen (%s erabiliz) ...\n"
+
+#: src/processarc.c:301
+#, c-format
+msgid "Unpacking %s (from %s) ...\n"
+msgstr "%s (%s) deskonprimitzen...\n"
+
+#: src/processarc.c:330
+#, c-format
+msgid "name of conffile (starting `%.250s') is too long (>%d characters)"
+msgstr ""
+"konf. fitxategiaren izena (`%.250s' hasten dena) luzeegia da (>%d karaktere)"
+
+#: src/processarc.c:383
+#, c-format
+msgid "read error in %.250s"
+msgstr "%.250s: irakurketa errorea"
+
+#: src/processarc.c:385
+#, c-format
+msgid "error closing %.250s"
+msgstr "errorea %.250s ixtean"
+
+#: src/processarc.c:387
+#, c-format
+msgid "error trying to open %.250s"
+msgstr "errorea %.250s irekitzen saiatzean"
+
+#: src/processarc.c:423
+#, c-format
+msgid "De-configuring %s, to allow removal of %s ...\n"
+msgstr "%s konfigurazioa kentzen, %s kendu ahal izateko...\n"
+
+#: src/processarc.c:426
+#, c-format
+msgid "De-configuring %s ...\n"
+msgstr "%s konfigurazioa kentzen...\n"
+
+#: src/processarc.c:501
+#, c-format
+msgid "Unpacking replacement %.250s ...\n"
+msgstr "%.250s ordeztea deskonprimitzen...\n"
+
+#: src/processarc.c:582
+msgid "unable to exec dpkg-deb to get filesystem archive"
+msgstr "ezin da exekutatu dpkg-deb fitxategi sistemaren artxiboa lortzeko"
+
+#: src/processarc.c:596
+msgid "error reading dpkg-deb tar output"
+msgstr "errorea dpkg-deb tar irteera irakurtzean "
+
+#: src/processarc.c:598
+msgid "corrupted filesystem tarfile - corrupted package archive"
+msgstr ""
+"fitxategi sistemaren tar fitxategia hondatu da - pakete artxiboa hondatuta "
+"dago"
+
+#: src/processarc.c:601
+msgid "dpkg-deb: zap possible trailing zeros"
+msgstr "dpkg-deb: kendu amaierako zero posibleak "
+
+#: src/processarc.c:657
+#, c-format
+msgid "dpkg: warning - could not stat old file `%.250s' so not deleting it: %s"
+msgstr ""
+"dpkg: abisua -  Ezin da `%.250s' fitxategi zaharraren egoera eskuratu beraz "
+"ez da ezabatuko: %s"
+
+#: src/processarc.c:665
+#, c-format
+msgid "dpkg: warning - unable to delete old directory `%.250s': %s\n"
+msgstr "dpkg: abisua - ezin  da `%.250s' direktorio zaharra ezabatu: %s\n"
+
+#: src/processarc.c:669
+#, c-format
+msgid ""
+"dpkg: warning - old conffile `%.250s' was an empty directory (and has now "
+"been deleted)\n"
+msgstr ""
+"dpkg: abisua - `%.250s' konf. fitxategi zaharra direktorio huts bat da (eta "
+"ezabatua izango da)\n"
+
+#: src/processarc.c:699
+#, c-format
+msgid "unable to stat other new file `%.250s'"
+msgstr "ezin da beste `%.250s' fitxategiaren egoera eskuratu"
+
+#: src/processarc.c:710
+#, c-format
+msgid ""
+"dpkg: warning - old file `%.250s' is the same as several new files!  (both `"
+"%.250s' and `%.250s')\n"
+msgstr ""
+"dpkg: abisua - `%.250s' fitxategi zaharra zenbait fitxategi berrien berdina "
+"da! (bai `%.250s' eta bai `%.250s')\n"
+
+#: src/processarc.c:751
+#, c-format
+msgid "dpkg: warning - unable to %s old file `%%.250s': %%s\n"
+msgstr "dpkg: abisua - ezin  da `%%.250s' fitxategi zaharra%s: %%s\n"
+
+#: src/processarc.c:787 src/processarc.c:1053 src/remove.c:297
+msgid "cannot read info directory"
+msgstr "ezin da irakurri informazio direktorioan"
+
+#: src/processarc.c:800
+#, c-format
+msgid "old version of package has overly-long info file name starting `%.250s'"
+msgstr ""
+"pakete bertsio zaharreko inf. fitxategiak izen luzeegia du;`%.250s' hasten "
+"da "
+
+#: src/processarc.c:825
+#, c-format
+msgid "unable to remove obsolete info file `%.250s'"
+msgstr "ezin da kendu `%.250s' informazio fitxategi zaharkitua"
+
+#: src/processarc.c:829
+#, c-format
+msgid "unable to install (supposed) new info file `%.250s'"
+msgstr "ezin da instalatu `%.250s' (ustezko) informazio fitxategi berria"
+
+#: src/processarc.c:840
+msgid "unable to open temp control directory"
+msgstr "ezin da ireki aldi baterako kontrok direktorioa"
+
+#: src/processarc.c:849
+#, c-format
+msgid "package contains overly-long control info file name (starting `%.50s')"
+msgstr ""
+"paketeak kontroleko informazio fitxategi izen luzeegia dauka (`%.50s' hasten "
+"da)"
+
+#: src/processarc.c:854
+#, c-format
+msgid "package control info contained directory `%.250s'"
+msgstr "paketearen kontrol informazioak `%.250s' direktorioa zeukan"
+
+#: src/processarc.c:856
+#, c-format
+msgid "package control info rmdir of `%.250s' didn't say not a dir"
+msgstr ""
+"`%.250s' rmdir paketearen kontrol informazioak ez du esaten direktorio bat "
+"ez denik"
+
+#: src/processarc.c:862
+#, c-format
+msgid "dpkg: warning - package %s contained list as info file"
+msgstr "dpkg: abisua - %s paketeak zerrenda informazio fitxategi gisa zeukan"
+
+#: src/processarc.c:869
+#, c-format
+msgid "unable to install new info file `%.250s' as `%.250s'"
+msgstr "ezin da `%.250s' informazio fitxategi berria `%.250s' gisa instalatu"
+
+#: src/processarc.c:1032
+#, c-format
+msgid "(Noting disappearance of %s, which has been completely replaced.)\n"
+msgstr "(Kontuan hartu %s desagertu dela, guztiz ordeztu delako.)\n"
+
+#: src/processarc.c:1069
+#, c-format
+msgid "unable to delete disappearing control info file `%.250s'"
+msgstr "ezin da ezabatu desagertutako `%.250s' kontroleko inf. fitxategia"
+
+#: src/query.c:125
+msgid ""
+"Desired=Unknown/Install/Remove/Purge/Hold\n"
+"| Status=Not/Inst/Cfg-files/Unpacked/Failed-cfg/Half-inst/trig-aWait/Trig-"
+"pend\n"
+"|/ Err?=(none)/Hold/Reinst-required/X=both-problems (Status,Err: "
+"uppercase=bad)\n"
+msgstr ""
+"Nahia=Unknown/Install/Remove/Purge/Hold\n"
+"| Egoera=Not/Inst/Cfg-files/Unpacked/Failed-cfg/Half-inst/trig-aWait/Trig-"
+"pend\n"
+"|/ Err?=(batez)/Hold/Reinst-required/X=both-problems (Status,Err: "
+"uppercase=bad)\n"
+
+#: src/query.c:129
+msgid "Name"
+msgstr "Izena"
+
+#: src/query.c:129
+msgid "Version"
+msgstr "Bertsioa"
+
+#: src/query.c:129
+msgid "Description"
+msgstr "Azalpena"
+
+#: src/query.c:197 src/query.c:440 src/select.c:80
+#, c-format
+msgid "No packages found matching %s.\n"
+msgstr "Ez dago honekin bat datorren paketerik: %s.\n"
+
+#: src/query.c:219
+#, c-format
+msgid "diversion by %s from: %s\n"
+msgstr "%s-(e)k hemendik desbideratuta: %s\n"
+
+#: src/query.c:221
+#, c-format
+msgid "diversion by %s to: %s\n"
+msgstr "%s-(e)k hona desbideratuta: %s\n"
+
+#: src/query.c:224
+#, c-format
+msgid "local diversion from: %s\n"
+msgstr "desbideratze lokala hemendik: %s\n"
+
+#: src/query.c:225
+#, c-format
+msgid "local diversion to: %s\n"
+msgstr "lokalki hona desbideratuta: %s\n"
+
+#: src/query.c:250
+msgid "--search needs at least one file name pattern argument"
+msgstr "--search: fitxategi-izeneko eredu-argumentu bat behar du gutxienez"
+
+#: src/query.c:278
+#, c-format
+msgid "dpkg: %s not found.\n"
+msgstr "dpkg: %s ez da aurkitu.\n"
+
+#: src/query.c:316
+#, c-format
+msgid "Package `%s' is not installed and no info is available.\n"
+msgstr "`%s' paketea ez dago instalatuta, eta ez dago inf. erabilgarririk.\n"
+
+#: src/query.c:325
+#, c-format
+msgid "Package `%s' is not available.\n"
+msgstr "`%s' paketea ez dago erabilgarri.\n"
+
+#: src/query.c:335
+#, c-format
+msgid "Package `%s' is not installed.\n"
+msgstr "`%s' paketea ez dago instalatuta.\n"
+
+#: src/query.c:344
+#, c-format
+msgid "Package `%s' does not contain any files (!)\n"
+msgstr "`%s' paketeak ez dauka fitxategirik (!)\n"
+
+#: src/query.c:351
+#, c-format
+msgid "locally diverted to: %s\n"
+msgstr "lokalki hona desbideratuta: %s\n"
+
+#: src/query.c:354
+#, c-format
+msgid "package diverts others to: %s\n"
+msgstr "paketeak beste batzuk hona desbideratzen ditu: %s\n"
+
+#: src/query.c:357
+#, c-format
+msgid "diverted by %s to: %s\n"
+msgstr "%s-(e)k hona desbideratuta: %s\n"
+
+#: src/query.c:379
+msgid ""
+"Use dpkg --info (= dpkg-deb --info) to examine archive files,\n"
+"and dpkg --contents (= dpkg-deb --contents) to list their contents.\n"
+msgstr ""
+"Erabili dpkg --info (= dpkg-deb --info) artxibo-fitxategiak aztertzeko,\n"
+"eta dpkg --contents (= dpkg-deb --contents) edukia zerrendatzeko.\n"
+
+#: src/query.c:455
+#, c-format
+msgid "Debian `%s' package management program query tool\n"
+msgstr "Debian pakete kudeaketarako `%s' programaren kontsulta tresna\n"
+
+#: src/query.c:474
+#, c-format
+msgid ""
+"Commands:\n"
+"  -s|--status <package> ...        Display package status details.\n"
+"  -p|--print-avail <package> ...   Display available version details.\n"
+"  -L|--listfiles <package> ...     List files `owned' by package(s).\n"
+"  -l|--list [<pattern> ...]        List packages concisely.\n"
+"  -W|--show <pattern> ...          Show information on package(s).\n"
+"  -S|--search <pattern> ...        Find package(s) owning file(s).\n"
+"\n"
+msgstr ""
+"Komandoak:\n"
+"  -s|--status <pakete-izena> ...      bistarazi pakete egoera xehetasunak\n"
+"  -p|--print-avail <pakete-izena> ... bistarazi bertsio eskuragarriaren "
+"xehetasunak\n"
+"  -L|--listfiles <pakete-izena> ...   paketeare parte diren fitxategia "
+"bistarazi\n"
+"  -l|--list [<patroia> ...]           paketeak laburki zerrendatu\n"
+"  -W|--show <patroia> ...             pakete(ar)en argibideak bistarazi\n"
+"  -S|--search <patroia> ...           fitxategia dagoen paketea(k) bilatzen "
+"du\n"
+"\n"
+
+#: src/query.c:490
+#, c-format
+msgid ""
+"Options:\n"
+"  --admindir=<directory>           Use <directory> instead of %s.\n"
+"  -f|--showformat=<format>         Use alternative format for --show.\n"
+"\n"
+msgstr ""
+"Aukerak:\n"
+"  --admindir=<direktorioa>     <direktorioa> erabili %s-en ordez\n"
+"  -f|--showformat=<formatua>      --show-entzat beste formatu bat erabili\n"
+"\n"
+
+#: src/query.c:496 dpkg-deb/main.c:101
+#, c-format
+msgid ""
+"Format syntax:\n"
+"  A format is a string that will be output for each package. The format\n"
+"  can include the standard escape sequences \\n (newline), \\r (carriage\n"
+"  return) or \\\\ (plain backslash). Package information can be included\n"
+"  by inserting variable references to package fields using the ${var[;"
+"width]}\n"
+"  syntax. Fields will be right-aligned unless the width is negative in "
+"which\n"
+"  case left alignment will be used.\n"
+msgstr ""
+"Formatu sintaxia:\n"
+"  Formatua pakete bakoitzagatik erakutsiko den katea da. Formatuak\n"
+"  irteera sekuentzi estandarrak eduki ditzake\\n (lerro berria), \\r (Orga \n"
+"  itzulera) edo \\\\ (atzeurreko barra). Pakete argibideak erabili daitezke\n"
+"  aldagai erreferentzi bezala erabilia pakete eremuetan ${var[;width]}\n"
+"  sintaxia erabiliaz. Eremuak eskuinaldera lerrokatuko dira zabaleroa "
+"negatiboa\n"
+"  ez den bitartean kasu horretan ezkerretara lerrokatuko dira.\n"
+
+#: src/query.c:506
+msgid ""
+"Use --help for help about querying packages;\n"
+"Use --license for copyright license and lack of warranty (GNU GPL).\n"
+"\n"
+msgstr ""
+"Erabili --help paketeei buruzko kontsultak egiteko laguntza lortzeko;\n"
+"Erabili --licence copyright lizentzia eta berme-eza (GNU GPL) ikusteko.\n"
+"\n"
+
+#: src/remove.c:95
+#, c-format
+msgid ""
+"dpkg - warning: ignoring request to remove %.250s which isn't installed.\n"
+msgstr ""
+"dpkg - abisua: %.250s kentzeko eskaerari ez ikusi egingo zaio, ez dagoelako "
+"instalatuta.\n"
+
+#: src/remove.c:103
+#, c-format
+msgid ""
+"dpkg - warning: ignoring request to remove %.250s, only the config\n"
+" files of which are on the system.  Use --purge to remove them too.\n"
+msgstr ""
+"dpkg - abisua: %.250s kentzeko eskaerari ez ikusi egingo zaio, konf. \n"
+" fitxategiak bakarrik daudelako sisteman. Erabili --purge horiek ere  "
+"kentzeko.\n"
+
+#: src/remove.c:112
+msgid "This is an essential package - it should not be removed."
+msgstr "Hau funtsezko pakete bat da, eta ez da kendu behar."
+
+#: src/remove.c:138
+#, c-format
+msgid ""
+"dpkg: dependency problems prevent removal of %s:\n"
+"%s"
+msgstr ""
+"dpkg: mendekotasun arazoak direla eta, ezin da %s kendu:\n"
+"%s"
+
+#: src/remove.c:140
+msgid "dependency problems - not removing"
+msgstr "mendekotasun arazoak - ez da kenduko"
+
+#: src/remove.c:144
+#, c-format
+msgid ""
+"dpkg: %s: dependency problems, but removing anyway as you request:\n"
+"%s"
+msgstr ""
+"dpkg: %s: mendekotasun arazoak, baina eskatu bezala kenduko da:\n"
+"%s"
+
+#: src/remove.c:152
+msgid ""
+"Package is in a very bad inconsistent state - you should\n"
+" reinstall it before attempting a removal."
+msgstr ""
+"Paketearen egoera inkoherentea da - berriro instalatu beharko\n"
+" zenuke, kentzen saiatu aurretik."
+
+#: src/remove.c:159
+#, c-format
+msgid "Would remove or purge %s ...\n"
+msgstr "%s kendu edo purgatuko litzateke...\n"
+
+#: src/remove.c:167
+#, c-format
+msgid "Removing %s ...\n"
+msgstr "%s kentzen...\n"
+
+#: src/remove.c:262 src/remove.c:379
+#, c-format
+msgid ""
+"dpkg - warning: while removing %.250s, unable to remove directory `%.250s': %"
+"s - directory may be a mount point ?\n"
+msgstr ""
+"dpkg - abisua: %.250s kentzean, ezin da `%.250s' direktorioa kendu: %s - "
+"baliteke direktorioa muntatze puntua bat izatea ?\n"
+
+#: src/remove.c:269 src/remove.c:386
+#, c-format
+msgid "cannot remove `%.250s'"
+msgstr "ezin da `%.250s' kendu"
+
+#: src/remove.c:287
+#, c-format
+msgid "cannot remove file `%.250s'"
+msgstr "ezin da `%.250s' fitxategia kendu"
+
+#: src/remove.c:320
+#, c-format
+msgid "unable to delete control info file `%.250s'"
+msgstr "ezin da ezabatu `%.250s' kontroleko informazio fitxategia"
+
+#: src/remove.c:373
+#, c-format
+msgid ""
+"dpkg - warning: while removing %.250s, directory `%.250s' not empty so not "
+"removed.\n"
+msgstr ""
+"dpkg - abisua: %.250s kentzean, `%.250s' direktorioa ez dago hutsik, eta "
+"beraz ez da kenduko.\n"
+
+#: src/remove.c:409
+#, c-format
+msgid "Purging configuration files for %s ...\n"
+msgstr "%s : konfigurazio fitxategiak purgatzen ...\n"
+
+#: src/remove.c:460
+#, c-format
+msgid "cannot remove old config file `%.250s' (= `%.250s')"
+msgstr "ezin da `%.250s' konfigurazio-fitxategi zaharra kendu (= `%.250s')"
+
+#: src/remove.c:475
+#, c-format
+msgid "cannot read config file dir `%.250s' (from `%.250s')"
+msgstr "ezin da `%.250s' konf. fitxategiaren direktorioa irakurri (`%.250s')"
+
+#: src/remove.c:510
+#, c-format
+msgid "cannot remove old backup config file `%.250s' (of `%.250s')"
+msgstr "ezin da `%.250s' babeskopiako konf. fitxategi zaharra kendu (`%.250s')"
+
+#: src/remove.c:546
+#, c-format
+msgid "unable to check existence of `%.250s'"
+msgstr "ezin da begiratu `%.250s' badagoen"
+
+#: src/remove.c:581
+msgid "cannot remove old files list"
+msgstr "ezin da kendu fitxategi zaharren zerrenda"
+
+#: src/remove.c:587
+msgid "can't remove old postrm script"
+msgstr "ezin da kendu postrm script zaharra"
+
+#: src/select.c:95
+msgid "--set-selections does not take any argument"
+msgstr "--set-selections: ez du argumenturik hartzen"
+
+#: src/select.c:114
+#, c-format
+msgid "unexpected eof in package name at line %d"
+msgstr "ustekabeko eof pakete izenaren %d lerroan"
+
+#: src/select.c:115
+#, c-format
+msgid "unexpected end of line in package name at line %d"
+msgstr "ustekabeko lerro-amaiera pakete izenaren %d lerroan"
+
+#: src/select.c:119
+#, c-format
+msgid "unexpected eof after package name at line %d"
+msgstr "ustekabeko eof pakete izenaren ondoren %d lerroan"
+
+#: src/select.c:120
+#, c-format
+msgid "unexpected end of line after package name at line %d"
+msgstr "espero ez zen lerro-amaiera pakete izenaren ondoren %d lerroan"
+
+#: src/select.c:129
+#, c-format
+msgid "unexpected data after package and selection at line %d"
+msgstr "espero ez ziren datuak paketearen eta hautapenaren ondoren %d lerroan"
+
+#: src/select.c:134
+#, c-format
+msgid "illegal package name at line %d: %.250s"
+msgstr "pakete izen baliogabea %d lerroan: %.250s"
+
+#: src/select.c:136
+#, c-format
+msgid "unknown wanted status at line %d: %.250s"
+msgstr "nahi zen egoera ezezaguna %d lerroan: %.250s"
+
+#: src/select.c:142
+msgid "read error on standard input"
+msgstr "irakurketa errorea sarrera estandarrean"
+
+#: src/select.c:154
+msgid "--clear-selections does not take any argument"
+msgstr "--clear-selections: ez du argumenturik hartzen"
+
+#: src/trigcmd.c:67
+msgid "Type dpkg-trigger --help for help about this utility."
+msgstr "Idatzi dpkg-trigger --help lanabes honen laguntza lortzeko."
+
+#: src/trigcmd.c:72
+#, c-format
+msgid "Debian %s package trigger utility.\n"
+msgstr "Debian %s pakeete abiarazle lanabesa.\n"
+
+#: src/trigcmd.c:86
+#, c-format
+msgid ""
+"Usage: %s [<options> ...] <trigger-name>\n"
+"       %s [<options> ...] <command>\n"
+"\n"
+msgstr ""
+"Erabilea: %s [<aukerak> ...] <abiarazle-izena>\n"
+"       %s [<aukerak> ...] <komandoa>\n"
+"\n"
+
+#: src/trigcmd.c:92
+#, c-format
+msgid ""
+"Commands:\n"
+"  --check-supported                Check if the running dpkg supports "
+"triggers.\n"
+"\n"
+msgstr ""
+"Komandoak:\n"
+"  --check-supported                Exekutatzen den dpkg-ek abiarazleak "
+"onartzen dituen egiaztatu.\n"
+"\n"
+
+#: src/trigcmd.c:105
+#, c-format
+msgid ""
+"Options:\n"
+"  --admindir=<directory>           Use <directory> instead of %s.\n"
+"  --by-package=<package>           Override trigger awaiter (normally set\n"
+"                                     by dpkg).\n"
+"  --no-await                       No package needs to await the "
+"processing.\n"
+"  --no-act                         Just test - don't actually change "
+"anything.\n"
+"\n"
+msgstr ""
+"Aukerak:\n"
+"  --admindir=<direktorioa>           Erabili <direktorioa> %s-ren ordez.\n"
+"  --by-package=<paketea>           Gainidatzi abiarazle itxoinlaria "
+"(normalean dpkg-ek\n"
+"                                     ezarri).\n"
+"  --no-await                       Ez dago paketerik prozesatzea espero "
+"duenik.\n"
+"  --no-act                         Probatu bakarrik, ez ezer aldatu.\n"
+"\n"
+
+#: src/trigcmd.c:162
+#, c-format
+msgid "%s: triggers data directory not yet created\n"
+msgstr "%s: abiarazle datu direktorioa oraindik ez da sortu\n"
+
+#: src/trigcmd.c:166
+#, c-format
+msgid "%s: trigger records not yet in existence\n"
+msgstr "%s: oraindik ez dago abiarazle erregistrorik\n"
+
+#: src/trigcmd.c:190
+msgid "dpkg-trigger --check-supported takes no arguments"
+msgstr "dpkg-trigger --check-supported-ek ez du argumenturik onartzen"
+
+#: src/trigcmd.c:195
+msgid "dpkg-trigger takes one argument, the trigger name"
+msgstr "dpkg-trigger-ek argumentu bat hartzen du, abiarazle izena"
+
+#: src/trigcmd.c:200
+msgid ""
+"dpkg-trigger must be called from a maintainer script (or with a --by-package "
+"option)"
+msgstr ""
+"dpkg-trigger mantentzaile script batetatik deitu behar da (edo --by-package "
+"aukerarekin)"
+
+#: src/trigcmd.c:205
+#, c-format
+msgid "dpkg-trigger: illegal awaited package name `%.250s': %.250s"
+msgstr "dpkg-trigger: legezkanpoko espero den `%.250s' pakete izena: %.250s"
+
+#: src/trigcmd.c:210
+#, c-format
+msgid "dpkg-trigger: invalid trigger name `%.250s': %.250s"
+msgstr "dpkg-trigger: `%.250s' abiarazle izen baliogabea: %.250s"
+
+#: src/trigproc.c:230
+#, c-format
+msgid ""
+"%s: cycle found while processing triggers:\n"
+" chain of packages whose triggers are or may be responsible:\n"
+msgstr ""
+"%s: zikloa aurkitua abiarazlea prozesatzerakoan:\n"
+" erantzule diren edo izan daitezkeen abiarazleen pakete katea:\n"
+
+#: src/trigproc.c:238
+#, c-format
+msgid ""
+"\n"
+" packages' pending triggers which are or may be unresolvable:\n"
+msgstr ""
+"\n"
+" ebatzi ezin diren edo izan daitezkeen espero diren abiarazleen paketeak:\n"
+
+#: src/trigproc.c:261
+msgid "triggers looping, abandoned"
+msgstr "abiarazle begizta, utzia"
+
+#: src/trigproc.c:288
+#, c-format
+msgid "Processing triggers for %s ...\n"
+msgstr "%s -ren abiarazleak prozesatzen ...\n"
+
+#: src/update.c:44
+#, c-format
+msgid "--%s takes no arguments"
+msgstr "--%s: ez du argumenturik hartzen"
+
+#: src/update.c:48
+#, c-format
+msgid "--%s needs exactly one Packages file argument"
+msgstr "--%s: Pakete fitxategiko argumentu bat behar du"
+
+#: src/update.c:57
+msgid "unable to access dpkg status area for bulk available update"
+msgstr "ezin da sartu dpkg egoera eremuan eguneratze masiboa egiteko"
+
+#: src/update.c:59
+msgid "bulk available update requires write access to dpkg status area"
+msgstr ""
+"eguneratze masiboa egiteko dpkg egoera eremuan idazteko baimena eduki behar "
+"da"
+
+#: src/update.c:66
+#, c-format
+msgid "Replacing available packages info, using %s.\n"
+msgstr "Pakete erabilgarrien informazioa ordezten, %s erabiliz.\n"
+
+#: src/update.c:69
+#, c-format
+msgid "Updating available packages info, using %s.\n"
+msgstr "Pakete erabilgarrien informazioa eguneratzen, %s erabiliz.\n"
+
+#: src/update.c:94
+#, c-format
+msgid "Information about %d package(s) was updated.\n"
+msgstr "%d paketeri buruzko informazioa eguneratu da.\n"
+
+#: src/update.c:102
+msgid "--forget-old-unavail takes no arguments"
+msgstr "--forget-old-unavail: ez du argumenturik hartzen"
+
+#: dpkg-deb/build.c:87
+#, c-format
+msgid "dpkg-deb - error: %s (`%s') doesn't contain any digits\n"
+msgstr "dpkg-deb - errorea: %s (`%s'): ez dauka digiturik\n"
+
+#: dpkg-deb/build.c:131
+#, c-format
+msgid "file name '%.50s...' is too long"
+msgstr "'%.50s...' fitxategi izena luzeegia da"
+
+#: dpkg-deb/build.c:192
+msgid "--build needs a directory argument"
+msgstr "--build: direktorio argumentu bat behar du"
+
+#: dpkg-deb/build.c:202
+msgid "--build takes at most two arguments"
+msgstr "--build: gehienez bi argumentu hartzen ditu"
+
+#: dpkg-deb/build.c:206
+#, c-format
+msgid "unable to check for existence of archive `%.250s'"
+msgstr "ezin da begiratu `%.250s' artxiboa badagoen"
+
+#: dpkg-deb/build.c:221
+msgid "target is directory - cannot skip control file check"
+msgstr ""
+"helburua direktorioa da - ezin da saltatu kontrol fitxategiaren egiaztapena"
+
+#: dpkg-deb/build.c:222
+#, c-format
+msgid ""
+"dpkg-deb: warning, not checking contents of control area.\n"
+"dpkg-deb: building an unknown package in `%s'.\n"
+msgstr ""
+"dpkg-deb: abisua, ez da egiaztatuko kontrol eremuko edukia.\n"
+"dpkg-deb: pakete ezezagun bat eraikitzen: `%s'.\n"
+
+#: dpkg-deb/build.c:240
+msgid "package name has characters that aren't lowercase alphanums or `-+.'"
+msgstr ""
+"pakete izenak minuskula alfanumerikoak edo `-+.' ez diren karaktereak dauzka"
+
+#: dpkg-deb/build.c:242
+#, c-format
+msgid "warning, `%s' contains user-defined Priority value `%s'\n"
+msgstr ""
+"abisua, `%s'(e)k erabiltzaileak definitutako `%s' lehentasun balioa dauka\n"
+
+#: dpkg-deb/build.c:250
+#, c-format
+msgid "warning, `%s' contains user-defined field `%s'\n"
+msgstr "abisua, `%s'(e)k erabiltzaileak definitutako `%s' eremua dauka\n"
+
+#: dpkg-deb/build.c:256
+#, c-format
+msgid "%d errors in control file"
+msgstr "%d errore kontrol fitxategian"
+
+#: dpkg-deb/build.c:267
+#, c-format
+msgid "dpkg-deb: building package `%s' in `%s'.\n"
+msgstr "dpkg-deb: `%s' paketea eraikitzen: `%s'.\n"
+
+#: dpkg-deb/build.c:275
+#, c-format
+msgid "control directory has bad permissions %03lo (must be >=0755 and <=0775)"
+msgstr ""
+"kontrol direktorioak okerreko baimenak ditu: %03lo (>=0755 eta <=0775 izan "
+"behar dute)"
+
+#: dpkg-deb/build.c:286
+#, c-format
+msgid "maintainer script `%.50s' is not a plain file or symlink"
+msgstr ""
+"mantentzailearen `%.50s' script-a ez da fitxategi arrunta edo esteka "
+"sinbolikoa"
+
+#: dpkg-deb/build.c:288
+#, c-format
+msgid ""
+"maintainer script `%.50s' has bad permissions %03lo (must be >=0555 and "
+"<=0775)"
+msgstr ""
+"mantentzailearen `%.50s' script-ak okerreko baimenak ditu: %03lo (>=0555 eta "
+"<=0775 izan behar dute)"
+
+#: dpkg-deb/build.c:292
+#, c-format
+msgid "maintainer script `%.50s' is not stattable"
+msgstr "mantentzailearen `%.50s' script-ean ezin da stat egin"
+
+#: dpkg-deb/build.c:302
+msgid "empty string from fgets reading conffiles"
+msgstr "fgets: kate huts bat bidali du konfigurazio fitxategiak irakurtzean"
+
+#: dpkg-deb/build.c:304
+#, c-format
+msgid ""
+"warning, conffile name `%.50s...' is too long, or missing final newline\n"
+msgstr ""
+"abisua, `%.50s...' konf. fitxategiaren izena luzeegia da, edo amaierako "
+"lerro-jauzia falta du\n"
+
+#: dpkg-deb/build.c:317
+#, c-format
+msgid "warning, conffile filename `%s' contains trailing white spaces\n"
+msgstr "abisua, `%s' konfigurazio fitxategiak amaieraz zuriuneak ditu\n"
+
+#: dpkg-deb/build.c:319
+#, c-format
+msgid "conffile `%.250s' does not appear in package"
+msgstr "`%.250s' konf. fitxategia ez da paketean azaltzen"
+
+#: dpkg-deb/build.c:321
+#, c-format
+msgid "conffile `%.250s' is not stattable"
+msgstr "`%.250s' konfigurazio fitxategian ezin da stat egin"
+
+#: dpkg-deb/build.c:323
+#, c-format
+msgid "warning, conffile `%s' is not a plain file\n"
+msgstr "abisua, `%s' konfigurazio fitxategia ez da fitxategi arrunta\n"
+
+#: dpkg-deb/build.c:328
+msgid "error reading conffiles file"
+msgstr "errorea konfigurazio fitxategien fitxategia irakurtzean"
+
+#: dpkg-deb/build.c:331
+msgid "error opening conffiles file"
+msgstr "errorea konfigurazio fitxategien fitxategia irekitzean"
+
+#: dpkg-deb/build.c:334
+#, c-format
+msgid "dpkg-deb: ignoring %d warnings about the control file(s)\n"
+msgstr "dpkg-deb: kontrol fitxategiei buruzko %d abisuri ez ikusi egiten\n"
+
+#: dpkg-deb/build.c:345
+#, c-format
+msgid "unable to unbuffer `%.255s'"
+msgstr "ezin da`%.255s' bufferretik atera"
+
+#: dpkg-deb/build.c:351 dpkg-deb/build.c:425 dpkg-deb/build.c:446
+#, c-format
+msgid "failed to chdir to `%.255s'"
+msgstr "huts egin du chdir egitean: `%.255s'"
+
+#: dpkg-deb/build.c:352
+msgid "failed to chdir to .../DEBIAN"
+msgstr "huts egin du chdir egitean: .../DEBIAN"
+
+#: dpkg-deb/build.c:354 dpkg-deb/build.c:427
+msgid "failed to exec tar -cf"
+msgstr "huts egin du tar -cf exekutatzean"
+
+#: dpkg-deb/build.c:360
+msgid "failed to make tmpfile (control)"
+msgstr "huts egin du aldi baterako fitxategi bat sortzean (control)"
+
+#: dpkg-deb/build.c:361
+#, c-format
+msgid "failed to open tmpfile (control), %s"
+msgstr "huts egin du aldi baterako fitxategi bat irekitzean (control), %s"
+
+#: dpkg-deb/build.c:364
+#, c-format
+msgid "failed to unlink tmpfile (control), %s"
+msgstr "huts egin du aldi baterako fitxategi bat desestekatzean (control), %s"
+
+#: dpkg-deb/build.c:372 dpkg-deb/build.c:401
+msgid "control"
+msgstr "control"
+
+#: dpkg-deb/build.c:377
+msgid "failed to fstat tmpfile (control)"
+msgstr "fstat: huts egin du aldi baterako fitxategi batekin (control)"
+
+#: dpkg-deb/build.c:400
+msgid "failed to rewind tmpfile (control)"
+msgstr "huts egin du aldi baterako fitxategiaren hasierara joatean (control)"
+
+#: dpkg-deb/build.c:408
+msgid "failed to make tmpfile (data)"
+msgstr "huts egin du aldi baterako fitxategia sortzean (data)"
+
+#: dpkg-deb/build.c:409
+#, c-format
+msgid "failed to open tmpfile (data), %s"
+msgstr "huts egin du aldi baterako fitxategia irekitzean (data), %s"
+
+#: dpkg-deb/build.c:412
+#, c-format
+msgid "failed to unlink tmpfile (data), %s"
+msgstr "huts egin du aldi baterako fitxategia desestekatzean (data), %s"
+
+#: dpkg-deb/build.c:436 dpkg-deb/extract.c:287
+msgid "data"
+msgstr "datua"
+
+#: dpkg-deb/build.c:449
+msgid "failed to exec find"
+msgstr "huts egin du find exekutatzean"
+
+#: dpkg-deb/build.c:460 dpkg-deb/build.c:467
+msgid "failed to write filename to tar pipe (data)"
+msgstr "huts egin du fitxategi izena tar kanalizazioan idaztean (data)"
+
+#: dpkg-deb/build.c:490
+#, c-format
+msgid "Internal error, compress_type `%i' unknown!"
+msgstr "barne errorea, '%i' konpresio mota ezezaguna!"
+
+#: dpkg-deb/build.c:502
+msgid "failed to rewind tmpfile (data)"
+msgstr "huts egin du aldi baterako fitxategiaren hasierara joatean (data)"
+
+#: dpkg-deb/build.c:503
+msgid "cat (data)"
+msgstr "cat (data)"
+
+#: dpkg-deb/extract.c:52
+msgid "failed to exec sh -c mv foo/* &c"
+msgstr "huts egin du sh -c mv foo/* &c exekutatzean"
+
+#: dpkg-deb/extract.c:60
+#, c-format
+msgid "error reading %s from file %.255s"
+msgstr "errorea %.255s fitxategitik %s irakurtzean"
+
+#: dpkg-deb/extract.c:62
+#, c-format
+msgid "unexpected end of file in %s in %.255s"
+msgstr "ustekabeko fitxategi amaiera: %s - %.255s"
+
+#: dpkg-deb/extract.c:75 dpkg-split/info.c:52
+#, c-format
+msgid "file `%.250s' is corrupt - %.250s length contains nulls"
+msgstr "`%.250s' fitxategia hondatuta dago - %.250s luzerak nuluak dauzka"
+
+#: dpkg-deb/extract.c:82
+#, c-format
+msgid "file `%.250s' is corrupt - negative member length %zi"
+msgstr "`%.250s' fitxategia hondatuta dago - kidearen %zi luzera negatiboa"
+
+#: dpkg-deb/extract.c:84 dpkg-split/info.c:43
+#, c-format
+msgid "file `%.250s' is corrupt - bad digit (code %d) in %s"
+msgstr ""
+"`%.250s' fitxategia hondatuta dago - okerreko digitua (%d kodea) %s(e)n"
+
+#: dpkg-deb/extract.c:97
+msgid "failed getting the current file position"
+msgstr "huts fitxategi kokapena eskuratzean"
+
+#: dpkg-deb/extract.c:100
+msgid "failed setting the current file position"
+msgstr "huts fitxategi kokapena ezartzean"
+
+#: dpkg-deb/extract.c:124
+#, c-format
+msgid "failed to read archive `%.255s'"
+msgstr "huts egin du `%.255s' artxiboa irakurtzean"
+
+#: dpkg-deb/extract.c:125
+msgid "failed to fstat archive"
+msgstr "fstat: huts egin du artxiboarekin"
+
+#: dpkg-deb/extract.c:126
+msgid "version number"
+msgstr "bertsio zenbakia"
+
+#: dpkg-deb/extract.c:135
+msgid "between members"
+msgstr "kideen artean"
+
+#: dpkg-deb/extract.c:137 dpkg-split/info.c:95
+#, c-format
+msgid "file `%.250s' is corrupt - bad magic at end of first header"
+msgstr ""
+"`%.250s' fitxategia hondatuta dago - okerreko \"magic\" lehenengo "
+"goiburuaren amaieran"
+
+#: dpkg-deb/extract.c:143
+#, c-format
+msgid "file `%.250s' is not a debian binary archive (try dpkg-split?)"
+msgstr ""
+"`%.250s' fitxategia ez da debian-en artxibo bitarra (dpkg-split probatu "
+"nahi?)"
+
+#: dpkg-deb/extract.c:146
+msgid "header info member"
+msgstr "goiburuaren informazio kidea"
+
+#: dpkg-deb/extract.c:149
+msgid "archive has no newlines in header"
+msgstr "artxiboak ez du lerro jauzirik goiburuan"
+
+#: dpkg-deb/extract.c:152
+msgid "archive has no dot in version number"
+msgstr "artxiboak ez du punturik bertsio zenbakian"
+
+#: dpkg-deb/extract.c:155
+#, c-format
+msgid "archive version %.250s not understood, get newer dpkg-deb"
+msgstr "%.250s artxibo bertsioa ez da ulertzen, lortu dpkg-deb berriago bat"
+
+#: dpkg-deb/extract.c:164 dpkg-deb/extract.c:197
+#, c-format
+msgid "skipped member data from %s"
+msgstr "%s: kide datuak saltatu dira"
+
+#: dpkg-deb/extract.c:187
+#, c-format
+msgid "file `%.250s' contains ununderstood data member %.*s, giving up"
+msgstr "`%.250s' fitxategiak %.*s datu-kide ulertezina dauka, utzi egingo da"
+
+#: dpkg-deb/extract.c:193
+#, c-format
+msgid "file `%.250s' contains two control members, giving up"
+msgstr "`%.250s' fitxategiak bi kontrol-kide dauzka, utzi egingo da"
+
+#: dpkg-deb/extract.c:205
+#, c-format
+msgid ""
+" new debian package, version %s.\n"
+" size %ld bytes: control archive= %zi bytes.\n"
+msgstr ""
+" debian pakete berria, %s bertsioa.\n"
+" tamaina: %ld byte; kontrol artxiboa= %zi byte.\n"
+
+#: dpkg-deb/extract.c:217
+msgid "control information length"
+msgstr "kontrol informazio luzera"
+
+#: dpkg-deb/extract.c:219
+#, c-format
+msgid "archive has malformatted control length `%s'"
+msgstr "artxiboak gaizki osatutako `%s' kontrol luzera dauka"
+
+#: dpkg-deb/extract.c:222
+#, c-format
+msgid ""
+" old debian package, version %s.\n"
+" size %ld bytes: control archive= %zi, main archive= %ld.\n"
+msgstr ""
+" debian pakete zaharra, %s bertsioa.\n"
+" tamaina: %ld byte; kontrol artxiboa= %zi, artxibo nagusia= %ld.\n"
+
+#: dpkg-deb/extract.c:231
+msgid "control area"
+msgstr "kontrol eremua"
+
+#: dpkg-deb/extract.c:237
+#, c-format
+msgid ""
+"dpkg-deb: file looks like it might be an archive which has been\n"
+"dpkg-deb:    corrupted by being downloaded in ASCII mode\n"
+msgstr ""
+"dpkg-deb: badirudi fitxategia ASCII moduan deskargatu delako \n"
+"dpkg-deb:    hondatu den artxibo bat dela\n"
+
+#: dpkg-deb/extract.c:242
+#, c-format
+msgid "`%.255s' is not a debian format archive"
+msgstr "`%.255s' ez da debian formatuko artxibo bat"
+
+#: dpkg-deb/extract.c:255
+msgid "failed to open pipe descriptor `1' in paste"
+msgstr "Huts `1' tutu deskribapena itsastean irekitzean"
+
+#: dpkg-deb/extract.c:257
+msgid "failed to write to gzip -dc"
+msgstr "huts egin du idaztean: gzip -dc"
+
+#: dpkg-deb/extract.c:258
+msgid "failed to close gzip -dc"
+msgstr "huts egin du ixtean: gzip -dc"
+
+#: dpkg-deb/extract.c:265
+msgid "failed to syscall lseek to files archive portion"
+msgstr "huts egin du lseek sistema deia egitean fitxategien artxibo zatian"
+
+#: dpkg-deb/extract.c:273
+msgid "failed to write to pipe in copy"
+msgstr "huts egin du kanalizazioan idaztean kopian"
+
+#: dpkg-deb/extract.c:274
+msgid "failed to close pipe in copy"
+msgstr "huts egin du kanalizazioa ixtean kopian"
+
+#: dpkg-deb/extract.c:295
+msgid "failed to create directory"
+msgstr "huts egin du direktorioa sortzean"
+
+#: dpkg-deb/extract.c:296
+msgid "failed to chdir to directory after creating it"
+msgstr "huts egin du direktoriora chdir egitean, direktorioa sortu ondoren"
+
+#: dpkg-deb/extract.c:298
+msgid "failed to chdir to directory"
+msgstr "huts egin du direktoriora chdir egitean"
+
+#: dpkg-deb/extract.c:312
+msgid "failed to exec tar"
+msgstr "huts egin du tar exekutatzean"
+
+#: dpkg-deb/extract.c:335 dpkg-deb/extract.c:350 dpkg-deb/info.c:68
+#, c-format
+msgid "--%s needs a .deb filename argument"
+msgstr "--%s: .deb fitxategi izen argumentu bat behar du"
+
+#: dpkg-deb/extract.c:338
+#, c-format
+msgid ""
+"--%s needs a target directory.\n"
+"Perhaps you should be using dpkg --install ?"
+msgstr ""
+"--%s: helburu direktorio bat behar du.\n"
+"Beharbada dpkg--install erabili nahi zenuen?"
+
+#: dpkg-deb/extract.c:341
+#, c-format
+msgid "--%s takes at most two arguments (.deb and directory)"
+msgstr "--%s: bi argumentu hartzen ditu gutxienez (.deb eta direktorioa)"
+
+#: dpkg-deb/extract.c:352
+#, c-format
+msgid "--%s takes only one argument (.deb filename)"
+msgstr "--%s: argumentu bat bakarrik hartzen du (.deb fitxategi izena)"
+
+#: dpkg-deb/info.c:49
+msgid "failed to chdir to `/' for cleanup"
+msgstr "huts egin du garbitzeko chdir `/' egitean"
+
+#: dpkg-deb/info.c:51
+msgid "failed to fork for cleanup"
+msgstr "huts egin du garbitzeko sardetzean"
+
+#: dpkg-deb/info.c:56
+msgid "failed to wait for rm cleanup"
+msgstr "huts egin du rm garbitzeko itxarotean"
+
+#: dpkg-deb/info.c:57
+#, c-format
+msgid "rm cleanup failed, code %d\n"
+msgstr "huts egin du rm garbitzean, %d kodea\n"
+
+#: dpkg-deb/info.c:71
+msgid "failed to make temporary directoryname"
+msgstr "huts egin du aldi baterako direktorio izena sortzean"
+
+#: dpkg-deb/info.c:76
+msgid "failed to exec rm -rf"
+msgstr "huts egin du rm -rf exekutatzean"
+
+#: dpkg-deb/info.c:99
+#, c-format
+msgid "realloc failed (%zu bytes)"
+msgstr "realloc-ek huts egin du (%zu byte)"
+
+#: dpkg-deb/info.c:108
+msgid "info_spew"
+msgstr "info_spew"
+
+#: dpkg-deb/info.c:110
+#, c-format
+msgid "dpkg-deb: `%.255s' contains no control component `%.255s'\n"
+msgstr "dpkg-deb: `%.255s': ez dauka `%.255s' kontrol-osagairik\n"
+
+#: dpkg-deb/info.c:114
+#, c-format
+msgid "open component `%.255s' (in %.255s) failed in an unexpected way"
+msgstr ""
+"huts egin du `%.255s' osagaia irekitzean (%.255s), espero ez zen moduan"
+
+#: dpkg-deb/info.c:120
+msgid "One requested control component is missing"
+msgstr "Eskatutako kontrol osagai bat falta da"
+
+#: dpkg-deb/info.c:122
+#, c-format
+msgid "%d requested control components are missing"
+msgstr "Eskatutako %d kontrol osagai falta dira"
+
+#: dpkg-deb/info.c:135
+#, c-format
+msgid "cannot scan directory `%.255s'"
+msgstr "ezin da aztertu `%.255s' direktorioa"
+
+#: dpkg-deb/info.c:140
+#, c-format
+msgid "cannot stat `%.255s' (in `%.255s')"
+msgstr "ezin da `%.255s' atzitu (`%.255s')"
+
+#: dpkg-deb/info.c:143
+#, c-format
+msgid "cannot open `%.255s' (in `%.255s')"
+msgstr "ezin da `%.255s' ireki (`%.255s')"
+
+#: dpkg-deb/info.c:157
+#, c-format
+msgid "failed to read `%.255s' (in `%.255s')"
+msgstr "ezin da `%.255s' irakurri (`%.255s')"
+
+#: dpkg-deb/info.c:160
+#, c-format
+msgid " %7ld bytes, %5d lines   %c  %-20.127s %.127s\n"
+msgstr " %7ld byte, %5d lerro   %c  %-20.127s %.127s\n"
+
+#: dpkg-deb/info.c:166
+#, c-format
+msgid "     not a plain file          %.255s\n"
+msgstr "     ez da fitxategi arrunta   %.255s\n"
+
+#: dpkg-deb/info.c:171
+#, c-format
+msgid "failed to read `control' (in `%.255s')"
+msgstr "huts egin du `control' irakurtzean (`%.255s')"
+
+#: dpkg-deb/info.c:172
+msgid "(no `control' file in control archive!)\n"
+msgstr "(ez dago `control' fitxategirik kontrol artxiboan!)\n"
+
+#: dpkg-deb/info.c:192
+msgid "could not open the `control' component"
+msgstr "ezin izan da ireki `control' osagaia"
+
+#: dpkg-deb/info.c:222
+msgid "failed during read of `control' component"
+msgstr "huts egin du `control' osagaia irakurtzean"
+
+#: dpkg-deb/info.c:233
+msgid "Error in format"
+msgstr "Errorea formatuan"
+
+#: dpkg-deb/info.c:269
+msgid "--contents takes exactly one argument"
+msgstr "--contents: argumentu bat hartzen du zehazki"
+
+#: dpkg-deb/main.c:48
+#, c-format
+msgid "Debian `%s' package archive backend version %s.\n"
+msgstr "`%s' debian pakete artxiboaren amaierako %s bertsioa.\n"
+
+#: dpkg-deb/main.c:64
+#, c-format
+msgid ""
+"Commands:\n"
+"  -b|--build <directory> [<deb>]   Build an archive.\n"
+"  -c|--contents <deb>              List contents.\n"
+"  -I|--info <deb> [<cfile> ...]    Show info to stdout.\n"
+"  -W|--show <deb>                  Show information on package(s)\n"
+"  -f|--field <deb> [<cfield> ...]  Show field(s) to stdout.\n"
+"  -e|--control <deb> [<directory>] Extract control info.\n"
+"  -x|--extract <deb> <directory>   Extract files.\n"
+"  -X|--vextract <deb> <directory>  Extract & list files.\n"
+"  --fsys-tarfile <deb>             Output filesystem tarfile.\n"
+"\n"
+msgstr ""
+"Komandoak:\n"
+"  -b|--build <directory> [<deb>]    Fitxategi batetan sortu.\n"
+"  -c|--contents <deb>               Edukiak zerrendatu.\n"
+"  -I|--info <deb> [<cfile>...]      Argibideak irteera estandarrean "
+"erakutsi.\n"
+"  -W|--show <deb>                   Erakutsi pakete(ar)en argibideak\n"
+"  -f|--field <deb> [<cfield>...]    Erakutsi eremuak irteera estandarrean.\n"
+"  -e|--control <deb> [<directory>]  Kontrol argibideak atera.\n"
+"  -x|--extract <deb> <directory>    Fitxategiak atera.\n"
+"  -X|--vextract <deb> <directory>   Fitxategia atera eta zerrendatu.\n"
+"  --fsys-tarfile <deb>              Irteera fitxategi sistema tar fitxategia "
+"sortu.\n"
+"\n"
+
+#: dpkg-deb/main.c:83
+#, c-format
+msgid ""
+"<deb> is the filename of a Debian format archive.\n"
+"<cfile> is the name of an administrative file component.\n"
+"<cfield> is the name of a field in the main `control' file.\n"
+"\n"
+msgstr ""
+"<deb> Debian formatu fitxategi baten izena da.\n"
+"<cfile> administrazio fitxategi osagai baten izena da.\n"
+"<cfield> kontrol fitxategi nagusi baten izena da.\n"
+"\n"
+
+#: dpkg-deb/main.c:89
+#, c-format
+msgid ""
+"Options:\n"
+"  --showformat=<format>            Use alternative format for --show.\n"
+"  -D                               Enable debugging output.\n"
+"  --old, --new                     Select archive format.\n"
+"  --nocheck                        Suppress control file check (build bad\n"
+"                                     packages).\n"
+"  -z#                              Set the compression level when building.\n"
+"  -Z<type>                         Set the compression type used when "
+"building.\n"
+"                                     Allowed values: gzip, bzip2, lzma, "
+"none.\n"
+"\n"
+msgstr ""
+"Aukerak:\n"
+"  --showformat=<formatua>    --show-rekin beste formatu bat erabili.\n"
+"  -D                         Arazpen irteera gaitu\n"
+"  --old, --new               Fitxategi formatua aukeratu\n"
+"  --nocheck                  Ezgaitu kontrol egiaztapena (okerreko paketea "
+"eraiki).\n"
+"  -z#                        Sortzerakoan konpresio maila ezarri\n"
+"  -Z<mota>                   Ezarri sortzerakoan erabiliko den konpresio "
+"mota.\n"
+"                             Aukerako balioak: gzip, bzip2, lzma, none\n"
+"\n"
+
+#: dpkg-deb/main.c:110
+#, c-format
+msgid ""
+"\n"
+"Use `dpkg' to install and remove packages from your system, or\n"
+"`dselect' or `aptitude' for user-friendly package management.  Packages\n"
+"unpacked using `dpkg-deb --extract' will be incorrectly installed !\n"
+msgstr ""
+"\n"
+"`dpkg' zure sisteman paketeak instalatu edo ezabatzeko erabili, edo\n"
+"`dselect' erabili pakete kudeaketa lagungarriago bat izateko.  `dpkg-deb --"
+"extract'\n"
+"erabiliaz irekitako paketeak oker instalatuko dira !\n"
+
+#: dpkg-deb/main.c:119
+msgid ""
+"Type dpkg-deb --help for help about manipulating *.deb files;\n"
+"Type dpkg --help for help about installing and deinstalling packages."
+msgstr ""
+"Idatzi dpkg-deb --help *.deb fitxategiak manipulatzeko laguntza lortzeko;\n"
+"Idatzi dpkg --help paketeak instalatu eta desinstalatzeko laguntza lortzeko."
+
+#: dpkg-deb/main.c:191
+#, c-format
+msgid "unknown compression type `%s'!"
+msgstr "%s konpresio mota ezezaguna!"
+
+#: dpkg-split/info.c:64
+#, c-format
+msgid "file `%.250s' is corrupt - %.250s missing"
+msgstr "`%.250s' fitxategia hondatuta dago - %.250s falta da"
+
+#: dpkg-split/info.c:67
+#, c-format
+msgid "file `%.250s' is corrupt - missing newline after %.250s"
+msgstr ""
+"`%.250s' fitxategia hondatuta dago - %.250s(r)en ondoren lerro-jauzia falta "
+"da"
+
+#: dpkg-split/info.c:91
+msgid "unable to seek back"
+msgstr "ezin da joan atzera"
+
+#: dpkg-split/info.c:105
+#, c-format
+msgid "file `%.250s' is corrupt - bad padding character (code %d)"
+msgstr ""
+"`%.250s' fitxategia hondatuta dago - okerreko karaktere betegarria (%d kodea)"
+
+#: dpkg-split/info.c:109
+#, c-format
+msgid "file `%.250s' is corrupt - nulls in info section"
+msgstr "`%.250s' fitxategia hondatuta dago - nuluak informazioaren sekzioan"
+
+#: dpkg-split/info.c:116
+#, c-format
+msgid "file `%.250s' is format version `%.250s' - you need a newer dpkg-split"
+msgstr ""
+"`%.250s' fitxategia `%.250s' formatu bertsiokoa da - dpkg-split berriagoa "
+"behar duzu"
+
+#: dpkg-split/info.c:124
+#, c-format
+msgid "file `%.250s' is corrupt - bad MD5 checksum `%.250s'"
+msgstr ""
+"`%.250s' fitxategia hondatuta dago - okerreko MD5 kontrol batura: `%.250s'"
+
+#: dpkg-split/info.c:131
+#, c-format
+msgid "file `%.250s' is corrupt - no slash between part numbers"
+msgstr "`%.250s' fitxategia hondatuta dago - barrarik ez zati zenbakien artean"
+
+#: dpkg-split/info.c:140
+#, c-format
+msgid "file `%.250s' is corrupt - bad part number"
+msgstr "`%.250s' fitxategia hondatuta dago - okerreko zati zenbakia"
+
+#: dpkg-split/info.c:145
+#, c-format
+msgid "file `%.250s' is corrupt - bad magic at end of second header"
+msgstr ""
+"`%.250s' fitxategia hondatuta dago - okerreko \"magic\" bigarren goiburuaren "
+"amaieran"
+
+#: dpkg-split/info.c:147
+#, c-format
+msgid "file `%.250s' is corrupt - second member is not data member"
+msgstr "`%.250s' fitxategia hondatuta dago - bigarren kidea ez da datu-kidea"
+
+#: dpkg-split/info.c:153
+#, c-format
+msgid "file `%.250s' is corrupt - wrong number of parts for quoted sizes"
+msgstr ""
+"`%.250s' fitxategia hondatuta dago - okerreko zati kopurua adierazitako "
+"tamainetan"
+
+#: dpkg-split/info.c:157
+#, c-format
+msgid "file `%.250s' is corrupt - size is wrong for quoted part number"
+msgstr ""
+"`%.250s' fitxategia hondatuta dago - okerreko tamaina adierazitako zati "
+"zenbakian"
+
+#: dpkg-split/info.c:163
+#, c-format
+msgid "unable to fstat part file `%.250s'"
+msgstr "ezin da fstat egin `%.250s' zati fitxategian"
+
+#: dpkg-split/info.c:169
+#, c-format
+msgid "file `%.250s' is corrupt - too short"
+msgstr "`%.250s' fitxategia hondatuta dago - laburregia"
+
+#: dpkg-split/info.c:181 dpkg-split/info.c:222
+#, c-format
+msgid "cannot open archive part file `%.250s'"
+msgstr "ezin da `%.250s' artxiboko zati fitxategia ireki"
+
+#: dpkg-split/info.c:183
+#, c-format
+msgid "file `%.250s' is not an archive part"
+msgstr "`%.250s' fitxategia ez da artxibo zatia"
+
+#: dpkg-split/info.c:188
+#, c-format
+msgid ""
+"%s:\n"
+"    Part format version:            %s\n"
+"    Part of package:                %s\n"
+"        ... version:                %s\n"
+"        ... MD5 checksum:           %s\n"
+"        ... length:                 %lu bytes\n"
+"        ... split every:            %lu bytes\n"
+"    Part number:                    %d/%d\n"
+"    Part length:                    %zi bytes\n"
+"    Part offset:                    %lu bytes\n"
+"    Part file size (used portion):  %lu bytes\n"
+"\n"
+msgstr ""
+"%s:\n"
+"    Zati-formatuaren bertsioa:   %s\n"
+"    Pakete zatia:                %s\n"
+"        ... bertsioa:            %s\n"
+"        ... MD5 kontrol batura:  %s\n"
+"        ... luzera:              %lu byte\n"
+"        ... zatitu:              %lu bytetik\n"
+"    Zati zenbakia:               %d/%d\n"
+"    Zati luzera:                 %zi byte\n"
+"    Zatiaren desplazamendua:     %lu byte\n"
+"    Zati fitxategiaren tamaina\n"
+"     (erabilitako zatia):        %lu byte\n"
+"\n"
+
+#: dpkg-split/info.c:218
+msgid "--info requires one or more part file arguments"
+msgstr "--info: zati fitxategiko argumentu bat edo gehiago behar ditu"
+
+#: dpkg-split/info.c:228
+#, c-format
+msgid "file `%s' is not an archive part\n"
+msgstr "`%s' fitxategia ez da artxibo zatia\n"
+
+#: dpkg-split/join.c:48
+#, c-format
+msgid "unable to open output file `%.250s'"
+msgstr "ezin da ireki irteerako `%.250s' fitxategia"
+
+#: dpkg-split/join.c:52
+#, c-format
+msgid "unable to (re)open input part file `%.250s'"
+msgstr "ezin da (berr)ireki sarrerako `%.250s' zati fitxategia"
+
+#: dpkg-split/join.c:68
+#, c-format
+msgid "done\n"
+msgstr "eginda\n"
+
+#: dpkg-split/join.c:84
+#, c-format
+msgid "files `%.250s' and `%.250s' are not parts of the same file"
+msgstr "`%.250s' eta `%.250s' fitxategiak ez dira fitxategi beraren zatiak"
+
+#: dpkg-split/join.c:89
+#, c-format
+msgid "there are several versions of part %d - at least `%.250s' and `%.250s'"
+msgstr "%d zatiaren hainbat bertsio daude - `%.250s' eta `%.250s' gutxienez"
+
+#: dpkg-split/join.c:102
+msgid "--join requires one or more part file arguments"
+msgstr "--join: zati fitxategiko argumentu bat edo gehiago behar ditu"
+
+#: dpkg-split/join.c:124
+#, c-format
+msgid "part %d is missing"
+msgstr "%d zatia falta da"
+
+#: dpkg-split/main.c:40
+#, c-format
+msgid "Debian `%s' package split/join tool; version %s.\n"
+msgstr "Debian paketeak zatitu/batzeko `%s' tresna; %s bertsioa\n"
+
+#: dpkg-split/main.c:42
+#, c-format
+msgid "Copyright (C) 1994-1996 Ian Jackson.\n"
+msgstr "Copyright (C) 1994-1996 Ian Jackson.\n"
+
+#: dpkg-split/main.c:57
+#, c-format
+msgid ""
+"Commands:\n"
+"  -s|--split <file> [<prefix>]     Split an archive.\n"
+"  -j|--join <part> <part> ...      Join parts together.\n"
+"  -I|--info <part> ...             Display info about a part.\n"
+"  -a|--auto -o <complete> <part>   Auto-accumulate parts.\n"
+"  -l|--listq                       List unmatched pieces.\n"
+"  -d|--discard [<filename> ...]    Discard unmatched pieces.\n"
+"\n"
+msgstr ""
+"Komandoak:\n"
+"  -s|--split <fitxat.> [<aurrizkia>] Artxiboa zatitzen du.\n"
+"  -j|--join <zatia> <zatia> ...      Zatiak elkartzen ditu.\n"
+"  -I|--info <zatia> ...              Erakutsi zatiaren informazioa.\n"
+"  -a|--auto -o <osoa> <zatia>        Metatu automatikoki zatiak.\n"
+"  -l|--listq                         Zerrendatu bat ez datozenak.\n"
+"  -d|--discard [<fitxategia> ...]    Baztertu bat ez datozenak.\n"
+"\n"
+
+#: dpkg-split/main.c:73
+#, c-format
+msgid ""
+"Options:\n"
+"  --depotdir <directory>           Use <directory> instead of %s/%s.\n"
+"  -S|--partsize <size>             In KiB, for -s (default is 450).\n"
+"  -o|--output <file>               For -j (default is <package>-<version>."
+"deb).\n"
+"  -Q|--npquiet                     Be quiet when -a is not a part.\n"
+"  --msdos                          Generate 8.3 filenames.\n"
+"\n"
+"Exit status: 0 = OK;  1 = -a is not a part;  2 = trouble!\n"
+msgstr ""
+"Aukerak:   --depotdir <direktorioa>          <direktorioa> erabili %s/%s "
+"beharrean\n"
+"  -S|--partsize <tamaina>   (Kb-tan, `-s'rekin, lehenetsia: 450)\n"
+"  -o|--output <fitxategia>  (`-j'rekin, lehenetsia: <paketea>-<bertsioa>."
+"deb)\n"
+"  -Q|--npquiet              (ez erakutsi ezer -a zatia ez denean)\n"
+"  --msdos                   (sortu 8.3 fitxategi izenak)\n"
+"\n"
+"Irteera egoera: 0 = Ados;  1 = -a ez da zatia;  2 = arazoak!\n"
+
+#: dpkg-split/main.c:85
+msgid "Type dpkg-split --help for help."
+msgstr "Idatzi dpkg-split --help laguntza lortzeko."
+
+#: dpkg-split/main.c:95 dpkg-split/main.c:99
+#, c-format
+msgid "error reading %.250s"
+msgstr "errorea %.250s irakurtzean"
+
+#: dpkg-split/main.c:100
+#, c-format
+msgid "unexpected end of file in %.250s"
+msgstr "%.250s: ustekabeko fitxategi amaiera "
+
+#: dpkg-split/main.c:111
+msgid "part size is far too large or is not positive"
+msgstr "zatiaren tamaina handiegia da, edo ez da positiboa"
+
+#: dpkg-split/main.c:115
+#, c-format
+msgid "part size must be at least %dk (to allow for header)"
+msgstr "zatiaren tamainak %dk izan behar du gutxienez (goiburua onartzeko)"
+
+#: dpkg-split/queue.c:69
+#, c-format
+msgid "unable to read depot directory `%.250s'"
+msgstr "ezin da irakurri `%.250s' biltegi direktorioa"
+
+#: dpkg-split/queue.c:107
+msgid "--auto requires the use of the --output option"
+msgstr "--auto: --output aukera erabiltzea eskatzen du"
+
+#: dpkg-split/queue.c:109
+msgid "--auto requires exactly one part file argument"
+msgstr "--auto: zati fitxategiko argumentu bat behar du zehazki"
+
+#: dpkg-split/queue.c:113
+#, c-format
+msgid "unable to read part file `%.250s'"
+msgstr "ezin da irakurri `%.250s' zati fitxategia"
+
+#: dpkg-split/queue.c:116
+#, c-format
+msgid "File `%.250s' is not part of a multipart archive.\n"
+msgstr "`%.250s' fitxategia ez da zati anitzeko artxibo baten zatia.\n"
+
+#: dpkg-split/queue.c:144
+#, c-format
+msgid "unable to reopen part file `%.250s'"
+msgstr "ezin da berriro ireki `%.250s' zati fitxategia"
+
+#: dpkg-split/queue.c:148
+#, c-format
+msgid "part file `%.250s' has trailing garbage"
+msgstr "`%.250s' zati fitxategiak amaierako zaborra dauka"
+
+#: dpkg-split/queue.c:157
+#, c-format
+msgid "unable to open new depot file `%.250s'"
+msgstr "ezin da ireki `%.250s' biltegi fitxategi berria"
+
+#: dpkg-split/queue.c:161
+#, c-format
+msgid "unable to rename new depot file `%.250s' to `%.250s'"
+msgstr "ezin zaio `%.250s' biltegi fitxategi berriari `%.250s' izena jarri"
+
+#: dpkg-split/queue.c:163
+#, c-format
+msgid "Part %d of package %s filed (still want "
+msgstr "%2$s paketearen %1$d zatia fitxategian (oraindik falta: "
+
+#: dpkg-split/queue.c:167
+msgid " and "
+msgstr " eta "
+
+#: dpkg-split/queue.c:180
+#, c-format
+msgid "unable to delete used-up depot file `%.250s'"
+msgstr "ezin da ezabatu erabilitako `%.250s' biltegi fitxategia"
+
+#: dpkg-split/queue.c:195
+msgid "--listq does not take any arguments"
+msgstr "--listq: ez du argumenturik hartzen"
+
+#: dpkg-split/queue.c:198
+msgid "Junk files left around in the depot directory:\n"
+msgstr "Fitxategi baztergarri batzuk biltegi direktorioan utzi dira:\n"
+
+#: dpkg-split/queue.c:203 dpkg-split/queue.c:227
+#, c-format
+msgid "unable to stat `%.250s'"
+msgstr "ezin da `%.250s' atzitu"
+
+#: dpkg-split/queue.c:206
+#, c-format
+msgid " %s (%lu bytes)\n"
+msgstr " %s (%lu byte)\n"
+
+#: dpkg-split/queue.c:208
+#, c-format
+msgid " %s (not a plain file)\n"
+msgstr " %s (ez da fitxategi arrunta)\n"
+
+#: dpkg-split/queue.c:213
+msgid "Packages not yet reassembled:\n"
+msgstr "Paketeak oraindik ez dira muntatu berriro:\n"
+
+#: dpkg-split/queue.c:229
+#, c-format
+msgid "part file `%.250s' is not a plain file"
+msgstr "`%.250s' zati fitxategia ez da fitxategi arrunta"
+
+#: dpkg-split/queue.c:234
+#, c-format
+msgid "(total %lu bytes)\n"
+msgstr "(%lu byte guztira)\n"
+
+#: dpkg-split/queue.c:257
+#, c-format
+msgid "unable to discard `%.250s'"
+msgstr "ezin da `%.250s' baztertu"
+
+#: dpkg-split/queue.c:258
+#, c-format
+msgid "Deleted %s.\n"
+msgstr "%s ezabatu da.\n"
+
+#: dpkg-split/split.c:45
+msgid "--split needs a source filename argument"
+msgstr "--split: iturburuko fitxategi izen argumentu bat behar du"
+
+#: dpkg-split/split.c:48
+msgid "--split takes at most a source filename and destination prefix"
+msgstr ""
+"--split: iturburuko fitxategi izen bat eta helburuko aurrizki bat hartzen du "
+"gehienez"
+
+#: dpkg-split/split.c:62
+#, c-format
+msgid "unable to open source file `%.250s'"
+msgstr "ezin da ireki iturburuko `%.250s' fitxategia"
+
+#: dpkg-split/split.c:63
+msgid "unable to fstat source file"
+msgstr "ezin da fstat egin iturburuko fitxategian"
+
+#: dpkg-split/split.c:64
+#, c-format
+msgid "source file `%.250s' not a plain file"
+msgstr "helburuko `%.250s' fitxategia ez da fitxategi arrunta"
+
+#: dpkg-split/split.c:70
+msgid "unable to exec mksplit"
+msgstr "ezin da mksplit exekutatu"
+
+#: scripts/cleanup-info.pl:35 scripts/dpkg-divert.pl:17
+#: scripts/dpkg-statoverride.pl:27 scripts/install-info.pl:17
+#: scripts/update-alternatives.pl:61
+#, perl-format
+msgid "Debian %s version %s.\n"
+msgstr "Debian %s -%s bertsioa.\n"
+
+#: scripts/cleanup-info.pl:37
+msgid ""
+"\n"
+"Copyright (C) 1996 Kim-Minh Kaplan."
+msgstr ""
+"\n"
+"Copyright (C) 1996 Kim-Minh Kaplan."
+
+#: scripts/cleanup-info.pl:40 scripts/dpkg-divert.pl:23
+#: scripts/dpkg-statoverride.pl:32 scripts/install-info.pl:22
+#: scripts/update-alternatives.pl:67
+msgid ""
+"\n"
+"This is free software; see the GNU General Public Licence version 2 or\n"
+"later for copying conditions. There is NO warranty.\n"
+msgstr ""
+"\n"
+"Software hau librea da; kopiatzeko baldintzen berri izateko, ikus\n"
+"GNU Lizentzia Publiko Orokorraren 2 bertsioa edo berriagoa.\n"
+"EZ dago bermerik.\n"
+
+#: scripts/cleanup-info.pl:48
+#, perl-format
+msgid ""
+"Usage: %s [<option> ...] [--] [<dirname>]\n"
+"\n"
+"Options:\n"
+"  --unsafe     set some additional possibly useful options.\n"
+"               warning: this option may garble an otherwise correct file.\n"
+"  --help       show this help message.\n"
+"  --version    show the version.\n"
+msgstr ""
+"Erabilera: %s [<aukerak> ...] [--] [<direktorioa>]\n"
+"\n"
+"Aukerak:\n"
+"  --unsafe     zenbait aukera gehigarri eta erabilgarri ezarri.\n"
+"               oharra: aukera honekbestela ondo egon daiteken fitxategiak "
+"nahaspila ditzake.\n"
+"  --help       laguntza mezu hau bistarazi.\n"
+"  --version    bertsioa bistarazi.\n"
+
+#: scripts/cleanup-info.pl:65 scripts/install-info.pl:508
+#, perl-format
+msgid "%s: warning - unable to unlock %s: %s"
+msgstr "%s: abisua - ezin  da %s atzitu: %s"
+
+#: scripts/cleanup-info.pl:85 scripts/install-info.pl:119
+#, perl-format
+msgid "%s: unknown option `%s'"
+msgstr "%s: `%s' aukera ezezaguna"
+
+#: scripts/cleanup-info.pl:93 scripts/install-info.pl:130
+#, perl-format
+msgid "%s: too many arguments"
+msgstr "%s: argumentu gehiegi"
+
+#: scripts/cleanup-info.pl:100 scripts/install-info.pl:305
+#, perl-format
+msgid "%s: failed to lock dir for editing! %s"
+msgstr "%s: huts egin direktorioa editatzeko blokeatzean! %s"
+
+#: scripts/cleanup-info.pl:102
+#, perl-format
+msgid "try deleting %s"
+msgstr "saiatu %s ezabatzen"
+
+#: scripts/cleanup-info.pl:106 scripts/install-info.pl:312
+#: scripts/update-alternatives.pl:163
+#, perl-format
+msgid "unable to open %s: %s"
+msgstr "Ezin da %s ireki: %s"
+
+#: scripts/cleanup-info.pl:108 scripts/install-info.pl:482
+#, perl-format
+msgid "unable to create %s: %s"
+msgstr "ezin da %s sortu: %s"
+
+#: scripts/cleanup-info.pl:119 scripts/install-info.pl:485
+#, perl-format
+msgid "unable to write %s: %s"
+msgstr "ezin da %s idatzi: %s"
+
+#: scripts/cleanup-info.pl:159 scripts/install-info.pl:165
+#: scripts/install-info.pl:207 scripts/install-info.pl:314
+#, perl-format
+msgid "unable to read %s: %s"
+msgstr "ezin da %s irakurri: %s"
+
+#: scripts/cleanup-info.pl:160 scripts/install-info.pl:315
+#, perl-format
+msgid "unable to close %s after read: %s"
+msgstr "ezin da irakurri ondoren %s itxi: %s"
+
+#: scripts/cleanup-info.pl:164 scripts/install-info.pl:486
+#: scripts/update-alternatives.pl:586
+#, perl-format
+msgid "unable to close %s: %s"
+msgstr "Ezin da %s itxi: %s"
+
+#: scripts/cleanup-info.pl:170 scripts/install-info.pl:490
+#, perl-format
+msgid "unable to backup old %s, giving up: %s"
+msgstr "Ezin da %s zaharraren babeskopia egin, uzten: %s"
+
+#: scripts/cleanup-info.pl:173
+#, perl-format
+msgid "failed to install %s; it will be left as %s: %s"
+msgstr "huts %s instalatzean ; berau %s bezala uzten: %s"
+
+#: scripts/cleanup-info.pl:177
+#, perl-format
+msgid "%s: unable to unlock %s: %s"
+msgstr "%s: ezin da %s desblokeatu: %s"
+
+#: scripts/dpkg-divert.pl:19
+msgid ""
+"\n"
+"Copyright (C) 1995 Ian Jackson.\n"
+"Copyright (C) 2000,2001 Wichert Akkerman."
+msgstr ""
+"\n"
+"Copyright (C) 1995 Ian Jackson.\n"
+"Copyright (C) 2000,2001 Wichert Akkerman."
+
+#: scripts/dpkg-divert.pl:31
+#, perl-format
+msgid ""
+"Usage: %s [<option> ...] <command>\n"
+"\n"
+"Commands:\n"
+"  [--add] <file>           add a diversion.\n"
+"  --remove <file>          remove the diversion.\n"
+"  --list [<glob-pattern>]  show file diversions.\n"
+"  --truename <file>        return the diverted file.\n"
+"\n"
+"Options:\n"
+"  --package <package>      name of the package whose copy of <file> will "
+"not\n"
+"                             be diverted.\n"
+"  --local                  all packages' versions are diverted.\n"
+"  --divert <divert-to>     the name used by other packages' versions.\n"
+"  --rename                 actually move the file aside (or back).\n"
+"  --admindir <directory>   set the directory with the diversions file.\n"
+"  --test                   don't do anything, just demonstrate.\n"
+"  --quiet                  quiet operation, minimal output.\n"
+"  --help                   show this help message.\n"
+"  --version                show the version.\n"
+"\n"
+"When adding, default is --local and --divert <original>.distrib.\n"
+"When removing, --package or --local and --divert must match if specified.\n"
+"Package preinst/postrm scripts should always specify --package and --"
+"divert.\n"
+msgstr ""
+"Erabilera: %s [<aukerak> ...] <komandoa>\n"
+"\n"
+"Komandoak:\n"
+"  [--add] <fitxategia>           desbideraketa bat gehitu.\n"
+"  --remove <fitxategia>          desbideraketa ezabatu.\n"
+"  --list [<glob-pattern>]  desbideraketak bistarazi.\n"
+"  --truename <fitxategia>        desbideratutako fitxategian atzera egin.\n"
+"\n"
+"Aukerak:\n"
+"  --package <paketea>      <fitxategia>-ren kopia desbideratu ez den\n"
+"                             paketearen izena.\n"
+"  --local                  pakete guztien bertsioak desbideraturik daude.\n"
+"  --divert <desb-nora>    beste pakete bertsioek erabiltzen duten izena.\n"
+"  --rename                 actually move the file aside (or back).\n"
+"  --admindir <direktori.>   desbideraketa fitxategia duen direktorioa "
+"ezarri.\n"
+"  --test                   ez ezer egin, erakutsi bakarrik.\n"
+"  --quiet                  ekintza ixila, gutxieneko irteera.\n"
+"  --help                   laguntza mezu hau ikusie.\n"
+"  --version                bertsioa ikusi.\n"
+"\n"
+"When adding, default is --local and --divert <original>.distrib.\n"
+"When removing, --package or --local and --divert must match if specified.\n"
+"Package preinst/postrm scripts should always specify --package and --"
+"divert.\n"
+
+#: scripts/dpkg-divert.pl:76 scripts/dpkg-statoverride.pl:60
+#: scripts/update-alternatives.pl:281
+#, perl-format
+msgid "two commands specified: %s and --%s"
+msgstr "bi komando ezarri dira: %s eta --%s"
+
+#: scripts/dpkg-divert.pl:109
+#, perl-format
+msgid "--%s needs a divert-to argument"
+msgstr "--%s-(e)k desbideratzeko argumentu bat behar du"
+
+#: scripts/dpkg-divert.pl:111
+msgid "divert-to may not contain newlines"
+msgstr "divert-to-ek ezin du lerro berririk eduki"
+
+#: scripts/dpkg-divert.pl:113
+#, perl-format
+msgid "--%s needs a <package> argument"
+msgstr "--%s-(e)k <pakete> argumentu bat behar du"
+
+#: scripts/dpkg-divert.pl:115
+msgid "package may not contain newlines"
+msgstr "paketea ezin du lerro berririk eduki"
+
+#: scripts/dpkg-divert.pl:117 scripts/dpkg-statoverride.pl:79
+#: scripts/update-alternatives.pl:334 scripts/update-alternatives.pl:337
+#, perl-format
+msgid "--%s needs a <directory> argument"
+msgstr "--%s-(e)k <direktorio> argumentu bat behar du"
+
+#: scripts/dpkg-divert.pl:120 scripts/dpkg-statoverride.pl:91
+#: scripts/update-alternatives.pl:342
+#, perl-format
+msgid "unknown option `%s'"
+msgstr "`%s' aukera ezezaguna"
+
+#: scripts/dpkg-divert.pl:126
+#, perl-format
+msgid "cannot open diversions: %s"
+msgstr "huts egin du desbideraketak irekitzean: %s"
+
+#: scripts/dpkg-divert.pl:129
+msgid "missing altname"
+msgstr "altname falta da"
+
+#: scripts/dpkg-divert.pl:131
+msgid "missing package"
+msgstr "paketea falta da"
+
+#: scripts/dpkg-divert.pl:137 scripts/dpkg-divert.pl:165
+#: scripts/dpkg-divert.pl:208 scripts/dpkg-statoverride.pl:154
+#, perl-format
+msgid "--%s needs a single argument"
+msgstr "--%s-(e)k argumentu soil bat behar du"
+
+#: scripts/dpkg-divert.pl:139 scripts/dpkg-divert.pl:143
+#, perl-format
+msgid "filename \"%s\" is not absolute"
+msgstr "\"%s\" fitxategi izena ez da absolutua"
+
+#: scripts/dpkg-divert.pl:140 scripts/dpkg-statoverride.pl:128
+msgid "file may not contain newlines"
+msgstr "fitxategiak ezin du lerro berririk eduki"
+
+#: scripts/dpkg-divert.pl:141
+msgid "Cannot divert directories"
+msgstr "Ezin dira direktorioak desbideratu"
+
+#: scripts/dpkg-divert.pl:150
+#, perl-format
+msgid "Leaving `%s'"
+msgstr "`%s' uzten"
+
+#: scripts/dpkg-divert.pl:153
+#, perl-format
+msgid "`%s' clashes with `%s'"
+msgstr "`%s'-ek `%s'-ekin elkarjotzen du"
+
+#: scripts/dpkg-divert.pl:159
+#, perl-format
+msgid "Adding `%s'"
+msgstr "`%s' gehitzen"
+
+#: scripts/dpkg-divert.pl:169
+#, perl-format
+msgid ""
+"mismatch on divert-to\n"
+"  when removing `%s'\n"
+"  found `%s'"
+msgstr ""
+"parekatze okerra \"divert-to\"-en\n"
+"`%s' ezabatzean\n"
+"`%s' aurkitu da"
+
+#: scripts/dpkg-divert.pl:171
+#, perl-format
+msgid ""
+"mismatch on package\n"
+"  when removing `%s'\n"
+"  found `%s'"
+msgstr ""
+"parekatze okerra paketean\n"
+"`%s' ezabatzean\n"
+"`%s' aurkitu da"
+
+#: scripts/dpkg-divert.pl:173
+#, perl-format
+msgid "Removing `%s'"
+msgstr "`%s' kentzen"
+
+#: scripts/dpkg-divert.pl:188
+#, perl-format
+msgid "No diversion `%s', none removed"
+msgstr "Ez dago `%s' desbideraketarik, ez da ezabatuko"
+
+#: scripts/dpkg-divert.pl:218
+#, perl-format
+msgid "internal error - bad mode `%s'"
+msgstr "barne errorea - `%s' modu okerra"
+
+#: scripts/dpkg-divert.pl:232
+#, perl-format
+msgid "cannot stat old name `%s': %s"
+msgstr "ezin da`%s' izen zaharra atzitu: %s"
+
+#: scripts/dpkg-divert.pl:234
+#, perl-format
+msgid "cannot stat new name `%s': %s"
+msgstr "ezin da `%s' izen berria atzitu: %s"
+
+#: scripts/dpkg-divert.pl:251 scripts/dpkg-divert.pl:258
+#, perl-format
+msgid "error checking `%s': %s"
+msgstr "errorea `%s' egiaztatzean: %s"
+
+#: scripts/dpkg-divert.pl:262
+#, perl-format
+msgid ""
+"rename involves overwriting `%s' with\n"
+"  different file `%s', not allowed"
+msgstr ""
+"berrizendatzeak `%s' gainidaztea dakar\n"
+"  `%s' fitxategi ezberdinarekin, ez da onartzen"
+
+#: scripts/dpkg-divert.pl:272
+#, perl-format
+msgid "rename: remove duplicate old link `%s': %s"
+msgstr "rename: `%s' lotura zaharra ezabatu: %s"
+
+#: scripts/dpkg-divert.pl:274
+#, perl-format
+msgid "rename: rename `%s' to `%s': %s"
+msgstr "rename: `%s' `%s'-ra berrizendatu: %s"
+
+#: scripts/dpkg-divert.pl:281
+#, perl-format
+msgid "create diversions-new: %s"
+msgstr "diversions-new sortu: %s"
+
+#: scripts/dpkg-divert.pl:285
+#, perl-format
+msgid "write diversions-new: %s"
+msgstr "diversions-new idatzi: %s"
+
+#: scripts/dpkg-divert.pl:287
+#, perl-format
+msgid "close diversions-new: %s"
+msgstr "diversions-new itxi: %s"
+
+#: scripts/dpkg-divert.pl:289
+#, perl-format
+msgid "remove old diversions-old: %s"
+msgstr "diversions-old zaharra ezabatu: %s"
+
+#: scripts/dpkg-divert.pl:291
+#, perl-format
+msgid "create new diversions-old: %s"
+msgstr "diversions-old berria sortu: %s"
+
+#: scripts/dpkg-divert.pl:293
+#, perl-format
+msgid "install new diversions: %s"
+msgstr "desbideraketa berriak instalatu: %s"
+
+#: scripts/dpkg-divert.pl:316 scripts/update-alternatives.pl:700
+#, perl-format
+msgid "internal error: %s corrupt: %s"
+msgstr "barne errorea: %s hondaturik: %s"
+
+#: scripts/dpkg-statoverride.pl:29
+msgid ""
+"\n"
+"Copyright (C) 2000 Wichert Akkerman."
+msgstr ""
+"\n"
+"Copyright (C) 2000 Wichert Akkerman."
+
+#: scripts/dpkg-statoverride.pl:40
+#, perl-format
+msgid ""
+"Usage: %s [<option> ...] <command>\n"
+"\n"
+"Commands:\n"
+"  --add <owner> <group> <mode> <file>\n"
+"                           add a new entry into the database.\n"
+"  --remove <file>          remove file from the database.\n"
+"  --list [<glob-pattern>]  list current overrides in the database.\n"
+"\n"
+"Options:\n"
+"  --admindir <directory>   set the directory with the statoverride file.\n"
+"  --update                 immediately update file permissions.\n"
+"  --force                  force an action even if a sanity check fails.\n"
+"  --quiet                  quiet operation, minimal output.\n"
+"  --help                   show this help message.\n"
+"  --version                show the version.\n"
+msgstr ""
+"Erabilera: %s [<aukera> ...] <komandoa>\n"
+"\n"
+"Komandoak:\n"
+"  --add <jabea> <taldea> <modua> <fitxategia>\n"
+"                           datubasean erregistro berri bat sartu.\n"
+"  --remove <fitxategia>          datubasetik fitxategi bat ezabatu.\n"
+"  --list [<glob-pattern>]  datubaseko uneko gainjarpenak zerrendatu.\n"
+"\n"
+"Aukerak:\n"
+"  --admindir <direktorioa>   statoverride fitxategiaren direktorioa ezarri.\n"
+"  --update                 fitxategi baimenak berehala eguneratu.\n"
+"  --force                  ekintza bat behatu nahiz egiaztapenak huts egin.\n"
+"  --quiet                  ekintza isildu, irteera gutxitu.\n"
+"  --help                   laguntza mezu hau bistarazi.\n"
+"  --version                bertsioa bistarazi.\n"
+
+#: scripts/dpkg-statoverride.pl:98
+msgid "no mode specified"
+msgstr "ez da modurik ezarri"
+
+#: scripts/dpkg-statoverride.pl:102
+msgid "--add needs four arguments"
+msgstr "--add-ek lau argumentu behar ditu"
+
+#: scripts/dpkg-statoverride.pl:110
+#, perl-format
+msgid "illegal user %s"
+msgstr "legezkanpoko %s erabiltzailea"
+
+#: scripts/dpkg-statoverride.pl:113
+#, perl-format
+msgid "non-existing user %s"
+msgstr "ez dagoen %s erabiltzailea"
+
+#: scripts/dpkg-statoverride.pl:119
+#, perl-format
+msgid "illegal group %s"
+msgstr "legezkanpoko %s taldea"
+
+#: scripts/dpkg-statoverride.pl:122
+#, perl-format
+msgid "non-existing group %s"
+msgstr "ez dagoen %s taldea"
+
+#: scripts/dpkg-statoverride.pl:126
+#, perl-format
+msgid "illegal mode %s"
+msgstr "legezkanpoko %s modua"
+
+#: scripts/dpkg-statoverride.pl:129 scripts/dpkg-statoverride.pl:156
+#: scripts/dpkg-statoverride.pl:175
+msgid "stripping trailing /"
+msgstr "amaierako soberako zuriuneak /"
+
+#: scripts/dpkg-statoverride.pl:132
+#, perl-format
+msgid "An override for \"%s\" already exists, "
+msgstr "\"%s\"-en gainidazketa badago dagoeneko, "
+
+#: scripts/dpkg-statoverride.pl:134
+msgid "but --force specified so will be ignored."
+msgstr "baina --force ezarri da, beraz alde batetara utziko da."
+
+#: scripts/dpkg-statoverride.pl:136
+msgid "aborting"
+msgstr "uzten"
+
+#: scripts/dpkg-statoverride.pl:147
+#, perl-format
+msgid "warning: --update given but %s does not exist"
+msgstr "abisua_ --update eman da baina %s ez dago"
+
+#: scripts/dpkg-statoverride.pl:149
+#, perl-format
+msgid "failed to chown %s: %s"
+msgstr "huts %s taldez aldatzean: %s"
+
+#: scripts/dpkg-statoverride.pl:150
+#, perl-format
+msgid "failed to chmod %s: %s"
+msgstr "huts %s-ren baimenak aldatzean: %s"
+
+#: scripts/dpkg-statoverride.pl:158
+msgid "No override present."
+msgstr "Ez dago gainidazketarik."
+
+#: scripts/dpkg-statoverride.pl:166
+msgid "warning: --update is useless for --remove"
+msgstr "abisua: --update ezin da --remove-rekin erabili"
+
+#: scripts/dpkg-statoverride.pl:193
+#, perl-format
+msgid "cannot open statoverride: %s"
+msgstr "Ezin da statoverride fitxategia ireki: %s"
+
+#: scripts/dpkg-statoverride.pl:199
+#, perl-format
+msgid "Multiple overrides for \"%s\", aborting"
+msgstr "Agindu anitz \"%s\"-rentzat, uzten"
+
+#: scripts/dpkg-statoverride.pl:212
+#, perl-format
+msgid "cannot open new statoverride file: %s"
+msgstr "Ezin da statoverride fitxategi berria ireki: %s"
+
+#: scripts/dpkg-statoverride.pl:219
+#, perl-format
+msgid "error removing statoverride-old: %s"
+msgstr "errorea statoverride-old ezabatzen: %s"
+
+#: scripts/dpkg-statoverride.pl:221
+#, perl-format
+msgid "error creating new statoverride-old: %s"
+msgstr "errorea statoverride-old berria sortzerakoan: %s"
+
+#: scripts/dpkg-statoverride.pl:223
+#, perl-format
+msgid "error installing new statoverride: %s"
+msgstr "errorea statoverride berria instalatzean: %s"
+
+#: scripts/install-info.pl:19
+msgid ""
+"\n"
+"Copyright (C) 1994,1995 Ian Jackson."
+msgstr ""
+"\n"
+"Copyright (C) 1994-1996 Ian Jackson."
+
+#: scripts/install-info.pl:31
+#, perl-format
+msgid ""
+"Usage: %s [<options> ...] [--] <filename>\n"
+"\n"
+"Options:\n"
+"  --section <regexp> <title>\n"
+"                           put the new entry in the <regex> matched section\n"
+"                           or create a new one with <title> if non-"
+"existent.\n"
+"  --menuentry=<text>       set the menu entry.\n"
+"  --description=<text>     set the description to be used in the menu "
+"entry.\n"
+"  --info-file=<path>       specify info file to install in the directory.\n"
+"  --dir-file=<path>        specify file name of info directory file.\n"
+"  --infodir=<directory>    same as '--dir-file=<directory>/dir'.\n"
+"  --info-dir=<directory>   likewise.\n"
+"  --keep-old               do not replace entries nor remove empty ones.\n"
+"  --remove                 remove the entry specified by <filename> "
+"basename.\n"
+"  --remove-exactly         remove the exact <filename> entry.\n"
+"  --test                   enables test mode (no actions taken).\n"
+"  --debug                  enables debug mode (show more information).\n"
+"  --quiet                  do not show output messages.\n"
+"  --help                   show this help message.\n"
+"  --version                show the version.\n"
+msgstr ""
+"Erabilera: %s [<aukerak> ...] [--] <fixtategi izena>\n"
+"\n"
+"Aukerak:\n"
+"  --section <expresio-erregularra> <izenburua>\n"
+"                           erregistro berria <expresio-erregularra> "
+"parekatze\n"
+"                           atalean ezarri edo <izenburu> izeneko atal bat "
+"sortu.\n"
+"  --menuentry=<testua>       menu sarrera ezarri.\n"
+"  --description=<testua>     menu sarreran erabilikode deskribapena ezarri.\n"
+"  --info-file=<bidea>       direktorioan ezarri beharreko info fitxategia "
+"ezarri.\n"
+"  --dir-file=<bidea>        argibide direktorio fitxategi izena ezarri.\n"
+"  --infodir=<direktorioa>    '--dir-file=<direktorioa>/dir'-ren berdina.\n"
+"  --info-dir=<direktorioa>   berdina.\n"
+"  --keep-old               ez erregistrorik ordeztu ezta hutsak ezabatu.\n"
+"  --remove                 <fitxategi izena> basename ezarritako erregistroa "
+"ezabatu.\n"
+"  --remove-exactly         zehazki <fitxategi izena> erregistroa ezabatu.\n"
+"  --test                   proba modua gaitu (ez dira ekintzak egingo).\n"
+"  --debug                  arazpen modua gaitu(argibide gehiago bistarazi).\n"
+"  --quiet                  ez bistarazi irteerako mezurik.\n"
+"  --help                   laguntza mezu hau bistarazi.\n"
+"  --version                bertsioa bistarazi.\n"
+
+#: scripts/install-info.pl:97
+#, perl-format
+msgid "could not open stderr for output! %s"
+msgstr "Ezin da irteera estandarra ireki! %s"
+
+#: scripts/install-info.pl:101
+#, perl-format
+msgid "%s: --section needs two more args"
+msgstr "%s: --section -ek bi argumentu gehiago behar ditu"
+
+#: scripts/install-info.pl:107
+#, perl-format
+msgid "%s: option --%s is deprecated (ignored)"
+msgstr "%s: --%s aukera zaharkiturik (alde batetara utzia)"
+
+#: scripts/install-info.pl:133
+#, perl-format
+msgid "%s: --section ignored with --remove"
+msgstr "%s: --section alde batetara utzia --remove erabiltzean"
+
+#: scripts/install-info.pl:134
+#, perl-format
+msgid "%s: --description ignored with --remove"
+msgstr "%s: --description alde batetara utzia --remove erabiltzean"
+
+#: scripts/install-info.pl:137
+#, perl-format
+msgid "%s: test mode - dir file will not be updated"
+msgstr "%s: proba modua - dir fitxategia ez da eguneratuko"
+
+#: scripts/install-info.pl:191
+#, perl-format
+msgid "%s: warning, ignoring confusing INFO-DIR-ENTRY in file."
+msgstr "%s: abisua, alde batetara uzten fitxategiko INFO-DIR-ENTRY"
+
+#: scripts/install-info.pl:200
+msgid "invalid info entry"
+msgstr "info sarrera baliogabea"
+
+#: scripts/install-info.pl:226
+#, perl-format
+msgid ""
+"\n"
+"No `START-INFO-DIR-ENTRY' and no `This file documents'.\n"
+"%s: unable to determine description for `dir' entry - giving up\n"
+msgstr ""
+"\n"
+"`START-INFO-DIR-ENTRY' ezta `This file documents' ez daude.\n"
+"%s: ezin da `dir' sarreraren deskribapena zehaztu - uzten\n"
+
+#: scripts/install-info.pl:279
+#, perl-format
+msgid "%s: no file %s, retrieving backup file %s."
+msgstr "%s: %s fitxategia ez dago, babeskopia %s fitxategia erabiltzen."
+
+#: scripts/install-info.pl:282 scripts/install-info.pl:292
+#, perl-format
+msgid "%s: copying %s to %s failed, giving up: %s"
+msgstr "%s: huts %s %s-ra mugitzerakoan, uzten: %s"
+
+#: scripts/install-info.pl:288
+#, perl-format
+msgid "%s: no backup file %s available, retrieving default file."
+msgstr ""
+"%s: %s babeskopia fitxategia ez dago, lehenetsiriko fitxategia erabiltzen."
+
+#: scripts/install-info.pl:297
+#, perl-format
+msgid "%s: no backup file %s available."
+msgstr "%s: ez dago %s babeskopia fitxategia eskuragarri."
+
+#: scripts/install-info.pl:298
+#, perl-format
+msgid "%s: no default file %s available, giving up."
+msgstr "%s: lehenetsia ez den %s fitxategia eskuragarri, uzten."
+
+#: scripts/install-info.pl:307
+#, perl-format
+msgid "try deleting %s?"
+msgstr "%s ezabatzen saiatu?"
+
+#: scripts/install-info.pl:348
+#, perl-format
+msgid "%s: existing entry for `%s' not replaced"
+msgstr "%s: dagoen `%s' sarrera ez da ordeztuko"
+
+#: scripts/install-info.pl:351
+#, perl-format
+msgid "%s: replacing existing dir entry for `%s'"
+msgstr "%s: dagoen `%s' direktorio sarrera ordezten"
+
+#: scripts/install-info.pl:364
+#, perl-format
+msgid "%s: creating new section `%s'"
+msgstr "%s: `%s' atal berria sortzen"
+
+#: scripts/install-info.pl:367
+#, perl-format
+msgid "%s: no sections yet, creating Miscellaneous section too."
+msgstr "%s: ez dago atali oraindik, Miscellaneous atala ere sortzen."
+
+#: scripts/install-info.pl:385
+#, perl-format
+msgid "%s: no section specified for new entry, placing at end"
+msgstr "%s: ez da atalik ezarri sarrera berriarentzat, amaieran ipintzen"
+
+#: scripts/install-info.pl:422
+#, perl-format
+msgid "%s: deleting entry `%s ...'"
+msgstr "%s: `%s ...' sarrera ezabatzen"
+
+#: scripts/install-info.pl:428
+#, perl-format
+msgid "%s: empty section `%s' not removed"
+msgstr "%s: `%s' atal hutsa ez da ezabatuko"
+
+#: scripts/install-info.pl:431
+#, perl-format
+msgid "%s: deleting empty section `%s'"
+msgstr "%s: `%s' atal hutsa ez da ezabatzen"
+
+#: scripts/install-info.pl:438
+#, perl-format
+msgid "%s: no entry for file `%s' and menu entry `%s'"
+msgstr "%s: ez dago sarerarik`%s' fitxategi eta `%s' menu sarrerentzat"
+
+#: scripts/install-info.pl:440
+#, perl-format
+msgid "%s: no entry for file `%s'"
+msgstr "%s: ez dago sarerarik`%s' fitxategiarentzat"
+
+#: scripts/install-info.pl:493
+#, perl-format
+msgid "unable to install new %s: %s"
+msgstr "Ezin da %s berria instalatu: %s"
+
+#: scripts/install-info.pl:496
+#, perl-format
+msgid "unable to unlock %s: %s"
+msgstr "Ezin da %s desblokeatu: %s"
+
+#: scripts/install-info.pl:498
+#, perl-format
+msgid "%s: could not backup %s in %s: %s"
+msgstr "%s: ezin da %s-en basbeskopia egin %s-en: %s"
+
+#: scripts/install-info.pl:515
+#, perl-format
+msgid "unable to read %s: %d"
+msgstr "ezin da %s irakurri: %d"
+
+#: scripts/install-info.pl:519
+#, perl-format
+msgid "dbg: %s"
+msgstr "dbg: %s"
+
+#: scripts/update-alternatives.pl:63
+msgid ""
+"\n"
+"Copyright (C) 1995 Ian Jackson.\n"
+"Copyright (C) 2000-2002 Wichert Akkerman."
+msgstr ""
+"\n"
+"Copyright (C) 1995 Ian Jackson.\n"
+"Copyright (C) 2000-2002 Wichert Akkerman."
+
+#: scripts/update-alternatives.pl:75
+#, perl-format
+msgid ""
+"Usage: %s [<option> ...] <command>\n"
+"\n"
+"Commands:\n"
+"  --install <link> <name> <path> <priority>\n"
+"    [--slave <link> <name> <path>] ...\n"
+"                           add a group of alternatives to the system.\n"
+"  --remove <name> <path>   remove <path> from the <name> group alternative.\n"
+"  --remove-all <name>      remove <name> group from the alternatives "
+"system.\n"
+"  --auto <name>            switch the master link <name> to automatic mode.\n"
+"  --display <name>         display information about the <name> group.\n"
+"  --list <name>            display all targets of the <name> group.\n"
+"  --config <name>          show alternatives for the <name> group and ask "
+"the\n"
+"                           user to select which one to use.\n"
+"  --set <name> <path>      set <path> as alternative for <name>.\n"
+"  --all                    call --config on all alternatives.\n"
+"\n"
+"<link> is the symlink pointing to %s/<name>.\n"
+"  (e.g. /usr/bin/pager)\n"
+"<name> is the master name for this link group.\n"
+"  (e.g. pager)\n"
+"<path> is the location of one of the alternative target files.\n"
+"  (e.g. /usr/bin/less)\n"
+"<priority> is an integer; options with higher numbers have higher priority "
+"in\n"
+"  automatic mode.\n"
+"\n"
+"Options:\n"
+"  --altdir <directory>     change the alternatives directory.\n"
+"  --admindir <directory>   change the administrative directory.\n"
+"  --verbose                verbose operation, more output.\n"
+"  --quiet                  quiet operation, minimal output.\n"
+"  --help                   show this help message.\n"
+"  --version                show the version.\n"
+msgstr ""
+"Erabilera: %s [<aukerak> ...] <komandoa>\n"
+"\n"
+"Komandoak:\n"
+"  --install <lotura> <izena> <bidea> <lehentasuna>\n"
+"    [--slave <lotura> <izena> <bidea>] ...\n"
+"                           sistemara alternatiba talde bat gehitu.\n"
+"  --remove <izena> <bidea>   <bidea> ezabatu <izena> alternatiba taldetik.\n"
+"  --remove-all <izena>      <izena> taldea ezabatu alternatiba sistematik\n"
+"  --auto <izena>             <izena> lotura nagusia modu automatikora "
+"aldatu.\n"
+"  --display <izena>         <izena> taldearen argibideak bistarazi.\n"
+"  --list <izena>            <izena> taldeko helburu guztiak bistarazi.\n"
+"  --config <izena>          <izena> taldeko alternatibak bistarazi eta\n"
+"                           erabiltzaileari bat hautatzeko eskatu.\n"
+"  --set <izena> <path>      <bidea> ezarri <izena>-ren alternatiba bezala.\n"
+"  --all                    alternatiba guztien --config deitu.\n"
+"\n"
+"<lotura> %s/<izena>-ra jozten duen lotura da.\n"
+"  (adib. /usr/bin/pager)\n"
+"<izena> lotura talde horretako izen nagusia da.\n"
+"  (adib. pager)\n"
+"<bidea> alternatiba helburu fitxategi baten kokapena da.\n"
+"  (adib. /usr/bin/less)\n"
+"<lehentasuna> zenbaki oso bat da; zenbaki handiago duten aukerak lehentasun\n"
+"  handiagoa dute modu automatikoan hautatuko dira.\n"
+"\n"
+"Aukerak:\n"
+"  --altdir <direktorioa>     alternatiba direktorioa aldatu.\n"
+"  --admindir <direktorioa>   administrazio direktorioa aldatu.\n"
+"  --verbose                ekintza zabaldu, irteera gehiago.\n"
+"  --quiet                  ekintza ixildu, irteera gutxiago.\n"
+"  --help                   laguntza mezu hau bistarazi.\n"
+"  --version                bertsioa bistarazi.\n"
+
+#: scripts/update-alternatives.pl:127
+msgid "invalid update mode"
+msgstr "eguneraketa modu baliogabea"
+
+#: scripts/update-alternatives.pl:131
+#, perl-format
+msgid "duplicate slave %s"
+msgstr "%s morroi bikoiztua"
+
+#: scripts/update-alternatives.pl:134
+#, perl-format
+msgid "slave link same as main link %s"
+msgstr "lotura morroia %s loturaren berdina da"
+
+#: scripts/update-alternatives.pl:135
+#, perl-format
+msgid "duplicate slave link %s"
+msgstr "%s lotura morroia bikoiztua"
+
+#: scripts/update-alternatives.pl:139
+#, perl-format
+msgid "duplicate path %s"
+msgstr "bikoizturiko %s bidea"
+
+#: scripts/update-alternatives.pl:145
+#, perl-format
+msgid "priority %s %s"
+msgstr "%s %s lehentasuna"
+
+#: scripts/update-alternatives.pl:152
+#, perl-format
+msgid ""
+"Alternative for %s points to %s - which wasn't found.  Removing from list of "
+"alternatives."
+msgstr ""
+"%s-ren alternatibak ez den aurkitzen %s-ra jotzen du. Aukera zerrendatik "
+"ezabatzen."
+
+#: scripts/update-alternatives.pl:192
+#, perl-format
+msgid "%s - status is %s."
+msgstr "%s - egoera %s da."
+
+#: scripts/update-alternatives.pl:196
+#, perl-format
+msgid " link currently points to %s"
+msgstr " loturak orain %s-ra darama"
+
+#: scripts/update-alternatives.pl:198
+msgid " link currently absent"
+msgstr " lotura ez dago une honetan"
+
+#: scripts/update-alternatives.pl:200
+#, perl-format
+msgid " link unreadable - %s"
+msgstr " lotura irakurtezina - %s"
+
+#: scripts/update-alternatives.pl:204
+#, perl-format
+msgid "%s - priority %s"
+msgstr "%s - %s lehentasuna"
+
+#: scripts/update-alternatives.pl:208
+#, perl-format
+msgid " slave %s: %s"
+msgstr " %s morroia: %s"
+
+#: scripts/update-alternatives.pl:213
+msgid "No versions available."
+msgstr "ez dago bertsiorik eskuragarri."
+
+#: scripts/update-alternatives.pl:215
+#, perl-format
+msgid "Current `best' version is %s."
+msgstr "Unekobertsio `onena' %s da."
+
+#: scripts/update-alternatives.pl:232
+#, perl-format
+msgid ""
+"warning: %s is supposed to be a symlink to %s, \n"
+"or nonexistent; however, readlink failed: %s"
+msgstr ""
+"abisua: %s %s-ra lotura sinboliko bat dela suposatzen\n"
+"da (edo ez dago), hala ere, rakurketak huts egin du: %s"
+
+#: scripts/update-alternatives.pl:244
+#, perl-format
+msgid "Leaving %s (%s) pointing to %s."
+msgstr "%s (%s)-ra lotzen %s utzi."
+
+#: scripts/update-alternatives.pl:247
+#, perl-format
+msgid "Updating %s (%s) to point to %s."
+msgstr "%s (%s) egunaratzen %s-ra jo dezan"
+
+#: scripts/update-alternatives.pl:256
+#, perl-format
+msgid "Using '%s' to provide '%s'."
+msgstr "'%s' erabiltzen '%s'-etaz hornitzeko."
+
+#: scripts/update-alternatives.pl:270 scripts/update-alternatives.pl:614
+#, perl-format
+msgid "Removing %s (%s), not appropriate with %s."
+msgstr "%s (%s) ezabatzen, ez da %s-rekin egokia."
+
+#: scripts/update-alternatives.pl:288
+#, perl-format
+msgid "unable to remove %s: %s"
+msgstr "ezin da %s ezabatu: %s"
+
+#: scripts/update-alternatives.pl:301
+#, perl-format
+msgid "unknown argument `%s'"
+msgstr "`%s' argumentu ezezaguna"
+
+#: scripts/update-alternatives.pl:312
+msgid "--install needs <link> <name> <path> <priority>"
+msgstr "--install-ek <lotura> <izena> <bidea> <lehentasuna> behar ditu"
+
+#: scripts/update-alternatives.pl:314
+msgid "priority must be an integer"
+msgstr "lehentasuna zenbaki oso bat izan behar da"
+
+#: scripts/update-alternatives.pl:318
+#, perl-format
+msgid "--%s needs <name> <path>"
+msgstr "--%s-ek <izena> <bidea> behar ditu"
+
+#: scripts/update-alternatives.pl:323
+#, perl-format
+msgid "--%s needs <name>"
+msgstr "--%s-ek <izena> behar du"
+
+#: scripts/update-alternatives.pl:327
+msgid "--slave needs <link> <name> <path>"
+msgstr "--slave-ek <lotura> <izena> <bidea> behar ditu"
+
+#: scripts/update-alternatives.pl:329
+#, perl-format
+msgid "slave name %s duplicated"
+msgstr "%s izen morroia bikoizturik"
+
+#: scripts/update-alternatives.pl:330
+#, perl-format
+msgid "slave link %s duplicated"
+msgstr "%s lotura morroia bikoizturik dago"
+
+#: scripts/update-alternatives.pl:347
+#, perl-format
+msgid "name %s is both primary and slave"
+msgstr "%s izena batera morroi eta nagusia da"
+
+#: scripts/update-alternatives.pl:349
+#, perl-format
+msgid "link %s is both primary and slave"
+msgstr "%s lotura batera morroi eta nagusia da"
+
+#: scripts/update-alternatives.pl:352
+msgid ""
+"need --display, --config, --set, --install, --remove, --all, --remove-all or "
+"--auto"
+msgstr ""
+"--display, --config, --set, --install, --remove, --all, --remove-all edo --"
+"auto behar da"
+
+#: scripts/update-alternatives.pl:354
+msgid "--slave only allowed with --install"
+msgstr "--slave --install-ekin batera bakarrik onartzen da"
+
+#: scripts/update-alternatives.pl:367
+#, perl-format
+msgid "No alternatives for %s."
+msgstr "Ez dago alternatibarik %s-rentzat."
+
+#: scripts/update-alternatives.pl:414
+#, perl-format
+msgid "Setting up automatic selection of %s."
+msgstr "%s-ren hautatze automatikoa ezartzen."
+
+#: scripts/update-alternatives.pl:428
+#, perl-format
+msgid ""
+"%s has been changed (manually or by a script).\n"
+"Switching to manual updates only."
+msgstr ""
+"%s aldatu egin da (eskuz edo script batez).\n"
+"Eskuzko eguneraketara aldatzen."
+
+#: scripts/update-alternatives.pl:440
+#, perl-format
+msgid ""
+"Checking available versions of %s, updating links in %s ...\n"
+"(You may modify the symlinks there yourself if desired - see `man ln'.)"
+msgstr ""
+"%s-ren bertsio eskuragarriak arakatzen, %s-ko loturak eguneratzen ...\n"
+"(lotura sinbolikoa aldatu beharko duzu zure kabuz, laguntza behar ezkero "
+"`man ln' begiratu.)"
+
+#: scripts/update-alternatives.pl:446
+#, perl-format
+msgid "Renaming %s link from %s to %s."
+msgstr "%s lotura %s-tik %s-ra berrizendatzen."
+
+#: scripts/update-alternatives.pl:449 scripts/update-alternatives.pl:473
+#, perl-format
+msgid "unable to rename %s to %s: %s"
+msgstr "ezin da %s %s-ra berrizendatu: %s"
+
+#: scripts/update-alternatives.pl:468
+#, perl-format
+msgid "slave link name %s duplicated"
+msgstr "%s lotura morroi izena bikoizturik dago"
+
+#: scripts/update-alternatives.pl:470
+#, perl-format
+msgid "Renaming %s slave link from %s to %s."
+msgstr "%s lotura morroia %s-tik %s-ra berrizendatzen."
+
+#: scripts/update-alternatives.pl:487
+msgid "Removing manually selected alternative - switching to auto mode"
+msgstr "Eskuz hautaturiko alternatiba ezabatzen - modu automatikora aldatzen"
+
+#: scripts/update-alternatives.pl:501
+#, perl-format
+msgid "Alternative %s for %s not registered, not removing."
+msgstr "%s alternatiba %s-rentzat ez dago erregistraturik, ez da ezabatuko."
+
+#: scripts/update-alternatives.pl:528
+#, perl-format
+msgid "Discarding obsolete slave link %s (%s)."
+msgstr "%s (%s) lotura morroi zaharra alde batetara uzten."
+
+#: scripts/update-alternatives.pl:547
+#, perl-format
+msgid "Automatic updates of %s are disabled, leaving it alone."
+msgstr "%s-ren eguneraketa automatikoak ezgaiturik daude, dagoen bezala uzten."
+
+#: scripts/update-alternatives.pl:549
+#, perl-format
+msgid "To return to automatic updates use `update-alternatives --auto %s'."
+msgstr ""
+"Eguneraketa automatikoetara itzultzeko `update-alternatives --auto %s' "
+"erabili."
+
+#: scripts/update-alternatives.pl:553
+#, perl-format
+msgid "Recovering from previous failed update of %s ..."
+msgstr "Aurretik huts egindako  %s-ren eguneraketa batetik berreskuratzen"
+
+#: scripts/update-alternatives.pl:567
+#, perl-format
+msgid "unable to open %s for write: %s"
+msgstr "Ezin da %s idazteko ireki: %s"
+
+#: scripts/update-alternatives.pl:590
+#, perl-format
+msgid "Last package providing %s (%s) removed, deleting it."
+msgstr "%s (%s) hornitzen duen azken paketea ezabaturik, ezabatzen."
+
+#: scripts/update-alternatives.pl:629
+#, perl-format
+msgid ""
+"There is no program which provides %s.\n"
+"Nothing to configure.\n"
+msgstr ""
+"Ez dago %s hornitzen duen programarik.\n"
+"Ezer ez konfiguratzeko.\n"
+
+#: scripts/update-alternatives.pl:635
+#, perl-format
+msgid ""
+"There is only 1 program which provides %s\n"
+"(%s). Nothing to configure.\n"
+msgstr ""
+"Programa 1 bakarrik dago %s (%s)-taz hornitzen\n"
+" duena. Ezer konfiguratzeko.\n"
+
+#: scripts/update-alternatives.pl:640
+#, perl-format
+msgid ""
+"There are %s alternatives which provide `%s'.\n"
+"\n"
+"  Selection    Alternative\n"
+"-----------------------------------------------\n"
+msgstr ""
+"%s alternatiba daude `%s'-(e)z hornitzen dutenak.\n"
+"\n"
+"Alternatiba aukeratu\n"
+"-----------------------------------------------\n"
+
+#: scripts/update-alternatives.pl:650
+msgid "Press enter to keep the default[*], or type selection number: "
+msgstr ""
+"Enter sakatu lehenespena mantentzeko[*], edo hautatze zenbakia sakatu: "
+
+#: scripts/update-alternatives.pl:682
+#, perl-format
+msgid "Cannot find alternative `%s'."
+msgstr "Ezin da `%s' ordezkorik aurkitu."
+
+#: scripts/update-alternatives.pl:687 scripts/update-alternatives.pl:690
+#, perl-format
+msgid "error writing stdout: %s"
+msgstr "errorea irteera estandarrean idazterakoan: %s"
+
+#: scripts/update-alternatives.pl:689
+#, perl-format
+msgid "newlines prohibited in update-alternatives files (%s)"
+msgstr "update-alternatives fitxategiak (%s) ezin du lerro berririk eduki"
+
+#: scripts/update-alternatives.pl:694
+#, perl-format
+msgid "error or eof reading %s for %s (%s)"
+msgstr "fitxategi amaiera edo errorea %s irakurtzean %s-rako (%s)"
+
+#: scripts/update-alternatives.pl:696
+#, perl-format
+msgid "missing newline after %s"
+msgstr "lerro berria falta da %s ondoren"
+
+#: scripts/update-alternatives.pl:708
+#, perl-format
+msgid "unable to make %s a symlink to %s: %s"
+msgstr "ezin da %s %s-ren lotura bat egin: %s"
+
+#: scripts/update-alternatives.pl:713
+#, perl-format
+msgid "unable to install %s as %s: %s"
+msgstr "Ezin da %s %s bezala instalatu: %s"
+
+#: scripts/update-alternatives.pl:716
+#, perl-format
+msgid "Serious problem: %s"
+msgstr "Arazo larria: %s"

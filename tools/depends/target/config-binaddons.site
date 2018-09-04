@@ -1,0 +1,167 @@
+if test "yes" = "yes"; then
+cross_compiling=yes
+host=arm-apple-darwin
+host_alias=arm-apple-darwin
+fi
+
+LD="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld"
+CC="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang"
+CXX="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++"
+CPP="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -E"
+AR="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar"
+AS="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/as"
+NM="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/nm"
+STRIP="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip"
+RANLIB="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib"
+OBJDUMP=""
+
+if test "ios" = "ios" ; then
+  export AS="/Users/Shared/xbmc-depends/buildtools-native/bin/gas-preprocessor.pl /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch armv7"
+  export CCAS="--tag CC /Users/Shared/xbmc-depends/buildtools-native/bin/gas-preprocessor.pl /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch armv7"
+fi
+
+CFLAGS="-fheinous-gnu-extensions -no-cpp-precomp -mcpu=cortex-a8 -mfpu=neon -ftree-vectorize -mfloat-abi=softfp -pipe -Wno-trigraphs -fpascal-strings -O3 -Wreturn-type -Wunused-variable -fmessage-length=0 -gdwarf-2 -arch armv7 -miphoneos-version-min=5.1  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk $CFLAGS"
+LDFLAGS="-Wl,-search_paths_first -L/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/usr/lib/system -Wl,-segalign,4000 -arch armv7 -miphoneos-version-min=5.1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk   $LDFLAGS"
+CXXFLAGS="-no-cpp-precomp -mcpu=cortex-a8 -mfpu=neon -ftree-vectorize -mfloat-abi=softfp -pipe -Wno-trigraphs -fpascal-strings -O3 -Wreturn-type -Wunused-variable -fmessage-length=0 -gdwarf-2 -arch armv7 -miphoneos-version-min=5.1 -std=c++11 -stdlib=libc++ -g -O2 -std=gnu++11 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk $CXXFLAGS"
+CPPFLAGS="-fheinous-gnu-extensions -no-cpp-precomp -mcpu=cortex-a8 -mfpu=neon -ftree-vectorize -mfloat-abi=softfp -pipe -Wno-trigraphs -fpascal-strings -O3 -Wreturn-type -Wunused-variable -fmessage-length=0 -gdwarf-2 -arch armv7 -miphoneos-version-min=5.1  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk $CPPFLAGS"
+
+export PKG_CONFIG=/Users/Shared/xbmc-depends/buildtools-native/bin/pkg-config
+export YASM=/Users/Shared/xbmc-depends/buildtools-native/bin/yasm
+export NASM=/Users/Shared/xbmc-depends/buildtools-native/bin/yasm
+
+PATH=/Users/Shared/xbmc-depends/buildtools-native/bin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/bin:$PATH
+LD_LIBRARY_PATH=/Users/Shared/xbmc-depends/buildtools-native/lib:$LD_LIBRARY_PATH
+
+NATIVE_ROOT=/Users/Shared/xbmc-depends/buildtools-native
+
+#libomxil-bellagio
+ac_cv_func_malloc_0_nonnull=yes
+
+#curl
+ac_cv_file__dev_urandom=yes
+ac_cv_lib_ssl_SSL_connect=yes
+
+#gettext and libiconv
+gl_cv_header_working_stdint_h=yes
+
+#libcec
+ac_cv_search_dlopen=-ldl
+
+#libgcrypt
+if test "${PACKAGE_NAME}" = "libgcrypt"; then
+  ac_cv_path_GPG_ERROR_CONFIG=/Users/Shared/xbmc-depends/iphoneos9.2_armv7-target/bin/gpg-error-config
+  ac_cv_sys_symbol_underscore=no
+  CFLAGS="$CFLAGS -std=gnu99"
+fi
+
+#python
+ac_cv_func_gethostbyname_r=no
+ac_cv_header_sys_un_h=yes
+
+#gnutls
+gl_cv_func_gettimeofday_clobber=no
+
+
+#samba
+SMB_BUILD_CC_NEGATIVE_ENUM_VALUES=yes
+samba_cv_CC_NEGATIVE_ENUM_VALUES=yes
+libreplace_cv_HAVE_C99_VSNPRINTF=yes
+samba_cv_HAVE_C99_VSNPRINTF=yes
+ac_cv_header_standards_h=no
+
+ac_cv_file__proc_sys_kernel_core_pattern=no
+samba_cv_SYSCONF_SC_NPROCESSORS_ONLN=no
+libreplace_cv_HAVE_GETADDRINFO=no
+
+if test "${PACKAGE_NAME}" = "Samba" -a "ios" = "ios"; then
+  # disable python support
+  export PYTHON_VER=0.0
+  # ios/osx-10.6 issue with collision of _MD5 exported from a system lib
+  export LDFLAGS="${LDFLAGS} -Wl,-unexported_symbol,_MD5* -lc"
+fi
+
+if test "${PACKAGE_NAME}" = "Samba" -a "ios" = "osx"; then
+  # disable python support
+  export PYTHON_VER=0.0
+  # ios/osx-10.6 issue with collision of _MD5 exported from a system lib
+  export LDFLAGS="${LDFLAGS} -Wl,-unexported_symbol,_MD5* -lc"
+  # uses OPT instead of CFLAGS
+  export OPT="${CFLAGS}"
+  # various configure overrides
+  ac_cv_header_libunwind_h=no
+  ac_cv_header_execinfo_h=no
+  # fixes crash on 10.6 if xbmc is built using 10.7 SDK with 10.6 min
+  ac_cv_func_vdprintf=no
+fi
+
+if test "ios" = "android"; then
+  #samba
+  SMB_BUILD_CC_NEGATIVE_ENUM_VALUES=yes
+  libreplace_cv_READDIR_GETDIRENTRIES=no
+  libreplace_cv_READDIR_GETDENTS=no
+  samba_cv_REPLACE_READDIR=no
+  samba_cv_HAVE_WRFILE_KEYTAB=yes
+  samba_cv_HAVE_GETTIMEOFDAY_TZ=yes
+  samba_cv_USE_SETREUID=yes
+  samba_cv_HAVE_KERNEL_OPLOCKS_LINUX=yes
+  samba_cv_HAVE_IFACE_IFCONF=yes
+  samba_cv_HAVE_MMAP=yes
+  samba_cv_HAVE_FCNTL_LOCK=yes
+  samba_cv_HAVE_SECURE_MKSTEMP=yes
+  samba_cv_CC_NEGATIVE_ENUM_VALUES=yes
+  samba_cv_fpie=no
+  samba_cv_have_longlong=yes
+  samba_cv_HAVE_OFF64_T=yes
+  samba_cv_HAVE_UT_UT_TYPE=no
+  ac_cv_func_srand=yes
+  ac_cv_func_rand=yes
+
+  #python: android doesn't have libutil
+  PYTHON_LDFLAGS="-L/Users/Shared/xbmc-depends/iphoneos9.2_armv7-target/lib -lpython${PYTHON_VERSION} -lc -ldl -lm -lexpat -lffi -lintl -lssl -lcrypto"
+
+fi
+
+if test "ios" = "ios"; then
+  # tweaks for libffi (ios must use llvm-gcc-4.2)
+  if test "${PACKAGE_NAME}" = "libffi" ; then
+      case "7.2.1" in
+        3.*.* | 4.* | 4.*.*)
+          export CC="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/llvm-gcc-4.2"
+          export CPP="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/llvm-gcc-4.2 -E"
+          ;;
+        *)
+          export CC="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang"
+          export CPP="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -E"
+          ;;
+        esac
+    unset AS
+    unset CCAS
+  fi
+
+  # tweaks for flac
+  if test "${ac_unique_file}" = "src/flac/main.c" ; then
+    # compiler barfs if we use -O3/O2 for flac
+    export CFLAGS=`echo ${CFLAGS} | sed 's/-O3/-Os/'`
+    export CPPFLAGS=`echo ${CPPFLAGS} | sed 's/-O3/-Os/'`
+  fi
+
+  # tweaks for libmpeg2
+  if test "${PACKAGE_NAME}" = "libmpeg2" ; then
+    export LDFLAGS="${LDFLAGS} -Wl,-read_only_relocs,suppress"
+  fi
+fi
+
+#Fix for older, broken android toolchains
+if test "${PACKAGE_NAME}" = "FreeType" -a "ios" = "android"; then
+  CFLAGS="$CFLAGS -std=gnu99"
+fi
+
+# These libs do not correctly export their symbols. Force them in case
+# -fvisibility=hidden is set.
+if test "${ac_unique_file}" = "src/flac/main.c" || \
+   test "${ac_unique_file}" = "src/framing.c" || \
+   test "${ac_unique_file}" = "src/libdvdcss.c" || \
+   test "${PACKAGE_NAME}" = "libmpeg2" || \
+   test "${PACKAGE_NAME}" = "libssh2" ; then
+     CFLAGS="$CFLAGS -fvisibility=default"
+fi

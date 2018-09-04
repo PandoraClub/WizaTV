@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.program.wizetv" version="1.0.0" name="WizeTV" provider-name="Team WizeTV">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+	</requires>
+    <extension point="xbmc.service" library="default.py" start="login"/>
+	
+	<extension point="xbmc.addon.metadata">
+		<summary></summary>
+		<description></description>
+		<website></website>
+		<platform>all</platform>
+	</extension>
+</addon>
